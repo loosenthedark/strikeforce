@@ -1,0 +1,21 @@
+@font-face {
+  font-family: entypo;
+  src: url(../fonts/toolkit-entypo.ttf);
+}
+
+.fa-bolt {
+    font-size: 3rem;
+}
+
+.input-with-icon {
+    display: unset;
+}
+
+.input-with-icon > .form-control {
+    padding-left: 44px;
+}
+
+.icon-trophy:before {
+    font-size: 26px;
+    top: 2px;
+}
