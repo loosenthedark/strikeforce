@@ -2,6 +2,8 @@ const playerSearch = document.getElementById('player-search');
 const playerMatchList = document.getElementById('player-match-list');
 const clubSearch = document.getElementById('club-search');
 const clubMatchList = document.getElementById('club-match-list');
+const pillsPlayersTab = document.getElementById('pills-players-tab');
+const pillsClubsTab = document.getElementById('pills-clubs-tab');
 
 
 // Search .json file and filter data
@@ -23,6 +25,12 @@ const searchScorers = async playerSearchText => {
         matches = [];
         playerMatchList.innerHTML = '';
     };
+
+    pillsClubsTab.addEventListener('click', () => {
+        matches = [];
+        playerMatchList.innerHTML = '';
+        playerSearch.value = '';
+    });
 };
 
 const searchClubs = async clubSearchText => {
@@ -43,6 +51,11 @@ const searchClubs = async clubSearchText => {
         matches = [];
         clubMatchList.innerHTML = '';
     };
+    pillsPlayersTab.addEventListener('click', () => {
+        matches = [];
+        clubMatchList.innerHTML = '';
+        clubSearch.value = '';
+    });
 };
 
 
@@ -50,28 +63,32 @@ const searchClubs = async clubSearchText => {
 
 const showScorers = matches => {
     if (matches.length > 0) {
-        const scorerList = matches.map(match => `<div class="col-12">
-        <div class="statcard statcard-primary statcard-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} p-4 mb-1">
-          <h3 class="statcard-number">
-            ${match.fname} ${match.lname}
-          </h3>
-          <span class="statcard-desc statcard-desc-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()}">${match.club}</span>
-        </div>
-      </div>`).join('');
+        const scorerList = matches.map(match => `<div class="col-12"><div class="row px-3">
+      <div class="statcard col-9 statcard-primary statcard-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} pl-3 py-3 pr-2 mb-1">
+        <h3 class="statcard-number">
+          ${match.fname} ${match.lname}
+        </h3>
+        <span class="statcard-desc statcard-desc-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()}">${match.club}</span></div>
+        <div class="statcard col-3 d-flex statcard-primary statcard-secondary-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} pr-3 py-1 mb-1">
+        <a href="#" class="btn-strike-rate btn-strike-rate-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} mb-1 btn btn-outline-primary px-1"><span class="icon icon-bar-graph"></span></a>
+      </div></div>
+    </div>`).join('');
+
         playerMatchList.innerHTML = scorerList;
     };
 };
 
 const showClubs = matches => {
     if (matches.length > 0) {
-        const clubList = matches.map(match => `<div class="col-12">
-        <div class="statcard statcard-primary statcard-${match.clubname.replace(/\s/g, '').replace('&', 'and').toLowerCase()} p-4 mb-1">
+        const clubList = matches.map(match => `<div class="col-12"><div class="row px-3">
+        <div class="statcard col-9 statcard-primary statcard-${match.clubname.replace(/\s/g, '').replace('&', 'and').toLowerCase()} pl-3 py-3 pr-2 mb-1">
           <h3 class="statcard-number">
             ${match.clubname}
           </h3>
-          <span class="statcard-desc statcard-desc-${match.clubname.replace(/\s/g, '').replace('&', 'and').toLowerCase()}">#${match.acronym}</span>
-          <img src="${match.crestUrl}">
-        </div>
+          <span class="statcard-desc statcard-desc-${match.clubname.replace(/\s/g, '').replace('&', 'and').toLowerCase()}">#${match.acronym}</span></div>
+          <div class="statcard col-3 d-flex statcard-primary statcard-tertiary-${match.clubname.replace(/\s/g, '').replace('&', 'and').toLowerCase()} pl-3 pr-3 py-2 mb-1">
+          <img class="mx-auto" src="${match.crestUrl}" height="auto" width="40">
+        </div></div>
       </div>`).join('');
         clubMatchList.innerHTML = clubList;
     };

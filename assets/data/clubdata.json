@@ -1,11 +1,101 @@
 [{
-        "clubname": "Leeds United",
-        "acronym": "LUFC",
-        "crestUrl": "assets/images/Leeds_United_F.C._logo.svg"
+        "clubname": "Arsenal",
+        "acronym": "AFC",
+        "crestUrl": "assets/images/crests/Arsenal_FC.svg"
+    },
+    {
+        "clubname": "Aston Villa",
+        "acronym": "AVFC",
+        "crestUrl": "assets/images/crests/Aston_Villa_FC_crest_(2016).svg"
+    },
+    {
+        "clubname": "Brighton & Hove Albion",
+        "acronym": "BHAFC",
+        "crestUrl": "assets/images/crests/Brighton_&_Hove_Albion_logo.svg"
+    },
+    {
+        "clubname": "Burnley",
+        "acronym": "BFC",
+        "crestUrl": "assets/images/crests/Burnley_F.C._Logo.svg"
+    },
+    {
+        "clubname": "Chelsea",
+        "acronym": "CFC",
+        "crestUrl": "assets/images/crests/Chelsea_FC.svg"
+    },
+    {
+        "clubname": "Crystal Palace",
+        "acronym": "CPFC",
+        "crestUrl": "assets/images/crests/Crystal_Palace_FC_logo.svg"
+    },
+    {
+        "clubname": "Everton",
+        "acronym": "EFC",
+        "crestUrl": "assets/images/crests/Everton_FC_logo.svg"
+    },
+    {
+        "clubname": "Fulham",
+        "acronym": "FFC",
+        "crestUrl": "assets/images/crests/Fulham_FC_(shield).svg"
     },
     {
         "clubname": "Leeds United",
         "acronym": "LUFC",
-        "crestUrl": "assets/images/Leeds_United_F.C._logo.svg"
+        "crestUrl": "assets/images/crests/Leeds_United_F.C._logo.svg"
+    },
+    {
+        "clubname": "Leicester City",
+        "acronym": "LCFC",
+        "crestUrl": "assets/images/crests/Leicester_City_crest.svg"
+    },
+    {
+        "clubname": "Liverpool",
+        "acronym": "LFC",
+        "crestUrl": "assets/images/crests/Liverpool_FC.svg"
+    },
+    {
+        "clubname": "Manchester City",
+        "acronym": "MCFC",
+        "crestUrl": "assets/images/crests/Manchester_City_FC_badge.svg"
+    },
+    {
+        "clubname": "Manchester United",
+        "acronym": "MUFC",
+        "crestUrl": "assets/images/crests/Manchester_United_FC_crest.svg"
+    },
+    {
+        "clubname": "Newcastle United",
+        "acronym": "NUFC",
+        "crestUrl": "assets/images/crests/Newcastle_United_Logo.svg"
+    },
+    {
+        "clubname": "Sheffield United",
+        "acronym": "SUFC",
+        "crestUrl": "assets/images/crests/Sheffield_United_FC_logo.svg"
+    },
+    {
+        "clubname": "Southampton",
+        "acronym": "SFC",
+        "crestUrl": "assets/images/crests/FC_Southampton.svg"
+    },
+    {
+        "clubname": "Tottenham Hotspur",
+        "acronym": "THFC",
+        "crestUrl": "assets/images/crests/Tottenham_Hotspur.svg"
+    },
+    {
+        "clubname": "West Bromwich Albion",
+        "acronym": "WBAFC",
+        "crestUrl": "assets/images/crests/West_Bromwich_Albion.svg"
+    },
+    {
+        "clubname": "West Ham United",
+        "acronym": "WHUFC",
+        "crestUrl": "assets/images/crests/West_Ham_United_FC_logo.svg"
+    },
+    {
+        "clubname": "Wolverhampton Wanderers",
+        "acronym": "WWFC",
+        "crestUrl": "assets/images/crests/Wolverhampton_Wanderers.svg"
     }
 ]
