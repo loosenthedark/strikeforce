@@ -1,6 +1,10 @@
+body * {
+    box-sizing: border-box;
+}
+
 @font-face {
-  font-family: entypo;
-  src: url(../fonts/toolkit-entypo.ttf);
+    font-family: entypo;
+    src: url(../fonts/toolkit-entypo.ttf);
 }
 
 .fa-bolt {
@@ -11,11 +15,180 @@
     display: unset;
 }
 
-.input-with-icon > .form-control {
+.input-with-icon>.form-control {
     padding-left: 44px;
 }
 
 .icon-trophy:before {
     font-size: 26px;
     top: 2px;
+}
+
+
+/* Nav elements */
+
+.nav-item a.active {
+    border: 1px solid #1997c6;
+    border-radius: 4px;
+}
+
+.nav-item a:not(.active) {
+    border: 1px solid #fff;
+    border-radius: 4px;
+}
+
+
+/* Club colours */
+
+.statcard-arsenal {
+    color: #fff;
+    background-color: #FF0100;
+}
+
+.statcard-astonvilla {
+    color: #A5CCFF;
+    background-color: #85001B;
+}
+
+.statcard-brightonandhovealbion {
+    color: #fff;
+    background-color: #0244A8;
+}
+
+.statcard-burnley {
+    color: #81C0FE;
+    background-color: #81001A;
+}
+
+.statcard-chelsea {
+    color: #fff;
+    background-color: #0000FB;
+}
+
+.statcard-crystalpalace {
+    color: #FF0100;
+    background-color: #0000FF;
+}
+
+.statcard-desc.statcard-desc-crystalpalace {
+    color: rgba(255, 255, 255, 1);
+}
+
+.statcard-everton {
+    color: #fFF;
+    background-color: #0000FF;
+}
+
+.statcard-fulham {
+    color: #0C0D0F;
+    background-color: #E7E9EE;
+}
+
+.statcard-desc.statcard-desc-fulham {
+    color: #CD0000;
+    font-weight: 500;
+}
+
+.statcard-leedsunited {
+    color: #0060A9;
+    background-color: #FFf;
+}
+
+.statcard-leedsunited .statcard-number {
+    font-weight: 500;
+}
+
+.statcard-desc.statcard-desc-leedsunited {
+    color: #FFE003;
+    font-weight: 600;
+}
+
+.statcard-leicestercity {
+    color: #A49261;
+    background-color: #0000FF;
+}
+
+.statcard-liverpool {
+    color: #fff;
+    background-color: #D93142;
+}
+
+.statcard-desc.statcard-desc-liverpool {
+    color: #3CA0BF;
+    font-weight: 600;
+}
+
+.statcard-manchestercity {
+    color: #fff;
+    background-color: #9BCDFF;
+}
+
+.statcard-desc.statcard-desc-manchestercity {
+    color: #000;
+}
+
+.statcard-manchesterunited {
+    color: #fFF;
+    background-color: #FF0100;
+}
+
+.statcard-desc.statcard-desc-manchesterunited {
+    color: #FFE500;
+}
+
+.statcard-newcastleunited {
+    color: #fFF;
+    background-color: #000000;
+    border: 1px solid #fff;
+}
+
+.statcard-desc.statcard-desc-newcastleunited {
+    color: #7FE2FC;
+}
+
+.statcard-sheffieldunited {
+    color: #FF0100;
+    background-color: #FFf;
+    border: 2px solid #ff0100;
+}
+
+.statcard-desc.statcard-desc-sheffieldunited {
+    color: #000;
+    font-weight: 500;
+}
+
+.statcard-southampton {
+    color: #fFF;
+    background-color: #FF0100;
+    border: 1px solid #f0f0f0;
+}
+
+.statcard-desc.statcard-desc-southampton {
+    color: #000;
+}
+
+.statcard-tottenhamhotspur {
+    color: #000060;
+    background-color: #FBFBFB;
+    border: 2px solid #000060;
+}
+
+.statcard-desc.statcard-desc-tottenhamhotspur {
+    color: #D9CB52;
+    font-weight: 500;
+}
+
+.statcard-westbromwichalbion {
+    color: #FFFFFF;
+    background-color: #020B52;
+}
+
+.statcard-westhamunited {
+    color: #81C0FF;
+    background-color: #970714;
+}
+
+.statcard-wolverhamptonwanderers {
+    color: #000000;
+    background-color: #FF8400;
 }
