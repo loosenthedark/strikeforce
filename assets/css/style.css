@@ -1,5 +1,21 @@
+/* Global styles */
+
+html,
+body {
+    height: 100%;
+}
+
 body * {
     box-sizing: border-box;
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
 }
 
 @font-face {
@@ -13,12 +29,8 @@ h2 {
     margin-left: -45px;
 }
 
-.input-with-icon {
-    display: unset;
-}
-
-.input-with-icon>.form-control {
-    padding-left: 44px;
+button {
+    cursor: pointer;
 }
 
 
@@ -53,14 +65,23 @@ h2 {
 
 /* Nav elements */
 
-.nav-item a.active {
+.sidebar-nav .sidebar-header {
+    padding: 0 0 50px;
+}
+
+#pills-tab .nav-item a.active {
     border: 1px solid #1997c6;
     border-radius: 4px;
 }
 
-.nav-item a:not(.active) {
+#pills-tab .nav-item a:not(.active) {
     border: 1px solid #fff;
     border-radius: 4px;
+}
+
+#nav-contact-link {
+    color: #1997c6;
+    border: 1px solid #1997cf;
 }
 
 
@@ -453,7 +474,7 @@ h2 {
 
 .statcard-newcastleunited {
     color: #fFF;
-    border-right-color: transparent;
+    border-right: none;
 }
 
 .statcard-desc.statcard-desc-newcastleunited {
@@ -467,7 +488,7 @@ h2 {
 
 .statcard-secondary-newcastleunited {
     background-color: #000000;
-    border-left-color: transparent;
+    border-left: none;
 }
 
 .statcard-tertiary-newcastleunited,
@@ -488,7 +509,7 @@ h2 {
 }
 
 .statcard-sheffieldunited {
-    border-right-color: transparent;
+    border-right: none;
 }
 
 .statcard-desc.statcard-desc-sheffieldunited {
@@ -504,7 +525,7 @@ h2 {
 .statcard-secondary-sheffieldunited,
 .statcard-tertiary-sheffieldunited {
     background-color: #FFf;
-    border-left-color: transparent;
+    border-left: none;
 }
 
 .btn-strike-rate-sheffieldunited {
@@ -560,12 +581,12 @@ h2 {
 
 .statcard-tottenhamhotspur {
     color: #000060;
-    border-right-color: transparent;
+    border-right: none;
 }
 
 .statcard-secondary-tottenhamhotspur,
 .statcard-tertiary-tottenhamhotspur {
-    border-left-color: transparent;
+    border-left: none;
 }
 
 .statcard-desc.statcard-desc-tottenhamhotspur {
@@ -666,7 +687,18 @@ h2 {
 }
 
 
-/* Card UI elements */
+/* UI */
+
+.input-with-icon {
+    display: unset;
+}
+
+.input-with-icon>.form-control {
+    padding-left: 44px;
+}
+
+
+/* UI statcard elements */
 
 .statcard.col-9 {
     border-top-right-radius: 0;
@@ -683,4 +715,32 @@ h2 {
 .btn-strike-rate {
     width: 100%;
     height: auto;
+}
+
+
+/* Footer */
+
+.footer-row {
+    font-size: 1.8rem;
+}
+
+.social-list {
+    justify-content: center;
+}
+
+.social-list a {
+    padding: 5px 30px;
+    margin: 10px 0 0;
+}
+
+.social-list li:first-child a {
+    padding-left: 10px;
+}
+
+.social-list li:last-child a {
+    padding-right: 10px;
+}
+
+.social-list .icon {
+    color: #434857;
 }

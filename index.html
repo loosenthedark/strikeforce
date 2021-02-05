@@ -6,52 +6,149 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="shortcut icon" href="assets/images/flash.svg" type="image/png">
+
     <link rel="stylesheet" href="assets/css/toolkit-inverse.css">
     <link rel="stylesheet" href="assets/css/application.css">
-    <script src="https://kit.fontawesome.com/4ca5255d6d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>StrikeForce</title>
+    <title>StrikeForce | Forward to the goal</title>
 </head>
 
-<body>
-    <div class="container d-flex container-logo">
-        <span class="icon icon-flash"></span>
-        <h2 class="mb-3">trikeForce</h2>
-    </div>
+<body class="d-flex flex-column">
+    <!----- Header ----->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 sidebar">
+                    <nav class="sidebar-nav">
+                        <div class="sidebar-header">
+                            <button class="nav-toggler nav-toggler-md sidebar-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav-toggleable-md" aria-expanded="false">
+                                <span class="sr-only">Toggle nav</span>
+                            </button>
+                        </div>
 
-    <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active container px-3 mt-2 mb-3" id="pills-players" role="tabpanel" aria-labelledby="pills-players-tab">
-            <div class="row">
-                <div class="col-sm-8 col-md-6 m-auto">
-                    <div class="input-with-icon form-group">
-                        <input type="text" id="player-search" placeholder="Enter player or club name..." class="form-control form-control-lg mb-1">
-                        <span class="icon icon-trophy"></span>
+                        <div class="nav-toggleable-md collapse" id="nav-toggleable-md" aria-expanded="false">
+                            <ul class="nav nav-pills nav-stacked flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link  active" href="../index.html">Home</a>
+                                </li>
+                                <li class="nav-header">Leaderboards</li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="../index.html">Scorers</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../order-history/index.html">Clubs</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="../fluid/index.html">StrikeRate</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="../icon-nav/index.html">StrikeValue</a>
+                                </li>
+
+                                <li class="nav-header">Dashboards</li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="../docs/index.html">
+                                        Scorers
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="../docs/index.html">
+                                        Clubs
+                                    </a>
+                                </li>
+                                <li class="pt-3 nav-item">
+                                    <a class="mb-5 nav-link" id="nav-contact-link" href="#docsModal" data-toggle="modal">
+                                        Contact
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-md-9 content">
+
+                    <div class="container mt-5 d-flex container-logo">
+                        <span class="icon icon-flash"></span>
+                        <h2 class="mb-3">trikeForce</h2>
                     </div>
-                    <div class='row' id="player-match-list"></div>
+
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active container px-3 mb-3" id="pills-players" role="tabpanel" aria-labelledby="pills-players-tab">
+                            <form action="">
+                                <div class="form-row">
+                                    <div class="col-sm-8 col-md-6 m-auto">
+                                        <div class="input-with-icon form-group">
+                                            <input type="text" id="player-search" placeholder="Enter player or club name..." class="form-control form-control-lg mb-1">
+                                            <span class="icon icon-trophy"></span>
+                                        </div>
+                                        <div class='row' id="player-match-list"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade show container px-3 mb-3" id="pills-clubs" role="tabpanel" aria-labelledby="pills-home-tab">
+                            <form action="">
+                                <div class="form-row">
+                                    <div class="col-sm-8 col-md-6 m-auto">
+                                        <div class="input-with-icon form-group">
+                                            <input type="text" id="club-search" placeholder="Search by club..." class="form-control form-control-lg mb-1">
+                                            <span class="icon icon-trophy"></span>
+                                        </div>
+                                        <div class='row' id="club-match-list"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <ul class="nav nav-pills my-3 px-3 container" id="pills-tab" role="tablist">
+                        <li class="nav-item ml-auto mr-1" role="presentation">
+                            <a class="nav-link active" id="pills-players-tab" data-toggle="pill" href="#pills-players" role="tab" aria-controls="pills-players" aria-selected="true">Players</a>
+                        </li>
+                        <li class="nav-item mr-auto ml-1" role="presentation">
+                            <a class="nav-link" id="pills-clubs-tab" data-toggle="pill" href="#pills-clubs" role="tab" aria-controls="pills-clubs" aria-selected="false">Clubs</a>
+                        </li>
+                    </ul>
+
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade show container px-3 mt-2 mb-3" id="pills-clubs" role="tabpanel" aria-labelledby="pills-home-tab">
-            <div class="row">
-                <div class="col-sm-8 col-md-6 m-auto">
-                    <div class="input-with-icon form-group">
-                        <input type="text" id="club-search" placeholder="Search by club..." class="form-control form-control-lg mb-1">
-                        <span class="icon icon-trophy"></span>
-                    </div>
-                    <div class='row' id="club-match-list"></div>
-                </div>
+    </header>
+    <!----- end of Header ----->
+    <!----- Main ----->
+    <!-- <main>
+    </main> -->
+    <!----- end of Main ----->
+    <!----- Footer ----->
+    <footer class="container footer-container">
+        <div class="text-center row footer-row">
+            <div class="col footer-col">
+                <ul class="list-inline social-list">
+                    <li class="list-inline-item social-list-item">
+                        <a href="https://www.facebook.com/" target="_blank" id="facebooklink">
+                            <span class="icon icon-facebook" aria-hidden="true"></span>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item social-list-item">
+                        <a href="https://twitter.com/" target="_blank" id="twitterlink">
+                            <span class="icon icon-twitter" aria-hidden="true"></span>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item social-list-item">
+                        <a href="https://www.linkedin.com/" target="_blank" id="linkedinlink">
+                            <span class="icon icon-linkedin" aria-hidden="true"></span>
+                            <span class="sr-only">LinkedIn</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-    <ul class="nav nav-pills my-3 px-3 container" id="pills-tab" role="tablist">
-        <li class="nav-item ml-auto mr-1" role="presentation">
-            <a class="nav-link active" id="pills-players-tab" data-toggle="pill" href="#pills-players" role="tab" aria-controls="pills-players" aria-selected="true">Players</a>
-        </li>
-        <li class="nav-item mr-auto ml-1" role="presentation">
-            <a class="nav-link" id="pills-clubs-tab" data-toggle="pill" href="#pills-clubs" role="tab" aria-controls="pills-clubs" aria-selected="false">Clubs</a>
-        </li>
-    </ul>
+    </footer>
+    <!----- end of Footer ----->
     <script src="assets/js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="assets/js/tether.min.js"></script>
