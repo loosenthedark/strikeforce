@@ -6,6 +6,10 @@ const clubMatchList = document.getElementById('club-match-list');
 const pillsPlayersTab = document.getElementById('pills-players-tab');
 const pillsClubsTab = document.getElementById('pills-clubs-tab');
 
+if (window.innerHeight < 500) {
+    document.querySelector('footer').style.visibility = "hidden";
+}
+
 
 // Search .json file and filter data
 const searchScorers = async playerSearchText => {
@@ -26,6 +30,7 @@ const searchScorers = async playerSearchText => {
     if (playerSearchText.length > 2) { showScorers(matches); } else if (playerSearchText.length === 0) {
         matches = [];
         playerMatchList.innerHTML = '';
+        logoContainer.classList.remove('no-top-margin');
         logoContainer.classList.add('mt-5');
     };
 
@@ -53,6 +58,7 @@ const searchClubs = async clubSearchText => {
     if (clubSearchText.length > 0) { showClubs(matches); } else if (clubSearchText.length === 0) {
         matches = [];
         clubMatchList.innerHTML = '';
+        logoContainer.classList.remove('no-top-margin-n3');
         logoContainer.classList.add('mt-5');
     };
     pillsPlayersTab.addEventListener('click', () => {
@@ -77,7 +83,7 @@ const showScorers = matches => {
         <a href="#" class="btn-strike-rate btn-strike-rate-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} mb-1 btn btn-outline-primary px-1"><span class="icon icon-bar-graph"></span></a>
       </div></div>
     </div>`).join('');
-
+        logoContainer.classList.add('no-top-margin');
         logoContainer.classList.remove('mt-5');
         playerMatchList.innerHTML = scorerList;
     };
@@ -95,7 +101,7 @@ const showClubs = matches => {
           <img class="mx-auto" src="${match.crestUrl}" height="auto" width="40">
         </div></div>
       </div>`).join('');
-
+        logoContainer.classList.add('no-top-margin');
         logoContainer.classList.remove('mt-5');
         clubMatchList.innerHTML = clubList;
     };
