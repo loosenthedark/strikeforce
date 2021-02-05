@@ -1,3 +1,4 @@
+const logoContainer = document.querySelector('.container-logo');
 const playerSearch = document.getElementById('player-search');
 const playerMatchList = document.getElementById('player-match-list');
 const clubSearch = document.getElementById('club-search');
@@ -19,11 +20,13 @@ const searchScorers = async playerSearchText => {
 
     if (matches.length === 0) {
         playerMatchList.innerHTML = '';
+
     };
 
     if (playerSearchText.length > 2) { showScorers(matches); } else if (playerSearchText.length === 0) {
         matches = [];
         playerMatchList.innerHTML = '';
+        logoContainer.classList.add('mt-5');
     };
 
     pillsClubsTab.addEventListener('click', () => {
@@ -50,6 +53,7 @@ const searchClubs = async clubSearchText => {
     if (clubSearchText.length > 0) { showClubs(matches); } else if (clubSearchText.length === 0) {
         matches = [];
         clubMatchList.innerHTML = '';
+        logoContainer.classList.add('mt-5');
     };
     pillsPlayersTab.addEventListener('click', () => {
         matches = [];
@@ -74,6 +78,7 @@ const showScorers = matches => {
       </div></div>
     </div>`).join('');
 
+        logoContainer.classList.remove('mt-5');
         playerMatchList.innerHTML = scorerList;
     };
 };
@@ -90,6 +95,8 @@ const showClubs = matches => {
           <img class="mx-auto" src="${match.crestUrl}" height="auto" width="40">
         </div></div>
       </div>`).join('');
+
+        logoContainer.classList.remove('mt-5');
         clubMatchList.innerHTML = clubList;
     };
 };
