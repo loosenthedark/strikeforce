@@ -5,11 +5,8 @@ const clubSearch = document.getElementById('club-search');
 const clubMatchList = document.getElementById('club-match-list');
 const pillsPlayersTab = document.getElementById('pills-players-tab');
 const pillsClubsTab = document.getElementById('pills-clubs-tab');
-
-if (window.innerHeight < 500) {
-    document.querySelector('footer').style.visibility = "hidden";
-}
-
+const animateNavToggler = document.getElementById('nav-toggler');
+const navTogglerIcons = document.querySelectorAll('.nav-toggler-icon');
 
 // Search .json file and filter data
 const searchScorers = async playerSearchText => {
@@ -109,3 +106,11 @@ const showClubs = matches => {
 
 playerSearch.addEventListener('input', () => searchScorers(playerSearch.value));
 clubSearch.addEventListener('input', () => searchClubs(clubSearch.value));
+animateNavToggler.addEventListener('click', () => navTogglerIcons.classList.toggle('active'));
+
+$(document).ready(function() {
+    $('#nav-toggler').click(function() {
+        $('.nav-toggler-icon').toggleClass('active');
+        $(this).toggleClass('no-border');
+    })
+})

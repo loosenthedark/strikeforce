@@ -8,6 +8,8 @@
 
     <link rel="shortcut icon" href="assets/images/flash.svg" type="image/png">
 
+    <script src="https://kit.fontawesome.com/4ca5255d6d.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="assets/css/toolkit-inverse.css">
     <link rel="stylesheet" href="assets/css/application.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -23,7 +25,12 @@
                 <div class="col-md-3 sidebar">
                     <nav class="sidebar-nav">
                         <div class="sidebar-header">
-                            <button class="nav-toggler nav-toggler-md sidebar-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav-toggleable-md" aria-expanded="false">
+                            <!-- <button class="nav-toggler nav-toggler-md sidebar-toggler collapsed" type="button" data-toggle="collapse" data-target="#nav-toggleable-md" aria-expanded="false">
+                                <span class="sr-only">Toggle nav</span>
+                            </button> -->
+                            <button class="collapsed" id="nav-toggler" type="button" data-toggle="collapse" data-target="#nav-toggleable-md" aria-expanded="false">
+                                <span class='nav-toggler-icon'><i class="fas fa-bars"></i></span>
+                                <span class='nav-toggler-icon'><i class="fas fa-futbol"></i></span>
                                 <span class="sr-only">Toggle nav</span>
                             </button>
                         </div>
@@ -31,7 +38,7 @@
                         <div class="nav-toggleable-md collapse" id="nav-toggleable-md" aria-expanded="false">
                             <ul class="nav nav-pills nav-stacked flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link  active" href="../index.html">Home</a>
+                                    <a class="nav-link  active" href="../index.html"> Home</a>
                                 </li>
                                 <li class="nav-header">Leaderboards</li>
                                 <li class="nav-item">
