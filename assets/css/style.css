@@ -119,7 +119,7 @@ button {
 }
 
 #nav-toggler:focus {
-    outline: none;
+    outline: 1px solid transparent;
 }
 
 .fa-futbol {
@@ -173,9 +173,15 @@ button {
     background-color: #fff;
 }
 
-.btn-strike-rate-arsenal:hover {
+.btn-strike-rate-arsenal:hover,
+.btn-strike-rate-arsenal:focus {
     background-color: #9D8349;
     border: 1px solid #9D8349;
+}
+
+.btn-strike-rate-arsenal:focus {
+    color: #fff;
+    box-shadow: 0 0 0 2px rgb(157, 131, 73);
 }
 
 .btn-strike-rate-arsenal {
@@ -207,10 +213,15 @@ button {
     border-width: 2px;
 }
 
-.btn-strike-rate-astonvilla:hover {
+.btn-strike-rate-astonvilla:hover,
+.btn-strike-rate-astonvilla:focus {
     color: #FFE600;
     border-color: #FFE600;
     background-color: #A5CCFF;
+}
+
+.btn-strike-rate-astonvilla:focus {
+    box-shadow: 0 0 0 2px rgb(255, 230, 0);
 }
 
 .statcard-brightonandhovealbion {
@@ -238,10 +249,15 @@ button {
     border-width: 2px;
 }
 
-.btn-strike-rate-brightonandhovealbion:hover {
+.btn-strike-rate-brightonandhovealbion:hover,
+.btn-strike-rate-brightonandhovealbion:focus {
     background-color: #fff;
     border-color: #F2AC02;
     color: #F2AC02;
+}
+
+.btn-strike-rate-brightonandhovealbion:focus {
+    box-shadow: 0 0 0 2px #f2ac02;
 }
 
 .statcard-burnley {
@@ -269,10 +285,15 @@ button {
     border-width: 2px;
 }
 
-.btn-strike-rate-burnley:hover {
+.btn-strike-rate-burnley:hover,
+.btn-strike-rate-burnley:focus {
     color: #FFF306;
     background-color: #81C0FE;
     border-color: #FFF306;
+}
+
+.btn-strike-rate-burnley:focus {
+    box-shadow: 0 0 0 2px #fff306;
 }
 
 .statcard-chelsea {
@@ -300,10 +321,15 @@ button {
     border-width: 2px;
 }
 
-.btn-strike-rate-chelsea:hover {
+.btn-strike-rate-chelsea:hover,
+.btn-strike-rate-chelsea:focus {
     color: #DBA111;
     background-color: #fff;
     border-color: #DBA111;
+}
+
+.btn-strike-rate-chelsea:focus {
+    box-shadow: 0 0 0 2px #dba111;
 }
 
 .statcard-crystalpalace {
@@ -338,10 +364,15 @@ button {
     border-width: 2px;
 }
 
-.btn-strike-rate-crystalpalace:hover {
+.btn-strike-rate-crystalpalace:hover,
+.btn-strike-rate-crystalpalace:focus {
     color: #00f;
     background-color: #ff0100;
     border-color: #FFF;
+}
+
+.btn-strike-rate-crystalpalace:focus {
+    box-shadow: 0 0 0 2px #fff;
 }
 
 .statcard-everton {
@@ -369,10 +400,15 @@ button {
     border-width: 2px;
 }
 
-.btn-strike-rate-everton:hover {
+.btn-strike-rate-everton:hover,
+.btn-strike-rate-everton:focus {
     color: #F7CE06;
     background-color: #fff;
     border-color: #F7CE06;
+}
+
+.btn-strike-rate-everton:focus {
+    box-shadow: 0 0 0 2px #f7ce06;
 }
 
 .statcard-fulham {
@@ -405,16 +441,22 @@ button {
     border-width: 2px;
 }
 
-.btn-strike-rate-fulham:hover {
+.btn-strike-rate-fulham:hover,
+.btn-strike-rate-fulham:focus {
     background-color: #cd0000;
     border-color: #0c0d0f;
+}
+
+.btn-strike-rate-fulham:focus {
+    box-shadow: 0 0 0 2px #0c0d0f;
 }
 
 .btn-strike-rate-fulham .icon-bar-graph {
     color: #cd0000;
 }
 
-.btn-strike-rate-fulham:hover .icon-bar-graph {
+.btn-strike-rate-fulham:hover .icon-bar-graph,
+.btn-strike-rate-fulham:focus .icon-bar-graph {
     color: #0c0d0f;
 }
 
@@ -453,12 +495,18 @@ button {
     color: #ffe003;
 }
 
-.btn-strike-rate-leedsunited:hover {
+.btn-strike-rate-leedsunited:hover,
+.btn-strike-rate-leedsunited:focus {
     background-color: #ffe003;
     border-color: #0060a9;
 }
 
-.btn-strike-rate-leedsunited:hover .icon-bar-graph {
+.btn-strike-rate-leedsunited:focus {
+    box-shadow: 0 0 0 2px #0060a9;
+}
+
+.btn-strike-rate-leedsunited:hover .icon-bar-graph,
+.btn-strike-rate-leedsunited:focus .icon-bar-graph {
     color: #0060a9;
 }
 
@@ -483,10 +531,15 @@ button {
     background-color: #A49261;
 }
 
-.btn-strike-rate-leicestercity:hover {
+.btn-strike-rate-leicestercity:hover,
+.btn-strike-rate-leicestercity:focus {
     color: #a49261;
     background-color: #00f;
     border-color: #a49261;
+}
+
+.btn-strike-rate-leicestercity:focus {
+    box-shadow: 0 0 0 2px #a49261;
 }
 
 .statcard-liverpool {
@@ -515,16 +568,22 @@ button {
     background-color: #fff;
 }
 
-.btn-strike-rate-liverpool:hover {
+.btn-strike-rate-liverpool:hover,
+.btn-strike-rate-liverpool:focus {
     background-color: #3ca0bf;
     border-color: #FFf;
+}
+
+.btn-strike-rate-liverpool:focus {
+    box-shadow: 0 0 0 2px #fff;
 }
 
 .btn-strike-rate-liverpool .icon-bar-graph {
     color: #3CA0BF;
 }
 
-.btn-strike-rate-liverpool:hover .icon-bar-graph {
+.btn-strike-rate-liverpool:hover .icon-bar-graph,
+.btn-strike-rate-liverpool:focus .icon-bar-graph {
     color: #fff;
 }
 
@@ -553,16 +612,22 @@ button {
     background-color: #fff;
 }
 
-.btn-strike-rate-manchestercity:hover {
+.btn-strike-rate-manchestercity:hover,
+.btn-strike-rate-manchestercity:focus {
     background-color: #000;
     border-color: #FFF;
+}
+
+.btn-strike-rate-manchestercity:focus {
+    box-shadow: 0 0 0 2px #fff;
 }
 
 .btn-strike-rate-manchestercity .icon-bar-graph {
     color: #000;
 }
 
-.btn-strike-rate-manchestercity:hover .icon-bar-graph {
+.btn-strike-rate-manchestercity:hover .icon-bar-graph,
+.btn-strike-rate-manchestercity:focus .icon-bar-graph {
     color: #fff;
 }
 
@@ -591,10 +656,15 @@ button {
     background-color: #fff;
 }
 
-.btn-strike-rate-manchesterunited:hover {
+.btn-strike-rate-manchesterunited:hover,
+.btn-strike-rate-manchesterunited:focus {
     color: #FFe500;
     background-color: #fff;
     border-color: #FFe500;
+}
+
+.btn-strike-rate-manchesterunited:focus {
+    box-shadow: 0 0 0 2px #ffe500;
 }
 
 .statcard-secondary-newcastleunited,
@@ -627,10 +697,15 @@ button {
     background-color: #fff;
 }
 
-.btn-strike-rate-newcastleunited:hover {
+.btn-strike-rate-newcastleunited:hover,
+.btn-strike-rate-newcastleunited:focus {
     color: #FFF;
     background-color: #000;
     border-color: #FFF;
+}
+
+.btn-strike-rate-newcastleunited:focus {
+    box-shadow: 0 0 0 2px #fff;
 }
 
 .statcard-sheffieldunited,
@@ -662,10 +737,15 @@ button {
     border-left: none;
 }
 
-.btn-strike-rate-sheffieldunited:hover {
+.btn-strike-rate-sheffieldunited:hover,
+.btn-strike-rate-sheffieldunited:focus {
     color: #000;
     background-color: #ff0100;
     border-color: #000;
+}
+
+.btn-strike-rate-sheffieldunited:focus {
+    box-shadow: 0 0 0 2px #000;
 }
 
 .statcard-secondary-southampton,
@@ -696,16 +776,22 @@ button {
     background-color: #f0f0f0;
 }
 
-.btn-strike-rate-southampton:hover {
+.btn-strike-rate-southampton:hover,
+.btn-strike-rate-southampton:focus {
     background-color: #000;
     border-color: #FFF;
+}
+
+.btn-strike-rate-southampton:focus {
+    box-shadow: 0 0 0 2px #fff;
 }
 
 .btn-strike-rate-southampton .icon-bar-graph {
     color: #000;
 }
 
-.btn-strike-rate-southampton:hover .icon-bar-graph {
+.btn-strike-rate-southampton:hover .icon-bar-graph,
+.btn-strike-rate-southampton:focus .icon-bar-graph {
     color: #fff;
 }
 
@@ -737,16 +823,22 @@ button {
     background-color: #000060;
 }
 
-.btn-strike-rate-tottenhamhotspur:hover {
+.btn-strike-rate-tottenhamhotspur:hover,
+.btn-strike-rate-tottenhamhotspur:focus {
     background-color: #d9cb52;
     border-color: #000060;
+}
+
+.btn-strike-rate-tottenhamhotspur:focus {
+    box-shadow: 0 0 0 2px #000060;
 }
 
 .btn-strike-rate-tottenhamhotspur .icon-bar-graph {
     color: #D9CB52;
 }
 
-.btn-strike-rate-tottenhamhotspur:hover .icon-bar-graph {
+.btn-strike-rate-tottenhamhotspur:hover .icon-bar-graph,
+.btn-strike-rate-tottenhamhotspur:focus .icon-bar-graph {
     color: #000060;
 }
 
@@ -771,10 +863,15 @@ button {
     background-color: #fff;
 }
 
-.btn-strike-rate-westbromwichalbion:hover {
+.btn-strike-rate-westbromwichalbion:hover,
+.btn-strike-rate-westbromwichalbion:focus {
     color: #FFF;
     background-color: #020b52;
     border-color: #FFF;
+}
+
+.btn-strike-rate-westbromwichalbion:focus {
+    box-shadow: 0 0 0 2px #fff;
 }
 
 .statcard-westhamunited {
@@ -798,10 +895,15 @@ button {
     background-color: #81C0FF;
 }
 
-.btn-strike-rate-westhamunited:hover {
+.btn-strike-rate-westhamunited:hover,
+.btn-strike-rate-westhamunited:focus {
     color: #81c0ff;
     background-color: #970714;
     border-color: #81c0ff;
+}
+
+.btn-strike-rate-westhamunited:focus {
+    box-shadow: 0 0 0 2px #81c0ff;
 }
 
 .statcard-wolverhamptonwanderers {
@@ -829,10 +931,15 @@ button {
     border-color: #000;
 }
 
-.btn-strike-rate-wolverhamptonwanderers:hover {
+.btn-strike-rate-wolverhamptonwanderers:hover,
+.btn-strike-rate-wolverhamptonwanderers:focus {
     color: #000;
     background-color: #ff8400;
     border-color: #000;
+}
+
+.btn-strike-rate-wolverhamptonwanderers:focus {
+    box-shadow: 0 0 0 2px #000;
 }
 
 
