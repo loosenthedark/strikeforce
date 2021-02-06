@@ -228,7 +228,7 @@ function getScorerValue(event) {
 //     );
 // }
 
-$(document).ready(getScorerValue);
+// $(document).ready(getScorerValue);
 $(document).ready(setTimeout(function() {
     $('#player-search').focus();
 }, 3000));

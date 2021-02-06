@@ -126,6 +126,26 @@ button {
     font-weight: 700;
 }
 
+#nav-main .nav-link:focus,
+#nav-main .nav-link.active:focus {
+    outline: none;
+    color: #fff;
+    box-shadow: 0 0 0 1px #fff;
+}
+
+#nav-main #nav-contact-link:hover,
+#nav-main #nav-contact-link:focus {
+    background-color: #1997c6;
+}
+
+#nav-main #nav-contact-link:hover {
+    color: #252830;
+}
+
+#nav-main #nav-contact-link:focus {
+    outline: none;
+}
+
 .sidebar-nav .sidebar-header {
     padding: 0 0 60px;
 }
@@ -135,9 +155,27 @@ button {
     border-radius: 4px;
 }
 
+#pills-tab .nav-item a.active:hover,
+#pills-tab .nav-item a.active:focus {
+    outline: none;
+}
+
+#pills-tab .nav-item a.active:focus {
+    box-shadow: 0 0 0 1px #005fcc;
+}
+
 #pills-tab .nav-item a:not(.active) {
     border: 1px solid #fff;
     border-radius: 4px;
+}
+
+#pills-tab .nav-item a:not(.active):hover,
+#pills-tab .nav-item a:not(.active):focus {
+    outline: none;
+}
+
+#pills-tab .nav-item a:not(.active):focus {
+    box-shadow: 0 0 0 1px #fff;
 }
 
 #nav-contact-link {
@@ -999,4 +1037,27 @@ button {
 
 .social-list .icon {
     color: #434857;
+    display: inline-block;
 }
+
+.social-list .icon:hover,
+.social-list .icon:focus {
+    animation: social-zoom 500ms ease-in-out forwards;
+}
+
+.social-list .icon:focus {
+    outline: none;
+}
+
+@keyframes social-zoom {
+    0% {
+        color: #434857;
+        transform: scale(1);
+    }
+    100% {
+        color: #1997c6;
+        transform: scale(1.5);
+    }
+}
+
+;
