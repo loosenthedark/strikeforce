@@ -16,7 +16,7 @@ const searchScorers = async playerSearchText => {
     // Get matches to current text input
     let matches = scorers.filter(scorer => {
         const regex = new RegExp(`^${playerSearchText}`, 'gi');
-        return scorer.fname.match(regex) || scorer.lname.match(regex) || scorer.club.match(regex);
+        return scorer.fname.match(regex) || scorer.lname.match(regex) || scorer.club.match(regex) || scorer.clubAcronym.match(regex);
     });
 
     if (matches.length === 0) {
@@ -113,4 +113,122 @@ $(document).ready(function() {
         $('.nav-toggler-icon').toggleClass('active');
         $(this).toggleClass('no-border');
     })
-})
+});
+
+function userInformationHTML(user) {
+    return `<h5>${user.name} <span class='small-name'>(@<a href='${user.html_url}' target='_blank'>${user.login}</a>)</span></h5>
+    <div class='gh-content'>
+        <div class='gh-avatar'>
+            <a href='${user.html_url}' target='_blank'>
+                <img src='${user.avatar_url}' id='avatar-img' alt=${user.login}>
+            </a>
+        </div>
+        <p>Followers: ${user.followers} | Following: ${user.following} <br> Projects: ${user.public_repos}</p>
+    </div>`;
+}
+
+function repoInformationHTML(repos) {
+    if (repos.length === 0) {
+        return `<div class='repo-list'>No projects found!</div>`;
+    }
+
+    var listItemsHTML = repos.map(function(repo) {
+        return `<li><a href='${repo.html_url}' target='_blank'>${repo.name}</a></li>`
+    });
+
+    return `<div class='repo-list'>
+                <p class='repo-heading'><strong>Project list:</strong></p>
+                <ul>
+                    ${listItemsHTML.join(' ')}
+                </ul>
+            </div>`;
+}
+
+function fetchGitHubInfo(event) {
+    var username = $('#gh-username').val();
+    if (!username) {
+        $('#gh-user-data').html(`<h5>Please enter a GitHub username!</h5>`).addClass('gh-alert');
+        $('#gh-repo-data').html('');
+        return;
+    }
+    $('#gh-user-data').html(`<div><img src='assets/img/1_CsJ05WEGfunYMLGfsT2sXA.gif' alt='loading...'></div>`);
+
+    $.when(
+        $.getJSON(`https://api.github.com/users/${username}`),
+        $.getJSON(`https://api.github.com/users/${username}/repos`)
+    ).then(
+        function(firstResponse, secondResponse) {
+            var userData = firstResponse[0];
+            var repoData = secondResponse[0];
+            $('#gh-user-data').removeClass('gh-alert').html(userInformationHTML(userData));
+            $('#gh-repo-data').html(repoInformationHTML(repoData));
+        },
+        function(errorResponse) {
+            if (errorResponse.status === 404) {
+                $('#gh-user-data').html(`<h5>No info found for user ${username}!</h5>`);
+            } else if (errorResponse.status === 403) {
+                var resetTime = new Date(errorResponse.getResponseHeader('X-RateLimit-Reset') * 1000);
+                $('#gh-user-data').addClass('gh-alert').html(`<h5>Too many API requests! <br>Please wait until ${resetTime.toLocaleTimeString()} before trying again.</h5>`);
+            } else {
+                $('#gh-user-data').html(`<h5>Error: ${errorResponse.responseJSON.message}!</h5>`);
+            }
+        }
+    );
+}
+
+function getScorerValue(event) {
+    const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://transfermarket.p.rapidapi.com/players/get-profile?id=411295",
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-key": "750dd332b2msh2ea2cd6530f8ce8p182023jsn0aa726d7814f",
+            "x-rapidapi-host": "transfermarket.p.rapidapi.com"
+        }
+    };
+
+    $.ajax(settings).done(function(response) {
+        console.log(response.playerProfile);
+        console.log(response.playerProfile.playerImage);
+        console.log(response.playerProfile.playerName);
+        console.log(response.playerProfile.playerID);
+        console.log(response.playerProfile.marketValueCurrency);
+        console.log(response.playerProfile.marketValue);
+        console.log(response.playerProfile.marketValueLastChange);
+
+        $('#player-match-list').html(`<div class='col text-center'>
+    <img src='${response.playerProfile.playerImage}' class='scorer-image' alt='Raphinha'></div>`);
+
+    });
+}
+
+//     $.when(
+//         $.getJSON(settings.url)
+//         // $.getJSON(`https://api.github.com/users/${username}/repos`)
+//     ).then(
+//         function(response) {
+//             var scorerData = response[0];
+//             // var repoData = secondResponse[0];
+//             // $('#gh-user-data').removeClass('gh-alert').html(userInformationHTML(userData));
+//             // $('#gh-repo-data').html(repoInformationHTML(repoData));
+//             console.log(scorerData)
+//         },
+//         function(errorResponse) {
+//             // if (errorResponse.status === 404) {
+//             //     $('#gh-user-data').html(`<h5>No info found for user ${username}!</h5>`);
+//             // } else if (errorResponse.status === 403) {
+//             //     var resetTime = new Date(errorResponse.getResponseHeader('X-RateLimit-Reset') * 1000);
+//             //     $('#gh-user-data').addClass('gh-alert').html(`<h5>Too many API requests! <br>Please wait until ${resetTime.toLocaleTimeString()} before trying again.</h5>`);
+//             // } else {
+//             //     $('#gh-user-data').html(`<h5>Error: ${errorResponse.responseJSON.message}!</h5>`);
+//             // }
+//             console.log(errorResponse.responseJSON.message);
+//         }
+//     );
+// }
+
+$(document).ready(getScorerValue);
+$(document).ready(setTimeout(function() {
+    $('#player-search').focus();
+}, 3000));
