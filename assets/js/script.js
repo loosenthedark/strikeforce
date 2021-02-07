@@ -71,12 +71,12 @@ const searchClubs = async clubSearchText => {
 const showScorers = matches => {
     if (matches.length > 0) {
         const scorerList = matches.map(match => `<div class="col-12"><div class="row px-3">
-      <div class="statcard col-9 statcard-primary statcard-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} pl-3 py-3 pr-2 mb-1">
-        <h3 class="statcard-number">
+      <div class="statcard col-9 statcard-primary statcard-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} pl-2 py-2 pr-2 mb-1">
+        <h2 class="statcard-number">
           ${match.fname} ${match.lname}
-        </h3>
-        <span class="statcard-desc statcard-desc-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()}">${match.club}</span></div>
-        <div class="statcard col-3 d-flex statcard-primary statcard-secondary-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} pr-3 py-1 mb-1">
+        </h2>
+        <span class="statcard-desc pt-1 statcard-desc-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()}">${match.club}</span></div>
+        <div class="statcard col-3 d-flex statcard-primary statcard-secondary-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} pr-2 py-2 mb-1">
         <a href="#" class="btn-strike-rate btn-strike-rate-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} mb-1 btn btn-outline-primary px-1"><span class="icon icon-bar-graph"></span></a>
       </div></div>
     </div>`).join('');
@@ -89,13 +89,13 @@ const showScorers = matches => {
 const showClubs = matches => {
     if (matches.length > 0) {
         const clubList = matches.map(match => `<div class="col-12"><div class="row px-3">
-        <div class="statcard col-9 statcard-primary statcard-${match.clubname.replace(/\s/g, '').replace('&', 'and').toLowerCase()} pl-3 py-3 pr-2 mb-1">
-          <h3 class="statcard-number">
+        <div class="statcard col-9 statcard-primary statcard-${match.clubname.replace(/\s/g, '').replace('&', 'and').toLowerCase()} pl-2 py-2 pr-2 mb-1">
+          <h2 class="statcard-number">
             ${match.clubname}
-          </h3>
-          <span class="statcard-desc statcard-desc-${match.clubname.replace(/\s/g, '').replace('&', 'and').toLowerCase()}">#${match.acronym}</span></div>
-          <div class="statcard col-3 d-flex statcard-primary statcard-tertiary-${match.clubname.replace(/\s/g, '').replace('&', 'and').toLowerCase()} pl-3 pr-3 py-2 mb-1">
-          <img class="mx-auto" src="${match.crestUrl}" height="auto" width="40">
+          </h2>
+          <span class="statcard-desc pt-1 statcard-desc-${match.clubname.replace(/\s/g, '').replace('&', 'and').toLowerCase()}">#${match.acronym}</span></div>
+          <div class="statcard col-3 d-flex statcard-primary statcard-tertiary-${match.clubname.replace(/\s/g, '').replace('&', 'and').toLowerCase()} pl-1 pr-1 py-2 mb-1">
+          <img class="mx-auto" src="${match.crestUrl}" height="49" width="50">
         </div></div>
       </div>`).join('');
         logoContainer.classList.add('no-top-margin');

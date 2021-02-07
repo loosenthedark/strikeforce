@@ -36,10 +36,14 @@ footer {
     src: url(assets/fonts/toolkit-entypo.ttf);
 }
 
-h2 {
+h1 {
     font-family: entypo;
     font-size: 40px;
     margin-left: -45px;
+}
+
+h2 {
+    font-size: 24px;
 }
 
 button {
@@ -186,6 +190,12 @@ button {
 
 /* Club colours */
 
+.statcard-desc {
+    display: block;
+    line-height: 120%;
+    font-size: 85%;
+}
+
 .btn-strike-rate {
     min-width: 50px;
 }
@@ -204,6 +214,7 @@ button {
 
 .statcard-secondary-arsenal {
     background-color: #ff0100;
+    border-width: 2px;
 }
 
 .statcard-tertiary-arsenal,
@@ -240,6 +251,7 @@ button {
 
 .statcard-secondary-astonvilla {
     background-color: #85001B;
+    border-width: 2px;
 }
 
 .statcard-tertiary-astonvilla,
@@ -276,6 +288,7 @@ button {
 
 .statcard-secondary-brightonandhovealbion {
     background-color: #0244A8;
+    border-width: 2px;
 }
 
 .statcard-tertiary-brightonandhovealbion,
@@ -312,6 +325,7 @@ button {
 
 .statcard-secondary-burnley {
     background-color: #81001A;
+    border-width: 2px;
 }
 
 .statcard-tertiary-burnley,
@@ -348,6 +362,7 @@ button {
 
 .statcard-secondary-chelsea {
     background-color: #0000FB;
+    border-width: 2px;
 }
 
 .statcard-tertiary-chelsea,
@@ -388,6 +403,7 @@ button {
 
 .statcard-secondary-crystalpalace {
     background-color: #0000FF;
+    border-width: 2px;
 }
 
 .btn-strike-rate-crystalpalace {
@@ -427,6 +443,7 @@ button {
 
 .statcard-secondary-everton {
     background-color: #0000FF;
+    border-width: 2px;
 }
 
 .statcard-tertiary-everton,
@@ -469,6 +486,10 @@ button {
 .statcard-secondary-fulham,
 .statcard-tertiary-fulham {
     background-color: #E7E9EE;
+}
+
+.statcard-secondary-fulham {
+    border-width: 2px;
 }
 
 .btn-strike-rate-fulham {
@@ -519,6 +540,10 @@ button {
     border: 5px solid #fff;
 }
 
+.statcard-secondary-leedsunited {
+    border-width: 2px;
+}
+
 .statcard-tertiary-leedsunited,
 .statcard-secondary-leedsunited {
     background-color: #fff;
@@ -557,7 +582,12 @@ button {
 .btn-strike-rate-leicestercity,
 .statcard-tertiary-leicestercity {
     color: #0000FF;
-    border: 2px solid #0000FF;
+    border: 5px solid #0000FF;
+}
+
+.statcard-secondary-leicestercity,
+.btn-strike-rate-leicestercity {
+    border-width: 2px;
 }
 
 .statcard-secondary-leicestercity {
@@ -587,14 +617,19 @@ button {
 
 .statcard-desc.statcard-desc-liverpool {
     color: #3CA0BF;
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 
 .statcard-secondary-liverpool,
 .btn-strike-rate-liverpool,
 .statcard-tertiary-liverpool {
     color: #D93142;
-    border: 2px solid #D93142;
+    border: 5px solid #D93142;
+}
+
+.btn-strike-rate-liverpool,
+.statcard-secondary-liverpool {
+    border-width: 2px;
 }
 
 .statcard-secondary-liverpool {
@@ -638,7 +673,12 @@ button {
 .btn-strike-rate-manchestercity,
 .statcard-tertiary-manchestercity {
     color: #9BCDFF;
-    border: 2px solid #9BCDFF;
+    border: 5px solid #9BCDFF;
+}
+
+.statcard-secondary-manchestercity,
+.btn-strike-rate-manchestercity {
+    border-width: 2px;
 }
 
 .statcard-secondary-manchestercity {
@@ -722,7 +762,7 @@ button {
 
 .btn-strike-rate-newcastleunited {
     color: #000000;
-    border: 2px solid #000000;
+    border: 5px solid #000000;
 }
 
 .statcard-secondary-newcastleunited {
@@ -733,6 +773,11 @@ button {
 .statcard-tertiary-newcastleunited,
 .btn-strike-rate-newcastleunited {
     background-color: #fff;
+    border: 5px solid #fff;
+}
+
+.btn-strike-rate-newcastleunited {
+    border-width: 3px;
 }
 
 .btn-strike-rate-newcastleunited:hover,
@@ -752,6 +797,10 @@ button {
     color: #FF0100;
     background-color: #FFf;
     border: 2px solid #ff0100;
+}
+
+.statcard-tertiary-sheffieldunited {
+    border-width: 5px;
 }
 
 .statcard-sheffieldunited {
@@ -802,11 +851,15 @@ button {
 
 .btn-strike-rate-southampton {
     color: #FF0100;
-    border: 2px solid#FF0100;
+    border: 3px solid#FF0100;
 }
 
 .statcard-secondary-southampton {
     background-color: #FF0100;
+}
+
+.statcard-tertiary-southampton {
+    border: 5px solid#FF0100;
 }
 
 .statcard-tertiary-southampton,
@@ -922,6 +975,10 @@ button {
 .statcard-tertiary-westhamunited {
     color: #970714;
     border: 2px solid #970714;
+}
+
+.statcard-tertiary-westhamunited {
+    border-width: 5px;
 }
 
 .statcard-secondary-westhamunited {
