@@ -725,6 +725,10 @@ button {
     border: 2px solid #FF0100;
 }
 
+.statcard-tertiary-manchesterunited {
+    border-width: 5px;
+}
+
 .statcard-secondary-manchesterunited {
     background-color: #FF0100;
 }
@@ -890,7 +894,7 @@ button {
 .statcard-secondary-tottenhamhotspur,
 .statcard-tertiary-tottenhamhotspur {
     background-color: #FBFBFB;
-    border: 2px solid #000060;
+    border: 2px solid #fbfbfb;
 }
 
 .statcard-tottenhamhotspur {
@@ -901,6 +905,10 @@ button {
 .statcard-secondary-tottenhamhotspur,
 .statcard-tertiary-tottenhamhotspur {
     border-left: none;
+}
+
+.statcard-tertiary-tottenhamhotspur {
+    border-width: 5px;
 }
 
 .statcard-desc.statcard-desc-tottenhamhotspur {
@@ -952,6 +960,10 @@ button {
 .statcard-tertiary-westbromwichalbion,
 .btn-strike-rate-westbromwichalbion {
     background-color: #fff;
+}
+
+.statcard-tertiary-westbromwichalbion {
+    border-width: 5px;
 }
 
 .btn-strike-rate-westbromwichalbion:hover,
@@ -1022,6 +1034,10 @@ button {
     background-color: #000;
 }
 
+.statcard-tertiary-wolverhamptonwanderers {
+    border-width: 5px;
+}
+
 .btn-strike-rate-wolverhamptonwanderers {
     border-color: #000;
 }
@@ -1046,6 +1062,7 @@ button {
 
 .input-with-icon>.form-control {
     padding-left: 44px;
+    padding-right: 22px;
 }
 
 

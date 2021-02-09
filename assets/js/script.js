@@ -77,7 +77,7 @@ const showScorers = matches => {
         </h2>
         <span class="statcard-desc pt-1 statcard-desc-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()}">${match.club}</span></div>
         <div class="statcard col-3 d-flex statcard-primary statcard-secondary-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} pr-2 py-2 mb-1">
-        <a href="#" class="btn-strike-rate btn-strike-rate-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} mb-1 btn btn-outline-primary px-1"><span class="icon icon-bar-graph"></span></a>
+        <a href="#ß" class="btn-strike-rate btn-strike-rate-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} mb-1 btn btn-outline-primary px-1"><span class="icon icon-bar-graph"></span></a>
       </div></div>
     </div>`).join('');
         logoContainer.classList.add('no-top-margin');
@@ -115,120 +115,73 @@ $(document).ready(function() {
     })
 });
 
-function userInformationHTML(user) {
-    return `<h5>${user.name} <span class='small-name'>(@<a href='${user.html_url}' target='_blank'>${user.login}</a>)</span></h5>
-    <div class='gh-content'>
-        <div class='gh-avatar'>
-            <a href='${user.html_url}' target='_blank'>
-                <img src='${user.avatar_url}' id='avatar-img' alt=${user.login}>
-            </a>
-        </div>
-        <p>Followers: ${user.followers} | Following: ${user.following} <br> Projects: ${user.public_repos}</p>
-    </div>`;
-}
+$(document).ready(function() {
+    setTimeout(function() {
+        $('#player-search').focus();
+    }, 2000);
+    $(document).on('click', '.btn-strike-rate', function() {
+        const apiKey = "750dd332b2msh2ea2cd6530f8ce8p182023jsn0aa726d7814f";
+        const host = "transfermarket.p.rapidapi.com"
+        let scorerName = $(this).parent().prev().children('h2').text().trim().split(' ').join('%20');
 
-function repoInformationHTML(repos) {
-    if (repos.length === 0) {
-        return `<div class='repo-list'>No projects found!</div>`;
-    }
+        function scorerSummary(profile, value) {
+            return `<div class='col-12'><img class="d-block mx-auto mt-3" src="${profile.playerImage}" height="auto" width="100"><div class='text-center'>${profile.playerName} Age: ${profile.age} | No.${profile.playerShirtNumber}</div><div class='text-center'>${value.marketValueCurrency} ${value.marketValue}0,000 | ${value.date}</div>`
+        }
 
-    var listItemsHTML = repos.map(function(repo) {
-        return `<li><a href='${repo.html_url}' target='_blank'>${repo.name}</a></li>`
-    });
-
-    return `<div class='repo-list'>
-                <p class='repo-heading'><strong>Project list:</strong></p>
-                <ul>
-                    ${listItemsHTML.join(' ')}
-                </ul>
-            </div>`;
-}
-
-function fetchGitHubInfo(event) {
-    var username = $('#gh-username').val();
-    if (!username) {
-        $('#gh-user-data').html(`<h5>Please enter a GitHub username!</h5>`).addClass('gh-alert');
-        $('#gh-repo-data').html('');
-        return;
-    }
-    $('#gh-user-data').html(`<div><img src='assets/img/1_CsJ05WEGfunYMLGfsT2sXA.gif' alt='loading...'></div>`);
-
-    $.when(
-        $.getJSON(`https://api.github.com/users/${username}`),
-        $.getJSON(`https://api.github.com/users/${username}/repos`)
-    ).then(
-        function(firstResponse, secondResponse) {
-            var userData = firstResponse[0];
-            var repoData = secondResponse[0];
-            $('#gh-user-data').removeClass('gh-alert').html(userInformationHTML(userData));
-            $('#gh-repo-data').html(repoInformationHTML(repoData));
-        },
-        function(errorResponse) {
-            if (errorResponse.status === 404) {
-                $('#gh-user-data').html(`<h5>No info found for user ${username}!</h5>`);
-            } else if (errorResponse.status === 403) {
-                var resetTime = new Date(errorResponse.getResponseHeader('X-RateLimit-Reset') * 1000);
-                $('#gh-user-data').addClass('gh-alert').html(`<h5>Too many API requests! <br>Please wait until ${resetTime.toLocaleTimeString()} before trying again.</h5>`);
-            } else {
-                $('#gh-user-data').html(`<h5>Error: ${errorResponse.responseJSON.message}!</h5>`);
+        var getScorerInfo = function() {
+            class scorerSettings {
+                constructor() {
+                    this.async = true;
+                    this.crossDomain = true;
+                    this.url = "https://transfermarket.p.rapidapi.com/";
+                    this.method = "GET";
+                    this.headers = {
+                        "x-rapidapi-key": "750dd332b2msh2ea2cd6530f8ce8p182023jsn0aa726d7814f",
+                        "x-rapidapi-host": "transfermarket.p.rapidapi.com"
+                    };
+                }
             }
-        }
-    );
-}
+            const getScorerID = new scorerSettings();
+            getScorerID.url += `search?query=${scorerName}`;
+            // console.log(getScorerID.url);
+            $.ajax(getScorerID).done(function(response) {
+                var scorerID = response.players[0].id;
 
-function getScorerValue(event) {
-    const settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://transfermarket.p.rapidapi.com/players/get-profile?id=411295",
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-key": "750dd332b2msh2ea2cd6530f8ce8p182023jsn0aa726d7814f",
-            "x-rapidapi-host": "transfermarket.p.rapidapi.com"
-        }
-    };
+                const getScorerValue = new scorerSettings();
+                getScorerValue.url = `https://transfermarket.p.rapidapi.com/players/get-market-value?id=${scorerID}`;
+                // console.log(getScorerValue.url);
 
-    $.ajax(settings).done(function(response) {
-        console.log(response.playerProfile);
-        console.log(response.playerProfile.playerImage);
-        console.log(response.playerProfile.playerName);
-        console.log(response.playerProfile.playerID);
-        console.log(response.playerProfile.marketValueCurrency);
-        console.log(response.playerProfile.marketValue);
-        console.log(response.playerProfile.marketValueLastChange);
+                const getScorerProfile = new scorerSettings();
+                getScorerProfile.url = `https://transfermarket.p.rapidapi.com/players/get-profile?id=${scorerID}`;
+                // console.log(getScorerProfile.url);
+                $.when(
+                    $.ajax(getScorerValue),
+                    $.ajax(getScorerProfile)
+                ).then(
+                    function(responseValue, responseProfile) {
+                        var currentMarketValue = responseValue[0].marketValueDevelopment[0];
+                        // console.log(`${currentMarketValue.marketValueCurrency} ${currentMarketValue.marketValue}0,000 | ${currentMarketValue.date}`);
+                        // console.log(responseValue);
+                        // console.log(getScorerProfile.url);
 
-        $('#player-match-list').html(`<div class='col text-center'>
-    <img src='${response.playerProfile.playerImage}' class='scorer-image' alt='Raphinha'></div>`);
+                        var scorerProfile = responseProfile[0].playerProfile;
+                        // console.log(`${scorerProfile.playerName} Age: ${scorerProfile.age} | No.${scorerProfile.playerShirtNumber}`);
+                        // console.log(responseProfile);
+                        // $(playerMatchList).html(`<div class='col-12'><img class="d-block mx-auto mt-3" src="${scorerProfile.playerImage}" height="auto" width="100"><div class='text-center'>${scorerProfile.playerName} Age: ${scorerProfile.age} | No.${scorerProfile.playerShirtNumber}</div><div class='text-center'>${currentMarketValue.marketValueCurrency} ${currentMarketValue.marketValue}0,000 | ${currentMarketValue.date}</div>`);
+                        $(playerMatchList).html(scorerSummary(scorerProfile, currentMarketValue));
+                    },
+                    function(errorResponse) {
+                        if (errorResponse.status === 404) {
 
+                        } else if (errorResponse.status === 403) {
+
+                        } else {
+
+                        }
+                    }
+                );
+            });
+        };
+        getScorerInfo();
     });
-}
-
-//     $.when(
-//         $.getJSON(settings.url)
-//         // $.getJSON(`https://api.github.com/users/${username}/repos`)
-//     ).then(
-//         function(response) {
-//             var scorerData = response[0];
-//             // var repoData = secondResponse[0];
-//             // $('#gh-user-data').removeClass('gh-alert').html(userInformationHTML(userData));
-//             // $('#gh-repo-data').html(repoInformationHTML(repoData));
-//             console.log(scorerData)
-//         },
-//         function(errorResponse) {
-//             // if (errorResponse.status === 404) {
-//             //     $('#gh-user-data').html(`<h5>No info found for user ${username}!</h5>`);
-//             // } else if (errorResponse.status === 403) {
-//             //     var resetTime = new Date(errorResponse.getResponseHeader('X-RateLimit-Reset') * 1000);
-//             //     $('#gh-user-data').addClass('gh-alert').html(`<h5>Too many API requests! <br>Please wait until ${resetTime.toLocaleTimeString()} before trying again.</h5>`);
-//             // } else {
-//             //     $('#gh-user-data').html(`<h5>Error: ${errorResponse.responseJSON.message}!</h5>`);
-//             // }
-//             console.log(errorResponse.responseJSON.message);
-//         }
-//     );
-// }
-
-// $(document).ready(getScorerValue);
-$(document).ready(setTimeout(function() {
-    $('#player-search').focus();
-}, 3000));
+});
