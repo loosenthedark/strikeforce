@@ -1186,20 +1186,20 @@ path {
 /* Scorer dashboard UI */
 
 .icon-user {
-    font-size: 70px;
+    font-size: 80px;
 }
 
-.statcard-img,
-.statcard-body {
-    border: 1px solid #fff;
+.statcard-img {
+    border: 1px solid #434857;
 }
 
 .iconav-nav>.nav-item>.nav-link.active {
     color: #252830;
 }
 
-.iconav-nav>.nav-item>.nav-link {
-    border: 1px solid #fff;
+.iconav-nav>.nav-item>.nav-link,
+.statcard-body {
+    border: 1px solid #fdfdfd;
 }
 
 .statcard-body {
