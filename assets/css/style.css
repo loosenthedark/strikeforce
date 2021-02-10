@@ -26,6 +26,10 @@ header {
     margin-top: -20px;
 }
 
+.negative-top-margin {
+    margin-top: -30px;
+}
+
 footer {
     flex-shrink: 0;
     position: relative;
@@ -44,6 +48,19 @@ h1 {
 
 h2 {
     font-size: 24px;
+}
+
+h3,
+h4 {
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 36px;
 }
 
 button {
@@ -1092,20 +1109,20 @@ button {
 /* Code template snippet found here: https://codepen.io/eyalcohen4/pen/mprbzP */
 
 .main-loader {
-    height: 50vh;
+    height: 35vh;
     background-color: transparent;
 }
 
 .main-fader {
     width: 100%;
-    height: 50vh;
+    height: 35vh;
     position: absolute;
     background-color: transparent;
 }
 
 .loader {
-    position: fixed;
-    top: 65.5%;
+    position: relative;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -1163,6 +1180,47 @@ path {
     100% {
         opacity: .1;
     }
+}
+
+
+/* Scorer dashboard UI */
+
+.icon-user {
+    font-size: 70px;
+}
+
+.statcard-img,
+.statcard-body {
+    border: 1px solid #fff;
+}
+
+.iconav-nav>.nav-item>.nav-link.active {
+    color: #252830;
+}
+
+.iconav-nav>.nav-item>.nav-link {
+    border: 1px solid #fff;
+}
+
+.statcard-body {
+    background-color: #434857;
+}
+
+#player-match-list {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.iconav-icon {
+    font-size: 30px;
+}
+
+.iconav-nav-label {
+    font-size: 14px;
+}
+
+#statcard-value-stat {
+    margin-left: -30px;
 }
 
 

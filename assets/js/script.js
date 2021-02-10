@@ -77,7 +77,7 @@ const showScorers = matches => {
         </h2>
         <span class="statcard-desc pt-1 statcard-desc-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()}">${match.club}</span></div>
         <div class="statcard col-3 d-flex statcard-primary statcard-secondary-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} pr-2 py-2 mb-1">
-        <a href="#ß" class="btn-strike-rate btn-strike-rate-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} mb-1 btn btn-outline-primary px-1"><span class="icon icon-bar-graph"></span></a>
+        <a href="#" class="btn-strike-rate btn-strike-rate-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} mb-1 btn btn-outline-primary px-1"><span class="icon icon-bar-graph"></span></a>
       </div></div>
     </div>`).join('');
         logoContainer.classList.add('no-top-margin');
@@ -158,9 +158,11 @@ $(document).ready(function() {
                 const getScorerProfile = new scorerSettings();
                 getScorerProfile.url = `https://transfermarket.p.rapidapi.com/players/get-profile?id=${scorerID}`;
 
+                $('#pills-tab').addClass('d-none');
+
                 $(playerMatchList).html(renderSpinner());
 
-                console.log(getScorerProfile.url);
+                // console.log(getScorerProfile.url);
                 $.when(
                     $.ajax(getScorerValue),
                     $.ajax(getScorerProfile)
@@ -174,6 +176,10 @@ $(document).ready(function() {
                         var scorerProfile = responseProfile[0].playerProfile;
                         // console.log(`${scorerProfile.playerName} Age: ${scorerProfile.age} | No.${scorerProfile.playerShirtNumber}`);
                         // console.log(responseProfile);
+
+                        $('#pills-tab').removeClass('d-none');
+                        $('#pills-tabContent').addClass('negative-top-margin');
+
 
                         $(playerMatchList).html(scorerSummary(scorerProfile, currentMarketValue));
                     },

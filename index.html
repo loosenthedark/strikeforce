@@ -75,12 +75,12 @@
                 </div>
                 <div class="col-md-9 content">
 
-                    <div class="container mt-5 d-flex container-logo">
+                    <div class="container d-flex container-logo no-top-margin">
                         <span class="icon icon-flash"></span>
                         <h1 class="mb-3">trikeForce</h1>
                     </div>
 
-                    <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-content negative-top-margin" id="pills-tabContent">
                         <div class="tab-pane fade show active container px-3 mb-3" id="pills-players" role="tabpanel" aria-labelledby="pills-players-tab">
                             <form action="">
                                 <div class="row">
@@ -89,7 +89,70 @@
                                             <input type="text" id="player-search" placeholder="Enter player or club name..." autocomplete="off" class="form-control form-control-lg mb-2">
                                             <span class="icon icon-trophy"></span>
                                         </div>
-                                        <div class='row' id="player-match-list"></div>
+                                        <div class='row mt-4' id="player-match-list">
+                                            <div class="col-12 statcard-img border-bottom-0 px-0"><img class="d-block mx-auto mt-4 mb-3" src="https://img.a.transfermarkt.technology/portrait/medium/183334-1612870768.jpg?lm=1" height="auto" width="180">
+                                                <div class="col-12 mb-4 px-0 border-top-0 statcard-img-name text-center">
+                                                    <h3>Patrick Bamford</h3>
+                                                </div>
+                                            </div>
+                                            <nav class="iconav mt-0 px-0 mb-0 col-12">
+                                                <div class="iconav-slider row">
+                                                    <div class="col-12">
+                                                        <ul class="row nav nav-pills iconav-nav flex-md-column mx-0">
+                                                            <li class="nav-item px-0 col-4">
+                                                                <a class="nav-link active" href="#" title="Docs" data-toggle="tooltip" data-placement="right" data-container="body">
+                                                                    <span class="icon iconav-icon icon-list"></span>
+                                                                    <small class="iconav-nav-label hidden-md-up">Summary</small>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item px-0 col-4 ml-0">
+                                                                <a class="nav-link" href="#" title="Light UI" data-toggle="tooltip" data-placement="right" data-container="body">
+                                                                    <span class="icon iconav-icon icon-circular-graph"></span>
+                                                                    <small class="iconav-nav-label hidden-md-up">StrikeRate</small>
+                                                                </a>
+                                                            </li>
+                                                            <li class="nav-item px-0 col-4 ml-0">
+                                                                <a class="nav-link" href="#" title="Signed in as mdo" data-toggle="tooltip" data-placement="right" data-container="body">
+                                                                    <span class="icon iconav-icon icon-line-graph"></span>
+                                                                    <small class="iconav-nav-label hidden-md-up">StrikeValue</small>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </nav>
+                                            <div class="col-12 px-0 statcard-body-wrapper">
+                                                <div class="row statcard-body-row mx-0">
+                                                    <div class="col-12 border-top-0 statcard-body">
+                                                        <div class="row statcard-row statcard p-3">
+                                                            <div class="col-4 statcard-col text-center">
+                                                                <h4 class="statcard-stat statcard-number">27</h4>
+                                                                <span class="statcard-desc">Age</span></div>
+                                                            <div class="col-4 statcard-col"></div>
+                                                            <div class="col-4 statcard-col text-center">
+                                                                <h4 class="statcard-stat statcard-number">9</h4>
+                                                                <span class="statcard-desc">Number</span></div>
+                                                        </div>
+                                                        <div class="row statcard-row statcard px-3">
+                                                            <div class="col-4 statcard-col text-center">
+                                                            </div>
+                                                            <div class="col-4 statcard-col text-center"><span class="icon icon-user"></span></div>
+                                                            <div class="col-4 statcard-col text-center">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row statcard-row statcard p-3">
+                                                            <div class="col-4 statcard-col text-center">
+                                                                <h4 class="statcard-stat statcard-number">11</h4>
+                                                                <span class="statcard-desc">Goals</span></div>
+                                                            <div class="col-4 statcard-col"></div>
+                                                            <div class="col-4 statcard-col text-center">
+                                                                <h4 class="statcard-stat statcard-number" id="statcard-value-stat">€15m</h4>
+                                                                <span class="statcard-desc">Value</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
