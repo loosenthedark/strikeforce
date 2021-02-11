@@ -103,9 +103,9 @@ const showClubs = matches => {
           </h2>
           <span class="statcard-desc pt-1 statcard-desc-${match.clubname.replace(/\s/g, '').replace('&', 'and').toLowerCase()}">#${match.acronym}</span></div>
           <div class="statcard col-2 d-flex statcard-crest statcard-crest-${match.clubname.replace(/\s/g, '').replace('&', 'and').toLowerCase()} pl-1 pr-2 py-2 mb-1">
-          <img class="mx-auto club-crest" src="${match.crestUrl}" height="48px" width="100%">
-        </div><div class="statcard col-2 d-flex pl-2 pr-1 py-2 mb-1 statcard-line-chart statcard-line-chart-${match.clubname.replace(/\s/g, '').replace('&', 'and').toLowerCase()}">
-        <a href="#" class="d-flex btn-strike-rate-club btn-strike-rate-club-${match.clubname.replace(/\s/g, '').replace('&', 'and').toLowerCase()}" title="Load club dashboards"><i class="d-flex flex-grow-1 fas fa-chart-line"></i></a>
+          <img class="club-crest" src="${match.crestUrl}" height="48px" width="100%">
+        </div><div class="statcard col-2 d-flex px-2 mb-1 statcard-line-chart statcard-line-chart-${match.clubname.replace(/\s/g, '').replace('&', 'and').toLowerCase()}">
+        <a href="#" class="d-flex btn-strike-rate-club btn-strike-rate-club-${match.clubname.replace(/\s/g, '').replace('&', 'and').toLowerCase()}" title="Load club dashboards"><i class="d-flex fas fa-chart-line"></i></a>
       </div></div>
       </div>`).join('');
         logoContainer.classList.add('no-top-margin');
