@@ -55,7 +55,7 @@ const searchClubs = async clubSearchText => {
     if (clubSearchText.length > 0) { showClubs(matches); } else if (clubSearchText.length === 0) {
         matches = [];
         clubMatchList.innerHTML = '';
-        logoContainer.classList.remove('no-top-margin-n3');
+        logoContainer.classList.remove('no-top-margin');
         logoContainer.classList.add('mt-5');
     };
     pillsPlayersTab.addEventListener('click', () => {
@@ -77,7 +77,7 @@ const showScorers = matches => {
         </h2>
         <span class="statcard-desc pt-1 statcard-desc-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()}">${match.club}</span></div>
         <div class="statcard col-3 d-flex statcard-primary statcard-secondary-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} pr-2 py-2 mb-1">
-        <a href="#" class="btn-strike-rate btn-strike-rate-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} mb-1 btn btn-outline-primary px-1"><span class="icon icon-bar-graph"></span></a>
+        <a href="#" class="btn-strike-rate btn-strike-rate-${match.club.replace(/\s/g, '').replace('&', 'and').toLowerCase()} mb-1 btn btn-outline-primary px-1" title="Load scorer dashboards"><span class="icon icon-bar-graph"></span></a>
       </div></div>
     </div>`).join('');
         logoContainer.classList.add('no-top-margin');
@@ -121,11 +121,13 @@ $(document).ready(function() {
     }, 2000);
     $(document).on('click', '.btn-strike-rate', function() {
         const apiKey = "750dd332b2msh2ea2cd6530f8ce8p182023jsn0aa726d7814f";
-        const host = "transfermarket.p.rapidapi.com"
+        const host = "transfermarket.p.rapidapi.com";
+        let scorerHTMLName = $(this).parent().prev().children('h2').text().trim();
+        // console.log(scorerHTMLName);
         let scorerName = $(this).parent().prev().children('h2').text().trim().split(' ').join('%20');
 
-        function scorerSummary(profile, value) {
-            return `<div class='col-12'><img class="d-block mx-auto mt-3" src="${profile.playerImage}" height="auto" width="100"><div class='text-center'>${profile.playerName} Age: ${profile.age} | No.${profile.playerShirtNumber}</div><div class='text-center'>${value.marketValueCurrency} ${value.marketValue}0,000 | ${value.date}</div>`
+        function scorerSummary(profile, value, goals) {
+            return `<div class="col-12 statcard-img border-bottom-0 px-0"><img class="d-block mx-auto mt-4 mb-3" src="${profile.playerImage}" alt="${profile.playerName}" height="auto" width="180"><div class="col-12 mb-4 px-0 border-top-0 statcard-img-name text-center"><h3>${profile.playerName}</h3></div></div><nav class="iconav mt-0 px-0 mb-0 col-12"><div class="iconav-slider row"><div class="col-12"><ul class="row nav nav-pills iconav-nav flex-md-column mx-0"><li class="nav-item px-0 col-4"><a class="nav-link active" href="#" title="Load Summary dashboard" data-toggle="tooltip" data-placement="right" data-container="body"><span class="icon iconav-icon icon-list"></span><small class="iconav-nav-label hidden-md-up">Summary</small></a></li><li class="nav-item px-0 col-4 ml-0"><a class="nav-link" href="#" title="Load StrikeRate dashboard" data-toggle="tooltip" data-placement="right" data-container="body"><span class="icon iconav-icon icon-circular-graph"></span><small class="iconav-nav-label hidden-md-up">StrikeRate</small></a></li><li class="nav-item px-0 col-4 ml-0"><a class="nav-link" href="#" title="Load StrikeValue dashboard" data-toggle="tooltip" data-placement="right" data-container="body"><span class="icon iconav-icon icon-line-graph"></span><small class="iconav-nav-label hidden-md-up">StrikeValue</small></a></li></ul></div></div></nav><div class="col-12 px-0 statcard-body-wrapper"><div class="row statcard-body-row mx-0"><div class="col-12 border-top-0 statcard-body"><div class="row statcard-row statcard p-3"><div class="col-4 statcard-col text-center"><h4 class="statcard-stat statcard-number">${profile.age}</h4><span class="statcard-desc">Age</span></div><div class="col-4 statcard-col"></div><div class="col-4 statcard-col text-center"><h4 class="statcard-stat statcard-number">${profile.playerShirtNumber}</h4><span class="statcard-desc">Number</span></div></div><div class="row statcard-row statcard px-3"><div class="col-4 statcard-col text-center"></div><div class="col-4 px-0 statcard-col text-center"><span class="icon icon-user"></span></div><div class="col-4 statcard-col text-center"></div></div><div class="row statcard-row statcard p-3"><div class="col-4 statcard-col text-center"><h4 class="statcard-stat statcard-number">${goals}</h4><span class="statcard-desc">Goals</span></div><div class="col-4 statcard-col"></div><div class="col-4 statcard-col text-center"><h4 class="statcard-stat statcard-number" id="statcard-value-stat">${value.marketValueCurrency}${value.marketValue.replace(',', '&centerdot;').slice(0, -1)}m</h4><span class="statcard-desc">Value</span></div></div></div></div></div>`
         }
 
         function renderSpinner() {
@@ -163,36 +165,53 @@ $(document).ready(function() {
                 $(playerMatchList).html(renderSpinner());
 
                 // console.log(getScorerProfile.url);
-                // $.when(
-                //     $.ajax(getScorerValue),
-                //     $.ajax(getScorerProfile)
-                // ).then(
-                //     function(responseValue, responseProfile) {
-                //         var currentMarketValue = responseValue[0].marketValueDevelopment[0];
-                //         // console.log(`${currentMarketValue.marketValueCurrency} ${currentMarketValue.marketValue}0,000 | ${currentMarketValue.date}`);
-                //         // console.log(responseValue);
-                //         // console.log(getScorerProfile.url);
+                $.when(
+                    $.ajax(getScorerValue),
+                    $.ajax(getScorerProfile),
+                    $.ajax('assets/data/playerdata.json')
+                ).then(
+                    function(responseValue, responseProfile, responseGoals) {
+                        var currentMarketValue = responseValue[0].marketValueDevelopment[0];
+                        // console.log(`${currentMarketValue.marketValueCurrency} ${currentMarketValue.marketValue}0,000 | ${currentMarketValue.date}`);
+                        // console.log(responseValue);
+                        // console.log(getScorerProfile.url);
 
-                //         var scorerProfile = responseProfile[0].playerProfile;
-                //         // console.log(`${scorerProfile.playerName} Age: ${scorerProfile.age} | No.${scorerProfile.playerShirtNumber}`);
-                //         // console.log(responseProfile);
+                        var scorerProfile = responseProfile[0].playerProfile;
+                        // console.log(`${scorerProfile.playerName} Age: ${scorerProfile.age} | No.${scorerProfile.playerShirtNumber}`);
+                        // console.log(responseProfile);
 
-                //         $('#pills-tab').removeClass('d-none');
-                //         $('#pills-tabContent').addClass('negative-top-margin');
+                        console.log(scorerHTMLName)
+                        for (let i = 0; i < responseGoals[0].length; i++) {
+                            // if (scorerHTMLName === ) {
+
+                            // }
+
+                            if (`${scorerHTMLName}` === `${responseGoals[0][i].fname} ${responseGoals[0][i].lname}`) {
+                                var goals = responseGoals[0][i].goals;
+                            };
+                            if (`${scorerHTMLName}` === "Jorginho" || "Raphinha") {
+                                var goals = "3";
+                            };
+                        };
 
 
-                //         $(playerMatchList).html(scorerSummary(scorerProfile, currentMarketValue));
-                //     },
-                //     function(errorResponse) {
-                //         if (errorResponse.status === 404) {
 
-                //         } else if (errorResponse.status === 403) {
+                        $('#pills-tab').removeClass('d-none');
+                        $('#pills-tabContent').addClass('negative-top-margin');
 
-                //         } else {
 
-                //         }
-                //     }
-                // );
+                        $(playerMatchList).html(scorerSummary(scorerProfile, currentMarketValue, goals));
+                    },
+                    function(errorResponse) {
+                        if (errorResponse.status === 404) {
+
+                        } else if (errorResponse.status === 403) {
+
+                        } else {
+
+                        }
+                    }
+                );
             });
         };
         getScorerInfo();
