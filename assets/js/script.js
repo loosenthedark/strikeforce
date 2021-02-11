@@ -1,10 +1,12 @@
 const logoContainer = document.querySelector('.container-logo');
+const mainContent = document.getElementById('content-main');
 const playerSearch = document.getElementById('player-search');
 const playerMatchList = document.getElementById('player-match-list');
 const clubSearch = document.getElementById('club-search');
 const clubMatchList = document.getElementById('club-match-list');
 const pillsPlayersTab = document.getElementById('pills-players-tab');
 const pillsClubsTab = document.getElementById('pills-clubs-tab');
+const pillsTabContent = document.getElementById('pills-tab-content');
 const animateNavToggler = document.getElementById('nav-toggler');
 const navTogglerIcons = document.querySelectorAll('.nav-toggler-icon');
 
@@ -29,6 +31,8 @@ const searchScorers = async playerSearchText => {
         playerMatchList.innerHTML = '';
         logoContainer.classList.remove('no-top-margin');
         logoContainer.classList.add('mt-5');
+        mainContent.classList.add('mt-4');
+        pillsTabContent.classList.remove('negative-top-margin');
     };
 
     pillsClubsTab.addEventListener('click', () => {
@@ -57,6 +61,8 @@ const searchClubs = async clubSearchText => {
         clubMatchList.innerHTML = '';
         logoContainer.classList.remove('no-top-margin');
         logoContainer.classList.add('mt-5');
+        mainContent.classList.add('mt-4');
+        pillsTabContent.classList.remove('negative-top-margin');
     };
     pillsPlayersTab.addEventListener('click', () => {
         matches = [];
@@ -82,6 +88,7 @@ const showScorers = matches => {
     </div>`).join('');
         logoContainer.classList.add('no-top-margin');
         logoContainer.classList.remove('mt-5');
+        mainContent.classList.remove('mt-4');
         playerMatchList.innerHTML = scorerList;
     };
 };
@@ -100,6 +107,7 @@ const showClubs = matches => {
       </div>`).join('');
         logoContainer.classList.add('no-top-margin');
         logoContainer.classList.remove('mt-5');
+        mainContent.classList.remove('mt-4');
         clubMatchList.innerHTML = clubList;
     };
 };
@@ -197,7 +205,8 @@ $(document).ready(function() {
 
 
                         $('#pills-tab').removeClass('d-none');
-                        $('#pills-tabContent').addClass('negative-top-margin');
+                        $('#pills-tab-content').addClass('negative-top-margin');
+                        $('#content-main').removeClass('mt-4');
 
 
                         $(playerMatchList).html(scorerSummary(scorerProfile, currentMarketValue, goals));
