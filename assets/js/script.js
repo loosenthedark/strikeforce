@@ -188,18 +188,13 @@ $(document).ready(function() {
                         // console.log(`${scorerProfile.playerName} Age: ${scorerProfile.age} | No.${scorerProfile.playerShirtNumber}`);
                         // console.log(responseProfile);
 
-                        console.log(scorerHTMLName)
+                        // console.log(scorerHTMLName);
                         for (let i = 0; i < responseGoals[0].length; i++) {
                             // if (scorerHTMLName === ) {
 
                             // }
 
-                            if (`${scorerHTMLName}` === `${responseGoals[0][i].fname} ${responseGoals[0][i].lname}`) {
-                                var goals = responseGoals[0][i].goals;
-                            };
-                            if (`${scorerHTMLName}` === "Jorginho" || "Raphinha") {
-                                var goals = "3";
-                            };
+                            if (`${scorerHTMLName}` === `${responseGoals[0][i].fullname}`) { var goals = responseGoals[0][i].goals; };
                         };
 
 

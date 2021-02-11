@@ -1,6 +1,7 @@
 [{
         "fname": "Mohamed",
         "lname": "Salah",
+        "fullname": "Mohamed Salah",
         "club": "Liverpool",
         "clubAcronym": "LFC",
         "age": "28",
@@ -20,6 +21,7 @@
     {
         "fname": "Dominic",
         "lname": "Calvert-Lewin",
+        "fullname": "Dominic Calvert-Lewin",
         "club": "Everton",
         "clubAcronym": "EFC",
         "age": "23",
@@ -39,6 +41,7 @@
     {
         "fname": "Heung-Min",
         "lname": "Son",
+        "fullname": "Heung-Min Son",
         "club": "Tottenham Hotspur",
         "clubAcronym": "THFC",
         "age": "28",
@@ -58,6 +61,7 @@
     {
         "fname": "Harry",
         "lname": "Kane",
+        "fullname": "Harry Kane",
         "club": "Tottenham Hotspur",
         "clubAcronym": "THFC",
         "age": "27",
@@ -77,6 +81,7 @@
     {
         "fname": "Patrick",
         "lname": "Bamford",
+        "fullname": "Patrick Bamford",
         "club": "Leeds United",
         "clubAcronym": "LUFC",
         "age": "27",
@@ -96,6 +101,7 @@
     {
         "fname": "Bruno",
         "lname": "Fernandes",
+        "fullname": "Bruno Fernandes",
         "club": "Manchester United",
         "clubAcronym": "MUFC",
         "age": "26",
@@ -115,6 +121,7 @@
     {
         "fname": "Jamie",
         "lname": "Vardy",
+        "fullname": "Jamie Vardy",
         "club": "Leicester City",
         "clubAcronym": "LCFC",
         "age": "34",
@@ -134,6 +141,7 @@
     {
         "fname": "Wilfried",
         "lname": "Zaha",
+        "fullname": "Wilfried Zaha",
         "club": "Crystal Palace",
         "clubAcronym": "CPFC",
         "age": "28",
@@ -153,6 +161,7 @@
     {
         "fname": "Ollie",
         "lname": "Watkins",
+        "fullname": "Ollie Watkins",
         "club": "Aston Villa",
         "clubAcronym": "AVFC",
         "age": "25",
@@ -172,6 +181,7 @@
     {
         "fname": "Alexandre",
         "lname": "Lacazette",
+        "fullname": "Alexandre Lacazette",
         "club": "Arsenal",
         "clubAcronym": "AFC",
         "age": "29",
@@ -191,6 +201,7 @@
     {
         "fname": "Callum",
         "lname": "Wilson",
+        "fullname": "Callum Wilson",
         "club": "Newcastle United",
         "clubAcronym": "NUFC",
         "age": "28",
@@ -210,6 +221,7 @@
     {
         "fname": "İlkay",
         "lname": "Gündoğan",
+        "fullname": "İlkay Gündoğan",
         "club": "Manchester City",
         "clubAcronym": "MCFC",
         "age": "30",
@@ -229,6 +241,7 @@
     {
         "fname": "Danny",
         "lname": "Ings",
+        "fullname": "Danny Ings",
         "club": "Southampton",
         "clubAcronym": "SFC",
         "age": "28",
@@ -248,6 +261,7 @@
     {
         "fname": "Sadio",
         "lname": "Mané",
+        "fullname": "Sadio Mané",
         "club": "Liverpool",
         "clubAcronym": "LFC",
         "age": "28",
@@ -267,6 +281,7 @@
     {
         "fname": "Marcus",
         "lname": "Rashford",
+        "fullname": "Marcus Rashford",
         "club": "Manchester United",
         "clubAcronym": "MUFC",
         "age": "23",
@@ -286,6 +301,7 @@
     {
         "fname": "Tomáš",
         "lname": "Souček",
+        "fullname": "Tomáš Souček",
         "club": "West Ham United",
         "clubAcronym": "WHUFC",
         "age": "25",
@@ -305,6 +321,7 @@
     {
         "fname": "Neal",
         "lname": "Maupay",
+        "fullname": "Neal Maupay",
         "club": "Brighton & Hove Albion",
         "clubAcronym": "BHAFC",
         "age": "24",
@@ -324,6 +341,7 @@
     {
         "fname": "Tammy",
         "lname": "Abraham",
+        "fullname": "Tammy Abraham",
         "club": "Chelsea",
         "clubAcronym": "CFC",
         "age": "23",
@@ -343,6 +361,7 @@
     {
         "fname": "James",
         "lname": "Maddison",
+        "fullname": "James Maddison",
         "club": "Leicester City",
         "clubAcronym": "LCFC",
         "age": "24",
@@ -362,6 +381,7 @@
     {
         "fname": "Raheem",
         "lname": "Sterling",
+        "fullname": "Raheem Sterling",
         "club": "Manchester City",
         "clubAcronym": "MCFC",
         "age": "26",
@@ -381,6 +401,7 @@
     {
         "fname": "Roberto",
         "lname": "Firmino",
+        "fullname": "Roberto Firmino",
         "club": "Liverpool",
         "clubAcronym": "LFC",
         "age": "29",
@@ -400,6 +421,7 @@
     {
         "fname": "Harvey",
         "lname": "Barnes",
+        "fullname": "Harvey Barnes",
         "club": "Leicester City",
         "clubAcronym": "LCFC",
         "age": "23",
@@ -419,6 +441,7 @@
     {
         "fname": "Jack",
         "lname": "Grealish",
+        "fullname": "Jack Grealish",
         "club": "Aston Villa",
         "clubAcronym": "AVFC",
         "age": "25",
@@ -438,6 +461,7 @@
     {
         "fname": "Diogo",
         "lname": "Jota",
+        "fullname": "Diogo Jota",
         "club": "Liverpool",
         "clubAcronym": "LFC",
         "age": "24",
@@ -457,6 +481,7 @@
     {
         "fname": "Michail",
         "lname": "Antonio",
+        "fullname": "Michail Antonio",
         "club": "West Ham United",
         "clubAcronym": "WHUFC",
         "age": "30",
@@ -476,6 +501,7 @@
     {
         "fname": "Anwar",
         "lname": "El Ghazi",
+        "fullname": "Anwar El Ghazi",
         "club": "Aston Villa",
         "clubAcronym": "AVFC",
         "age": "25",
@@ -495,6 +521,7 @@
     {
         "fname": "Riyad",
         "lname": "Mahrez",
+        "fullname": "Riyad Mahrez",
         "club": "Manchester City",
         "clubAcronym": "MCFC",
         "age": "29",
@@ -514,6 +541,7 @@
     {
         "fname": "David",
         "lname": "McGoldrick",
+        "fullname": "David McGoldrick",
         "club": "Sheffield United",
         "clubAcronym": "SUFC",
         "age": "33",
@@ -533,6 +561,7 @@
     {
         "fname": "Bobby",
         "lname": "Decordova-Reid",
+        "fullname": "Bobby Decordova-Reid",
         "club": "Fulham",
         "clubAcronym": "FFC",
         "age": "28",
@@ -552,6 +581,7 @@
     {
         "fname": "Bukayo",
         "lname": "Saka",
+        "fullname": "Bukayo Saka",
         "club": "Arsenal",
         "clubAcronym": "AFC",
         "age": "19",
@@ -571,6 +601,7 @@
     {
         "fname": "Jack",
         "lname": "Harrison",
+        "fullname": "Jack Harrison",
         "club": "Leeds United",
         "clubAcronym": "LUFC",
         "age": "24",
@@ -590,6 +621,7 @@
     {
         "fname": "Jarrod",
         "lname": "Bowen",
+        "fullname": "Jarrod Bowen",
         "club": "West Ham United",
         "clubAcronym": "WHUFC",
         "age": "24",
@@ -609,6 +641,7 @@
     {
         "fname": "Pierre-Emerick",
         "lname": "Aubameyang",
+        "fullname": "Pierre-Emerick Aubameyang",
         "club": "Arsenal",
         "clubAcronym": "AFC",
         "age": "31",
@@ -628,6 +661,7 @@
     {
         "fname": "Youri",
         "lname": "Tielemans",
+        "fullname": "Youri Tielemans",
         "club": "Leicester City",
         "clubAcronym": "LCFC",
         "age": "23",
@@ -647,6 +681,7 @@
     {
         "fname": "Edinson",
         "lname": "Cavani",
+        "fullname": "Edinson Cavani",
         "club": "Manchester United",
         "clubAcronym": "MUFC",
         "age": "33",
@@ -666,6 +701,7 @@
     {
         "fname": "Phil",
         "lname": "Foden",
+        "fullname": "Phil Foden",
         "club": "Manchester City",
         "clubAcronym": "MCFC",
         "age": "20",
@@ -685,6 +721,7 @@
     {
         "fname": "Bertrand",
         "lname": "Traoré",
+        "fullname": "Bertrand Traoré",
         "club": "Aston Villa",
         "clubAcronym": "AVFC",
         "age": "25",
@@ -704,6 +741,7 @@
     {
         "fname": "James",
         "lname": "Rodríguez",
+        "fullname": "James Rodríguez",
         "club": "Everton",
         "clubAcronym": "EFC",
         "age": "29",
@@ -723,6 +761,7 @@
     {
         "fname": "Kurt",
         "lname": "Zouma",
+        "fullname": "Kurt Zouma",
         "club": "Chelsea",
         "clubAcronym": "CFC",
         "age": "26",
@@ -742,6 +781,7 @@
     {
         "fname": "Timo",
         "lname": "Werner",
+        "fullname": "Timo Werner",
         "club": "Chelsea",
         "clubAcronym": "CFC",
         "age": "24",
@@ -761,6 +801,7 @@
     {
         "fname": "Ché",
         "lname": "Adams",
+        "fullname": "Ché Adams",
         "club": "Southampton",
         "clubAcronym": "SFC",
         "age": "24",
@@ -780,6 +821,7 @@
     {
         "fname": "Pedro",
         "lname": "Neto",
+        "fullname": "Pedro Neto",
         "club": "Wolverhampton Wanderers",
         "clubAcronym": "WWFC",
         "age": "20",
@@ -799,6 +841,7 @@
     {
         "fname": "Chris",
         "lname": "Wood",
+        "fullname": "Chris Wood",
         "club": "Burnley",
         "clubAcronym": "BFC",
         "age": "29",
@@ -818,6 +861,7 @@
     {
         "fname": "Stuart",
         "lname": "Dallas",
+        "fullname": "Stuart Dallas",
         "club": "Leeds United",
         "clubAcronym": "LUFC",
         "age": "29",
@@ -837,6 +881,7 @@
     {
         "fname": "James",
         "lname": "Ward-Prowse",
+        "fullname": "James Ward-Prowse",
         "club": "Southampton",
         "clubAcronym": "SFC",
         "age": "26",
@@ -856,6 +901,7 @@
     {
         "fname": "Matheus",
         "lname": "Pereira",
+        "fullname": "Matheus Pereira",
         "club": "West Bromwich Albion",
         "clubAcronym": "WBAFC",
         "age": "24",
@@ -875,6 +921,7 @@
     {
         "fname": "Olivier",
         "lname": "Giroud",
+        "fullname": "Olivier Giroud",
         "club": "Chelsea",
         "clubAcronym": "CFC",
         "age": "34",
@@ -894,6 +941,7 @@
     {
         "fname": "Christian",
         "lname": "Benteke",
+        "fullname": "Christian Benteke",
         "club": "Crystal Palace",
         "clubAcronym": "CPFC",
         "age": "30",
@@ -913,6 +961,7 @@
     {
         "fname": "Raúl",
         "lname": "Jiménez",
+        "fullname": "Raúl Jiménez",
         "club": "Wolverhampton Wanderers",
         "clubAcronym": "WWFC",
         "age": "29",
@@ -932,6 +981,7 @@
     {
         "fname": "Ross",
         "lname": "Barkley",
+        "fullname": "Ross Barkley",
         "club": "Aston Villa",
         "clubAcronym": "AVFC",
         "age": "27",
@@ -951,6 +1001,7 @@
     {
         "fname": "Nicolas",
         "lname": "Pépé",
+        "fullname": "Nicolas Pépé",
         "club": "Arsenal",
         "clubAcronym": "AFC",
         "age": "25",
@@ -970,6 +1021,7 @@
     {
         "fname": "Gabriel",
         "lname": "Jesus",
+        "fullname": "Gabriel Jesus",
         "club": "Manchester City",
         "clubAcronym": "MCFC",
         "age": "23",
@@ -989,6 +1041,7 @@
     {
         "fname": "Sébastien",
         "lname": "Haller",
+        "fullname": "Sébastien Haller",
         "club": "West Ham United",
         "clubAcronym": "WHUFC",
         "age": "26",
@@ -1008,6 +1061,7 @@
     {
         "fname": "Rodrigo",
         "lname": "Moreno",
+        "fullname": "Rodrigo Moreno",
         "club": "Leeds United",
         "clubAcronym": "LUFC",
         "age": "29",
@@ -1027,6 +1081,7 @@
     {
         "fname": "Raphinha",
         "lname": "",
+        "fullname": "Raphinha",
         "club": "Leeds United",
         "clubAcronym": "LUFC",
         "age": "24",
@@ -1046,6 +1101,7 @@
     {
         "fname": "Jannik",
         "lname": "Vestergaard",
+        "fullname": "Jannik Vestergaard",
         "club": "Southampton",
         "clubAcronym": "SFC",
         "age": "28",
@@ -1065,6 +1121,7 @@
     {
         "fname": "Tanguy",
         "lname": "Ndombele",
+        "fullname": "Tanguy Ndombele",
         "club": "Tottenham Hotspur",
         "clubAcronym": "THFC",
         "age": "24",
@@ -1084,6 +1141,7 @@
     {
         "fname": "Daniel",
         "lname": "Podence",
+        "fullname": "Daniel Podence",
         "club": "Wolverhampton Wanderers",
         "clubAcronym": "WWFC",
         "age": "25",
@@ -1103,6 +1161,7 @@
     {
         "fname": "Paul",
         "lname": "Pogba",
+        "fullname": "Paul Pogba",
         "club": "Manchester United",
         "clubAcronym": "MUFC",
         "age": "27",
@@ -1122,6 +1181,7 @@
     {
         "fname": "Romain",
         "lname": "Saïss",
+        "fullname": "Romain Saïss",
         "club": "Wolverhampton Wanderers",
         "clubAcronym": "WWFC",
         "age": "30",
@@ -1141,6 +1201,7 @@
     {
         "fname": "Ademola",
         "lname": "Lookman",
+        "fullname": "Ademola Lookman",
         "club": "Fulham",
         "clubAcronym": "FFC",
         "age": "23",
@@ -1160,6 +1221,7 @@
     {
         "fname": "Stuart",
         "lname": "Armstrong",
+        "fullname": "Stuart Armstrong",
         "club": "Southampton",
         "clubAcronym": "SFC",
         "age": "28",
@@ -1179,6 +1241,7 @@
     {
         "fname": "Gylfi",
         "lname": "Sigurðsson",
+        "fullname": "Gylfi Sigurðsson",
         "club": "Everton",
         "clubAcronym": "EFC",
         "age": "31",
@@ -1198,6 +1261,7 @@
     {
         "fname": "Michael",
         "lname": "Keane",
+        "fullname": "Michael Keane",
         "club": "Everton",
         "clubAcronym": "EFC",
         "age": "28",
@@ -1217,6 +1281,7 @@
     {
         "fname": "Ivan",
         "lname": "Cavaleiro",
+        "fullname": "Ivan Cavaleiro",
         "club": "Fulham",
         "clubAcronym": "FFC",
         "age": "27",
@@ -1236,6 +1301,7 @@
     {
         "fname": "Mateusz",
         "lname": "Klich",
+        "fullname": "Mateusz Klich",
         "club": "Leeds United",
         "clubAcronym": "LUFC",
         "age": "30",
@@ -1255,6 +1321,7 @@
     {
         "fname": "Kevin",
         "lname": "De Bruyne",
+        "fullname": "Kevin De Bruyne",
         "club": "Manchester City",
         "clubAcronym": "MCFC",
         "age": "29",
@@ -1274,6 +1341,7 @@
     {
         "fname": "Jorginho",
         "lname": "",
+        "fullname": "Jorginho",
         "club": "Chelsea",
         "clubAcronym": "CFC",
         "age": "29",
