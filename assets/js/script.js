@@ -18,7 +18,8 @@ const searchScorers = async playerSearchText => {
     // Get matches to current text input
     let matches = scorers.filter(scorer => {
         const regex = new RegExp(`^${playerSearchText}`, 'gi');
-        return scorer.fname.match(regex) || scorer.lname.match(regex) || scorer.club.match(regex) || scorer.clubAcronym.match(regex);
+
+        return scorer.fname.normalize("NFD").replace(/[\u0300-\u036f]/g, "").match(regex) || scorer.lname.normalize("NFD").replace(/[\u0300-\u036f]/g, "").match(regex) || scorer.club.match(regex) || scorer.clubAcronym.match(regex);
     });
 
     if (matches.length === 0) {
@@ -125,7 +126,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     setTimeout(function() {
-        $('#player-search').focus();
+        playerSearch.focus();
     }, 2000);
     $(document).on('click', '.btn-strike-rate', function() {
         const apiKey = "750dd332b2msh2ea2cd6530f8ce8p182023jsn0aa726d7814f";
@@ -205,6 +206,10 @@ $(document).ready(function() {
 
 
                         $(playerMatchList).html(scorerSummary(scorerProfile, currentMarketValue, goals));
+
+                        playerSearch.focus();
+
+                        $(playerSearch).val('');
                     },
                     function(errorResponse) {
                         if (errorResponse.status === 404) {
