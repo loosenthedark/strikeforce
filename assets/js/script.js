@@ -199,8 +199,6 @@ $(document).ready(function() {
 
                         $(playerMatchList).html(scorerSummary(scorerProfile, currentMarketValue, goals));
 
-                        playerSearch.focus();
-
                         $(playerSearch).val('');
                     },
                     function(errorResponse) {
@@ -329,8 +327,6 @@ $(document).ready(function() {
 
 
                         $(clubMatchList).html(clubSummary(clubLogo, avgAge, clubPosition, valueCurrency, squadValue, clubGoals));
-
-                        clubSearch.focus();
 
                         $(clubSearch).val('');
                     },
