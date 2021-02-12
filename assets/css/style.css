@@ -1550,6 +1550,12 @@ path {
     border: 1px solid #434857;
 }
 
+.statcard-img-thfc {
+    background-color: #fdfdfd;
+    border: 1px solid #fdfdfd;
+    margin-top: 8px;
+}
+
 .iconav-nav>.nav-item>.nav-link.active {
     color: #252830;
 }
@@ -1563,7 +1569,8 @@ path {
     background-color: #434857;
 }
 
-#player-match-list {
+#player-match-list,
+#club-match-list {
     padding-left: 15px;
     padding-right: 15px;
 }

@@ -1,5 +1,6 @@
 [{
         "clubname": "Arsenal",
+        "APIclubname": "FC Arsenal",
         "acronym": "AFC",
         "crestURL": "assets/images/crests/Arsenal_FC.svg",
         "goals": "26",
@@ -11,6 +12,7 @@
     },
     {
         "clubname": "Aston Villa",
+        "APIclubname": "Aston Villa",
         "acronym": "AVFC",
         "crestURL": "assets/images/crests/Aston_Villa_FC_crest_(2016).svg",
         "goals": "35",
@@ -22,6 +24,7 @@
     },
     {
         "clubname": "Brighton & Hove Albion",
+        "APIclubname": "Brighton & Hove",
         "acronym": "BHAFC",
         "crestURL": "assets/images/crests/Brighton_&_Hove_Albion_logo.svg",
         "goals": "24",
@@ -33,6 +36,7 @@
     },
     {
         "clubname": "Burnley",
+        "APIclubname": "FC Burnley",
         "acronym": "BFC",
         "crestURL": "assets/images/crests/Burnley_F.C._Logo.svg",
         "goals": "13",
@@ -44,6 +48,7 @@
     },
     {
         "clubname": "Chelsea",
+        "APIclubname": "FC Chelsea",
         "acronym": "CFC",
         "crestURL": "assets/images/crests/Chelsea_FC.svg",
         "goals": "33",
@@ -55,6 +60,7 @@
     },
     {
         "clubname": "Crystal Palace",
+        "APIclubname": "Crystal Palace",
         "acronym": "CPFC",
         "crestURL": "assets/images/crests/Crystal_Palace_FC_logo.svg",
         "goals": "24",
@@ -66,6 +72,7 @@
     },
     {
         "clubname": "Everton",
+        "APIclubname": "FC Everton",
         "acronym": "EFC",
         "crestURL": "assets/images/crests/Everton_FC_logo.svg",
         "goals": "31",
@@ -77,6 +84,7 @@
     },
     {
         "clubname": "Fulham",
+        "APIclubname": "FC Fulham",
         "acronym": "FFC",
         "crestURL": "assets/images/crests/Fulham_FC_(shield).svg",
         "goals": "17",
@@ -88,6 +96,7 @@
     },
     {
         "clubname": "Leeds United",
+        "APIclubname": "Leeds United",
         "acronym": "LUFC",
         "crestURL": "assets/images/crests/Leeds_United_F.C._logo.svg",
         "goals": "37",
@@ -99,6 +108,7 @@
     },
     {
         "clubname": "Leicester City",
+        "APIclubname": "Leicester City",
         "acronym": "LCFC",
         "crestURL": "assets/images/crests/Leicester_City_crest.svg",
         "goals": "36",
@@ -110,6 +120,7 @@
     },
     {
         "clubname": "Liverpool",
+        "APIclubname": "FC Liverpool",
         "acronym": "LFC",
         "crestURL": "assets/images/crests/Liverpool_FC.svg",
         "goals": "40",
@@ -121,6 +132,7 @@
     },
     {
         "clubname": "Manchester City",
+        "APIclubname": "Manchester City",
         "acronym": "MCFC",
         "crestURL": "assets/images/crests/Manchester_City_FC_badge.svg",
         "goals": "37",
@@ -132,6 +144,7 @@
     },
     {
         "clubname": "Manchester United",
+        "APIclubname": "Manchester Utd.",
         "acronym": "MUFC",
         "crestURL": "assets/images/crests/Manchester_United_FC_crest.svg",
         "goals": "37",
@@ -143,6 +156,7 @@
     },
     {
         "clubname": "Newcastle United",
+        "APIclubname": "Newcastle Utd.",
         "acronym": "NUFC",
         "crestURL": "assets/images/crests/Newcastle_United_Logo.svg",
         "goals": "19",
@@ -154,6 +168,7 @@
     },
     {
         "clubname": "Sheffield United",
+        "APIclubname": "Sheffield Utd.",
         "acronym": "SUFC",
         "crestURL": "assets/images/crests/Sheffield_United_FC_logo.svg",
         "goals": "12",
@@ -165,6 +180,7 @@
     },
     {
         "clubname": "Southampton",
+        "APIclubname": "FC Southampton",
         "acronym": "SFC",
         "crestURL": "assets/images/crests/FC_Southampton.svg",
         "goals": "27",
@@ -176,6 +192,7 @@
     },
     {
         "clubname": "Tottenham Hotspur",
+        "APIclubname": "Tottenham",
         "acronym": "THFC",
         "crestURL": "assets/images/crests/Tottenham_Hotspur.svg",
         "goals": "34",
@@ -187,6 +204,7 @@
     },
     {
         "clubname": "West Bromwich Albion",
+        "APIclubname": "West Brom",
         "acronym": "WBAFC",
         "crestURL": "assets/images/crests/West_Bromwich_Albion.svg",
         "goals": "15",
@@ -198,6 +216,7 @@
     },
     {
         "clubname": "West Ham United",
+        "APIclubname": "West Ham Utd.",
         "acronym": "WHUFC",
         "crestURL": "assets/images/crests/West_Ham_United_FC_logo.svg",
         "goals": "30",
@@ -209,6 +228,7 @@
     },
     {
         "clubname": "Wolverhampton Wanderers",
+        "APIclubname": "Wolverhampton",
         "acronym": "WWFC",
         "crestURL": "assets/images/crests/Wolverhampton_Wanderers.svg",
         "goals": "21",
