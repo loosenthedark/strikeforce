@@ -1541,7 +1541,8 @@ path {
 
 /* Scorer dashboard UI */
 
-.icon-user {
+.icon-user,
+.icon-sports-club {
     font-size: 80px;
 }
 
