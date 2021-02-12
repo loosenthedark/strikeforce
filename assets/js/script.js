@@ -220,8 +220,8 @@ $(document).ready(function() {
         let clubName = $(this).parent().prev().prev().children('h2').text().trim().split(' ').join('%20');
         let clubNameAPI = $(this).parent().prev().prev().children('h2').attr('id');
 
-        function clubSummary(logo, age, position, goals) {
-            return `<div class="col-12 statcard-img statcard-img-${goals.acronym.toLowerCase()} border-bottom-0 px-0"><img class="d-block mx-auto mt-4 mb-3" src="${goals.crestURL}" alt="${goals.clubname} club crest" height="auto" width="180"><div class="col-12 mb-4 px-0 border-top-0 statcard-img-name text-center"><h3>${goals.clubname}</h2></div></div><nav class="iconav mt-0 px-0 mb-0 col-12"><div class="iconav-slider row"><div class="col-12"><ul class="row nav nav-pills iconav-nav flex-md-column mx-0"><li class="nav-item px-0 col-4"><a class="nav-link active" href="#" title="Load Summary dashboard" data-toggle="tooltip" data-placement="right" data-container="body"><span class="icon iconav-icon icon-list"></span><small class="iconav-nav-label hidden-md-up">Summary</small></a></li><li class="nav-item px-0 col-4 ml-0"><a class="nav-link" href="#" title="Load StrikeRate dashboard" data-toggle="tooltip" data-placement="right" data-container="body"><span class="icon iconav-icon icon-circular-graph"></span><small class="iconav-nav-label hidden-md-up">StrikeRate</small></a></li><li class="nav-item px-0 col-4 ml-0"><a class="nav-link" href="#" title="Load StrikeValue dashboard" data-toggle="tooltip" data-placement="right" data-container="body"><span class="icon iconav-icon icon-line-graph"></span><small class="iconav-nav-label hidden-md-up">StrikeValue</small></a></li></ul></div></div></nav><div class="col-12 px-0 statcard-body-wrapper"><div class="row statcard-body-row mx-0"><div class="col-12 border-top-0 statcard-body"><div class="row statcard-row statcard py-3 px-2"><div class="col-4 px-0 statcard-col text-center"><h4 class="statcard-stat statcard-number">${age.replace('.', '&centerdot;').slice(0, -1)}</h4><span class="statcard-desc">Average age</span></div><div class="col-4 statcard-col"></div><div class="col-4 px-0 statcard-col text-center"><h4 class="statcard-stat statcard-number">${position}</h4><span class="statcard-desc">Position</span></div></div><div class="row statcard-row statcard py-3 px-2"><div class="col-4 statcard-col text-center"></div><div class="col-4 px-0 statcard-col text-center"><span class="icon icon-sports-club"></span></div><div class="col-4 statcard-col text-center"></div></div><div class="row statcard-row statcard py-3 px-2"><div class="col-4 px-0 statcard-col text-center"><h4 class="statcard-stat statcard-number">${goals.goals}</h4><span class="statcard-desc">Goals</span></div><div class="col-4 statcard-col"></div><div class="col-4 px-0 statcard-col text-center"><h4 class="statcard-stat statcard-number" id="statcard-value-stat">${goals.goals}m</h4><span class="statcard-desc">Squad value</span></div></div></div></div></div>`;
+        function clubSummary(logo, age, position, currency, value, goals) {
+            return `<div class="col-12 statcard-img statcard-img-${goals.acronym.toLowerCase()} border-bottom-0 px-0"><img class="d-block mx-auto mt-4 mb-3" src="${goals.crestURL}" alt="${goals.clubname} club crest" height="auto" width="180"><div class="col-12 mb-4 px-0 border-top-0 statcard-img-name text-center"><h3 class="d-none d-sm-block">${goals.clubname}</h2></div></div><nav class="iconav mt-0 px-0 mb-0 col-12"><div class="iconav-slider row"><div class="col-12"><ul class="row nav nav-pills iconav-nav flex-md-column mx-0"><li class="nav-item px-0 col-4"><a class="nav-link active" href="#" title="Load Summary dashboard" data-toggle="tooltip" data-placement="right" data-container="body"><span class="icon iconav-icon icon-list"></span><small class="iconav-nav-label hidden-md-up">Summary</small></a></li><li class="nav-item px-0 col-4 ml-0"><a class="nav-link" href="#" title="Load StrikeRate dashboard" data-toggle="tooltip" data-placement="right" data-container="body"><span class="icon iconav-icon icon-circular-graph"></span><small class="iconav-nav-label hidden-md-up">StrikeRate</small></a></li><li class="nav-item px-0 col-4 ml-0"><a class="nav-link" href="#" title="Load StrikeValue dashboard" data-toggle="tooltip" data-placement="right" data-container="body"><span class="icon iconav-icon icon-line-graph"></span><small class="iconav-nav-label hidden-md-up">StrikeValue</small></a></li></ul></div></div></nav><div class="col-12 px-0 statcard-body-wrapper"><div class="row statcard-body-row mx-0"><div class="col-12 border-top-0 statcard-body"><div class="row statcard-row statcard py-3 px-2"><div class="col-4 px-0 statcard-col text-center"><h4 class="statcard-stat statcard-number">${age.replace('.', '&centerdot;').slice(0, -1)}</h4><span class="statcard-desc">Average age</span></div><div class="col-4 statcard-col"></div><div class="col-4 px-0 statcard-col text-center"><h4 class="statcard-stat statcard-number">${position}</h4><span class="statcard-desc">Position</span></div></div><div class="row statcard-row statcard py-0 px-2"><div class="col-4 statcard-col text-center"></div><div class="col-4 px-0 statcard-col text-center"><span class="icon icon-sports-club"></span></div><div class="col-4 statcard-col text-center"></div></div><div class="row statcard-row statcard py-3 px-2"><div class="col-4 px-0 statcard-col text-center"><h4 class="statcard-stat statcard-number">${goals.goals}</h4><span class="statcard-desc">Goals</span></div><div class="col-4 statcard-col"></div><div class="col-4 px-0 statcard-col text-center"><h4 class="statcard-stat statcard-number" id="statcard-value-stat">${currency}${value}m</h4><span class="statcard-desc">Squad value</span></div></div></div></div></div>`;
         }
 
         renderSpinner();
@@ -254,6 +254,9 @@ $(document).ready(function() {
                 const getClubPosition = new clubSettings();
                 getClubPosition.url = `https://transfermarket.p.rapidapi.com/competitions/get-table?id=GB1&seasonID=2020`;
 
+                const getSquadValue = new clubSettings();
+                getSquadValue.url = `https://transfermarket.p.rapidapi.com/clubs/get-squad?id=${clubID}`;
+
                 $('#pills-tab').addClass('d-none');
 
                 $(clubMatchList).html(renderSpinner());
@@ -262,9 +265,10 @@ $(document).ready(function() {
                     $.ajax(get_ClubLogo),
                     $.ajax(getClubProfile),
                     $.ajax(getClubPosition),
+                    $.ajax(getSquadValue),
                     $.ajax('assets/data/clubdata.json')
                 ).then(
-                    function(responseLogo, responseClubProfile, responseClubPosition, responseClubGoals) {
+                    function(responseLogo, responseClubProfile, responseClubPosition, responseSquadValue, responseClubGoals) {
                         var clubLogo = responseLogo[0].clubs[0].image;
 
                         var avgAge = responseClubProfile[0].mainFacts.avgAge;
@@ -286,6 +290,31 @@ $(document).ready(function() {
                             };
                         }
 
+                        var squad = responseSquadValue[0].squad;
+
+                        var values = squad.filter(function(squadMember) {
+                            if (squadMember.marketValue.value === null) {
+                                return false; // skip
+                            };
+                            return true;
+                        }).map(getNumericalValues);
+
+                        function getNumericalValues(_squad) {
+                            return parseInt(_squad.marketValue.value, 10);
+                        };
+
+                        var squadValue = values.reduce((a, b) => a + b, 0);
+
+                        squadValue = (squadValue - (squadValue % 100000)) / 100000;
+
+                        function insertDecimal(num) {
+                            return Number((num / 10).toFixed(1));
+                        };
+
+                        squadValue = insertDecimal(squadValue);
+
+                        var valueCurrency = squad[0].marketValue.currency;
+
                         for (let i = 0; i < responseClubGoals[0].length; i++) {
                             if (`${clubHTMLName}` === `${responseClubGoals[0][i].clubname}`) { var clubGoals = responseClubGoals[0][i]; };
                         };
@@ -297,7 +326,7 @@ $(document).ready(function() {
                         $('#content-main').removeClass('mt-4');
 
 
-                        $(clubMatchList).html(clubSummary(clubLogo, avgAge, clubPosition, clubGoals));
+                        $(clubMatchList).html(clubSummary(clubLogo, avgAge, clubPosition, valueCurrency, squadValue, clubGoals));
 
                         clubSearch.focus();
 
