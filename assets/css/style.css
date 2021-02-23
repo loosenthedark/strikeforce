@@ -1569,6 +1569,13 @@ path {
     background-color: #434857;
 }
 
+.statcard-canvas {
+    /* width: 1000px; */
+    /* min-height: 400px; */
+    min-height: 300px;
+    /* width: 100%; */
+}
+
 #player-match-list,
 #club-match-list {
     padding-left: 15px;
@@ -1589,6 +1596,15 @@ path {
 
 #statcard-player-value-stat {
     margin-left: -25px;
+}
+
+#scorers-tab a.active {
+    color: #252830;
+    background-color: #1997c6;
+}
+
+#scorers-tab li:not(:first-child) a.active {
+    border-left: none;
 }
 
 
