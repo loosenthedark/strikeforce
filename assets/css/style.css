@@ -63,8 +63,39 @@ h4 {
     font-size: 36px;
 }
 
+
+/* Button elements */
+
 button {
     cursor: pointer;
+}
+
+.btn-success:hover {
+    background-color: #1bc98e;
+    border-color: rgb(27, 201, 142);
+}
+
+.btn-success:focus {
+    box-shadow: none;
+}
+
+.btn-success:active {
+    background-color: #1bc98e;
+    border-color: rgb(27, 201, 142);
+}
+
+.btn-warning:hover {
+    background-color: #e4d836;
+    border-color: rgb(228, 216, 54);
+}
+
+.btn-warning:focus {
+    box-shadow: none;
+}
+
+.btn-warning:active {
+    background-color: #e4d836;
+    border-color: rgb(228, 216, 54);
 }
 
 
@@ -1561,19 +1592,18 @@ path {
 }
 
 .iconav-nav>.nav-item>.nav-link,
-.statcard-body {
+.statcard-body-row {
     border: 1px solid #fdfdfd;
 }
 
-.statcard-body {
+.statcard-body,
+#scorers-strikerate {
     background-color: #434857;
 }
 
 .statcard-canvas {
-    /* width: 1000px; */
-    /* min-height: 400px; */
-    min-height: 300px;
-    /* width: 100%; */
+    min-height: 239px;
+    border-bottom: none;
 }
 
 #player-match-list,
