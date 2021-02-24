@@ -1630,7 +1630,9 @@ path {
 
 .statcard-body,
 #scorers-strikerate,
-#scorers-strikevalue {
+#scorers-strikevalue,
+#clubs-strikerate,
+#clubs-strikevalue {
     background-color: #434857;
 }
 
@@ -1658,12 +1660,14 @@ path {
     margin-left: -25px;
 }
 
-#scorers-tab a.active {
+#scorers-tab a.active,
+#clubs-tab a.active {
     color: #252830;
     background-color: #1997c6;
 }
 
-#scorers-tab li:not(:first-child) a.active {
+#scorers-tab li:not(:first-child) a.active,
+#clubs-tab li:not(:first-child) a.active {
     border-left: none;
 }
 
