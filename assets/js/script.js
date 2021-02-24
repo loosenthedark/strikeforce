@@ -140,24 +140,14 @@ $(document).ready(function() {
         let scorerHTMLName = $(this).parent().prev().children('h2').text().trim();
         let scorerName = $(this).parent().prev().children('h2').text().trim().split(' ').join('%20');
 
-        function scorerSummary(profile, value, goals, _goals, goals_) {
-            return `<div class="col-12 statcard-img border-bottom-0 px-0"><img class="d-block mx-auto mt-4 mb-3" src="${profile.playerImage}" alt="${profile.playerName}" height="auto" width="180"><div class="col-12 mb-4 px-0 border-top-0 statcard-img-name text-center"><h3>${profile.playerName}</h3></div></div><nav class="iconav mt-0 px-0 mb-0 col-12"><div class="iconav-slider row"><div class="col-12"><ul class="row nav nav-pills iconav-nav flex-md-column mx-auto" id="scorers-tab" role="tablist"><li class="nav-item px-0 col-4" role="presentation"><a class="nav-link nav-link-scorers active" id="scorers-players-tab" href="#scorers-players" title="Load Summary dashboard" role="tab" aria-controls="scorers-players" aria-selected="true" data-toggle="pill"><span class="icon iconav-icon icon-list"></span><small class="iconav-nav-label hidden-md-up">Summary</small></a></li><li class="nav-item ml-0 px-0 col-4" role="presentation"><a class="nav-link nav-link-scorers" id="scorers-strikerate-tab" href="#scorers-strikerate" title="Load StrikeRate dashboard" role="tab" aria-controls="scorers-strikerate" aria-selected="false" data-toggle="pill"><span class="icon iconav-icon icon-circular-graph"></span><small class="iconav-nav-label hidden-md-up">StrikeRate</small></a></li><li class="nav-item ml-0 px-0 col-4" role="presentation"><a class="nav-link nav-link-scorers" id="scorers-strikevalue-tab" href="#scorers-strikevalue" title="Load StrikeValue dashboard" role="tab" aria-controls="scorers-strikevalue" aria-selected="false" data-toggle="pill"><span class="icon iconav-icon icon-line-graph"></span><small class="iconav-nav-label hidden-md-up">StrikeValue</small></a></li></ul></div></div></nav><div class="col-12 px-0 tab-content statcard-body-wrapper" id="scorers-tab-content"><div class="row statcard-body-row mx-0 tab-pane fade show active" id="scorers-players" role="tabpanel" aria-labelledby="scorers-players-tab"><div class="col-12 border-top-0 statcard-body"><div class="row statcard-row statcard p-3"><div class="col-4 statcard-col text-center"><h4 class="statcard-stat statcard-number">${profile.age}</h4><span class="statcard-desc">Age</span></div><div class="col-4 statcard-col"></div><div class="col-4 statcard-col text-center"><h4 class="statcard-stat statcard-number">${profile.playerShirtNumber}</h4><span class="statcard-desc">Number</span></div></div><div class="row statcard-row statcard px-3"><div class="col-4 statcard-col text-center"></div><div class="col-4 px-0 statcard-col text-center"><span class="icon icon-user"></span></div><div class="col-4 statcard-col text-center"></div></div><div class="row statcard-row statcard p-3"><div class="col-4 statcard-col text-center"><h4 class="statcard-stat statcard-number">${goals}</h4><span class="statcard-desc">Goals</span></div><div class="col-4 statcard-col"></div><div class="col-4 statcard-col text-center"><h4 class="statcard-stat statcard-number" id="statcard-player-value-stat">€${value}m</h4><span class="statcard-desc">Value</span></div></div></div></div><div class="statcard-body-container tab-pane fade show" id="scorers-strikerate" role="tabpanel" aria-labelledby="scorers-strikerate-tab"><div class="row statcard-body-row mx-0"><button type="button" class='d-block mx-auto mt-3 mb-2 btn btn-sm btn-pill btn-warning' id="toggle-pens">Exclude pens</button><div class="col-12 border-top-0 statcard-body statcard-canvas px-4 pb-4 pt-1"><canvas id="myChart"></canvas></div></div></div><div class="statcard-body-container tab-pane fade show" id="scorers-strikevalue" role="tabpanel" aria-labelledby="scorers-strikevalue-tab"><div class="row statcard-body-row mx-0"><div class="col-12 border-top-0 statcard-body statcard-canvas p-4">Meh</div></div></div><script>var ctx = document.getElementById('myChart').getContext('2d');
+        function scorerSummary(profile, value, goals, _goals, goals_, gpm, _gpm) {
+            console.log(profile);
+            return `<div class="col-12 statcard-img border-bottom-0 px-0"><img class="d-block mx-auto mt-4 mb-3" src="${profile.playerImage}" alt="${profile.playerName}" height="auto" width="180"><div class="col-12 mb-4 px-0 border-top-0 statcard-img-name text-center"><h3>${profile.playerName}</h3></div></div><nav class="iconav mt-0 px-0 mb-0 col-12"><div class="iconav-slider row"><div class="col-12"><ul class="row nav nav-pills iconav-nav flex-md-column mx-auto" id="scorers-tab" role="tablist"><li class="nav-item px-0 col-4" role="presentation"><a class="nav-link nav-link-scorers active" id="scorers-players-tab" href="#scorers-players" title="Load Summary dashboard" role="tab" aria-controls="scorers-players" aria-selected="true" data-toggle="pill"><span class="icon iconav-icon icon-list"></span><small class="iconav-nav-label hidden-md-up">Summary</small></a></li><li class="nav-item ml-0 px-0 col-4" role="presentation"><a class="nav-link nav-link-scorers" id="scorers-strikerate-tab" href="#scorers-strikerate" title="Load StrikeRate dashboard" role="tab" aria-controls="scorers-strikerate" aria-selected="false" data-toggle="pill"><span class="icon iconav-icon icon-circular-graph"></span><small class="iconav-nav-label hidden-md-up">StrikeRate</small></a></li><li class="nav-item ml-0 px-0 col-4" role="presentation"><a class="nav-link nav-link-scorers" id="scorers-strikevalue-tab" href="#scorers-strikevalue" title="Load StrikeValue dashboard" role="tab" aria-controls="scorers-strikevalue" aria-selected="false" data-toggle="pill"><span class="icon iconav-icon icon-line-graph"></span><small class="iconav-nav-label hidden-md-up">StrikeValue</small></a></li></ul></div></div></nav><div class="col-12 px-0 tab-content statcard-body-wrapper" id="scorers-tab-content"><div class="row statcard-body-row mx-0 tab-pane fade show active" id="scorers-players" role="tabpanel" aria-labelledby="scorers-players-tab"><div class="col-12 border-top-0 statcard-body"><div class="row statcard-row statcard p-3"><div class="col-4 statcard-col text-center"><h4 class="statcard-stat statcard-number">${profile.age}</h4><span class="statcard-desc">Age</span></div><div class="col-4 statcard-col"></div><div class="col-4 statcard-col text-center"><h4 class="statcard-stat statcard-number">${profile.playerShirtNumber}</h4><span class="statcard-desc">Number</span></div></div><div class="row statcard-row statcard px-3"><div class="crest-box col-4 px-0 statcard-col d-flex"><img src="${profile.clubImage}" alt="${profile.club}" width="50%"></div><div class="user-box col-4 py-3 px-0 statcard-col d-flex"><span class="icon icon-user d-flex"></span></div><div class="crest-box col-4 px-0 statcard-col d-flex"><img src="${profile.countryImage}" alt="${profile.country}" width="40%"></div></div><div class="row statcard-row statcard px-3 pt-4 pb-3"><div class="col-4 statcard-col text-center"><h4 class="statcard-stat statcard-number">${goals}</h4><span class="statcard-desc">Goals</span></div><div class="col-4 statcard-col"></div><div class="col-4 statcard-col text-center"><h4 class="statcard-stat statcard-number" id="statcard-player-value-stat">€${value}m</h4><span class="statcard-desc">Value</span></div></div></div></div><div class="statcard-body-container tab-pane fade show" id="scorers-strikerate" role="tabpanel" aria-labelledby="scorers-strikerate-tab"><div class="row statcard-body-row mx-0"><button type="button" class='d-block mx-auto mt-3 mb-2 btn btn-sm btn-pill btn-warning' id="toggle-pens">Exclude pens</button><div class="col-12 border-top-0 statcard-body statcard-canvas px-4 pb-4 pt-1"><canvas id="myChart"></canvas></div></div></div><div class="statcard-body-container tab-pane fade show" id="scorers-strikevalue" role="tabpanel" aria-labelledby="scorers-strikevalue-tab"><div class="row statcard-body-row mx-0"><button type="button" class='d-block mx-auto mt-3 mb-2 btn btn-sm btn-pill btn-secondary' id="toggle-penz">Exclude pens</button><div class="col-12 border-top-0 statcard-body statcard-canvas px-4 pb-4 pt-1"><canvas id="mySecondChart"></canvas></div></div></div></div><script>var ctx = document.getElementById('myChart').getContext('2d');
 var chart = new Chart(ctx, {
-    // The type of chart we want to create
     type: 'doughnut',
-
-    // The data for our dataset
-    data: {
-        
-        datasets: [{
-            data: [${_goals}, 0.9 - ${_goals}],
-            backgroundColor: ['#1bc98e', '#252830'],
-            borderColor: ['#fff', '#252830'],
-            borderAlign: 'inner'
+    data: {datasets: [{data: [${_goals}, 0.9 - ${_goals}],backgroundColor: ['#1bc98e', '#252830'],borderColor: ['#fff', '#252830'],borderAlign: 'inner'
         }]
     },
-
-    // Configuration options go here
     options: {responsive:true, cutoutPercentage: 60, maintainAspectRatio: false, title: {
         display: true,
         position: 'bottom',
@@ -207,7 +197,63 @@ pensToggler.addEventListener('click', function() {
         chart.config.data.datasets[0].backgroundColor = ['#1bc98e', '#252830'];chart.config.options.title.text = '${_goals} goals per game';
         chart.update();
     };
-});</script>`;
+});
+var _ctx = document.getElementById('mySecondChart').getContext('2d');
+var _chart = new Chart(_ctx, {
+    type: 'doughnut',
+    data: {datasets: [{data: [${gpm}, 2.5 - ${gpm}],backgroundColor: ['#9f86ff', '#252830'],borderColor: ['#fff', '#252830'],borderAlign: 'inner'
+        }]
+    },
+    options: {responsive:true, cutoutPercentage: 60, maintainAspectRatio: false, title: {
+        display: true,
+        position: 'bottom',
+        fontSize: 20,
+        fontStyle: 'normal',
+        text: '${gpm} goals per €1m',
+        fontColor: '#fff'
+    }, legend: {
+        display: false
+    }, tooltips: {
+        callbacks: {
+           label: function(tooltipItem) {
+                  return tooltipItem.yLabel;
+           }
+        }
+    }}
+});
+
+var penzToggler = document.getElementById('toggle-penz');
+
+function resetStrikeValuePane() {
+    penzToggler.innerText = 'Exclude pens';
+    penzToggler.classList.add('btn-secondary');
+    penzToggler.classList.remove('btn-info');
+    _chart.config.data.datasets[0].data = [${gpm}, 2.5 - ${gpm}];
+    _chart.config.data.datasets[0].backgroundColor = ['#9f86ff', '#252830'];
+    _chart.config.options.title.text = '${gpm} goals per €1m';
+    _chart.update();
+}
+
+scorersPlayersTabsArray.forEach(function(tab) {
+    tab.addEventListener("click", resetStrikeValuePane);
+});
+
+penzToggler.addEventListener('click', function() {
+    this.classList.toggle('btn-secondary');
+    this.classList.toggle('btn-info');
+    if(this.classList.contains('btn-info')) {
+        this.innerText = 'Include pens';
+        _chart.config.data.datasets[0].data = [${_gpm}, 2.5 - ${_gpm}];
+        _chart.config.data.datasets[0].backgroundColor = ['#f5f5f5', '#252830'];_chart.config.options.title.text = '${_gpm} goals per €1m';
+        _chart.update();
+    } else {
+        this.innerText = 'Exclude pens';
+        _chart.config.data.datasets[0].data = [${gpm}, 2.5 - ${gpm}];
+        _chart.config.data.datasets[0].backgroundColor = ['#9f86ff', '#252830'];_chart.config.options.title.text = '${gpm} goals per €1m';
+        _chart.update();
+    };
+});
+</script>`;
         }
 
         renderSpinner();
@@ -260,8 +306,13 @@ pensToggler.addEventListener('click', function() {
 
                             if (`${scorerHTMLName}` === `${responseGoals[0][i].fullname}`) {
                                 var goals = responseGoals[0][i].goals;
+                                var goalsMinusPens = responseGoals[0][i].goalsMinusPens;
                                 var goalsPer90 = responseGoals[0][i].goalsPer90;
                                 var goalsMinusPensPer90 = responseGoals[0][i].goalsMinusPensPer90;
+                                var goalsPerMillion = goals / currentMarketValue;
+                                var gPerM = goalsPerMillion.toFixed(2);
+                                var goalsMinusPensPerMillion = goalsMinusPens / currentMarketValue;
+                                var _gPerM = goalsMinusPensPerMillion.toFixed(2);
                             };
                         };
 
@@ -272,7 +323,7 @@ pensToggler.addEventListener('click', function() {
                         $('#content-main').removeClass('mt-4');
 
 
-                        $(playerMatchList).html(scorerSummary(scorerProfile, roundedMarketValue, goals, goalsPer90, goalsMinusPensPer90));
+                        $(playerMatchList).html(scorerSummary(scorerProfile, roundedMarketValue, goals, goalsPer90, goalsMinusPensPer90, gPerM, _gPerM));
 
                         $(playerSearch).val('');
                     },
@@ -295,8 +346,9 @@ pensToggler.addEventListener('click', function() {
         let clubName = $(this).parent().prev().prev().children('h2').text().trim().split(' ').join('%20');
         let clubNameAPI = $(this).parent().prev().prev().children('h2').attr('id');
 
-        function clubSummary(logo, age, position, value, goals) {
-            return `<div class="col-12 statcard-img statcard-img-${goals.acronym.toLowerCase()} border-bottom-0 px-0"><img class="d-block mx-auto mt-4 mb-3" src="${goals.crestURL}" alt="${goals.clubname} club crest" height="auto" width="180"><div class="col-12 mb-4 px-0 border-top-0 statcard-img-name text-center"><h3 class="d-none d-sm-block">${goals.clubname}</h2></div></div><nav class="iconav mt-0 px-0 mb-0 col-12"><div class="iconav-slider row"><div class="col-12"><ul class="row nav nav-pills iconav-nav flex-md-column mx-0"><li class="nav-item px-0 col-4"><a class="nav-link active" href="#" title="Load Summary dashboard" data-toggle="tooltip" data-placement="right" data-container="body"><span class="icon iconav-icon icon-list"></span><small class="iconav-nav-label hidden-md-up">Summary</small></a></li><li class="nav-item px-0 col-4 ml-0"><a class="nav-link" href="#" title="Load StrikeRate dashboard" data-toggle="tooltip" data-placement="right" data-container="body"><span class="icon iconav-icon icon-circular-graph"></span><small class="iconav-nav-label hidden-md-up">StrikeRate</small></a></li><li class="nav-item px-0 col-4 ml-0"><a class="nav-link" href="#" title="Load StrikeValue dashboard" data-toggle="tooltip" data-placement="right" data-container="body"><span class="icon iconav-icon icon-line-graph"></span><small class="iconav-nav-label hidden-md-up">StrikeValue</small></a></li></ul></div></div></nav><div class="col-12 px-0 statcard-body-wrapper"><div class="row statcard-body-row mx-0"><div class="col-12 border-top-0 statcard-body"><div class="row statcard-row statcard py-3 px-2"><div class="col-4 px-0 statcard-col text-center"><h4 class="statcard-stat statcard-number">${age.slice(0, -1)}</h4><span class="statcard-desc">Average age</span></div><div class="col-4 statcard-col"></div><div class="col-4 px-0 statcard-col text-center"><h4 class="statcard-stat statcard-number">${position}</h4><span class="statcard-desc">League position</span></div></div><div class="row statcard-row statcard py-0 px-2"><div class="col-4 statcard-col text-center"></div><div class="col-4 px-0 statcard-col text-center"><span class="icon icon-sports-club"></span></div><div class="col-4 statcard-col text-center"></div></div><div class="row statcard-row statcard py-3 px-2"><div class="col-4 px-0 statcard-col text-center"><h4 class="statcard-stat statcard-number">${goals.goals}</h4><span class="statcard-desc">Goals</span></div><div class="col-4 statcard-col"></div><div class="col-4 px-0 statcard-col text-center"><h4 class="statcard-stat statcard-number" id="statcard-value-stat">€${value}</h4><span class="statcard-desc">Squad value</span></div></div></div></div></div>`;
+        function clubSummary(logo, size, age, position, _value, value, goals) {
+            console.log(_value);
+            return `<div class="col-12 statcard-img statcard-img-${goals.acronym.toLowerCase()} border-bottom-0 px-0"><img class="d-block mx-auto mt-4 mb-3" src="${goals.crestURL}" alt="${goals.clubname} club crest" height="auto" width="180"><div class="col-12 mb-4 px-0 border-top-0 statcard-img-name text-center"><h3 class="d-none d-sm-block">${goals.clubname}</h2></div></div><nav class="iconav mt-0 px-0 mb-0 col-12"><div class="iconav-slider row"><div class="col-12"><ul class="row nav nav-pills iconav-nav flex-md-column mx-0"><li class="nav-item px-0 col-4"><a class="nav-link active" href="#" title="Load Summary dashboard" data-toggle="tooltip" data-placement="right" data-container="body"><span class="icon iconav-icon icon-list"></span><small class="iconav-nav-label hidden-md-up">Summary</small></a></li><li class="nav-item px-0 col-4 ml-0"><a class="nav-link" href="#" title="Load StrikeRate dashboard" data-toggle="tooltip" data-placement="right" data-container="body"><span class="icon iconav-icon icon-circular-graph"></span><small class="iconav-nav-label hidden-md-up">StrikeRate</small></a></li><li class="nav-item px-0 col-4 ml-0"><a class="nav-link" href="#" title="Load StrikeValue dashboard" data-toggle="tooltip" data-placement="right" data-container="body"><span class="icon iconav-icon icon-line-graph"></span><small class="iconav-nav-label hidden-md-up">StrikeValue</small></a></li></ul></div></div></nav><div class="col-12 px-0 statcard-body-wrapper"><div class="row statcard-body-row mx-0"><div class="col-12 border-top-0 statcard-body"><div class="row statcard-row statcard py-3 px-2"><div class="col-5 px-0 statcard-col text-center"><h4 class="statcard-stat statcard-number">${age.slice(0, -1)}</h4><span class="statcard-desc">Average age</span></div><div class="col-2 statcard-col"></div><div class="col-5 px-0 statcard-col text-center"><h4 class="statcard-stat statcard-number">${position}</h4><span class="statcard-desc">League position</span></div></div><div class="row statcard-row statcard py-0 px-2"><div class="col-4 statcard-col text-center"></div><div class="user-box col-4 py-3 px-0 statcard-col d-flex"><span class="icon icon-sports-club d-flex"></span></div><div class="col-4 statcard-col text-center"></div></div><div class="row statcard-row statcard px-2 pt-4 pb-3"><div class="col-5 px-0 statcard-col text-center"><h4 class="statcard-stat statcard-number">${goals.goals}</h4><span class="statcard-desc">Goals</span></div><div class="col-2 statcard-col"></div><div class="col-5 px-0 statcard-col text-center"><h4 class="statcard-stat statcard-number" id="statcard-value-stat">€${_value}m</h4><span class="statcard-desc">Average player value</span></div></div></div></div></div>`;
         }
 
         renderSpinner();
@@ -346,6 +398,8 @@ pensToggler.addEventListener('click', function() {
                     function(responseLogo, responseClubProfile, responseClubPosition, responseSquadValue, responseClubGoals) {
                         var clubLogo = responseLogo[0].clubs[0].image;
 
+                        var squadSize = responseClubProfile[0].mainFacts.squadSize;
+
                         var avgAge = responseClubProfile[0].mainFacts.avgAge;
 
                         var leagueTable = responseClubPosition[0].table;
@@ -388,6 +442,9 @@ pensToggler.addEventListener('click', function() {
 
                         squadValue = insertDecimal(squadValue);
 
+                        var avgValue = squadValue / squadSize;
+                        var _avgValue = avgValue.toFixed(1)
+
                         var roundedSquadValue = `${Math.round(squadValue)}`;
                         var _roundedSquadValue;
                         if (roundedSquadValue.length > 3) {
@@ -410,7 +467,7 @@ pensToggler.addEventListener('click', function() {
                         $('#content-main').removeClass('mt-4');
 
 
-                        $(clubMatchList).html(clubSummary(clubLogo, avgAge, clubPosition, _roundedSquadValue, clubGoals));
+                        $(clubMatchList).html(clubSummary(clubLogo, squadSize, avgAge, clubPosition, _avgValue, _roundedSquadValue, clubGoals));
 
                         $(clubSearch).val('');
                     },

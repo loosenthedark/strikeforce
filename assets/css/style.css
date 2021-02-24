@@ -98,6 +98,34 @@ button {
     border-color: rgb(228, 216, 54);
 }
 
+.btn-secondary:hover {
+    background-color: rgb(245, 245, 245);
+    border-color: gainsboro;
+}
+
+.btn-secondary:focus {
+    box-shadow: none;
+}
+
+.btn-secondary:active {
+    background-color: rgb(245, 245, 245);
+    border-color: gainsboro;
+}
+
+.btn-info:hover {
+    background-color: #9f86ff;
+    border-color: rgb(159, 134, 255);
+}
+
+.btn-info:focus {
+    box-shadow: none;
+}
+
+.btn-info:active {
+    background-color: #9f86ff;
+    border-color: rgb(159, 134, 255);
+}
+
 
 /* Logo container */
 
@@ -1577,6 +1605,10 @@ path {
     font-size: 80px;
 }
 
+.icon-user::before {
+    display: flex;
+}
+
 .statcard-img {
     border: 1px solid #434857;
 }
@@ -1597,7 +1629,8 @@ path {
 }
 
 .statcard-body,
-#scorers-strikerate {
+#scorers-strikerate,
+#scorers-strikevalue {
     background-color: #434857;
 }
 
@@ -1620,10 +1653,7 @@ path {
     font-size: 14px;
 }
 
-#statcard-value-stat {
-    margin-left: -45px;
-}
-
+#statcard-value-statm,
 #statcard-player-value-stat {
     margin-left: -25px;
 }
@@ -1635,6 +1665,15 @@ path {
 
 #scorers-tab li:not(:first-child) a.active {
     border-left: none;
+}
+
+.crest-box,
+.user-box {
+    justify-content: center;
+}
+
+.crest-box {
+    align-items: center;
 }
 
 
