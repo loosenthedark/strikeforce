@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-md-3 sidebar">
                     <nav class="sidebar-nav">
-                        <div class="sidebar-header">
+                        <div class="sidebar-header sidebar-header-raised">
                             <button class="collapsed" id="nav-toggler" type="button" data-toggle="collapse" data-target="#nav-toggleable-md" aria-expanded="false">
                                 <span class='nav-toggler-icon'><i class="fas fa-bars"></i></span>
                                 <span class='nav-toggler-icon'><i class="fas fa-futbol"></i></span>
@@ -40,13 +40,13 @@
                                 </li>
                                 <li class="nav-header">Leaderboards</li>
                                 <li class="nav-item">
-                                    <a class="nav-link " href="leaderboards.html#summary-tables">Summary</a>
+                                    <a class="nav-link" data-toggle="collapse" id="summary-tables-nav-link" data-target="#nav-toggleable-md.show" href="#summary-tables">Summary</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " href="leaderboards.html#strikerate-tables">StrikeRate</a>
+                                    <a class="nav-link" data-toggle="collapse" id="strikerate-tables-nav-link" data-target="#nav-toggleable-md.show" href="#strikerate-tables">StrikeRate</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link " href="leaderboards.html#strikevalue-tables">StrikeValue</a>
+                                    <a class="nav-link" data-toggle="collapse" id="strikevalue-tables-nav-link" data-target="#nav-toggleable-md.show" href="#strikevalue-tables">StrikeValue</a>
                                 </li>
 
                                 <li class="nav-header">Dashboards</li>
@@ -72,56 +72,67 @@
                                     </a>
                                 </li>
                             </ul>
-
                         </div>
                     </nav>
                 </div>
-                <div class="col-md-9 content mt-4" id="content-main">
-
-                    <div class="container d-flex container-logo mt-5">
+                <div class="col-md-9 content negative-top-margin" id="content-leaderboard-main">
+                    <div class="container d-flex container-logo">
                         <a class='logo-link d-flex' href="index.html">
                             <span class="icon icon-flash"></span>
                             <h1 class="mb-3">trikeForce</h1>
                         </a>
                     </div>
-
-                    <div class="tab-content" id="pills-tab-content">
-                        <div class="tab-pane fade show active container px-3 mb-3" id="pills-players" role="tabpanel" aria-labelledby="pills-players-tab">
-                            <form action="">
-                                <div class="row">
-                                    <div class="col-sm-8 col-md-6 m-auto">
-                                        <div class="input-with-icon form-group">
-                                            <input type="text" id="player-search" placeholder="Enter scorer or club name..." autocomplete="off" class="form-control form-control-lg mb-1">
-                                            <span class="icon icon-trophy"></span>
-                                        </div>
-                                        <div class='row mt-0' id="player-match-list">
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane fade show container px-3 mb-3" id="pills-clubs" role="tabpanel" aria-labelledby="pills-home-tab">
-                            <form action="">
-                                <div class="row">
-                                    <div class="col-sm-8 col-md-6 m-auto">
-                                        <div class="input-with-icon form-group">
-                                            <input type="text" id="club-search" autocomplete="off" placeholder="Search by club..." class="form-control form-control-lg mb-1">
-                                            <span class="icon icon-trophy"></span>
-                                        </div>
-                                        <div class='row' id="club-match-list"></div>
-                                    </div>
-                                </div>
-                            </form>
+                    <div class="dashhead">
+                        <div class="dashhead-titles">
+                            <h2 class="dashhead-title text-center">Leaderboards</h2>
                         </div>
                     </div>
-                    <ul class="nav nav-pills mt-4 mb-5 px-3 container" id="pills-tab" role="tablist">
-                        <li class="nav-item ml-auto mr-1" role="presentation">
-                            <a class="nav-link active" id="pills-players-tab" data-toggle="pill" href="#pills-players" role="tab" title="Search for scorers" aria-controls="pills-players" aria-selected="true">Scorers</a>
-                        </li>
-                        <li class="nav-item mr-auto ml-1" role="presentation">
-                            <a class="nav-link" id="pills-clubs-tab" data-toggle="pill" href="#pills-clubs" role="tab" title="Search for clubs" aria-controls="pills-clubs" aria-selected="false">Clubs</a>
-                        </li>
-                    </ul>
+                    <div class="hr-divider my-4">
+                        <ul class="nav nav-pills hr-divider-content hr-divider-nav" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a href="#summary-tables" id='summary-tables-tab' class="nav-link active" role="tab" data-toggle="tab" aria-controls="sales" aria-expanded="true">Summary</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="#strikerate-tables" id='strikerate-tables-tab' class="nav-link" role="tab" data-toggle="tab" aria-controls="inventory" aria-expanded="false">StrikeRate</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a href="#strikevalue-tables" id='strikevalue-tables-tab' class="nav-link" role="tab" data-toggle="tab" aria-controls="profit" aria-expanded="false">StrikeValue</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="summary-tables" aria-expanded="true">
+                            <div class="table-responsive">
+                                <table class="table leaderboard-table" data-sort="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="header sorter-false pl-1"></th>
+                                            <th class="header sorter-last-name pr-2">Scorer</th>
+                                            <th class="header text-center pl-2 pr-2">Club</th>
+                                            <th class="header text-center pl-1 pr-3">Goals</th>
+                                            <th class="header text-center pl-2 pr-3">Pens</th>
+                                            <th class="header text-center pl-1 pr-3">Goals<br> (excl.<br> pens)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id='leaderboard-body'>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane" id="strikerate-tables" aria-expanded="false">
+                            <div class="">THE
+                                <canvas class=""></canvas>
+                            </div>
+                        </div>
+
+                        <div role="tabpanel" class="tab-pane" id="strikevalue-tables" aria-expanded="false">
+                            <div class="">CRAIC?
+                                <canvas class=""></canvas>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -165,8 +176,10 @@
     <script src="assets/js/tether.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="assets/js/toolkit.js"></script>
-    <!-- <script src="assets/js/application.js"></script> -->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/tablesorter.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js" integrity="sha512-qzgd5cYSZcosqpzpn7zF2ZId8f/8CHmFKZ8j7mU4OUXTNRd5g+ZHBPsgKEwoqxCtdQvExE5LprwwPAgoicguNg==" crossorigin="anonymous"></script> -->
+    <!-- <script src="assets/js/script.js"></script> -->
+    <script src="assets/js/leaderboards.js"></script>
 </body>
 
 </html>
