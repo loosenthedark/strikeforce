@@ -10,6 +10,13 @@ $(document).ready(function() {
     const strikevalueTablesTab = document.getElementById('strikevalue-tables-tab');
     const strikevalueTablesPane = document.getElementById('strikevalue-tables');
 
+    // Animate nav toggler icon on click
+
+    $('#nav-toggler').click(function() {
+        $('.nav-toggler-icon').toggleClass('active');
+        $(this).toggleClass('no-border');
+    })
+
     if (window.location.href.indexOf("#strikerate-tables") > -1) {
         $(summaryTablesTab).removeClass('active');
         $(summaryTablesPane).removeClass('active');

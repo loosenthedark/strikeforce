@@ -6,7 +6,7 @@
 
 * CSS hack for hiding `footer` on mobile when keyboard is enabled taken from [this Stack Overflow query](https://stackoverflow.com/questions/22627646/how-to-prevent-mobile-keyboard-from-rising-footer-over-the-text-fields)
 
-* jQuery + CSS fix for animating custom `#nav-toggler` icon (incorporating [Font Awesome](https://fontawesome.com) icons found in [this video tutorial](https://www.youtube.com/watch?v=g7v4BB9IMRw))
+* jQuery + CSS fix for animating custom `#nav-toggler` icon incorporating [Font Awesome](https://fontawesome.com) icons found in [this video tutorial](https://www.youtube.com/watch?v=g7v4BB9IMRw))
 
 * Code used to create custom football hexagon pattern `.loader` element adapted from [this loading animation tutorial](https://codemyui.com/soccer-ball-hexagon-pattern-loader/)
 
@@ -21,3 +21,7 @@
 * Tablesorter custom parser to sort scorers by surname instead of by first name: (https://mottie.github.io/tablesorter/docs/example-parsers.html)(https://stackoverflow.com/questions/38209618/tablesorter-sort-by-last-name-ignore-middle-preffered-name)
 
 * (https://stackoverflow.com/questions/42401606/how-to-hide-collapsible-bootstrap-4-navbar-on-click)
+
+* Font Awesome 'futbol' icon SVG used as background-image in custom iOS-style switch [with permission](https://fontawesome.com/license). No changes were made to the file's source code.
+
+* Pure CSS custom switch built using tips and code blocks from [Martin Haubek](https://haubek.github.io/custom-switch/) and retrieved from [this article](https://www.cssscript.com/ios-style-switches-bootstrap-4/)

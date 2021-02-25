@@ -1691,6 +1691,13 @@ path {
 }
 
 
+/* Custom iOS-style switch */
+
+.custom-switch .custom-switch-input+.custom-switch-btn:after {
+    background-image: url('../images/futbol-solid.svg');
+}
+
+
 /* Leaderboards */
 
 .hr-divider:before {
