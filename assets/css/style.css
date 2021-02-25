@@ -1697,11 +1697,23 @@ path {
     background-image: url('../images/futbol-solid.svg');
 }
 
+.custom-switch .custom-switch-input:checked+.custom-switch-btn {
+    background: #fff;
+}
+
+.custom-switch .custom-switch-input+.custom-switch-btn {
+    background: #28a745;
+}
+
 
 /* Leaderboards */
 
 .hr-divider:before {
     background-color: #252830;
+}
+
+.hr-divider-nav a {
+    width: 101px;
 }
 
 .leaderboard-table {
