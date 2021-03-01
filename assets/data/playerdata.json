@@ -14,7 +14,7 @@
         "goalsPer90": "0.75",
         "goalsMinusPensPer90": "0.46",
         "strikeRank": "1",
-        "value": "",
+        "value": "120",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -34,7 +34,7 @@
         "goalsPer90": "0.64",
         "goalsMinusPensPer90": "0.64",
         "strikeRank": "2",
-        "value": "",
+        "value": "45",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -54,7 +54,7 @@
         "goalsPer90": "0.63",
         "goalsMinusPensPer90": "0.63",
         "strikeRank": "3",
-        "value": "",
+        "value": "90",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -74,7 +74,7 @@
         "goalsPer90": "0.65",
         "goalsMinusPensPer90": "0.49",
         "strikeRank": "4",
-        "value": "",
+        "value": "120",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -94,7 +94,7 @@
         "goalsPer90": "0.58",
         "goalsMinusPensPer90": "0.53",
         "strikeRank": "5",
-        "value": "",
+        "value": "15",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -114,7 +114,7 @@
         "goalsPer90": "0.60",
         "goalsMinusPensPer90": "0.33",
         "strikeRank": "6",
-        "value": "",
+        "value": "90",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -134,7 +134,7 @@
         "goalsPer90": "0.67",
         "goalsMinusPensPer90": "0.30",
         "strikeRank": "7",
-        "value": "",
+        "value": "16",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -154,7 +154,7 @@
         "goalsPer90": "0.53",
         "goalsMinusPensPer90": "0.41",
         "strikeRank": "8",
-        "value": "",
+        "value": "50",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -174,7 +174,7 @@
         "goalsPer90": "0.45",
         "goalsMinusPensPer90": "0.40",
         "strikeRank": "9",
-        "value": "",
+        "value": "30",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -194,7 +194,7 @@
         "goalsPer90": "0.64",
         "goalsMinusPensPer90": "0.56",
         "strikeRank": "10",
-        "value": "",
+        "value": "35",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -214,7 +214,7 @@
         "goalsPer90": "0.45",
         "goalsMinusPensPer90": "0.23",
         "strikeRank": "11",
-        "value": "",
+        "value": "22.5",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -234,7 +234,7 @@
         "goalsPer90": "0.56",
         "goalsMinusPensPer90": "0.48",
         "strikeRank": "12",
-        "value": "",
+        "value": "40",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -254,7 +254,7 @@
         "goalsPer90": "0.56",
         "goalsMinusPensPer90": "0.40",
         "strikeRank": "13",
-        "value": "",
+        "value": "20",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -274,7 +274,7 @@
         "goalsPer90": "0.39",
         "goalsMinusPensPer90": "0.39",
         "strikeRank": "14",
-        "value": "",
+        "value": "120",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -294,7 +294,7 @@
         "goalsPer90": "0.37",
         "goalsMinusPensPer90": "0.37",
         "strikeRank": "15",
-        "value": "",
+        "value": "80",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -314,7 +314,7 @@
         "goalsPer90": "0.35",
         "goalsMinusPensPer90": "0.35",
         "strikeRank": "16",
-        "value": "",
+        "value": "30",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -334,7 +334,7 @@
         "goalsPer90": "0.48",
         "goalsMinusPensPer90": "0.27",
         "strikeRank": "17",
-        "value": "",
+        "value": "22",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -354,7 +354,7 @@
         "goalsPer90": "0.60",
         "goalsMinusPensPer90": "0.60",
         "strikeRank": "18",
-        "value": "",
+        "value": "40",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -374,7 +374,7 @@
         "goalsPer90": "0.65",
         "goalsMinusPensPer90": "0.45",
         "strikeRank": "19",
-        "value": "",
+        "value": "55",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -394,7 +394,7 @@
         "goalsPer90": "0.38",
         "goalsMinusPensPer90": "0.38",
         "strikeRank": "20",
-        "value": "",
+        "value": "110",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -414,7 +414,7 @@
         "goalsPer90": "0.34",
         "goalsMinusPensPer90": "0.34",
         "strikeRank": "21",
-        "value": "",
+        "value": "72",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -434,7 +434,7 @@
         "goalsPer90": "0.33",
         "goalsMinusPensPer90": "0.33",
         "strikeRank": "22",
-        "value": "",
+        "value": "28",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -454,7 +454,7 @@
         "goalsPer90": "0.30",
         "goalsMinusPensPer90": "0.30",
         "strikeRank": "23",
-        "value": "",
+        "value": "50",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -474,7 +474,7 @@
         "goalsPer90": "0.90",
         "goalsMinusPensPer90": "0.90",
         "strikeRank": "24",
-        "value": "",
+        "value": "40",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -494,7 +494,7 @@
         "goalsPer90": "0.54",
         "goalsMinusPensPer90": "0.54",
         "strikeRank": "25",
-        "value": "",
+        "value": "12",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -514,7 +514,7 @@
         "goalsPer90": "0.80",
         "goalsMinusPensPer90": "0.48",
         "strikeRank": "26",
-        "value": "",
+        "value": "8",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -534,7 +534,7 @@
         "goalsPer90": "0.48",
         "goalsMinusPensPer90": "0.48",
         "strikeRank": "27",
-        "value": "",
+        "value": "48",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -554,7 +554,7 @@
         "goalsPer90": "0.38",
         "goalsMinusPensPer90": "0.38",
         "strikeRank": "28",
-        "value": "",
+        "value": "2",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -574,7 +574,7 @@
         "goalsPer90": "0.35",
         "goalsMinusPensPer90": "0.35",
         "strikeRank": "29",
-        "value": "",
+        "value": "8",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -594,7 +594,7 @@
         "goalsPer90": "0.30",
         "goalsMinusPensPer90": "0.30",
         "strikeRank": "30",
-        "value": "",
+        "value": "40",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -614,7 +614,7 @@
         "goalsPer90": "0.28",
         "goalsMinusPensPer90": "0.28",
         "strikeRank": "31",
-        "value": "",
+        "value": "9",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -634,7 +634,7 @@
         "goalsPer90": "0.26",
         "goalsMinusPensPer90": "0.26",
         "strikeRank": "32",
-        "value": "",
+        "value": "28",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -654,7 +654,7 @@
         "goalsPer90": "0.30",
         "goalsMinusPensPer90": "0.24",
         "strikeRank": "33",
-        "value": "",
+        "value": "40",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -674,7 +674,7 @@
         "goalsPer90": "0.26",
         "goalsMinusPensPer90": "0.15",
         "strikeRank": "34",
-        "value": "",
+        "value": "50",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -694,7 +694,7 @@
         "goalsPer90": "0.68",
         "goalsMinusPensPer90": "0.68",
         "strikeRank": "35",
-        "value": "",
+        "value": "12",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -714,7 +714,7 @@
         "goalsPer90": "0.39",
         "goalsMinusPensPer90": "0.39",
         "strikeRank": "36",
-        "value": "",
+        "value": "60",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -734,7 +734,7 @@
         "goalsPer90": "0.37",
         "goalsMinusPensPer90": "0.37",
         "strikeRank": "37",
-        "value": "",
+        "value": "13",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -754,7 +754,7 @@
         "goalsPer90": "0.32",
         "goalsMinusPensPer90": "0.32",
         "strikeRank": "38",
-        "value": "",
+        "value": "35",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -774,7 +774,7 @@
         "goalsPer90": "0.27",
         "goalsMinusPensPer90": "0.27",
         "strikeRank": "39",
-        "value": "",
+        "value": "35",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -794,7 +794,7 @@
         "goalsPer90": "0.26",
         "goalsMinusPensPer90": "0.26",
         "strikeRank": "40",
-        "value": "",
+        "value": "70",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -814,7 +814,7 @@
         "goalsPer90": "0.23",
         "goalsMinusPensPer90": "0.23",
         "strikeRank": "41",
-        "value": "",
+        "value": "15",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -834,7 +834,7 @@
         "goalsPer90": "0.22",
         "goalsMinusPensPer90": "0.22",
         "strikeRank": "42",
-        "value": "",
+        "value": "27",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -854,7 +854,7 @@
         "goalsPer90": "0.21",
         "goalsMinusPensPer90": "0.21",
         "strikeRank": "43",
-        "value": "",
+        "value": "12",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -874,7 +874,7 @@
         "goalsPer90": "0.20",
         "goalsMinusPensPer90": "0.20",
         "strikeRank": "44",
-        "value": "",
+        "value": "3",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -894,7 +894,7 @@
         "goalsPer90": "0.20",
         "goalsMinusPensPer90": "0.20",
         "strikeRank": "45",
-        "value": "",
+        "value": "25",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -914,7 +914,7 @@
         "goalsPer90": "0.30",
         "goalsMinusPensPer90": "0.15",
         "strikeRank": "46",
-        "value": "",
+        "value": "13",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -934,7 +934,7 @@
         "goalsPer90": "0.53",
         "goalsMinusPensPer90": "0.53",
         "strikeRank": "47",
-        "value": "",
+        "value": "5",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -954,7 +954,7 @@
         "goalsPer90": "0.39",
         "goalsMinusPensPer90": "0.39",
         "strikeRank": "48",
-        "value": "",
+        "value": "9",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -974,7 +974,7 @@
         "goalsPer90": "0.33",
         "goalsMinusPensPer90": "0.33",
         "strikeRank": "49",
-        "value": "",
+        "value": "40",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -994,7 +994,7 @@
         "goalsPer90": "0.33",
         "goalsMinusPensPer90": "0.33",
         "strikeRank": "50",
-        "value": "",
+        "value": "21.5",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -1014,7 +1014,7 @@
         "goalsPer90": "0.48",
         "goalsMinusPensPer90": "0.32",
         "strikeRank": "51",
-        "value": "",
+        "value": "40",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -1034,7 +1034,7 @@
         "goalsPer90": "0.30",
         "goalsMinusPensPer90": "0.30",
         "strikeRank": "52",
-        "value": "",
+        "value": "60",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -1054,7 +1054,7 @@
         "goalsPer90": "0.29",
         "goalsMinusPensPer90": "0.29",
         "strikeRank": "53",
-        "value": "",
+        "value": "30",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -1074,7 +1074,7 @@
         "goalsPer90": "0.27",
         "goalsMinusPensPer90": "0.27",
         "strikeRank": "54",
-        "value": "",
+        "value": "25",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -1094,7 +1094,7 @@
         "goalsPer90": "0.25",
         "goalsMinusPensPer90": "0.25",
         "strikeRank": "55",
-        "value": "",
+        "value": "18",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -1114,7 +1114,7 @@
         "goalsPer90": "0.24",
         "goalsMinusPensPer90": "0.24",
         "strikeRank": "56",
-        "value": "",
+        "value": "15",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -1134,7 +1134,7 @@
         "goalsPer90": "0.24",
         "goalsMinusPensPer90": "0.24",
         "strikeRank": "57",
-        "value": "",
+        "value": "45",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -1154,7 +1154,7 @@
         "goalsPer90": "0.23",
         "goalsMinusPensPer90": "0.23",
         "strikeRank": "58",
-        "value": "",
+        "value": "25",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -1174,7 +1174,7 @@
         "goalsPer90": "0.22",
         "goalsMinusPensPer90": "0.22",
         "strikeRank": "59",
-        "value": "",
+        "value": "65",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -1194,7 +1194,7 @@
         "goalsPer90": "0.22",
         "goalsMinusPensPer90": "0.22",
         "strikeRank": "60",
-        "value": "",
+        "value": "10",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -1214,7 +1214,7 @@
         "goalsPer90": "0.19",
         "goalsMinusPensPer90": "0.19",
         "strikeRank": "61",
-        "value": "",
+        "value": "10",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -1234,7 +1234,7 @@
         "goalsPer90": "0.19",
         "goalsMinusPensPer90": "0.19",
         "strikeRank": "62",
-        "value": "",
+        "value": "65",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -1254,7 +1254,7 @@
         "goalsPer90": "0.25",
         "goalsMinusPensPer90": "0.17",
         "strikeRank": "63",
-        "value": "",
+        "value": "18",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -1274,7 +1274,7 @@
         "goalsPer90": "0.17",
         "goalsMinusPensPer90": "0.17",
         "strikeRank": "64",
-        "value": "",
+        "value": "28",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -1294,7 +1294,7 @@
         "goalsPer90": "0.21",
         "goalsMinusPensPer90": "0.14",
         "strikeRank": "65",
-        "value": "",
+        "value": "8",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -1314,7 +1314,7 @@
         "goalsPer90": "0.17",
         "goalsMinusPensPer90": "0.11",
         "strikeRank": "66",
-        "value": "",
+        "value": "3.5",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -1334,7 +1334,7 @@
         "goalsPer90": "0.19",
         "goalsMinusPensPer90": "0.06",
         "strikeRank": "67",
-        "value": "",
+        "value": "120",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     },
@@ -1354,7 +1354,7 @@
         "goalsPer90": "0.34",
         "goalsMinusPensPer90": "0",
         "strikeRank": "68",
-        "value": "",
+        "value": "50",
         "pricePerGoal": "",
         "pricePerGoalMinusPens": ""
     }

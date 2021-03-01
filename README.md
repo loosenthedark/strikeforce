@@ -14,7 +14,7 @@
 
 * (https://stackoverflow.com/questions/24806772/how-to-skip-over-an-element-in-map)(https://stackoverflow.com/questions/31489413/remove-last-3-characters-of-string-or-number-in-javascript/45165923)
 
-* Guidance on implementing flexible client-side table sorting using the [Tablesorter](http://tablesorter.com/) jQuery plugin found [here](https://bootstrap-themes.github.io/dashboard/docs/index.html#tablesorter)
+* Guidance on implementing flexible client-side `table` sorting using the [Tablesorter](http://tablesorter.com/) jQuery plugin found [here](https://bootstrap-themes.github.io/dashboard/docs/index.html#tablesorter)
 
 * (https://forum.jquery.com/topic/tablesorter-freeze-one-column)(https://stackoverflow.com/questions/6833545/tablesorter-how-do-i-make-the-first-column-static-fixed-in-tablesorter)
 
@@ -25,3 +25,7 @@
 * Font Awesome 'futbol' icon SVG used as background-image in custom iOS-style switch [with permission](https://fontawesome.com/license). No changes were made to the file's source code.
 
 * Pure CSS custom switch built using tips and code blocks from [Martin Haubek](https://haubek.github.io/custom-switch/) and retrieved from [this article](https://www.cssscript.com/ios-style-switches-bootstrap-4/)
+
+* Not happy with settling for a page refresh (`location.reload()`) workaround when unchecking leaderboards custom toggler switch - will look to rectify this at some point in the future
+
+* The TransferMarket API applies a rate limit of 5 requests per second, which prevented me from making calls to it in order to populate my StrikeValue tables (for both individual scorers and clubs). Instead, I had to manually log scorer and squad values in my local .json files and retrieve the relevant data from there to load these tables, which proved to be quite time-consuming.

@@ -1,124 +1,4 @@
 [{
-        "clubname": "Arsenal",
-        "APIclubname": "FC Arsenal",
-        "acronym": "AFC",
-        "crestURL": "assets/images/crests/Arsenal_FC.svg",
-        "goals": "26",
-        "pens": "3",
-        "goalsMinusPens": "23",
-        "goalsPer90": "1.3",
-        "goalsMinusPensPer90": "1.15",
-        "clubStrikeRank": "12"
-    },
-    {
-        "clubname": "Aston Villa",
-        "APIclubname": "Aston Villa",
-        "acronym": "AVFC",
-        "crestURL": "assets/images/crests/Aston_Villa_FC_crest_(2016).svg",
-        "goals": "35",
-        "pens": "3",
-        "goalsMinusPens": "32",
-        "goalsPer90": "1.75",
-        "goalsMinusPensPer90": "1.6",
-        "clubStrikeRank": "6"
-    },
-    {
-        "clubname": "Brighton & Hove Albion",
-        "APIclubname": "Brighton & Hove",
-        "acronym": "BHAFC",
-        "crestURL": "assets/images/crests/Brighton_&_Hove_Albion_logo.svg",
-        "goals": "24",
-        "pens": "5",
-        "goalsMinusPens": "19",
-        "goalsPer90": "1.2",
-        "goalsMinusPensPer90": "0.95",
-        "clubStrikeRank": "14"
-    },
-    {
-        "clubname": "Burnley",
-        "APIclubname": "FC Burnley",
-        "acronym": "BFC",
-        "crestURL": "assets/images/crests/Burnley_F.C._Logo.svg",
-        "goals": "13",
-        "pens": "1",
-        "goalsMinusPens": "12",
-        "goalsPer90": "0.65",
-        "goalsMinusPensPer90": "0.60",
-        "clubStrikeRank": "19"
-    },
-    {
-        "clubname": "Chelsea",
-        "APIclubname": "FC Chelsea",
-        "acronym": "CFC",
-        "crestURL": "assets/images/crests/Chelsea_FC.svg",
-        "goals": "33",
-        "pens": "3",
-        "goalsMinusPens": "30",
-        "goalsPer90": "1.65",
-        "goalsMinusPensPer90": "1.50",
-        "clubStrikeRank": "8"
-    },
-    {
-        "clubname": "Crystal Palace",
-        "APIclubname": "Crystal Palace",
-        "acronym": "CPFC",
-        "crestURL": "assets/images/crests/Crystal_Palace_FC_logo.svg",
-        "goals": "24",
-        "pens": "2",
-        "goalsMinusPens": "22",
-        "goalsPer90": "1.20",
-        "goalsMinusPensPer90": "1.10",
-        "clubStrikeRank": "13"
-    },
-    {
-        "clubname": "Everton",
-        "APIclubname": "FC Everton",
-        "acronym": "EFC",
-        "crestURL": "assets/images/crests/Everton_FC_logo.svg",
-        "goals": "31",
-        "pens": "2",
-        "goalsMinusPens": "29",
-        "goalsPer90": "1.55",
-        "goalsMinusPensPer90": "1.45",
-        "clubStrikeRank": "9"
-    },
-    {
-        "clubname": "Fulham",
-        "APIclubname": "FC Fulham",
-        "acronym": "FFC",
-        "crestURL": "assets/images/crests/Fulham_FC_(shield).svg",
-        "goals": "17",
-        "pens": "2",
-        "goalsMinusPens": "15",
-        "goalsPer90": "0.85",
-        "goalsMinusPensPer90": "0.75",
-        "clubStrikeRank": "17"
-    },
-    {
-        "clubname": "Leeds United",
-        "APIclubname": "Leeds United",
-        "acronym": "LUFC",
-        "crestURL": "assets/images/crests/Leeds_United_F.C._logo.svg",
-        "goals": "37",
-        "pens": "3",
-        "goalsMinusPens": "34",
-        "goalsPer90": "1.85",
-        "goalsMinusPensPer90": "1.70",
-        "clubStrikeRank": "2"
-    },
-    {
-        "clubname": "Leicester City",
-        "APIclubname": "Leicester City",
-        "acronym": "LCFC",
-        "crestURL": "assets/images/crests/Leicester_City_crest.svg",
-        "goals": "36",
-        "pens": "8",
-        "goalsMinusPens": "28",
-        "goalsPer90": "1.80",
-        "goalsMinusPensPer90": "1.40",
-        "clubStrikeRank": "5"
-    },
-    {
         "clubname": "Liverpool",
         "APIclubname": "FC Liverpool",
         "acronym": "LFC",
@@ -128,9 +8,21 @@
         "goalsMinusPens": "35",
         "goalsPer90": "2.00",
         "goalsMinusPensPer90": "1.75",
-        "clubStrikeRank": "1"
-    },
-    {
+        "clubStrikeRank": "1",
+        "squadvalue": "11.247"
+    }, {
+        "clubname": "Leeds United",
+        "APIclubname": "Leeds United",
+        "acronym": "LUFC",
+        "crestURL": "assets/images/crests/Leeds_United_F.C._logo.svg",
+        "goals": "37",
+        "pens": "3",
+        "goalsMinusPens": "34",
+        "goalsPer90": "1.85",
+        "goalsMinusPensPer90": "1.70",
+        "clubStrikeRank": "2",
+        "squadvalue": "1.944"
+    }, {
         "clubname": "Manchester City",
         "APIclubname": "Manchester City",
         "acronym": "MCFC",
@@ -140,9 +32,9 @@
         "goalsMinusPens": "34",
         "goalsPer90": "1.85",
         "goalsMinusPensPer90": "1.70",
-        "clubStrikeRank": "3"
-    },
-    {
+        "clubStrikeRank": "3",
+        "squadvalue": "10.563"
+    }, {
         "clubname": "Manchester United",
         "APIclubname": "Manchester Utd.",
         "acronym": "MUFC",
@@ -152,45 +44,33 @@
         "goalsMinusPens": "32",
         "goalsPer90": "1.85",
         "goalsMinusPensPer90": "1.60",
-        "clubStrikeRank": "4"
-    },
-    {
-        "clubname": "Newcastle United",
-        "APIclubname": "Newcastle Utd.",
-        "acronym": "NUFC",
-        "crestURL": "assets/images/crests/Newcastle_United_Logo.svg",
-        "goals": "19",
-        "pens": "4",
-        "goalsMinusPens": "15",
-        "goalsPer90": "0.95",
-        "goalsMinusPensPer90": "0.75",
-        "clubStrikeRank": "16"
-    },
-    {
-        "clubname": "Sheffield United",
-        "APIclubname": "Sheffield Utd.",
-        "acronym": "SUFC",
-        "crestURL": "assets/images/crests/Sheffield_United_FC_logo.svg",
-        "goals": "12",
+        "clubStrikeRank": "4",
+        "squadvalue": "7.383"
+    }, {
+        "clubname": "Leicester City",
+        "APIclubname": "Leicester City",
+        "acronym": "LCFC",
+        "crestURL": "assets/images/crests/Leicester_City_crest.svg",
+        "goals": "36",
+        "pens": "8",
+        "goalsMinusPens": "28",
+        "goalsPer90": "1.80",
+        "goalsMinusPensPer90": "1.40",
+        "clubStrikeRank": "5",
+        "squadvalue": "4.685"
+    }, {
+        "clubname": "Aston Villa",
+        "APIclubname": "Aston Villa",
+        "acronym": "AVFC",
+        "crestURL": "assets/images/crests/Aston_Villa_FC_crest_(2016).svg",
+        "goals": "35",
         "pens": "3",
-        "goalsMinusPens": "9",
-        "goalsPer90": "0.60",
-        "goalsMinusPensPer90": "0.45",
-        "clubStrikeRank": "20"
-    },
-    {
-        "clubname": "Southampton",
-        "APIclubname": "FC Southampton",
-        "acronym": "SFC",
-        "crestURL": "assets/images/crests/FC_Southampton.svg",
-        "goals": "27",
-        "pens": "2",
-        "goalsMinusPens": "25",
-        "goalsPer90": "1.35",
-        "goalsMinusPensPer90": "1.25",
-        "clubStrikeRank": "11"
-    },
-    {
+        "goalsMinusPens": "32",
+        "goalsPer90": "1.75",
+        "goalsMinusPensPer90": "1.6",
+        "clubStrikeRank": "6",
+        "squadvalue": "3.313"
+    }, {
         "clubname": "Tottenham Hotspur",
         "APIclubname": "Tottenham",
         "acronym": "THFC",
@@ -200,19 +80,32 @@
         "goalsMinusPens": "31",
         "goalsPer90": "1.70",
         "goalsMinusPensPer90": "1.55",
-        "clubStrikeRank": "7"
-    },
-    {
-        "clubname": "West Bromwich Albion",
-        "APIclubname": "West Brom",
-        "acronym": "WBAFC",
-        "crestURL": "assets/images/crests/West_Bromwich_Albion.svg",
-        "goals": "15",
+        "clubStrikeRank": "7",
+        "squadvalue": "7.196"
+    }, {
+        "clubname": "Chelsea",
+        "APIclubname": "FC Chelsea",
+        "acronym": "CFC",
+        "crestURL": "assets/images/crests/Chelsea_FC.svg",
+        "goals": "33",
+        "pens": "3",
+        "goalsMinusPens": "30",
+        "goalsPer90": "1.65",
+        "goalsMinusPensPer90": "1.50",
+        "clubStrikeRank": "8",
+        "squadvalue": "8.036"
+    }, {
+        "clubname": "Everton",
+        "APIclubname": "FC Everton",
+        "acronym": "EFC",
+        "crestURL": "assets/images/crests/Everton_FC_logo.svg",
+        "goals": "31",
         "pens": "2",
-        "goalsMinusPens": "13",
-        "goalsPer90": "0.75",
-        "goalsMinusPensPer90": "0.65",
-        "clubStrikeRank": "18"
+        "goalsMinusPens": "29",
+        "goalsPer90": "1.55",
+        "goalsMinusPensPer90": "1.45",
+        "clubStrikeRank": "9",
+        "squadvalue": "4.915"
     },
     {
         "clubname": "West Ham United",
@@ -224,9 +117,57 @@
         "goalsMinusPens": "30",
         "goalsPer90": "1.50",
         "goalsMinusPensPer90": "1,50",
-        "clubStrikeRank": "10"
-    },
-    {
+        "clubStrikeRank": "10",
+        "squadvalue": "2.713"
+    }, {
+        "clubname": "Southampton",
+        "APIclubname": "FC Southampton",
+        "acronym": "SFC",
+        "crestURL": "assets/images/crests/FC_Southampton.svg",
+        "goals": "27",
+        "pens": "2",
+        "goalsMinusPens": "25",
+        "goalsPer90": "1.35",
+        "goalsMinusPensPer90": "1.25",
+        "clubStrikeRank": "11",
+        "squadvalue": "2.395"
+    }, {
+        "clubname": "Arsenal",
+        "APIclubname": "FC Arsenal",
+        "acronym": "AFC",
+        "crestURL": "assets/images/crests/Arsenal_FC.svg",
+        "goals": "26",
+        "pens": "3",
+        "goalsMinusPens": "23",
+        "goalsPer90": "1.3",
+        "goalsMinusPensPer90": "1.15",
+        "clubStrikeRank": "12",
+        "squadvalue": "5.54"
+    }, {
+        "clubname": "Crystal Palace",
+        "APIclubname": "Crystal Palace",
+        "acronym": "CPFC",
+        "crestURL": "assets/images/crests/Crystal_Palace_FC_logo.svg",
+        "goals": "24",
+        "pens": "2",
+        "goalsMinusPens": "22",
+        "goalsPer90": "1.20",
+        "goalsMinusPensPer90": "1.10",
+        "clubStrikeRank": "13",
+        "squadvalue": "2.229"
+    }, {
+        "clubname": "Brighton & Hove Albion",
+        "APIclubname": "Brighton & Hove",
+        "acronym": "BHAFC",
+        "crestURL": "assets/images/crests/Brighton_&_Hove_Albion_logo.svg",
+        "goals": "24",
+        "pens": "5",
+        "goalsMinusPens": "19",
+        "goalsPer90": "1.2",
+        "goalsMinusPensPer90": "0.95",
+        "clubStrikeRank": "14",
+        "squadvalue": "2.488"
+    }, {
         "clubname": "Wolverhampton Wanderers",
         "APIclubname": "Wolverhampton",
         "acronym": "WWFC",
@@ -236,6 +177,69 @@
         "goalsMinusPens": "19",
         "goalsPer90": "1.05",
         "goalsMinusPensPer90": "0.95",
-        "clubStrikeRank": "15"
+        "clubStrikeRank": "15",
+        "squadvalue": "4.282"
+    }, {
+        "clubname": "Newcastle United",
+        "APIclubname": "Newcastle Utd.",
+        "acronym": "NUFC",
+        "crestURL": "assets/images/crests/Newcastle_United_Logo.svg",
+        "goals": "19",
+        "pens": "4",
+        "goalsMinusPens": "15",
+        "goalsPer90": "0.95",
+        "goalsMinusPensPer90": "0.75",
+        "clubStrikeRank": "16",
+        "squadvalue": "2.787"
+    }, {
+        "clubname": "Fulham",
+        "APIclubname": "FC Fulham",
+        "acronym": "FFC",
+        "crestURL": "assets/images/crests/Fulham_FC_(shield).svg",
+        "goals": "17",
+        "pens": "2",
+        "goalsMinusPens": "15",
+        "goalsPer90": "0.85",
+        "goalsMinusPensPer90": "0.75",
+        "clubStrikeRank": "17",
+        "squadvalue": "2.17"
+    }, {
+        "clubname": "West Bromwich Albion",
+        "APIclubname": "West Brom",
+        "acronym": "WBAFC",
+        "crestURL": "assets/images/crests/West_Bromwich_Albion.svg",
+        "goals": "15",
+        "pens": "2",
+        "goalsMinusPens": "13",
+        "goalsPer90": "0.75",
+        "goalsMinusPensPer90": "0.65",
+        "clubStrikeRank": "18",
+        "squadvalue": "1.323"
+    },
+    {
+        "clubname": "Burnley",
+        "APIclubname": "FC Burnley",
+        "acronym": "BFC",
+        "crestURL": "assets/images/crests/Burnley_F.C._Logo.svg",
+        "goals": "13",
+        "pens": "1",
+        "goalsMinusPens": "12",
+        "goalsPer90": "0.65",
+        "goalsMinusPensPer90": "0.60",
+        "clubStrikeRank": "19",
+        "squadvalue": "1.516"
+    },
+    {
+        "clubname": "Sheffield United",
+        "APIclubname": "Sheffield Utd.",
+        "acronym": "SUFC",
+        "crestURL": "assets/images/crests/Sheffield_United_FC_logo.svg",
+        "goals": "12",
+        "pens": "3",
+        "goalsMinusPens": "9",
+        "goalsPer90": "0.60",
+        "goalsMinusPensPer90": "0.45",
+        "clubStrikeRank": "20",
+        "squadvalue": "1.714"
     }
 ]

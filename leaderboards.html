@@ -37,11 +37,11 @@
                         <div class="nav-toggleable-md collapse" id="nav-toggleable-md" aria-expanded="false">
                             <ul class="nav nav-pills nav-stacked flex-column" id="nav-main">
                                 <li class="nav-item">
-                                    <a class="nav-link  active" href="index.html"> Home</a>
+                                    <a class="nav-link" href="index.html"> Home</a>
                                 </li>
                                 <li class="nav-header">Leaderboards</li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="collapse" id="summary-tables-nav-link" data-target="#nav-toggleable-md.show" href="#summary-tables">Summary</a>
+                                    <a class="nav-link active" data-toggle="collapse" id="summary-tables-nav-link" data-target="#nav-toggleable-md.show" href="#summary-tables">Summary</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="collapse" id="strikerate-tables-nav-link" data-target="#nav-toggleable-md.show" href="#strikerate-tables">StrikeRate</a>
@@ -90,31 +90,35 @@
                     </div>
                     <div class="hr-divider my-4">
                         <ul class="nav nav-pills hr-divider-content hr-divider-nav" role="tablist">
+                            <!-- Summary leaderboards tab -->
                             <li class="nav-item" role="presentation">
-                                <a href="#summary-tables" id='summary-tables-tab' class="nav-link active" role="tab" data-toggle="tab" aria-controls="sales" aria-expanded="true">Summary</a>
+                                <a href="#summary-tables" id='summary-tables-tab' class="nav-link nav-link-leaderboards-tab active" role="tab" data-toggle="tab" aria-controls="sales" aria-expanded="true">Summary</a>
                             </li>
+                            <!-- StrikeRate leaderboards tab -->
                             <li class="nav-item" role="presentation">
-                                <a href="#strikerate-tables" id='strikerate-tables-tab' class="nav-link" role="tab" data-toggle="tab" aria-controls="inventory" aria-expanded="false">StrikeRate</a>
+                                <a href="#strikerate-tables" id='strikerate-tables-tab' class="nav-link nav-link-leaderboards-tab" role="tab" data-toggle="tab" aria-controls="inventory" aria-expanded="false">StrikeRate</a>
                             </li>
+                            <!-- StrikeValue leaderboards tab-pane -->
                             <li class="nav-item" role="presentation">
-                                <a href="#strikevalue-tables" id='strikevalue-tables-tab' class="nav-link" role="tab" data-toggle="tab" aria-controls="profit" aria-expanded="false">StrikeValue</a>
+                                <a href="#strikevalue-tables" id='strikevalue-tables-tab' class="nav-link nav-link-leaderboards-tab" role="tab" data-toggle="tab" aria-controls="profit" aria-expanded="false">StrikeValue</a>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="tab-content">
+                    <div class="tab-content" id='tab-content-leaderboards'>
+                        <!-- Summary leaderboards tab-pane -->
                         <div role="tabpanel" class="tab-pane active" id="summary-tables" aria-expanded="true">
-                            <div class="custom-switch custom-switch-label-status text-center pl-0">
-                                <input class="custom-switch-input" id="example_05" type="checkbox">
-                                <label class="custom-switch-btn" for="example_05"></label>
+                            <div class="custom-switch custom-switch-label-status text-center pl-0" id='custom-switch-summary'>
+                                <input class="custom-switch-input" id="custom-switch-input" type="checkbox">
+                                <label class="custom-switch-btn" for="custom-switch-input"></label>
                             </div>
                             <div class="table-responsive">
-                                <table class="table leaderboard-table" data-sort="table">
+                                <table class="table tablesorter leaderboard-table" data-sort="table" id="my-table">
                                     <thead>
-                                        <tr>
+                                        <tr class='leaderboard-table-header-row'>
                                             <th class="header sorter-false pl-1"></th>
-                                            <th class="header sorter-last-name pr-2">Scorer</th>
-                                            <th class="header text-center pl-2 pr-2">Club</th>
+                                            <th class="header sorter-last-name pr-2 column-name"></th>
+                                            <th class="header text-center pl-2 pr-2"></th>
                                             <th class="header text-center pl-1 pr-3">Goals</th>
                                             <th class="header text-center pl-2 pr-3">Pens</th>
                                             <th class="header text-center pl-1 pr-3">Goals<br> (excl.<br> pens)</th>
@@ -125,16 +129,58 @@
                                 </table>
                             </div>
                         </div>
-
+                        <!-- StrikeRate leaderboards tab-pane -->
                         <div role="tabpanel" class="tab-pane" id="strikerate-tables" aria-expanded="false">
-                            <div class="">THE
-                                <canvas class=""></canvas>
+                            <div class="custom-switch custom-switch-label-status text-center pl-0" id='custom-switch-strikerate'>
+                                <input class="custom-switch-input" id="custom-switch-input-strikerate" type="checkbox">
+                                <label class="custom-switch-btn" for="custom-switch-input-strikerate"></label>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table tablesorter leaderboard-table" data-sort="table" id="my-second-table">
+                                    <thead>
+                                        <tr class='leaderboard-table-header-row'>
+                                            <th class="header sorter-false pl-1" scope='col' rowspan="2"></th>
+                                            <th class="header sorter-last-name pr-2" scope='col' rowspan="2"></th>
+                                            <th class="header text-center pl-2 pr-2" scope='col' rowspan="2"></th>
+                                            <th class="header text-center pl-1 pr-3" rowspan="2" scope='col'>Goals</th>
+                                            <th class="header text-center pl-2 pr-3" scope='col' colspan="2">Per game</th>
+                                        </tr>
+                                        <tr class='leaderboard-table-header-row'>
+
+                                            <th class="header text-center pl-2 pr-3 table-border-left table-backdrop-contrast" scope='col'>Goals</th>
+                                            <th class="header text-center pl-1 pr-3 table-backdrop-contrast" scope='col'>Goals<br> (excl.<br> pens)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id='leaderboard-body-strikerate'>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-
+                        <!-- StrikeValue leaderboards tab-pane -->
                         <div role="tabpanel" class="tab-pane" id="strikevalue-tables" aria-expanded="false">
-                            <div class="">CRAIC?
-                                <canvas class=""></canvas>
+                            <div class="custom-switch custom-switch-label-status text-center pl-0" id='custom-switch-strikevalue'>
+                                <input class="custom-switch-input" id="custom-switch-input-strikevalue" type="checkbox">
+                                <label class="custom-switch-btn" for="custom-switch-input-strikevalue"></label>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table tablesorter leaderboard-table" data-sort="table" id="my-third-table">
+                                    <thead>
+                                        <tr class='leaderboard-table-header-row'>
+                                            <th class="header sorter-false pl-1" scope='col' rowspan="2"></th>
+                                            <th class="header sorter-last-name pr-2" scope='col' rowspan="2"></th>
+                                            <th class="header text-center pl-2 pr-2" scope='col' rowspan="2"></th>
+                                            <th class="header text-center pl-1 pr-3" rowspan="2" scope='col'>Goals</th>
+                                            <th class="header text-center pl-2 pr-3" id='perPane' scope='col' colspan="2">Per €1m</th>
+                                        </tr>
+                                        <tr class='leaderboard-table-header-row'>
+
+                                            <th class="header text-center pl-2 pr-3 table-border-left table-backdrop-contrast" scope='col'>Goals</th>
+                                            <th class="header text-center pl-1 pr-3 table-backdrop-contrast" scope='col'>Goals<br> (excl.<br> pens)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id='leaderboard-body-strikevalue'>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>

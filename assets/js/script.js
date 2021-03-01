@@ -39,7 +39,6 @@ const searchScorers = async playerSearchText => {
         logoContainer.classList.remove('no-top-margin');
         logoContainer.classList.add('mt-5');
         mainContent.classList.add('mt-4');
-        pillsTabContent.classList.remove('negative-top-margin');
     };
 
     pillsClubsTab.addEventListener('click', () => {
@@ -69,7 +68,6 @@ const searchClubs = async clubSearchText => {
         logoContainer.classList.remove('no-top-margin');
         logoContainer.classList.add('mt-5');
         mainContent.classList.add('mt-4');
-        pillsTabContent.classList.remove('negative-top-margin');
     };
     pillsPlayersTab.addEventListener('click', () => {
         matches = [];
@@ -235,7 +233,6 @@ $(document).ready(function() {
                         $('#pills-tab').removeClass('d-none');
 
                         // Push main input field and site logo up using negative margin to make way for scorer data dashboard display
-                        $('#pills-tab-content').addClass('negative-top-margin');
                         $('#content-main').removeClass('mt-4');
 
 
@@ -368,6 +365,7 @@ $(document).ready(function() {
                         };
 
                         squadValue = insertDecimal(squadValue);
+                        console.log(squadValue);
 
                         var avgValue = squadValue / squadSize;
                         var _avgValue = avgValue.toFixed(1)
@@ -399,7 +397,6 @@ $(document).ready(function() {
                         $('#pills-tab').removeClass('d-none');
 
                         // Push main input field and site logo up using negative margin to make way for club data dashboard display
-                        $('#pills-tab-content').addClass('negative-top-margin');
                         $('#content-main').removeClass('mt-4');
 
 

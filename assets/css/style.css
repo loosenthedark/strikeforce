@@ -27,7 +27,7 @@ header {
 }
 
 .negative-top-margin {
-    margin-top: -30px;
+    margin-top: -20px;
 }
 
 footer {
@@ -61,6 +61,13 @@ h3 {
 
 h4 {
     font-size: 36px;
+}
+
+
+/* Utility classes */
+
+.table thead th.no-bottom-border {
+    border-bottom: 0;
 }
 
 
@@ -131,6 +138,7 @@ button {
 
 .container-logo,
 .logo-link {
+    z-index: 2;
     align-items: center;
     justify-content: center;
 }
@@ -179,6 +187,7 @@ button {
     right: 0;
     top: 2px;
     overflow: hidden;
+    z-index: 2;
 }
 
 #nav-toggler.no-border {
@@ -1495,6 +1504,7 @@ button {
 
 .input-with-icon {
     display: unset;
+    z-index: 2;
 }
 
 .input-with-icon>.form-control {
@@ -1708,6 +1718,13 @@ path {
 
 /* Leaderboards */
 
+#summary-tables,
+#strikerate-tables,
+#strikevalue-tables {
+    margin-top: -296px;
+    padding-top: 296px;
+}
+
 .hr-divider:before {
     background-color: #252830;
 }
@@ -1752,11 +1769,23 @@ path {
 }
 
 .leaderboard-table tr:first-child th:nth-child(5) {
+    width: 34%;
+}
+
+#my-table tr:first-child th:nth-child(5) {
     width: 17%;
 }
 
-.leaderboard-table tr:first-child th:nth-child(6) {
-    width: 17%;
+.table {
+    margin: 0 0 50px;
+}
+
+.table-border-left {
+    border-left: 1px solid #434857;
+}
+
+.table-backdrop-contrast {
+    backdrop-filter: contrast(0.97);
 }
 
 .crest-pane {
@@ -1846,6 +1875,7 @@ path {
 
 .west-bromwich-albion-crest-pane {
     background-image: url("../../assets/images/crests/West_Bromwich_Albion.svg");
+    background-size: 24px;
 }
 
 .west-ham-united-crest-pane {
