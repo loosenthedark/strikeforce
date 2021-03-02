@@ -37,7 +37,7 @@
                         <div class="nav-toggleable-md collapse" id="nav-toggleable-md" aria-expanded="false">
                             <ul class="nav nav-pills nav-stacked flex-column" id="nav-main">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="index.html"> Home</a>
+                                    <a class="nav-link" id='nav-home-link' href="index.html"> Home</a>
                                 </li>
                                 <li class="nav-header">Leaderboards</li>
                                 <li class="nav-item">
@@ -52,12 +52,12 @@
 
                                 <li class="nav-header">Dashboards</li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="collapse" id="scorers-dashboards-menu-nav-link" data-target="#nav-toggleable-md.show" href="dashboards.html#scorers">
+                                    <a class="nav-link active" data-toggle="collapse" id="scorers-dashboards-menu-nav-link" data-target="#nav-toggleable-md.show" href="#player-match-list">
                                         Scorers
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="collapse" id="clubs-dashboards-menu-nav-link" data-target="#nav-toggleable-md.show" href="dashboards.html#clubs">
+                                    <a class="nav-link" data-toggle="collapse" id="clubs-dashboards-menu-nav-link" data-target="#nav-toggleable-md.show" href="#club-match-list">
                                         Clubs
                                     </a>
                                 </li>
@@ -83,52 +83,100 @@
                             <h1 class="mb-3">trikeForce</h1>
                         </a>
                     </div>
-                    <div class="dashhead mb-3">
-                        <div class="dashhead-titles">
-                            <h2 class="dashhead-title text-center">Dashboards</h2>
+                    <div class="tab-content" id="pills-tab-content">
+                        <div class="tab-pane fade show container px-3 mb-3" id="pills-players" role="tabpanel" aria-labelledby="pills-players-tab">
+                            <div class="row">
+                                <div class="col-sm-8 col-md-6 m-auto">
+                                    <div class="dashhead mb-3">
+                                        <div class="dashhead-titles">
+                                            <h2 class="dashhead-title text-center">Scorer dashboards</h2>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown text-center mb-3" id='dropdown-clubs'>
+                                        <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdown-menu-button-clubs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="far fa-futbol"></span>
+                                  </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdown-menu-button-clubs" id='select-scorer-box-1'>
+                                            <h6 class="pl-3 dropdown-header">Choose a club</h6>
+                                            <a class="dropdown-item pl-3 " href="#">Arsenal</a>
+                                            <a class="dropdown-item pl-3 " href="#">Aston Villa</a>
+                                            <a class="dropdown-item pl-3 " href="#">Brighton & Hove Albion</a>
+                                            <a class="dropdown-item pl-3 " href="#">Burnley</a>
+                                            <a class="dropdown-item pl-3 " href="#">Chelsea</a>
+                                            <a class="dropdown-item pl-3 " href="#">Crystal Palace</a>
+                                            <a class="dropdown-item pl-3 " href="#">Everton</a>
+                                            <a class="dropdown-item pl-3 " href="#">Fulham</a>
+                                            <a class="dropdown-item pl-3 " href="#">Leeds United</a>
+                                            <a class="dropdown-item pl-3 " href="#">Leicester City</a>
+                                            <a class="dropdown-item pl-3 " href="#">Liverpool</a>
+                                            <a class="dropdown-item pl-3 " href="#">Manchester City</a>
+                                            <a class="dropdown-item pl-3 " href="#">Manchester United</a>
+                                            <a class="dropdown-item pl-3 " href="#">Newcastle United</a>
+                                            <a class="dropdown-item pl-3 " href="#">Sheffield United</a>
+                                            <a class="dropdown-item pl-3 " href="#">Southampton</a>
+                                            <a class="dropdown-item pl-3 " href="#">Tottenham Hotspur</a>
+                                            <a class="dropdown-item pl-3 " href="#">West Bromwich Albion</a>
+                                            <a class="dropdown-item pl-3 " href="#">West Ham United</a>
+                                            <a class="dropdown-item pl-3 " href="#">Wolverhampton Wanderers</a>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown d-none text-center mb-3" id="dropdown-scorers">
+                                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdown-menu-button-scorers" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="icon icon-user"></span></button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdown-menu-button-scorers" id='select-scorer-box-2'>
+                                        </div>
+                                    </div>
+                                    <div class='row mt-0' id="player-match-list">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade show container px-3 mb-3" id="pills-clubs" role="tabpanel" aria-labelledby="pills-clubs-tab">
+                            <div class="row">
+                                <div class="col-sm-8 col-md-6 m-auto">
+                                    <div class="dashhead mb-3">
+                                        <div class="dashhead-titles">
+                                            <h2 class="dashhead-title text-center">Club dashboards</h2>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown text-center mb-3" id='dropdown-clubz'>
+                                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdown-menu-button-clubz" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="icon icon-sports-club"></span>
+                              </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdown-menu-button-clubz" id='select-club-box'>
+                                            <h6 class="pl-3 dropdown-header">Choose a club</h6>
+                                            <a class="dropdown-item" href="#" id='FCArsenal'>Arsenal</a>
+                                            <a class="dropdown-item" href="#" id='AstonVilla'>Aston Villa</a>
+                                            <a class="dropdown-item" href="#" id='Brighton&Hove'>Brighton & Hove Albion</a>
+                                            <a class="dropdown-item" href="#" id='FCBurnley'>Burnley</a>
+                                            <a class="dropdown-item" href="#" id='FCChelsea'>Chelsea</a>
+                                            <a class="dropdown-item" href="#" id='CrystalPalace'>Crystal Palace</a>
+                                            <a class="dropdown-item" href="#" id='FCEverton'>Everton</a>
+                                            <a class="dropdown-item" href="#" id='FCFulham'>Fulham</a>
+                                            <a class="dropdown-item" href="#" id='LeedsUnited'>Leeds United</a>
+                                            <a class="dropdown-item" href="#" id='LeicesterCity'>Leicester City</a>
+                                            <a class="dropdown-item" href="#" id='FCLiverpool'>Liverpool</a>
+                                            <a class="dropdown-item" href="#" id='ManchesterCity'>Manchester City</a>
+                                            <a class="dropdown-item" href="#" id='ManchesterUtd.'>Manchester United</a>
+                                            <a class="dropdown-item" href="#" id='NewcastleUtd.'>Newcastle United</a>
+                                            <a class="dropdown-item" href="#" id='SheffieldUtd.'>Sheffield United</a>
+                                            <a class="dropdown-item" href="#" id='FCSouthampton'>Southampton</a>
+                                            <a class="dropdown-item" href="#" id='Tottenham'>Tottenham Hotspur</a>
+                                            <a class="dropdown-item" href="#" id='WestBrom'>West Bromwich Albion</a>
+                                            <a class="dropdown-item" href="#" id='WestHamUtd.'>West Ham United</a>
+                                            <a class="dropdown-item" href="#" id='Wolverhampton'>Wolverhampton Wanderers</a>
+                                        </div>
+                                    </div>
+                                    <div class='row' id="club-match-list"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="dropdown text-center mb-3">
-                        <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="dropdown-menu-button-clubs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="icon icon-sports-club"></span>
-                      </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdown-menu-button-clubs" id='select-scorer-box-1'>
-                            <h6 class="dropdown-header">Choose a club</h6>
-                            <a class="dropdown-item" href="#">Arsenal</a>
-                            <a class="dropdown-item" href="#">Aston Villa</a>
-                            <a class="dropdown-item" href="#">Brighton & Hove Albion</a>
-                            <a class="dropdown-item" href="#">Burnley</a>
-                            <a class="dropdown-item" href="#">Chelsea</a>
-                            <a class="dropdown-item" href="#">Crystal Palace</a>
-                            <a class="dropdown-item" href="#">Everton</a>
-                            <a class="dropdown-item" href="#">Fulham</a>
-                            <a class="dropdown-item" href="#">Leeds United</a>
-                            <a class="dropdown-item" href="#">Leicester City</a>
-                            <a class="dropdown-item" href="#">Liverpool</a>
-                            <a class="dropdown-item" href="#">Manchester City</a>
-                            <a class="dropdown-item" href="#">Manchester United</a>
-                            <a class="dropdown-item" href="#">Newcastle United</a>
-                            <a class="dropdown-item" href="#">Sheffield United</a>
-                            <a class="dropdown-item" href="#">Southampton</a>
-                            <a class="dropdown-item" href="#">Tottenham Hotspur</a>
-                            <a class="dropdown-item" href="#">West Bromwich Albion</a>
-                            <a class="dropdown-item" href="#">West Ham United</a>
-                            <a class="dropdown-item" href="#">Wolverhampton Wanderers</a>
-                        </div>
-                    </div>
-                    <!-- <label>Make</label>
-                    <select id="makeSelectionBox" class="stringInfoSpacing">
-  <option value="-1" selected="selected">Make</option>
-  </select>
-                    <br>
-                    <label>Select your vehicle</label>
-                    <select id="modelSelectionBox" class="stringInfoSpacing">
-  <option  id="selectVehicleBox" value="-1" selected="selected">Select your vehicle</option>
-  </select> -->
-                    <div class="dropdown d-none text-center" id="dropdown-scorers">
-                        <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdown-menu-button-scorers" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="icon icon-user"></span></button>
-                        <div class="dropdown-menu" aria-labelledby="dropdown-menu-button-scorers" id='select-scorer-box-2'>
-                        </div>
-                    </div>
+                    <ul class="nav nav-pills mt-4 mb-5 px-3 container" id="pills-tab" role="tablist">
+                        <li class="nav-item ml-auto mr-1" role="presentation">
+                            <a class="nav-link" id="pills-players-tab" data-toggle="pill" href="#pills-players" role="tab" title="Search for scorers" aria-controls="pills-players" aria-selected="true">Scorers</a>
+                        </li>
+                        <li class="nav-item mr-auto ml-1" role="presentation">
+                            <a class="nav-link" id="pills-clubs-tab" data-toggle="pill" href="#pills-clubs" role="tab" title="Search for clubs" aria-controls="pills-clubs" aria-selected="false">Clubs</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -165,7 +213,7 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="assets/js/tether.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="assets/js/toolkit.js"></script>
 
     <script src="assets/js/dashboards.js"></script>

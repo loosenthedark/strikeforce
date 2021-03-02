@@ -37,7 +37,7 @@ footer {
 
 @font-face {
     font-family: entypo;
-    src: url("assets/fonts/toolkit-entypo.ttf");
+    src: url("/assets/fonts/toolkit-entypo.ttf");
 }
 
 h1 {
@@ -232,17 +232,25 @@ button {
     box-shadow: 0 0 0 1px #fff;
 }
 
-#nav-main #nav-contact-link:hover,
-#nav-main #nav-contact-link:focus {
+#nav-main #nav-contact-link:not(.active):hover,
+#nav-main #nav-contact-link:not(.active):focus,
+#nav-home-link:not(.active):hover,
+#nav-home-link:not(.active):focus {
     background-color: #1997c6;
 }
 
-#nav-main #nav-contact-link:hover {
+#nav-main #nav-contact-link:not(.active):hover,
+#nav-home-link:not(.active):hover {
     color: #252830;
 }
 
-#nav-main #nav-contact-link:focus {
+#nav-main #nav-contact-link:not(.active):focus,
+#nav-home-link:not(.active):focus {
     outline: none;
+}
+
+.sidebar {
+    z-index: 3;
 }
 
 .sidebar-nav .sidebar-header {
@@ -277,9 +285,10 @@ button {
     box-shadow: 0 0 0 1px #fff;
 }
 
-#nav-contact-link {
+#nav-contact-link:not(.active),
+#nav-home-link:not(.active) {
     color: #1997c6;
-    border: 1px solid #1997cf;
+    border: 1px solid #1997c6;
 }
 
 
@@ -1890,6 +1899,10 @@ path {
 
 /* Dashboards Menu */
 
+.dashhead-title {
+    font-size: 27px;
+}
+
 .dropdown-toggle,
 .dropdown-menu {
     width: 66%;
@@ -1906,11 +1919,17 @@ path {
     border-color: #fff;
 }
 
-#dropdown-menu-button-clubs .icon,
+#dropdown-menu-button-clubz .icon,
+#dropdown-menu-button-clubs .fa-futbol,
 #dropdown-menu-button-scorers .icon {
     font-size: 60px;
 }
 
+#dropdown-menu-button-clubs .fa-futbol {
+    padding: 6px 0 10px;
+}
+
+#dropdown-menu-button-clubz::after,
 #dropdown-menu-button-clubs::after,
 #dropdown-menu-button-scorers::after {
     display: block;
@@ -1918,8 +1937,40 @@ path {
     margin-right: auto;
 }
 
-#dropdown-menu-button-scorers .icon-user::before {
+#dropdown-menu-button-scorers .icon::before,
+#dropdown-menu-button-clubz .icon::before {
     display: inline-block;
+}
+
+.dropdown-toggle {
+    position: relative;
+}
+
+.dropdown-toggle>span {
+    animation: bounce 1s ease-in-out infinite;
+    position: relative;
+    left: 0;
+    bottom: 0;
+}
+
+.dropdown-toggle:hover>span,
+.dropdown-toggle:focus>span,
+.dropdown-toggle:active>span {
+    animation-play-state: paused;
+}
+
+#dropdown-menu-button-clubz {
+    padding-top: 13px;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 5px;
+    }
 }
 
 
