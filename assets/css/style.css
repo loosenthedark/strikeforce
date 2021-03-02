@@ -1721,7 +1721,7 @@ path {
 #summary-tables,
 #strikerate-tables,
 #strikevalue-tables {
-    margin-top: -296px;
+    margin-top: -306px;
     padding-top: 296px;
 }
 
@@ -1885,6 +1885,41 @@ path {
 
 .wolverhampton-wanderers-crest-pane {
     background-image: url("../../assets/images/crests/Wolverhampton_Wanderers.svg");
+}
+
+
+/* Dashboards Menu */
+
+.dropdown-toggle,
+.dropdown-menu {
+    width: 66%;
+}
+
+.dropdown-menu {
+    margin-left: 17%;
+}
+
+.btn-secondary.dropdown-toggle {
+    color: #1997c6;
+    background-color: #fff;
+    font-weight: 500;
+    border-color: #fff;
+}
+
+#dropdown-menu-button-clubs .icon,
+#dropdown-menu-button-scorers .icon {
+    font-size: 60px;
+}
+
+#dropdown-menu-button-clubs::after,
+#dropdown-menu-button-scorers::after {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#dropdown-menu-button-scorers .icon-user::before {
+    display: inline-block;
 }
 
 

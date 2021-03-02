@@ -138,7 +138,7 @@ clubSearch.addEventListener('input', () => searchClubs(clubSearch.value));
 $(document).ready(function() {
     $('#nav-toggler').click(function() {
         $('.nav-toggler-icon').toggleClass('active');
-        $(this).toggleClass('no-border');
+        $('#nav-toggler').toggleClass('no-border');
     })
 });
 

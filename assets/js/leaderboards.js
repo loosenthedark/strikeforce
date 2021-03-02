@@ -17,7 +17,7 @@ $(document).ready(function() {
 
     $('#nav-toggler').click(function() {
         $('.nav-toggler-icon').toggleClass('active');
-        $(this).toggleClass('no-border');
+        $('#nav-toggler').toggleClass('no-border');
     })
 
     if (window.location.href.indexOf("#strikerate-tables") > -1) {
