@@ -122,6 +122,9 @@ $(document).ready(function() {
                     // Hide pill buttons while page is loading scorer data
                     $('#pills-tab').addClass('d-none');
 
+                    dropdownScorers.addClass('d-none');
+                    dropdownClubs.addClass('d-none');
+
                     // Show custom spinner while page is loading scorer data
                     $(playerMatchList).html(renderSpinner());
 
@@ -193,7 +196,7 @@ $(document).ready(function() {
             selectScorerBox.html(selectScorerBoxContent);
             const selectScorerBoxLink = $('#select-scorer-box-2 > .dropdown-item');
             selectScorerBoxLink.click(function() {
-                dropdownScorers.addClass('d-none');
+
                 var selectedScorer = (this.text);
                 showSelectedScorer(selectedScorer);
             });
@@ -208,7 +211,6 @@ $(document).ready(function() {
                 }
             }
             dropdownScorers.removeClass('d-none');
-            dropdownClubs.addClass('d-none');
 
             pillsClubsTabLink.click(function() {
                 dropdownScorers.addClass('d-none');
@@ -268,6 +270,8 @@ $(document).ready(function() {
 
                     // Hide pill buttons while page is loading club data
                     $('#pills-tab').addClass('d-none');
+
+                    dropdownClubz.addClass('d-none');
 
                     // Show custom spinner while page is loading club data
                     $(clubMatchList).html(renderSpinner());
@@ -380,7 +384,7 @@ $(document).ready(function() {
         }
         const selectClubBoxLink = $('#select-club-box > .dropdown-item');
         selectClubBoxLink.click(function() {
-            dropdownClubz.addClass('d-none');
+
             var chosenClub = (this.text);
             var chosenClubAPI = $(this).attr('id');
             showChosenClub(chosenClub, chosenClubAPI);
