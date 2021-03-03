@@ -78,51 +78,26 @@
                 </div>
                 <div class="col-md-9 content mt-4" id="content-main">
 
-                    <div class="container d-flex container-logo mt-5">
-                        <a class='logo-link d-flex' href="index.html">
+                    <div class="container d-flex container-logo even-less-top-margin">
+                        <a class='logo-link d-flex' id='logo-link' href="index.html">
                             <span class="icon icon-flash"></span>
                             <h1 class="mb-3">trikeForce</h1>
                         </a>
                     </div>
-
-                    <div class="tab-content" id="pills-tab-content">
-                        <div class="tab-pane fade show active container px-3 mb-3" id="pills-players" role="tabpanel" aria-labelledby="pills-players-tab">
-                            <form action="">
-                                <div class="row">
-                                    <div class="col-sm-8 col-md-6 m-auto">
-                                        <div class="input-with-icon form-group">
-                                            <input type="text" id="player-search" placeholder="Enter scorer or club name..." autocomplete="off" class="form-control form-control-lg mb-1">
-                                            <span class="icon icon-trophy"></span>
-                                        </div>
-                                        <div class='row mt-0' id="player-match-list">
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane fade show container px-3 mb-3" id="pills-clubs" role="tabpanel" aria-labelledby="pills-clubs-tab">
-                            <form action="">
-                                <div class="row">
-                                    <div class="col-sm-8 col-md-6 m-auto">
-                                        <div class="input-with-icon form-group">
-                                            <input type="text" id="club-search" autocomplete="off" placeholder="Search by club..." class="form-control form-control-lg mb-1">
-                                            <span class="icon icon-trophy"></span>
-                                        </div>
-                                        <div class='row' id="club-match-list"></div>
-                                    </div>
-                                </div>
-                            </form>
+                    <div class="statcard-wrapper px-5 pt-0">
+                        <div class="statcard p-3 text-xs-center mx-auto" id="statcard-about">
                         </div>
                     </div>
-                    <ul class="nav nav-pills mt-4 mb-5 px-3 container" id="pills-tab" role="tablist">
-                        <li class="nav-item ml-auto mr-1" role="presentation">
-                            <a class="nav-link active" id="pills-players-tab" data-toggle="pill" href="#pills-players" role="tab" title="Search for scorers" aria-controls="pills-players" aria-selected="true">Scorers</a>
-                        </li>
-                        <li class="nav-item mr-auto ml-1" role="presentation">
-                            <a class="nav-link" id="pills-clubs-tab" data-toggle="pill" href="#pills-clubs" role="tab" title="Search for clubs" aria-controls="pills-clubs" aria-selected="false">Clubs</a>
-                        </li>
-                    </ul>
-
+                    <div class="container px-4">
+                        <div class="progress" id='meaningful'>
+                            <div class="progress-bar text-left pl-3" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">Meaningful data&nbsp;&nbsp;<span class="icon icon-chevron-thin-right"></span><span class="icon icon-chevron-thin-right"></span><span class="icon icon-chevron-thin-right"></span></div>
+                        </div>
+                        <div class="progress" id='beautiful'>
+                            <div class="progress-bar text-left pl-3" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">for the beautiful game
+                                <span class="icon icon-chevron-thin-right"></span><span class="icon icon-chevron-thin-right"></span><span class="icon icon-chevron-thin-right"></span><span class="icon icon-chevron-thin-right"></span><span class="icon icon-chevron-thin-right"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -163,7 +138,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="assets/js/toolkit.js"></script>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/about.js"></script>
 </body>
 
 </html>

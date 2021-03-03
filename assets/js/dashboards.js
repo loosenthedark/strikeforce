@@ -12,6 +12,8 @@ $(document).ready(function() {
     const scorersPane = $('#pills-players');
     const clubsPane = $('#pills-clubs');
 
+    const dashboardTitles = $('.dashhead');
+
     const pillsScorersTabLink = $('#pills-players-tab');
     const pillsClubsTabLink = $('#pills-clubs-tab');
     const pillsTabLinks = $('#pills-tab .nav-link');
@@ -44,6 +46,7 @@ $(document).ready(function() {
     pillsTabLinks.click(function() {
         playerMatchList.innerHTML = '';
         clubMatchList.innerHTML = '';
+        dashboardTitles.removeClass('d-none');
         dropdownClubs.removeClass('d-none');
         dropdownClubz.removeClass('d-none');
         dropdownScorers.addClass('d-none');
@@ -119,14 +122,6 @@ $(document).ready(function() {
                     const getScorerProfile = new scorerSettings();
                     getScorerProfile.url = `https://transfermarket.p.rapidapi.com/players/get-profile?id=${scorerID}`;
 
-                    // Hide pill buttons while page is loading scorer data
-                    $('#pills-tab').addClass('d-none');
-
-                    dropdownScorers.addClass('d-none');
-                    dropdownClubs.addClass('d-none');
-
-                    // Show custom spinner while page is loading scorer data
-                    $(playerMatchList).html(renderSpinner());
 
                     // Also make a further call to locally-stored .json file
                     $.when(
@@ -197,6 +192,16 @@ $(document).ready(function() {
             const selectScorerBoxLink = $('#select-scorer-box-2 > .dropdown-item');
             selectScorerBoxLink.click(function() {
 
+                // Hide pill buttons while page is loading scorer data
+                $('#pills-tab').addClass('d-none');
+
+                dashboardTitles.addClass('d-none');
+                dropdownScorers.addClass('d-none');
+                dropdownClubs.addClass('d-none');
+
+                // Show custom spinner while page is loading scorer data
+                $(playerMatchList).html(renderSpinner());
+
                 var selectedScorer = (this.text);
                 showSelectedScorer(selectedScorer);
             });
@@ -215,6 +220,7 @@ $(document).ready(function() {
             pillsClubsTabLink.click(function() {
                 dropdownScorers.addClass('d-none');
                 dropdownClubs.removeClass('d-none');
+                dashboardTitles.removeClass('d-none');
             });
             updateSelectScorerBox(selectedScorers);
             selectedScorers = [];
@@ -267,11 +273,6 @@ $(document).ready(function() {
 
                     const getSquadValue = new clubSettings();
                     getSquadValue.url = `https://transfermarket.p.rapidapi.com/clubs/get-squad?id=${clubID}`;
-
-                    // Hide pill buttons while page is loading club data
-                    $('#pills-tab').addClass('d-none');
-
-                    dropdownClubz.addClass('d-none');
 
                     // Show custom spinner while page is loading club data
                     $(clubMatchList).html(renderSpinner());
@@ -385,6 +386,12 @@ $(document).ready(function() {
         const selectClubBoxLink = $('#select-club-box > .dropdown-item');
         selectClubBoxLink.click(function() {
 
+            // Hide pill buttons while page is loading club data
+            $('#pills-tab').addClass('d-none');
+
+            dropdownClubz.addClass('d-none');
+            dashboardTitles.addClass('d-none');
+            $(clubMatchList).html(renderSpinner());
             var chosenClub = (this.text);
             var chosenClubAPI = $(this).attr('id');
             showChosenClub(chosenClub, chosenClubAPI);

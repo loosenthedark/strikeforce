@@ -30,6 +30,10 @@ header {
     margin-top: -20px;
 }
 
+.even-less-top-margin {
+    margin-top: -30px;
+}
+
 footer {
     flex-shrink: 0;
     position: relative;
@@ -1970,6 +1974,118 @@ path {
     }
     50% {
         bottom: 5px;
+    }
+}
+
+
+/* About page */
+
+#logo-link {
+    animation: logo-zoom 1200ms forwards;
+}
+
+@keyframes logo-zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.4);
+    }
+}
+
+.statcard-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 12px;
+}
+
+#statcard-about {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    animation: background-flip 4200ms ease-in-out 1300ms 1 normal forwards, ball-bounce 1s ease-in-out 5500ms 1 normal forwards;
+}
+
+@keyframes background-flip {
+    0% {
+        background: url('../../assets/images/futbol-solid-grey.svg') center/cover no-repeat;
+    }
+    40% {
+        background: url('../../assets/images/futbol-solid-blue.svg') center/cover no-repeat;
+    }
+    45% {
+        background: url('../../assets/images/user.svg') center/cover no-repeat;
+    }
+    50% {
+        background: url('../../assets/images/sports-club.svg') center/cover no-repeat;
+    }
+    55% {
+        background: url('../../assets/images/trophy.svg') center/cover no-repeat;
+    }
+    60% {
+        background: url('../../assets/images/bar-graph.svg') center/cover no-repeat;
+    }
+    65% {
+        background: url('../../assets/images/circular-graph.svg') center/cover no-repeat;
+    }
+    70% {
+        background: url('../../assets/images/line-graph.svg') center/cover no-repeat;
+    }
+    75% {
+        background: url('../../assets/images/futbol-solid-blue.svg') center/cover no-repeat;
+    }
+    100% {
+        background: url('../../assets/images/futbol-solid-grey.svg') center/cover no-repeat;
+    }
+}
+
+@keyframes ball-bounce {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -20px;
+    }
+}
+
+.progress {
+    height: 48px;
+    background: #252830;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.progress-bar {
+    height: 48px;
+    background: transparent;
+    border: 2px solid #1997c6;
+    color: #1997c6;
+    font-size: 18px;
+    line-height: 48px;
+    font-weight: 400;
+}
+
+#meaningful,
+#beautiful {
+    opacity: 0;
+}
+
+#meaningful {
+    animation: fade-in 1s ease-in-out 6500ms 1 normal forwards;
+    margin: 0 0 12px;
+}
+
+#beautiful {
+    animation: fade-in 1s ease-in-out 7500ms 1 normal forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 

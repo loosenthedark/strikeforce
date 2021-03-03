@@ -147,7 +147,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     setTimeout(function() {
         playerSearch.focus();
-    }, 2000);
+    }, 1000);
     // make API call to TransferMarket when user clicks on scorer StrikeRate button
     $(document).on('click', '.btn-strike-rate', function() {
         const apiKey = "750dd332b2msh2ea2cd6530f8ce8p182023jsn0aa726d7814f";
