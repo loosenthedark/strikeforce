@@ -36,7 +36,7 @@
                         <div class="nav-toggleable-md collapse" id="nav-toggleable-md" aria-expanded="false">
                             <ul class="nav nav-pills nav-stacked flex-column" id="nav-main">
                                 <li class="nav-item">
-                                    <a class="nav-link  active" id='nav-home-link' href="index.html"> Home</a>
+                                    <a class="nav-link" id='nav-home-link' href="index.html"> Home</a>
                                 </li>
                                 <li class="nav-header">Leaderboards</li>
                                 <li class="nav-item">
@@ -67,7 +67,7 @@
                                     </a>
                                 </li>
                                 <li class="pt-2 nav-item">
-                                    <a class="mb-5 nav-link" id="nav-contact-link" href="contact.html">
+                                    <a class="mb-5 nav-link  active" id="nav-contact-link" href="contact.html">
                                         Contact
                                     </a>
                                 </li>
@@ -77,52 +77,42 @@
                     </nav>
                 </div>
                 <div class="col-md-9 content mt-4" id="content-main">
-
-                    <div class="container d-flex container-logo mt-5">
+                    <div class="container d-flex container-logo even-less-top-margin">
                         <a class='logo-link d-flex' href="index.html">
                             <span class="icon icon-flash"></span>
                             <h1 class="mb-3">trikeForce</h1>
                         </a>
                     </div>
-
-                    <div class="tab-content" id="pills-tab-content">
-                        <div class="tab-pane fade show active container px-3 mb-3" id="pills-players" role="tabpanel" aria-labelledby="pills-players-tab">
-                            <form action="">
-                                <div class="row">
-                                    <div class="col-sm-8 col-md-6 m-auto">
-                                        <div class="input-with-icon form-group">
-                                            <input type="text" id="player-search" placeholder="Enter scorer or club name..." autocomplete="off" class="form-control form-control-lg mb-1">
-                                            <span class="icon icon-trophy"></span>
-                                        </div>
-                                        <div class='row mt-0' id="player-match-list">
-                                        </div>
-                                    </div>
+                    <!--  Newsletter Section -->
+                    <section id="newsletter">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6">
+                                    <h3>Get in T<i class="fas fa-futbol"></i>uch</h3>
+                                    <p class='para-lead px-3'>Contacting us couldn't be simpler, and we'd love to hear from you!</p>
+                                    <p class='para-two'>Email us any time at hello@loosenthedark.tech, or better still sign up for our monthly newsletter using the form below.</p>
+                                    <p class='para-three'>Alternatively, you can always reach out to us on social media and we'll do our best to get back to you right away <span class="icon icon-emoji-happy"></span></p>
                                 </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane fade show container px-3 mb-3" id="pills-clubs" role="tabpanel" aria-labelledby="pills-clubs-tab">
-                            <form action="">
-                                <div class="row">
-                                    <div class="col-sm-8 col-md-6 m-auto">
-                                        <div class="input-with-icon form-group">
-                                            <input type="text" id="club-search" autocomplete="off" placeholder="Search by club..." class="form-control form-control-lg mb-1">
-                                            <span class="icon icon-trophy"></span>
-                                        </div>
-                                        <div class='row' id="club-match-list"></div>
-                                    </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6">
+                                    <form action="" method="">
+                                        <input type="email" name="email" placeholder="Enter your email"><input type="submit" value="Subscribe">
+                                    </form>
                                 </div>
-                            </form>
+                            </div>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
                         </div>
-                    </div>
-                    <ul class="nav nav-pills mt-4 mb-5 px-3 container" id="pills-tab" role="tablist">
-                        <li class="nav-item ml-auto mr-1" role="presentation">
-                            <a class="nav-link active" id="pills-players-tab" data-toggle="pill" href="#pills-players" role="tab" title="Search for scorers" aria-controls="pills-players" aria-selected="true">Scorers</a>
-                        </li>
-                        <li class="nav-item mr-auto ml-1" role="presentation">
-                            <a class="nav-link" id="pills-clubs-tab" data-toggle="pill" href="#pills-clubs" role="tab" title="Search for clubs" aria-controls="pills-clubs" aria-selected="false">Clubs</a>
-                        </li>
-                    </ul>
-
+                    </section>
+                    <!-- End newsletter Section-->
+                    <!-- <div class="container">
+                        <div class="contact-content">Contacting us is easy, and we'd love to hear from you! Email us any time at hello@loosenthedark.tech, or better still, sign up for our monthly newsletter using the form below.</div>
+                        <div>Alternatively, you can always reach out to us on social media and we'll do our best to get back to you right away <span class="icon icon-emoji-happy"></span></div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -130,31 +120,7 @@
     <!----- end of Header ----->
 
     <!----- Footer ----->
-    <footer class="container footer-container">
-        <div class="text-center row footer-row">
-            <div class="col footer-col">
-                <ul class="list-inline social-list">
-                    <li class="list-inline-item social-list-item">
-                        <a href="https://www.facebook.com/" target="_blank" title="Facebook" id="facebooklink">
-                            <span class="icon icon-facebook" aria-hidden="true"></span>
-                            <span class="sr-only">Facebook</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item social-list-item">
-                        <a href="https://twitter.com/" target="_blank" title="Twitter" id="twitterlink">
-                            <span class="icon icon-twitter" aria-hidden="true"></span>
-                            <span class="sr-only">Twitter</span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item social-list-item">
-                        <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn" id="linkedinlink">
-                            <span class="icon icon-linkedin" aria-hidden="true"></span>
-                            <span class="sr-only">LinkedIn</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <footer class="container footer-container footer-contact">
     </footer>
     <!----- end of Footer ----->
     <script src="assets/js/jquery.min.js"></script>
@@ -163,7 +129,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="assets/js/toolkit.js"></script>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/about.js"></script>
 </body>
 
 </html>
