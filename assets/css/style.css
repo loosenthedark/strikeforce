@@ -2055,19 +2055,33 @@ path {
 
 .progress {
     height: 48px;
-    background: #252830;
+    background: transparent;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 
 .progress-bar {
     height: 48px;
-    background: transparent;
+    background: #1997c6;
     border: 2px solid #1997c6;
-    color: #1997c6;
+    color: #252830;
     font-size: 18px;
     line-height: 48px;
     font-weight: 400;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: calc(100% + 1px);
+    top: -2px;
+    border-top: 24px solid #252830;
+    border-bottom: 24px solid #252830;
+    border-left: 24px solid #1997c6;
 }
 
 #meaningful,
@@ -2078,6 +2092,16 @@ path {
 #meaningful {
     animation: fade-in 1s ease-in-out 6500ms 1 normal forwards;
     margin: 0 0 12px;
+}
+
+#meaningful>.progress-bar>span:first-child,
+#beautiful>.progress-bar>span:first-child {
+    position: relative;
+    top: -2px;
+}
+
+.progress-bar>span {
+    float: left;
 }
 
 #beautiful {
@@ -2102,14 +2126,15 @@ path {
 
 #newsletter {
     background: #1997c6;
-    padding: 60px 0px;
+    padding: 40px 0 50px;
     text-align: center;
     color: #fff;
     border-radius: 15px 15px 15px 0px;
+    max-width: 550px;
+    margin: 0 auto;
 }
 
 #newsletter h3 {
-    font-size: 36px;
     font-weight: 500;
     color: #fff;
     font-size: 40px;
@@ -2118,9 +2143,10 @@ path {
 #newsletter i.fa-futbol {
     position: relative;
     font-size: 27px;
-    top: -1px;
+    top: -2px;
     color: #fff;
-    left: -2px;
+    left: -1px;
+    padding-left: 3px;
 }
 
 #newsletter p {
@@ -2430,15 +2456,18 @@ path {
     #dropdown-menu-button-clubs .fa-futbol {
         padding-bottom: 16px;
     }
-    .nav-toggler-about#nav-toggler {
+    .nav-toggler-about#nav-toggler,
+    .nav-toggler-contact#nav-toggler {
         height: 50px;
         width: 50px;
     }
-    .nav-toggler-about#nav-toggler span {
+    .nav-toggler-about#nav-toggler span,
+    .nav-toggler-contact#nav-toggler span {
         font-size: 34px;
         line-height: 46px;
     }
-    .nav-toggler-about#nav-toggler span .fa-futbol {
+    .nav-toggler-about#nav-toggler span .fa-futbol,
+    .nav-toggler-contact#nav-toggler span .fa-futbol {
         font-size: 44px;
     }
     #logo-about {
@@ -2462,13 +2491,71 @@ path {
     #meaningful {
         margin: 0 0 20px;
     }
-    .breaking-span {
-        margin-left: -8px;
+    .progress-bar::after {
+        border-top: 30px solid #252830;
+        border-bottom: 30px solid #252830;
+        border-left: 30px solid #1997c6;
+    }
+    .icon-flash {
+        font-size: 7.3rem;
     }
     .icon-flash.icon-flash-about {
         font-size: 9rem;
     }
     .icon-flash.icon-flash-about:before {
         left: -6px;
+    }
+    .icon-flash:before {
+        left: -14px;
+    }
+    .footer-row {
+        font-size: 2.2rem;
+    }
+    .main-loader {
+        height: 52.5vh;
+    }
+    .main-fader {
+        height: 52.5vh;
+    }
+    .loader {
+        top: 50%;
+        left: 35%;
+    }
+    svg {
+        height: 450px;
+    }
+    #newsletter {
+        margin: 30px auto 0;
+        padding: 60px 0;
+    }
+    #newsletter h3 {
+        font-size: 50px;
+    }
+    #newsletter p {
+        font-size: 20px;
+        margin: 30px 0 0;
+    }
+    #newsletter .para-lead,
+    #newsletter .para-two {
+        margin-bottom: 0.7em;
+    }
+    #newsletter .para-three {
+        margin-bottom: 35px;
+    }
+    #contact-form>input {
+        font-size: 20px;
+    }
+    #newsletter form input[type="submit"] {
+        font-size: 18px;
+    }
+    #newsletter .social-links a {
+        width: 55px;
+        height: 55px;
+        font-size: 27px;
+        line-height: 55px;
+    }
+    #newsletter .social-links a i {
+        position: relative;
+        top: -10px;
     }
 }

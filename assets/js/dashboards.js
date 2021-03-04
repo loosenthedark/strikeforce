@@ -208,6 +208,7 @@ $(document).ready(function() {
         }
 
         selectClubBox.click(function() {
+            console.log(this.parentElement.parentElement.classList.remove('mb-md-5'));
             var _selectedClub = this.innerHTML;
             for (let i = 0; i < data.length; i++) {
                 var selectedClub = _selectedClub.replace(/&amp;/, '&');
