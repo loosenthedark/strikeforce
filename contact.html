@@ -13,9 +13,17 @@
 
     <link rel="stylesheet" href="assets/css/toolkit-inverse.css">
     <link rel="stylesheet" href="assets/css/application.css">
+
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>StrikeForce | Meaningful data for the beautiful game</title>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_Xqu28mWZuK1KkKdLu5olD");
+        })();
+    </script>
 </head>
 
 <body class="d-flex flex-column">
@@ -78,7 +86,7 @@
                 </div>
                 <div class="col-md-9 content mt-4" id="content-main">
                     <div class="container d-flex container-logo even-less-top-margin">
-                        <a class='logo-link d-flex' href="index.html">
+                        <a class='logo-link d-flex' id='logo_link' href="index.html">
                             <span class="icon icon-flash"></span>
                             <h1 class="mb-3">trikeForce</h1>
                         </a>
@@ -86,17 +94,19 @@
                     <!--  Newsletter Section -->
                     <section id="newsletter">
                         <div class="container">
-                            <div class="row justify-content-center">
+                            <div class="row">
                                 <div class="col-lg-6">
                                     <h3>Get in T<i class="fas fa-futbol"></i>uch</h3>
-                                    <p class='para-lead px-3'>Contacting us couldn't be simpler, and we'd love to hear from you!</p>
-                                    <p class='para-two'>Email us any time at hello@loosenthedark.tech, or better still sign up for our monthly newsletter using the form below.</p>
-                                    <p class='para-three'>Alternatively, you can always reach out to us on social media and we'll do our best to get back to you right away <span class="icon icon-emoji-happy"></span></p>
+                                    <p class='para-lead text-left'>Contacting us couldn't be simpler, and we'd love to hear from you!</p>
+                                    <p class='para-two text-left'>Email us any time at <span class='email-span'><a class='email-link' href='mailto:hello@loosenthedark.tech?subject=Hello%20there!'>hello@loosenthedark.tech</a></span>, or better still sign up for our monthly newsletter
+                                        using the form below.</p>
+                                    <p class='para-three text-left'>Alternatively, you can always reach out to us on social media and we'll do our best to get back to you right away <span class="icon icon-thumbs-up"></span></p>
                                 </div>
                             </div>
                             <div class="row justify-content-center">
                                 <div class="col-lg-6">
-                                    <form action="" method="">
+                                    <form id='contact-form' action="" method="">
+                                        <input type="hidden" name="contact_number">
                                         <input type="email" name="email" placeholder="Enter your email"><input type="submit" value="Subscribe">
                                     </form>
                                 </div>
@@ -109,10 +119,28 @@
                         </div>
                     </section>
                     <!-- End newsletter Section-->
-                    <!-- <div class="container">
-                        <div class="contact-content">Contacting us is easy, and we'd love to hear from you! Email us any time at hello@loosenthedark.tech, or better still, sign up for our monthly newsletter using the form below.</div>
-                        <div>Alternatively, you can always reach out to us on social media and we'll do our best to get back to you right away <span class="icon icon-emoji-happy"></span></div>
-                    </div> -->
+                    <!-- Modal -->
+                    <div class="modal fade" id='modal-submit' tabindex="-1" role="dialog">
+                        <div class="modal-dialog-wrapper">
+                            <div class="modal-dialog modal-sm vertical-align-center" role="document">
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class='px-2'>Thanks for reaching out <span class="icon icon-emoji-happy"></span></h4><button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <p>A member of our team will get back to you as soon as possible!</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End modal -->
                 </div>
             </div>
         </div>
@@ -127,9 +155,13 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="assets/js/tether.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    </script>
     <script src="assets/js/toolkit.js"></script>
 
+
     <script src="assets/js/about.js"></script>
+
+    <script src="assets/js/email.js"></script>
 </body>
 
 </html>
