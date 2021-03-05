@@ -13,6 +13,16 @@ $(document).ready(function() {
     const leaderboardBodyStrikeRate = document.getElementById('leaderboard-body-strikerate');
     const leaderboardBodyStrikeValue = document.getElementById('leaderboard-body-strikevalue');
 
+    var summaryTablesOffset = $(summaryTablesPane).offset().top - $(window).scrollTop();
+    var strikerateTablesOffset = $(strikerateTablesPane).offset().top - $(window).scrollTop();
+    var strikevalueTablesOffset = $(strikevalueTablesPane).offset().top - $(window).scrollTop();
+
+    console.log(summaryTablesOffset);
+    console.log(strikerateTablesOffset);
+    console.log(strikevalueTablesOffset);
+    // console.log(strikerateTablesPane.offsetTop);
+    // console.log(strikevalueTablesPane.offsetTop);
+
     // Animate nav toggler icon on click
 
     $('#nav-toggler').click(function() {

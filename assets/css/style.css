@@ -1737,7 +1737,8 @@ path {
 
 #summary-tables,
 #strikerate-tables,
-#strikevalue-tables {
+#strikevalue-tables,
+#pillz-tab-content {
     margin-top: -306px;
     padding-top: 296px;
 }
@@ -2197,8 +2198,8 @@ path {
     bottom: 0;
     border: 0;
     background: none;
-    font-size: 16px;
-    padding: 0 20px;
+    font-size: 14px;
+    padding: 0 12px;
     background: #28a745;
     color: #fff;
     border: 2px solid #fff;
@@ -2547,6 +2548,7 @@ path {
     }
     #newsletter form input[type="submit"] {
         font-size: 18px;
+        padding: 0 20px;
     }
     #newsletter .social-links a {
         width: 55px;

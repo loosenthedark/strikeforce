@@ -9,6 +9,12 @@ $(document).ready(function() {
     const playerMatchList = document.getElementById('player-match-list');
     const clubMatchList = document.getElementById('club-match-list');
 
+    var playerMatchListOffset = $(playerMatchList).offset().top - $(window).scrollTop();
+    var clubMatchListOffset = $(clubMatchList).offset().top - $(window).scrollTop();
+
+    console.log(playerMatchListOffset);
+    console.log(clubMatchListOffset);
+
     const scorersPane = $('#pills-players');
     const clubsPane = $('#pills-clubs');
 
