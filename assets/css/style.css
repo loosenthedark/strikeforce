@@ -2415,6 +2415,23 @@ path {
 }
 
 
+/* Alerts */
+
+.alert {
+    color: #434857;
+    width: 100%;
+    font-weight: 500;
+}
+
+.alert .icon {
+    font-size: 2rem;
+}
+
+.alert>p {
+    margin-bottom: 0.15rem;
+}
+
+
 /* >>>>> Media Queries >>>>> */
 
 @media (min-width: 576px) {
@@ -2508,7 +2525,7 @@ path {
     }
     #clubs-strikerate .statcard-canvas,
     #clubs-strikevalue .statcard-canvas {
-        min-height: 285px;
+        min-height: 317px;
     }
     #clubs-strikerate .statcard-body-row,
     #clubs-strikevalue .statcard-body-row {

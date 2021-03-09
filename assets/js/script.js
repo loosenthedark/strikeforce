@@ -33,7 +33,8 @@ const searchScorers = async playerSearchText => {
 
     };
 
-    if (playerSearchText.length > 2) { showScorers(matches); } else if (playerSearchText.length === 0) {
+    // Render alert message if user enters invalid scorer search string
+    if (playerSearchText.length > 2 && matches.length === 0) { playerMatchList.innerHTML = "<div class='alert alert-warning text-center' role='alert'><span class='icon icon-warning'></span><br><p>Sorry, no scorers found.</p><p>Please try searching for someone else!</p></div>"; } else if (playerSearchText.length > 2) { showScorers(matches); } else if (playerSearchText.length === 0) {
         matches = [];
         playerMatchList.innerHTML = '';
         logoContainer.classList.remove('no-top-margin');
@@ -62,7 +63,7 @@ const searchClubs = async clubSearchText => {
         clubMatchList.innerHTML = '';
     };
 
-    if (clubSearchText.length > 0) { showClubs(matches); } else if (clubSearchText.length === 0) {
+    if (clubSearchText.length > 0 && matches.length === 0) { clubMatchList.innerHTML = "<div class='alert alert-warning text-center' role='alert'><span class='icon icon-warning'></span><br><p>Sorry, no clubs found.</p><p>Please try searching for another one!</p></div>"; } else if (clubSearchText.length > 0) { showClubs(matches); } else if (clubSearchText.length === 0) {
         matches = [];
         clubMatchList.innerHTML = '';
         logoContainer.classList.remove('no-top-margin');
@@ -185,10 +186,10 @@ $(document).ready(function() {
 
                 // Use this scorer ID variable in two further API calls
                 const getScorerValue = new scorerSettings();
-                getScorerValue.url = `https://transfermarket.p.rapidapi.com/players/get-market-value?id=${scorerID}`;
+                getScorerValue.url = `https://transfermarket.p.rapidapi.co/players/get-market-value?id=${scorerID}`;
 
                 const getScorerProfile = new scorerSettings();
-                getScorerProfile.url = `https://transfermarket.p.rapidapi.com/players/get-profile?id=${scorerID}`;
+                getScorerProfile.url = `https://transfermarket.p.rapidapi.co/players/get-profile?id=${scorerID}`;
 
                 // Hide pill buttons while page is loading scorer data
                 $('#pills-tab').addClass('d-none');
@@ -241,14 +242,10 @@ $(document).ready(function() {
                         $(playerSearch).val('');
                     },
                     // function to handle any errors arising from API calls
-                    function(errorResponse) {
-                        if (errorResponse.status === 404) {
-
-                        } else if (errorResponse.status === 403) {
-
-                        } else {
-
-                        }
+                    function(errorResponseValue, errorResponseProfile, errorResponseGoals) {
+                        setTimeout(() => {
+                            playerMatchList.innerHTML = "<div class='alert alert-danger text-center' role='alert'><span class='icon icon-warning'></span><br><p>We're sorry, but something's gone wrong.</p><p>Please refresh the page and try again!</p></div>";
+                        }, 5000);
                     }
                 );
             });
@@ -293,16 +290,16 @@ $(document).ready(function() {
 
                 // Use this club ID variable in three further API calls
                 const get_ClubLogo = new clubSettings();
-                get_ClubLogo.url = `https://transfermarket.p.rapidapi.com/clubs/get-short-info?ids=${clubID}`;
+                get_ClubLogo.url = `https://transfermarket.p.rapidapi.co/clubs/get-short-info?ids=${clubID}`;
 
                 const getClubProfile = new clubSettings();
-                getClubProfile.url = `https://transfermarket.p.rapidapi.com/clubs/get-profile?id=${clubID}`;
+                getClubProfile.url = `https://transfermarket.p.rapidapi.co/clubs/get-profile?id=${clubID}`;
 
                 const getClubPosition = new clubSettings();
-                getClubPosition.url = `https://transfermarket.p.rapidapi.com/competitions/get-table?id=GB1&seasonID=2020`;
+                getClubPosition.url = `https://transfermarket.p.rapidapi.co/competitions/get-table?id=GB1&seasonID=2020`;
 
                 const getSquadValue = new clubSettings();
-                getSquadValue.url = `https://transfermarket.p.rapidapi.com/clubs/get-squad?id=${clubID}`;
+                getSquadValue.url = `https://transfermarket.p.rapidapi.co/clubs/get-squad?id=${clubID}`;
 
                 // Hide pill buttons while page is loading club data
                 $('#pills-tab').addClass('d-none');
@@ -404,14 +401,10 @@ $(document).ready(function() {
                         $(clubSearch).val('');
                     },
                     // function to handle any errors arising from API calls
-                    function(errorResponse) {
-                        if (errorResponse.status === 404) {
-
-                        } else if (errorResponse.status === 403) {
-
-                        } else {
-
-                        }
+                    function(errorResponseLogo, errorResponseClubProfile, errorResponseClubPosition, errorResponseSquadValue, errorResponseClubGoals) {
+                        setTimeout(() => {
+                            clubMatchList.innerHTML = "<div class='alert alert-danger text-center' role='alert'><span class='icon icon-warning'></span><br><p>We're sorry, but something's gone wrong.</p><p>Please refresh the page and try again!</p></div>";
+                        }, 5000);
                     }
                 );
             });
