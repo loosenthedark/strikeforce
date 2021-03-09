@@ -22,10 +22,10 @@
 <body class="d-flex flex-column">
     <!----- Header ----->
     <header>
-        <div class="container">
+        <div class="container leaderboards-container">
             <div class="row">
                 <div class="col-md-3 sidebar">
-                    <nav class="sidebar-nav">
+                    <nav class="sidebar-nav leaderboards-sidebar-nav">
                         <div class="sidebar-header d-md-none">
                             <button class="collapsed" id="nav-toggler" type="button" data-toggle="collapse" data-target="#nav-toggleable-md" aria-expanded="false">
                                 <span class='nav-toggler-icon'><i class="fas fa-bars"></i></span>
@@ -121,7 +121,7 @@
                                             <th class="header text-center pl-2 pr-2"></th>
                                             <th class="header text-center pl-1 pr-3">Goals</th>
                                             <th class="header text-center pl-2 pr-3">Pens</th>
-                                            <th class="header text-center pl-1 pr-3">Goals<br> (excl.<br> pens)</th>
+                                            <th class="header text-center pl-1 pr-3">Goals<br> (excl.<br class='d-xl-none'> pens)</th>
                                         </tr>
                                     </thead>
                                     <tbody id='leaderboard-body'>
@@ -148,7 +148,7 @@
                                         <tr class='leaderboard-table-header-row'>
 
                                             <th class="header text-center pl-2 pr-3 table-border-left table-backdrop-contrast" scope='col'>Goals</th>
-                                            <th class="header text-center pl-1 pr-3 table-backdrop-contrast" scope='col'>Goals<br> (excl.<br> pens)</th>
+                                            <th class="header text-center pl-1 pr-3 table-backdrop-contrast" scope='col'>Goals<br> (excl.<br class='d-xl-none'> pens)</th>
                                         </tr>
                                     </thead>
                                     <tbody id='leaderboard-body-strikerate'>
@@ -175,7 +175,7 @@
                                         <tr class='leaderboard-table-header-row'>
 
                                             <th class="header text-center pl-2 pr-3 table-border-left table-backdrop-contrast" scope='col'>Goals</th>
-                                            <th class="header text-center pl-1 pr-3 table-backdrop-contrast" scope='col'>Goals<br> (excl.<br> pens)</th>
+                                            <th class="header text-center pl-1 pr-3 table-backdrop-contrast" scope='col'>Goals<br> (excl.<br class='d-xl-none'> pens)</th>
                                         </tr>
                                     </thead>
                                     <tbody id='leaderboard-body-strikevalue'>
@@ -195,10 +195,10 @@
     </main> -->
     <!----- end of Main ----->
     <!----- Footer ----->
-    <footer class="container footer-container">
-        <div class="text-center row footer-row">
+    <footer class="container footer-container leaderboards-footer">
+        <div class="text-center row footer-row leaderboards-footer-row">
             <div class="col-md-9 offset-md-3">
-                <ul class="list-inline social-list">
+                <ul class="list-inline leaderboards-social-list social-list">
                     <li class="list-inline-item social-list-item">
                         <a href="https://www.facebook.com/" target="_blank" title="Facebook" id="facebooklink">
                             <span class="icon icon-facebook" aria-hidden="true"></span>

@@ -13,8 +13,6 @@ body * {
 header {
     flex: 1 0 auto;
     min-height: calc(100vh - 80px);
-    /* margin-bottom: -60px; */
-    /* padding-bottom: 60px; */
 }
 
 .scorer-image {
@@ -291,6 +289,11 @@ button {
 
 #pills-tab .nav-item a:not(.active):focus {
     box-shadow: 0 0 0 1px #fff;
+}
+
+#pills-players-tab,
+#pills-clubs-tab {
+    min-width: 80px
 }
 
 #nav-contact-link:not(.active),
@@ -1580,7 +1583,8 @@ button {
 }
 
 svg {
-    height: 300px;
+    width: 100%;
+    height: auto;
     display: block;
     margin: 0 auto;
 }
@@ -1678,6 +1682,17 @@ path {
     border-bottom: none;
 }
 
+#clubs-strikerate,
+#clubs-strikevalue {
+    border: 1px solid #fdfdfd;
+}
+
+#clubs-strikerate .statcard-body-row,
+#clubs-strikevalue .statcard-body-row {
+    padding-top: 20px;
+    border: none;
+}
+
 #player-match-list,
 #club-match-list {
     padding-left: 15px;
@@ -1737,8 +1752,7 @@ path {
 
 #summary-tables,
 #strikerate-tables,
-#strikevalue-tables,
-#pillz-tab-content {
+#strikevalue-tables {
     margin-top: -306px;
     padding-top: 296px;
 }
@@ -2126,13 +2140,22 @@ path {
 }
 
 #newsletter {
-    background: #1997c6;
-    padding: 40px 0 50px;
+    width: calc(100% - 45px);
     text-align: center;
     color: #fff;
-    border-radius: 15px 15px 15px 0px;
-    max-width: 550px;
     margin: 0 auto;
+    max-width: 480px;
+}
+
+.newsletter-row {
+    border-radius: 15px 15px 15px 0px;
+    padding: 40px 0 50px;
+    background: #1997c6;
+}
+
+.newsletter-container {
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #newsletter h3 {
@@ -2179,6 +2202,8 @@ path {
     border-radius: 50px;
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
     text-align: left;
+    max-width: 450px;
+    margin: 0 auto;
 }
 
 #newsletter form input[type="email"] {
@@ -2399,11 +2424,53 @@ path {
 }
 
 @media (min-width: 768px) {
+    body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .home-header,
+    .dashboards-header {
+        min-height: calc(90vh - 40px);
+    }
+    .about-header,
+    .contact-header {
+        min-height: calc(90vh - 20px);
+    }
+    .home-footer,
+    .dashboards-footer,
+    .about-footer {
+        height: 10vh;
+    }
+    .home-container,
+    .dashboards-container,
+    .leaderboards-container {
+        margin-right: 20px;
+        width: calc(100% - 20px);
+    }
+    .home-footer,
+    .dashboards-footer,
+    .leaderboards-footer {
+        margin-right: 20px;
+        width: calc(100% - 20px);
+    }
+    #content-leaderboard-main {
+        padding-left: 20px;
+    }
+    .leaderboards-footer-row>.col-md-9 {
+        padding-left: 20px;
+    }
     h1 {
         font-size: 54px;
     }
+    .home-social-list {
+        margin: 0;
+    }
     .social-list a {
-        padding: 5px 45px;
+        line-height: 10vh;
+        padding: 5px 60px;
+    }
+    .about-footer .social-list a {
+        padding: 5px 102px;
     }
     .iconav {
         position: unset;
@@ -2416,12 +2483,19 @@ path {
         background-color: #30343e;
         overflow-y: unset;
     }
+    .iconav-nav>.nav-item>.nav-link {
+        padding: 22px 15px;
+    }
     header {
-        min-height: calc(100vh - 120px);
+        min-height: unset;
     }
     .iconav-nav>.nav-item+.nav-item>.nav-link {
         border-top: 1px solid #fdfdfd;
         border-right: 1px solid #fdfdfd;
+    }
+    .icon-user,
+    .icon-sports-club {
+        font-size: 96px;
     }
     .dashhead-titles {
         float: unset;
@@ -2429,12 +2503,20 @@ path {
     .dashhead-title {
         font-size: 32px;
     }
+    .statcard-canvas {
+        min-height: 263px;
+    }
+    #clubs-strikerate .statcard-canvas,
+    #clubs-strikevalue .statcard-canvas {
+        min-height: 285px;
+    }
+    #clubs-strikerate .statcard-body-row,
+    #clubs-strikevalue .statcard-body-row {
+        padding-top: unset;
+    }
     .dropdown-toggle,
     .dropdown-menu {
-        width: 80%;
-    }
-    .dropdown-menu {
-        margin-left: 10%;
+        max-width: 330px;
     }
     #dropdown-menu-button-clubs .fa-futbol,
     #dropdown-menu-button-scorers .icon {
@@ -2457,6 +2539,9 @@ path {
     #dropdown-menu-button-clubs .fa-futbol {
         padding-bottom: 16px;
     }
+    .custom-switch.custom-switch-label-status .custom-switch-input:checked+.custom-switch-btn {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='38'%3E%3Ctext x='12.71429' y='23.75' font-size='12px' font-weight='700' font-family='-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji' fill='%2328a745'%3EClubs%3C/text%3E%3C/svg%3E");
+    }
     .nav-toggler-about#nav-toggler,
     .nav-toggler-contact#nav-toggler {
         height: 50px;
@@ -2471,6 +2556,10 @@ path {
     .nav-toggler-contact#nav-toggler span .fa-futbol {
         font-size: 44px;
     }
+    .about-container,
+    .contact-container {
+        width: 100%;
+    }
     #logo-about {
         font-size: 66px;
     }
@@ -2478,8 +2567,8 @@ path {
         margin-top: 0.7rem;
     }
     #statcard-about {
-        width: 370px;
-        height: 370px;
+        width: 330px;
+        height: 330px;
     }
     .progress {
         height: 60px;
@@ -2519,15 +2608,16 @@ path {
         height: 52.5vh;
     }
     .loader {
-        top: 50%;
-        left: 35%;
+        top: 65%;
+        left: 50%;
+        transform: translate(-65%, -65%);
     }
     svg {
-        height: 450px;
+        width: 130%;
     }
     #newsletter {
         margin: 30px auto 0;
-        padding: 60px 0;
+        padding: 0 0 60px;
     }
     #newsletter h3 {
         font-size: 50px;
@@ -2552,6 +2642,7 @@ path {
     }
     #newsletter .social-links a {
         width: 55px;
+        margin-right: 30px;
         height: 55px;
         font-size: 27px;
         line-height: 55px;
@@ -2559,5 +2650,486 @@ path {
     #newsletter .social-links a i {
         position: relative;
         top: -10px;
+    }
+    .sidebar-nav-about,
+    .sidebar-nav-contact {
+        display: flex;
+    }
+    .nav-toggleable-md.nav-toggleable-md-about,
+    .nav-toggleable-md.nav-toggleable-md-contact {
+        display: flex !important;
+        width: 100%;
+    }
+    .nav-stacked-about,
+    .nav-stacked-contact {
+        flex-direction: row !important;
+        width: 100%;
+    }
+    .nav-stacked-about>li,
+    .nav-stacked-contact>li {
+        flex-basis: 20%;
+        flex-grow: 0;
+    }
+    .nav-stacked-about>li>a,
+    .nav-stacked-about>li.nav-header>a,
+    .nav-stacked-contact>li>a,
+    .nav-stacked-contact>li.nav-header>a {
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        border-right: none;
+        border-bottom: 0.1rem solid #1997c6;
+        font-size: 0.8rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .nav-stacked-about>li.nav-header,
+    .nav-stacked-contact>li.nav-header {
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .nav-stacked-about>li.nav-header .dropdown-toggle,
+    .nav-stacked-contact>li.nav-header .dropdown-toggle {
+        width: 100%;
+    }
+    .nav-stacked-about>li.nav-header .dropdown-toggle::after,
+    .nav-stacked-contact>li.nav-header .dropdown-toggle::after {
+        display: none;
+    }
+    .nav-stacked-about>li.nav-header>a,
+    .nav-stacked-contact>li.nav-header>a {
+        display: block;
+        color: #1997c6;
+        border-left: .1rem solid #1997c6;
+        font-weight: 500;
+    }
+    .nav-stacked-about>li:nth-of-type(6)>a,
+    .nav-stacked-contact>li:nth-of-type(6)>a {
+        border-right: .1rem solid #1997c6;
+    }
+    .nav-stacked-about>li.nav-header>a:hover,
+    .nav-stacked-contact>li.nav-header>a:hover {
+        text-decoration: none;
+    }
+    .nav-stacked-about>li.nav-header>a:hover,
+    .nav-stacked-about>li.nav-header>a:active,
+    .nav-stacked-contact>li.nav-header>a:hover,
+    .nav-stacked-contact>li.nav-header>a:active {
+        text-decoration: none;
+        color: #252830;
+        background: #fdfdfd;
+    }
+    .nav-stacked-about>li.nav-header>a:focus,
+    .nav-stacked-contact>li.nav-header>a:focus {
+        text-decoration: none;
+    }
+    .nav-pills.nav-stacked-about .nav-link,
+    .nav-pills.nav-stacked-contact .nav-link {
+        border-radius: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    .nav-pills.nav-stacked-about .dropdown-menu,
+    .nav-pills.nav-stacked-contact .dropdown-menu {
+        margin-left: unset;
+        width: calc(100% + 1px);
+        border-radius: unset;
+        min-width: unset;
+        margin-top: unset;
+        background: #252830;
+        border: .1rem solid #1997c6;
+        border-bottom: none;
+        border-top: none;
+        padding-top: unset;
+        padding-bottom: unset;
+    }
+    .nav-pills.nav-stacked-about #about-nav-dropdown-dashboards+.dropdown-menu,
+    .nav-pills.nav-stacked-contact #about-nav-dropdown-dashboards+.dropdown-menu {
+        width: 100%;
+    }
+    .nav-pills.nav-stacked-about .dropdown-item,
+    .nav-pills.nav-stacked-contact .dropdown-item {
+        position: relative;
+        left: -1px;
+        padding-left: 0;
+        padding-right: 0;
+        color: #1997c6;
+        text-align: center;
+        font-size: .8rem;
+        padding-top: unset;
+        padding-bottom: unset;
+        height: 50px;
+        width: calc(100% + 2px);
+        line-height: 50px;
+    }
+    .nav-pills.nav-stacked-about .dropdown-item:hover,
+    .nav-pills.nav-stacked-about .dropdown-item:focus,
+    .nav-pills.nav-stacked-contact .dropdown-item:hover,
+    .nav-pills.nav-stacked-contact .dropdown-item:focus {
+        color: #252830;
+        background: #1997c6;
+        border-left: .1rem solid #1997c6;
+    }
+    .nav-pills.nav-stacked-about .dropdown-item,
+    .nav-pills.nav-stacked-contact .dropdown-item {
+        border-bottom: .1rem solid #1997c6;
+    }
+    .nav-pills.nav-stacked-about .nav-link.active,
+    .nav-pills.nav-stacked-about .nav-item.show .nav-link,
+    .nav-pills.nav-stacked-contact .nav-link.active,
+    .nav-pills.nav-stacked-contact .nav-item.show .nav-link {
+        border-left: 0.1rem solid #1997c6;
+    }
+    .nav-pills.nav-stacked-about #nav-home-link:not(.active),
+    .nav-pills.nav-stacked-contact #nav-home-link:not(.active) {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 0.1rem solid #1997c6;
+    }
+    .nav-pills.nav-stacked-about #nav-contact-link:not(.active),
+    .nav-pills.nav-stacked-contact #nav-contact-link:not(.active) {
+        border-top: none;
+        border-right: none;
+        border-left: 0.1rem solid #1997c6;
+        border-bottom: 0.1rem solid #1997c6;
+    }
+    .nav-pills.nav-stacked-about #nav-home-link:not(.active):hover,
+    .nav-pills.nav-stacked-about #nav-contact-link:not(.active):hover,
+    .nav-pills.nav-stacked-contact #nav-home-link:not(.active):hover,
+    .nav-pills.nav-stacked-contact #nav-contact-link:not(.active):hover {
+        border-left: .1rem solid #252830;
+    }
+    .nav-pills.nav-stacked-about #nav-home-link:not(.active):focus,
+    .nav-pills.nav-stacked-about #nav-contact-link:not(.active):focus,
+    #nav-main.nav-pills.nav-stacked-about .nav-link.active:focus,
+    .nav-pills.nav-stacked-contact #nav-home-link:not(.active):focus,
+    .nav-pills.nav-stacked-contact #nav-contact-link:not(.active):focus,
+    #nav-main.nav-pills.nav-stacked-contact .nav-link.active:focus {
+        box-shadow: none;
+    }
+    .nav-pills.nav-stacked-about #nav-home-link:not(.active):focus,
+    .nav-pills.nav-stacked-about #nav-contact-link:not(.active):focus,
+    .nav-pills.nav-stacked-contact #nav-home-link:not(.active):focus,
+    .nav-pills.nav-stacked-contact #nav-contact-link:not(.active):focus {
+        border-left: 0.1rem solid #252830;
+    }
+    .nav-pills.nav-stacked-contact #nav-about-link:not(.active) {
+        color: #1997c6;
+    }
+    .nav-pills.nav-stacked-contact #nav-about-link:not(.active):hover {
+        border-right: .1rem solid #252830;
+        background: #1997c6;
+        color: #252830;
+    }
+    .nav-pills.nav-stacked-contact #nav-about-link:not(.active):focus {
+        border-right: .1rem solid #252830;
+        color: #fff;
+        background: #1997c6;
+        box-shadow: none;
+    }
+    .sidebar-about,
+    .sidebar-contact {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .about-body {
+        padding-top: 0;
+    }
+    .clicked {
+        background: #fdfdfd;
+    }
+    .chevron-container {
+        max-width: 620px;
+    }
+    .contact-body {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    #newsletter i.fa-futbol {
+        font-size: 32px;
+        top: -3px;
+    }
+}
+
+@media (min-width: 992px) {
+    .home-social-list a,
+    .dashboards-social-list a,
+    .leaderboards-social-list a {
+        padding: 5px 95px;
+    }
+    .loader {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    svg {
+        width: 100%;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 36px;
+    }
+    h4 {
+        font-size: 42px;
+    }
+    .dashhead-title {
+        font-size: 36px;
+    }
+    .statcard-desc {
+        font-size: 14px;
+    }
+    .icon-bar-graph {
+        font-size: 2.3rem;
+    }
+    .statcard-number-clubs {
+        font-size: 28px;
+    }
+    .club-crest {
+        height: 54px;
+    }
+    .fa-chart-line {
+        font-size: 2.8rem;
+        line-height: 89px;
+    }
+    .iconav-icon {
+        font-size: 36px;
+    }
+    .iconav-nav-label {
+        font-size: 16px;
+    }
+    .iconav-nav>.nav-item>.nav-link {
+        padding: 30px 12px;
+    }
+    .icon-user,
+    .icon-sports-club {
+        font-size: 108px;
+    }
+    .crest-box img {
+        width: 35%;
+    }
+    .statcard-canvas,
+    #clubs-strikerate .statcard-canvas,
+    #clubs-strikevalue .statcard-canvas {
+        min-height: 330px;
+    }
+    .btn-sm {
+        font-size: 16px;
+    }
+    .hr-divider {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .hr-divider-nav>li>a {
+        padding: 6px 18px;
+    }
+    .hr-divider-nav a {
+        width: 140px;
+    }
+    .custom-switch {
+        line-height: 16px;
+    }
+    .custom-switch.custom-switch-label-status .custom-switch-input+.custom-switch-btn {
+        width: 108px;
+    }
+    .custom-switch.custom-switch-label-status .custom-switch-input+.custom-switch-btn {
+        width: 108px;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='108' height='38'%3E%3Ctext x='42.85714' y='23.75' font-size='14px' font-weight='500' font-family='-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji' fill='%23fff'%3EScorers%3C/text%3E%3C/svg%3E");
+    }
+    .custom-switch.custom-switch-label-status .custom-switch-input:checked+.custom-switch-btn:after {
+        left: 70px;
+    }
+    .custom-switch.custom-switch-label-status .custom-switch-input:checked+.custom-switch-btn {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='108' height='38'%3E%3Ctext x='12.71429' y='23.75' font-size='14px' font-weight='700' font-family='-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji' fill='%2328a745'%3EClubs%3C/text%3E%3C/svg%3E");
+    }
+    thead,
+    tbody {
+        font-size: 16px;
+    }
+    .crest-pane {
+        height: 30px;
+        background-size: 30px;
+    }
+    .arsenal-crest-pane {
+        background-size: 28px;
+    }
+    .aston-villa-crest-pane {
+        background-size: 26px;
+    }
+    .burnley-crest-pane {
+        background-size: 28px;
+    }
+    .crystal-palace-crest-pane {
+        background-size: 26px;
+    }
+    .fulham-crest-pane {
+        background-size: 26px;
+    }
+    .leeds-united-crest-pane {
+        background-size: 28px;
+    }
+    .liverpool-crest-pane {
+        background-size: 28px;
+    }
+    .tottenham-hotspur-crest-pane {
+        background-size: 22px;
+    }
+    .west-bromwich-albion-crest-pane {
+        background-size: 28px;
+    }
+    .west-ham-united-crest-pane {
+        background-size: 28px;
+    }
+    .table-responsive {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .leaderboard-table tr:first-child th:nth-child(2) {
+        width: 40%;
+    }
+    .leaderboard-table tr:first-child th:nth-child(3) {
+        width: 14%;
+    }
+    .leaderboard-table tr:first-child th:nth-child(4) {
+        width: 14%;
+    }
+    #my-table tr:first-child th:nth-child(5) {
+        width: 14%;
+    }
+    #my-second-table tr:first-child th:nth-child(5),
+    #my-third-table tr:first-child th:nth-child(5) {
+        width: 28%;
+    }
+    .sidebar-nav-about,
+    .sidebar-nav-contact {
+        margin-right: unset;
+    }
+    #meaningful {
+        margin: 0 0 15px;
+    }
+    #newsletter {
+        max-width: 600px;
+    }
+    #newsletter p {
+        font-size: 16px;
+    }
+    #newsletter form {
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+    #contact-form>input {
+        font-size: 18px;
+    }
+    #newsletter .social-links a {
+        width: 48px;
+        height: 48px;
+        font-size: 24px;
+        line-height: 48px;
+    }
+    #newsletter {
+        max-width: 750px;
+        padding: 0 0 35px;
+    }
+    #newsletter h3 {
+        font-size: 38px;
+    }
+    #newsletter i.fa-futbol {
+        font-size: 24px;
+    }
+    .icon-flash.icon-flash-about,
+    .icon-flash.icon-flash-contact {
+        font-size: 5.8rem;
+    }
+    #logo-about,
+    #logo-contact {
+        font-size: 40px;
+    }
+    .icon-flash.icon-flash-about:before,
+    .icon-flash.icon-flash-contact:before {
+        left: -20px;
+    }
+    #newsletter form input[type="submit"] {
+        font-size: 16px;
+        padding: 0 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .loader {
+        top: 40%;
+        left: 40%;
+        transform: translate(-40%, -40%);
+    }
+    svg {
+        width: 80%;
+    }
+    .statcard-img img {
+        width: 220px;
+    }
+    .table-responsive {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .leaderboard-table tr:first-child th:nth-child(2) {
+        width: 34%;
+    }
+    .leaderboard-table tr:first-child th:nth-child(3) {
+        width: 14%;
+    }
+    .leaderboard-table tr:first-child th:nth-child(4) {
+        width: 16%;
+    }
+    #my-table tr:first-child th:nth-child(5) {
+        width: 16%;
+    }
+    #my-table tr:first-child th:nth-child(6) {
+        width: 16%;
+    }
+    #my-second-table tr:first-child th:nth-child(5),
+    #my-third-table tr:first-child th:nth-child(5) {
+        width: 32%;
+    }
+    .about-header,
+    .about-container {
+        height: calc(90vh - 20px);
+    }
+    #statcard-about {
+        width: 30vh;
+        height: 30vh;
+    }
+    .statcard-wrapper {
+        padding-bottom: 0;
+    }
+    .progress {
+        height: 40px;
+    }
+    .progress-bar {
+        height: 40px;
+        font-size: 16px;
+        line-height: 40px;
+    }
+    .progress-bar::after {
+        border-top: 20px solid #252830;
+        border-bottom: 20px solid #252830;
+        border-left: 20px solid #1997c6;
+    }
+    #newsletter p {
+        font-size: 16px;
+    }
+    #contact-form>input {
+        font-size: 16px;
+    }
+    #newsletter .social-links a {
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+        line-height: 52px;
     }
 }

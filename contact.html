@@ -26,56 +26,67 @@
     </script>
 </head>
 
-<body class="d-flex flex-column">
+<body class="d-flex flex-column contact-body">
     <!----- Header ----->
-    <header>
-        <div class="container">
+    <header class='contact-header'>
+        <div class="container contact-container">
             <div class="row">
-                <div class="col-lg-3 sidebar">
-                    <nav class="sidebar-nav">
-                        <div class="sidebar-header">
-                            <button class="collapsed nav-toggler-contact" id="nav-toggler" type="button" data-toggle="collapse" data-target="#nav-toggleable-lg" aria-expanded="false">
+                <div class="col-md-12 sidebar sidebar-contact">
+                    <nav class="sidebar-nav sidebar-nav-contact">
+                        <div class="sidebar-header d-md-none">
+                            <button class="collapsed nav-toggler-about" id="nav-toggler" type="button" data-toggle="collapse" data-target="#nav-toggleable-md" aria-expanded="false">
                                 <span class='nav-toggler-icon'><i class="fas fa-bars"></i></span>
                                 <span class='nav-toggler-icon'><i class="fas fa-futbol"></i></span>
                                 <span class="sr-only">Toggle nav</span>
                             </button>
                         </div>
 
-                        <div class="nav-toggleable-lg collapse" id="nav-toggleable-lg" aria-expanded="false">
-                            <ul class="nav nav-pills nav-stacked flex-column" id="nav-main">
+                        <div class="nav-toggleable-md nav-toggleable-md-contact collapse" id="nav-toggleable-md" aria-expanded="false">
+                            <ul class="nav nav-pills nav-stacked nav-stacked-contact flex-column" id="nav-main">
                                 <li class="nav-item">
                                     <a class="nav-link" id='nav-home-link' href="index.html"> Home</a>
                                 </li>
-                                <li class="nav-header">Leaderboards</li>
-                                <li class="nav-item">
+                                <li class="nav-header dropdown"><a class='d-none d-md-block dropdown-toggle' role="button" id="about-nav-dropdown-leaderboards" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Leaderboards</a>
+                                    <div class="dropdown-menu" aria-labelledby="about-nav-dropdown-leaderboards">
+                                        <a class="nav-link dropdown-item" href="leaderboards.html#summary-tables">Summary</a>
+                                        <a class="nav-link dropdown-item " href="leaderboards.html#strikerate-tables">StrikeRate</a>
+                                        <a class="nav-link dropdown-item " href="leaderboards.html#strikevalue-tables">StrikeValue</a>
+                                    </div>
+                                </li>
+                                <li class="d-md-none nav-item">
                                     <a class="nav-link" href="leaderboards.html#summary-tables">Summary</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="d-md-none nav-item">
                                     <a class="nav-link " href="leaderboards.html#strikerate-tables">StrikeRate</a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="d-md-none nav-item">
                                     <a class="nav-link " href="leaderboards.html#strikevalue-tables">StrikeValue</a>
                                 </li>
 
-                                <li class="nav-header">Dashboards</li>
-                                <li class="nav-item">
+                                <li class="nav-header dropdown"><a class='d-none d-md-block dropdown-toggle' role="button" id="about-nav-dropdown-dashboards" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Dashboards</a>
+                                    <div class="dropdown-menu" aria-labelledby="about-nav-dropdown-dashboards">
+                                        <a class="nav-link dropdown-item" href="dashboards.html#player-match-list">Scorers</a>
+                                        <a class="nav-link dropdown-item " href="dashboards.html#club-match-list">Clubs</a>
+                                    </div>
+                                </li>
+                                <li class="d-md-none nav-item">
                                     <a class="nav-link " href="dashboards.html#player-match-list">
                                         Scorers
                                     </a>
                                 </li>
-                                <li class="nav-item">
+                                <li class="d-md-none nav-item">
                                     <a class="nav-link " href="dashboards.html#club-match-list">
                                         Clubs
                                     </a>
                                 </li>
-                                <li class="nav-header">More</li>
+                                <li class="d-md-none nav-header"><a class='d-none d-md-block' href="#">More</a></li>
                                 <li class="nav-item">
-                                    <a class="nav-link " href="about.html">
+                                    <a class="nav-link" id='nav-about-link' href="about.html">
                                         About
                                     </a>
                                 </li>
-                                <li class="pt-2 nav-item">
-                                    <a class="mb-5 nav-link  active" id="nav-contact-link" href="contact.html">
+                                <li class="pt-2 pt-md-0 nav-item">
+                                    <a class="mb-5 mb-md-0 nav-link active" id="nav-contact-link" href="contact.html">
                                         Contact
                                     </a>
                                 </li>
@@ -84,19 +95,19 @@
                         </div>
                     </nav>
                 </div>
-                <div class="col-lg-9 content mt-4" id="content-main">
-                    <div class="container d-flex container-logo even-less-top-margin">
+                <div class="col-md-12 content mt-2 mt-md-5 mt-lg-3 mt-xl-2" id="content-main">
+                    <div class="container d-flex container-logo even-less-top-margin mt-md-2 mt-lg-0 mt-xl-4 mb-xl-2">
                         <a class='logo-link d-flex' id='logo_link' href="index.html">
-                            <span class="icon icon-flash"></span>
-                            <h1 class="mb-3">trikeForce</h1>
+                            <span class="icon icon-flash icon-flash-contact"></span>
+                            <h1 class="mb-3" id='logo-contact'>trikeForce</h1>
                         </a>
                     </div>
                     <!--  Newsletter Section -->
-                    <section id="newsletter" class='mx-2'>
-                        <div class="row">
-                            <div class="col-10 container">
+                    <section id="newsletter" class='mt-1 mt-md-3 mb-5 mb-md-3 mt-lg-0'>
+                        <div class="row newsletter-row">
+                            <div class="col-11 col-md-10 col-xl-11 container newsletter-container">
                                 <div class="row">
-                                    <div class="col-lg-6">
+                                    <div class="col">
                                         <h3>C<i class="fas fa-futbol"></i>ntact us</h3>
                                         <p class='para-lead text-left'>Getting in touch couldn't be simpler, and we'd love to hear from you!</p>
                                         <p class='para-two text-left'>Email us any time at <span class='email-span'><a class='email-link' href='mailto:hello@loosenthedark.tech?subject=Hello%20there!'>hello@loosenthedark.tech</a></span>, or better still sign up for our monthly newsletter
@@ -105,7 +116,7 @@
                                     </div>
                                 </div>
                                 <div class="row justify-content-center">
-                                    <div class="col-lg-6">
+                                    <div class="col">
                                         <form id='contact-form' action="" method="">
                                             <input type="hidden" name="contact_number">
                                             <input type="email" name="email" placeholder="Enter your email"><input type="submit" value="Subscribe">
@@ -150,8 +161,8 @@
     <!----- end of Header ----->
 
     <!----- Footer ----->
-    <footer class="container footer-container footer-contact">
-    </footer>
+    <!-- <footer class="container footer-container footer-contact">
+    </footer> -->
     <!----- end of Footer ----->
     <script src="assets/js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
