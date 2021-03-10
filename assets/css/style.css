@@ -2431,6 +2431,25 @@ path {
     margin-bottom: 0.15rem;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
+#newsletter p.alert-para {
+    margin: 0 0 .15rem;
+    color: #434857;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+#newsletter .alert .icon {
+    font-weight: 500;
+}
+
+.emphasise {
+    font-weight: 900;
+}
+
 
 /* >>>>> Media Queries >>>>> */
 
