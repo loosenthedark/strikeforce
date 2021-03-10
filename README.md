@@ -1,16 +1,16 @@
-# StrikeForce Website
+<h1 align='center'>StrikeForce Website</h1>
 
 
 
-## <h2 align="center"><img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" alt="Code Institute logo" width="200" height="auto" style="margin-right:50px;"> <img src="assets/images/strikeforce-logo.png" alt="StrikeForce logo" width="200" height="auto" style="margin-left:50px;"></h2>
+<h2 align="center"><img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" alt="Code Institute logo" width="200" height="auto" style="margin-right:20px;"> <img src="assets/images/strikeforce-logo.png" alt="StrikeForce logo" width="200" height="auto"></h2>
 
 
 
-*Code Institute Diploma in Software Development: Interactive Frontend Development - Milestone Project*
+<p align="center" style="font-style:italic;">Code Institute Diploma in Software Development: Interactive Frontend Development - Milestone Project</p>
 
 
 
-**[Live link to deployed project](https://loosenthedark.github.io/strikeforce/)** (hosted on GitHub Pages)
+<p align="center"><a href="https://loosenthedark.github.io/strikeforce/" style="font-weight:bold;">Live link to deployed project</a> (hosted on GitHub Pages)</p>
 
 
 
@@ -22,7 +22,9 @@
 
 
 
-## <h2 align="center"><img src="assets/images/strikerate-leaderboards.png" alt="StrikeForce 'strikerate' leaderboards screenshots across multiple device sizes" width="70%" height="auto"></h2>
+
+<h2 align="center"><img src="assets/images/strikerate-leaderboards.png" alt="StrikeForce 'strikerate' leaderboards screenshots across multiple device sizes" width="70%" height="auto"></h2>
+
 
 
 
@@ -58,7 +60,7 @@ My choice of **font** for the site's main logo was informed by the ready availab
 
 
 
-The site opts for a minimalist approach in terms of **imagery**: there is no background hero image, for instance, on the landing page. It was felt that this might distract site visitors from focusing on the main search bar when they first arrive, and so background images have been forsaken in favour of informational icons that are used sparingly but effectively to guide the user. A compilation of these icons can be viewed as part of the flashing hero animation on the 'About' page. These have mostly been sourced from the aforementioned Entypo library, but a few [Font Awesome](https://fontawesome.com/) icons have also been selected.
+The site opts for a minimalist approach in terms of **imagery**: there is no background hero image, for instance, on the main landing page. It was felt that this might distract site visitors from focusing on the main search bar when they first arrive, and so background images have been forsaken in favour of informational icons that are used sparingly but effectively to guide the user. A compilation of these icons can be viewed as part of the flashing hero animation on the 'About' page. These have mostly been sourced from the aforementioned Entypo library, but a few [Font Awesome](https://fontawesome.com/) icons have also been selected.
 
 
 
@@ -66,32 +68,129 @@ Apart from this, dynamically-loaded imagery such as player profile photos and cl
 
 
 
+### Wireframes
+
+- Main landing page: mobile | tablet | desktop
+- Leaderboards: mobile | tablet | desktop
+- Dashboards: mobile | tablet | desktop
+- 'About' page: mobile | tablet | desktop
+- 'Contact' page: mobile | tablet | desktop
+
+
+
 ## Features
 
 ### Existing Features
 
-+ The Bootstrap JavaScript Scrollspy plugin was enabled via `data-*` attributes in order to bring some colour and life to the `.navbar`, as well as to generate a sense of progress and flow as users navigate between the various page sections. Guidance on how to do this was obtained from the following W3Schools [reference](https://www.w3schools.com/bootstrap/bootstrap_ref_js_scrollspy.asp) and [tutorial](https://www.w3schools.com/bootstrap/bootstrap_scrollspy.asp).
-+ In order to create a smooth scrolling effect as users navigate between anchor links on the site, I firstly read up on [optional means of implementing this](https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link). I subsequently decided against using pure CSS due to cross-browser compatibility concerns, and instead followed the advice of [Traversy Media's YouTube tutorial](https://www.youtube.com/watch?v=y9nlfqT4s9s) in order to enable it using jQuery (see local `index.js` file for further details).
-+ A fixed-position responsive `.navbar` (collapsed on extra-small and small devices; visible on landscape phones and all larger screen sizes) ensures simple, fluid movement and safeguards against users getting 'lost' anywhere within the site.
-+ Several built-in Bootstrap components and JavaScript plugins were utilised to achieve certain design goals:
-  + The Collapse JS plugin was used to create a functioning [`.navbar toggler icon` (aka 'hamburger icon')](https://getbootstrap.com/docs/4.0/components/navbar/#toggler) in the top right-hand corner of the screen on smaller devices. Additional styling of this icon (primarily applying a colour change to its `span` elements to ensure consistency with the site's overall colour scheme) was facilitated by this [Stack Overflow thread](https://stackoverflow.com/questions/42586729/bootstrap-4-change-hamburger-toggler-color), and in particular its [linked code demo](https://www.codeply.com/go/4FdZGlPMNV).
-  + For smaller devices an [`.accordion`](https://getbootstrap.com/docs/4.0/components/collapse/#accordion-example) was created, again using Bootstrap's Collapse JS plugin, to organise and condense the information contained in the FAQ section. An extension of default `.collapse` behaviour using the `.card` component was necessary here.
-  + On larger devices, a similar need was met via Bootstrap's [`.carousel`](https://getbootstrap.com/docs/4.0/components/carousel/) slideshow component, which uses a mix of JavaScript and CSS 3D transforms to present relevant details to the user in a manner that is easy to digest and make sense of.
-+ Bespoke background `:hover` effects were added behind the `iframe` media elements within the FAQ section to produce a subtle visual differentiation between embedded video and audio links. A similar, albeit more dynamic, effect was achieved in the text boxes throughout the Blog section: the custom 'sweep-to-left' and 'sweep-to-right' classes produce a sleek and symmetrical look that is both pleasing to the eye and organisationally sound. All of this was made possible thanks to [Ian Lunn's handy collection of Hover.css transitions](http://ianlunn.github.io/Hover/).
-+ A minor complication involving an obscured/cropped `border` surrounding the Contact `form` at the bottom of the page was resolved by following the advice of [this Stack Overflow solution](https://stackoverflow.com/questions/6312067/border-radius-background-color-cropped-border).
+- Main landing page:
 
-### Features Left to Implement
+  - Inspiration for scorer/club search functionailty gained from [this Traversy Media video tutorial](https://www.youtube.com/watch?v=1iysNUrI3lw&list=PLillGF-RfqbbnEGy3ROiLWk7JMCuSyQtX&index=16) on leveraging JSON data to build an autocomplete application
+  - Users can toggle with ease between scorer and club search bars
+  - The autocomplete filter returns all available matches from the relevant (local) JSON files for search strings greater than two characters in length in the case of scorers and greater than zero characters in the case of clubs:
 
-As the business grows and the website evolves further, I can envision the need to add or improve each of the following three features:
+  <img src="assets/images/StrikeForce-landing1.png" alt="StrikeForce landing page scorer search" width="45%" height="auto" style="margin-right: 10px;">
+  <img src="assets/images/StrikeForce-landing2.png" alt="StrikeForce landing page club search" width="45%" height="auto">
 
-+ **`.navbar-brand` logo**: At present, this is fairly basic and nondescript due to time and development resource constraints. In the near future, however, I would like to implement a more fully-formed and striking Matter of Heart Psychotherapy ('MofH') branded logo that is conspicuous while still being in keeping with the site's general typography and aesthetic.
-+ **Expansion/Customisation of Blog section**: For the time being, the blog has been populated with somewhat generic 'filler' content taken from Wikipedia. The hope is that it can be enhanced through the creation and addition of more personalised and tailored blog entries that appeal to MofH clients more effectively. These blog posts could then be pushed to the business's various social media channels to boost the site's reach and ultimately entice more clients. Fortunately, such long-term design considerations have been factored into the site's information architecture from the start; as a result, all existing blog content can be flexibly added to or displaced by more appropriate material without disrupting the site's core structure or jeopardising its visual impact.
-+ **[Google Maps Embed API](https://developers.google.com/maps/documentation/embed/start)**: Obviously, any business looking to get off the ground and thrive will generally need a street address of some sort. At the moment, a permanent location for MofH has yet to be finalised. Once an address has been confirmed, I plan on alerting site visitors to its location using a Maps API. Ideally, this would be situated somewhere adjacent to the Contact form towards the foot of the page, [a bit like this](https://www.albapsychotherapy.ie/contact-me/). Once again, Brad from Traversy Media has put together [a pretty comprehensive video tutorial](https://www.youtube.com/watch?v=Zxf1mnP5zcw) on how to do this, which I will look to follow when the time comes for implementation.
+  - Once a dynamic list of matching scorers/clubs has been returned, users may select an individual scorer/club by clicking on the appropriate `.btn-strike-rate(-club)` `<a>` element on the right-hand side of each player's/club's data panel:
+
+  <img src="assets/images/StrikeForce-landing3.png" alt="StrikeForce landing page scorer search" width="15%" height="auto" style="margin-right: 20px;">
+  <img src="assets/images/StrikeForce-landing4.png" alt="StrikeForce landing page club search" width="15%%" height="auto">
+
+  - This will load the data dashboard relating to the scorer/club in question, each of which consists of a header image and main content pane separated by a tabbed navigation bar that can be clicked to select from a total of three custom `.statcard` data visualisation components: one of these (labelled 'Summary') displays static data, while the other two ('StrikeRate' and 'StrikeValue') allow users to interact by filtering the data to be displayed (e.g. by clicking a toggle button that either excludes or includes penalties scored from the data rendered in chart form):
+
+  <img src="assets/images/StrikeForce-landing5.png" alt="StrikeForce landing page scorer search" width="15%" height="auto" style="margin-right: 10px;">
+  <img src="assets/images/StrikeForce-landing6.png" alt="StrikeForce landing page scorer search" width="15%%" height="auto" style="margin-right: 10px;">
+  <img src="assets/images/StrikeForce-landing7.png" alt="StrikeForce landing page scorer search" width="15%%" height="auto">
+
+- Leaderboard pages:
+  
+  - Each of the site's three subcategorised leaderboard pages (again divided by 'Summary', 'StrikeRate' and 'StrikeValue', thus establishing a consistent, intuitive navigational theme) consists of sortable tabular data.
+  - Not only can users swiftly move between these three different table categories (either by using the site's main `nav` menu or by clicking on one of the three secondary nav tabs directly above each table)...
+
+  <img src="assets/images/StrikeForce-leaderboards1.png" alt="StrikeForce Leaderboards page Summary table" width="25%" height="auto" style="margin-right: 10px;">
+  <img src="assets/images/StrikeForce-leaderboards2.png" alt="StrikeForce Leaderboards page StrikeRate table" width="25%%" height="auto" style="margin-right: 10px;">
+  <img src="assets/images/StrikeForce-leaderboards3.png" alt="StrikeForce l Leaderboards page StrikeValue table" width="25%" height="auto">
+
+  - ...but they can also alternate between viewing individual and club goalscoring leaderboards by means of a pure CSS custom switch that was built using tips and code blocks from [Martin Haubek](https://haubek.github.io/custom-switch/) and retrieved from [this article](https://www.cssscript.com/ios-style-switches-bootstrap-4/):
+
+  <img src="assets/images/StrikeForce-leaderboards4.png" alt="StrikeForce Leaderboards page custom switch" width="15%" height="auto" style="margin-right: 10px;">
+  <img src="assets/images/StrikeForce-leaderboards5.png" alt="StrikeForce Leaderboards page custom switch" width="15%" height="auto">
+
+  - By default, each table is sorted in descending order of goals scored outright, as indicated by the downward-pointing directional arrow visible in the bottom right-hand corner of the 'Goals' `th` element in the first screenshot below. However, as seen in the second screenshot, users may interact with each table to rearrange the data by clicking on the appropriate `th` category. Data can also be arranged in either descending (downward-pointing arrow) or ascending (upward-pointing arrow) order, according to user preference:
+
+  <img src="assets/images/StrikeForce-leaderboards6.png" alt="StrikeForce Leaderboards page table sorting" width="25%" height="auto" style="margin-right: 10px;">
+  <img src="assets/images/StrikeForce-leaderboards7.png" alt="StrikeForce Leaderboards page table sorting" width="25%" height="auto" style="margin-right: 10px;">
+  <img src="assets/images/StrikeForce-leaderboards8.png" alt="StrikeForce Leaderboards page table sorting" width="25%" height="auto">
+
+- Dashboard pages:
+
+  - As an alternative to using the main landing page's autocomplete search bars to access data visualisations for individual scorers/clubs, users may instead select from a list of valid options when they navigate to one of the two (Scorers / Clubs) dashboard landing pages. Here they will be prompted by a CSS3 animation effect on the `.dropdown-toggle` `button` element to trigger a `.dropdown-menu`:
+
+  <img src="assets/images/StrikeForce-dashboards1.png" alt="StrikeForce Dashboards page Scorers dropdown" width="15%" height="auto" style="margin-right: 10px;">
+  <img src="assets/images/StrikeForce-dashboards3.png" alt="StrikeForce Dashboards page Scorers dropdown menu" width="15%" height="auto" style="margin-right: 10px;">
+  <img src="assets/images/StrikeForce-dashboards2.png" alt="StrikeForce Dashboards page Clubs dropdown" width="15%" height="auto" style="margin-right: 10px;">
+  <img src="assets/images/StrikeForce-dashboards4.png" alt="StrikeForce Dashboards page Clubs dropdown menu" width="15%" height="auto">
+
+  - In the case of the Scorer dashboards `.dropdown-toggle`, the content of a second (initially hidden) `.dropdown-menu` element will be populated according to the user's choice when prompted to "Choose a club". For instance, if the user selects 'Leeds United' from the first `.dropdown-menu`, they will then be offered a selection limited to scorers from that club alone in the subsequent "Choose a scorer" menu. See the walkthrough below for clarification:
+
+  <img src="assets/images/StrikeForce-dashboards5.png" alt="StrikeForce Dashboards page Scorers first dropdown" width="15%" height="auto" style="margin-right: 10px;">
+  <img src="assets/images/StrikeForce-dashboards6.png" alt="StrikeForce Dashboards page Scorers first dropdown menu" width="15%" height="auto" style="margin-right: 10px;">
+  <img src="assets/images/StrikeForce-dashboards7.png" alt="StrikeForce Dashboards page Scorers second dropdown" width="15%" height="auto" style="margin-right: 10px;">
+  <img src="assets/images/StrikeForce-dashboards8.png" alt="StrikeForce Dashboards page Scorers second dropdown menu" width="15%" height="auto">
+
+  - The relevant data visualisation dashboard will then load (per the main landing page's functionality described above) based on the user's selection from this *second* `.dropdown-menu` list.
+
+  - Guidance on how to use jQuery to implement this dynamic functionality whereby a secondary `.dropdown-menu` list can be compiled based on a user's primary `.dropdown-menu` selection was received from reading the answer to [this Stack Overflow query](https://stackoverflow.com/questions/21561353/jquery-populate-drop-down-options-based-on-another-drop-down-option-using-javasc/21640704)
+
+- 'About' page:
+
+  - The only purely decorative (i.e. non-interactive) page on the site, the 'About' page nevertheless boasts a visually-arresting pure CSS animation on page load that combines enlarged versions of several of the site's recurring icons with a neat rendering of the StrikeForce tag line ("Meaningful data for the beautiful game"):
+
+  <img src="https://media.giphy.com/media/LMr83nWYlUeLE5b395/giphy.gif" alt="StrikeForce About page flashing animation demo" width="70%" height="auto">
+
+  - Pure CSS angled arrow-style borders were applied to the 'About' page's `.progress-bar` elements by referencing [this Stack Overflow thread](https://stackoverflow.com/questions/19736655/pointed-angled-arrow-style-borders-in-css) and [this CSS-Tricks tutorial](https://css-tricks.com/snippets/css/css-triangle/)
+
+  - A decision was also made to restyle the site's main `nav` element for the 'About' and 'Contact' pages on tablet and desktop devices. This was a largely cosmetic modification: it was felt that keeping the `.sidebar` `nav` layout on larger screens would make both these pages appear asymmetrical and therefore not as pleasing on the eye. Thus, compare...
+
+  <img src="assets/images/StrikeForce-navlanding.png" alt="StrikeForce landing page nav md" width="25%" height="auto" style="margin-right: 10px;">
+  <img src="assets/images/StrikeForce-navleaderboards.png" alt="StrikeForce Leaderboards page nav md" width="25%" height="auto" style="margin-right: 10px;">
+  <img src="assets/images/StrikeForce-navdashboards.png" alt="StrikeForce Dashboards page nav md" width="25%" height="auto">
+
+
+
+  ...with...
+
+
+
+  <img src="assets/images/StrikeForce-navabout.png" alt="StrikeForce About page nav md" width="25%" height="auto" style="margin-right: 10px;">
+  <img src="assets/images/StrikeForce-navcontact.png" alt="StrikeForce Contact page nav md" width="25%" height="auto">
+
+
+
+- 'Contact' page:
+
+  - The site's contact page features an email newsletter subscription form that has been adapted from [this design template](https://www.markuptag.com/newsletter-subscription-form-design-in-bootstrap-4/)
+  - Users are encouraged to submit their email address in order to be kept updated via the site's monthly newsletter; there is a brightly-coloured 'Subscribe' `button` element that triggers a `form` submit event when users click on it
+  - There is also a timely reminder of StrikeForce's social media presence, with the social icons this time no longer located in the `footer`, but rather inside the contact form container close to the call-to-action `button`
+  - When users successfully input their email address and submit the `form`, a `.modal` is activated thanking them for taking the time to subscribe and assuring them that they will soon be receiving a follow-up email to confirm their subscription:
+
+  <img src="assets/images/StrikeForce-contact1.png" alt="StrikeForce Contact page pre-submit" width="25%" height="auto" style="margin-right: 10px;">
+  <img src="assets/images/StrikeForce-contact2.png" alt="StrikeForce Contact page post-submit" width="25%" height="auto">
+
+  - [This Stack Overflow solution](https://bootstrapshuffle.com/classes/modal/modal-dialog-centered) suggested a workaround for Bootstrap's `.modal-dialog-centered` class (inexplicably) malfunctioning - by following it, I was able to achieve vertical centering for my modal on contact `form` submit (see second screenshot above)
+
+
 
 ## Technologies Used
 
-1. HTML (HTML5)
-2. CSS (CSS3)
+### Languages
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+### Frameworks, Libraries & Programmes
+
 3. [Bootstrap (v4.3.1)](https://getbootstrap.com/)
 4. [jQuery (v3.3.1)](https://jquery.com/)
 5. [Google Fonts](https://fonts.google.com/)
@@ -172,13 +271,7 @@ Other excellent pieces of advice came via @Anna_G and @Eventyret_mentor (among o
 
 ////////////////////////////////////////////////////////////////////////////////////
 
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-* The site is based around [this 'Dashboard' Official Bootstrap Theme](https://themes.getbootstrap.com/product/dashboard/) that's built on top of Bootstrap's core (v4.0.0-alpha.6) and is tailored towards interactive data visualisation and presentation  
-
 * Entypo pictograms (used in site logo, favicon, `footer` and icons elsewhere) by Daniel Bruce — www.entypo.com
-
-* Advice on implementing a sticky `footer` using Flexbox from [this CSS-Tricks article](https://css-tricks.com/couple-takes-sticky-footer/)
 
 * CSS hack for hiding `footer` on mobile when keyboard is enabled taken from [this Stack Overflow query](https://stackoverflow.com/questions/22627646/how-to-prevent-mobile-keyboard-from-rising-footer-over-the-text-fields)
 
@@ -200,19 +293,9 @@ Other excellent pieces of advice came via @Anna_G and @Eventyret_mentor (among o
 
 * Font Awesome 'futbol' icon SVG used as background-image in custom iOS-style switch [with permission](https://fontawesome.com/license). No changes were made to the file's source code.
 
-* Pure CSS custom switch built using tips and code blocks from [Martin Haubek](https://haubek.github.io/custom-switch/) and retrieved from [this article](https://www.cssscript.com/ios-style-switches-bootstrap-4/)
-
 * Not happy with settling for a page refresh (`location.reload()`) workaround when unchecking leaderboards custom toggler switch - will look to rectify this at some point in the future
 
 * The TransferMarket API applies a rate limit of 5 requests per second, which prevented me from making calls to it in order to populate my StrikeValue tables (for both individual scorers and clubs). Instead, I had to manually log scorer and squad values in my local .json files and retrieve the relevant data from there to load these tables, which proved to be quite time-consuming.
-
-* Guidance on how to use jQuery to populate secondary dropdown options based primary dropdown selection gained from reading the answer to [this Stack Overflow query](https://stackoverflow.com/questions/21561353/jquery-populate-drop-down-options-based-on-another-drop-down-option-using-javasc/21640704)
-
-* Newsletter subscription form on Contact page adapted from [this design template](https://www.markuptag.com/newsletter-subscription-form-design-in-bootstrap-4/)
-
-* [This Stack Overflow solution](https://bootstrapshuffle.com/classes/modal/modal-dialog-centered) suggested a workaround for Bootstrap's `.modal-dialog-centered` class (inexplicably) malfunctioning - by following it, I was able to achieve vertical centering for my modal on contact `form` submit
-
-* Pure CSS angled arrow-style borders were applied to the 'About' page's `.progress-bar` elements by referencing [this Stack Overflow thread](https://stackoverflow.com/questions/19736655/pointed-angled-arrow-style-borders-in-css) and [this CSS-Tricks tutorial](https://css-tricks.com/snippets/css/css-triangle/)
 
 * Reminders on how to catch and handle errors and use them to implement client-side and server-side validation with alert messages on invalid form submit came from [this Udemy project source code](http://completewebdevelopercourse.com/content/6-php/7.11.php)
 
