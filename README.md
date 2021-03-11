@@ -302,16 +302,8 @@ In order to run this project locally, you can clone [the remote GH repository](h
 
 ### Acknowledgements
 
-- Thanks to my mentor Aaron for his timely feedback, encouragement and recommendations throughout this project. Anto pointed me towards [WrapBootstrap](https://wrapbootstrap.com/) for browsing a wide selection of Bootstrap templates and themes, which provided plenty of inspiration. It was also he who suggested I should use Responsinator for testing site responsiveness throughout the construction process, and this proved to be an invaluable tool.
+<<<<<<< HEAD
 
-
-- Other excellent pieces of advice came via @Anna_G and @Eventyret_mentor (among others) in Code Institute's Slack room. Thanks, guys!
-
-
-
-
-
-
-
-
-* The TransferMarket API applies a rate limit of 5 requests per second, which prevented me from making calls to it in order to populate my StrikeValue tables (for both individual scorers and clubs). Instead, I had to manually log scorer and squad values in my local JSON files and retrieve the relevant data from there to load these tables, which proved to be quite time-consuming.
+=======
+- Thanks to my mentor Aaron for his timely feedback, encouragement and recommendations throughout this project.
+>>>>>>> d8f7815e5fb8b7f4e0658547232e4bfafcad8d9a
