@@ -139,7 +139,7 @@ Apart from this, dynamically-loaded imagery such as player profile photos and cl
 
 - Pure CSS angled arrow-style borders were applied to the 'About' page's `.progress-bar` elements by referencing [this Stack Overflow thread](https://stackoverflow.com/questions/19736655/pointed-angled-arrow-style-borders-in-css) and [this CSS-Tricks tutorial](https://css-tricks.com/snippets/css/css-triangle/)
 
-- A decision was also made to restyle the site's main `nav` element for the 'About' and 'Contact' pages on tablet and desktop devices. This was a largely cosmetic modification: it was felt that keeping the `.sidebar` `nav` layout on larger screens would make both these pages appear asymmetrical and therefore not as pleasing on the eye. Thus, compare...
+- A decision was also made to restyle the site's main `nav` element for the 'About' and 'Contact' pages on tablet and desktop devices. This was a largely cosmetic modification: it was felt that keeping the `.sidebar` `nav` layout on larger screens would make both these pages appear asymmetrical and therefore not as pleasing on the eye. By way of illustration, compare...
 
 <p align="center"><img src="assets/images/StrikeForce-navlanding.png" alt="StrikeForce landing page nav md" width="25%" height="auto" style="margin-right: 10px;">
 <img src="assets/images/StrikeForce-navleaderboards.png" alt="StrikeForce Leaderboards page nav md" width="25%" height="auto" style="margin-right: 10px;">
@@ -147,7 +147,7 @@ Apart from this, dynamically-loaded imagery such as player profile photos and cl
 
 
 
-...with...
+  ...with...
 
 
 
@@ -166,7 +166,7 @@ Apart from this, dynamically-loaded imagery such as player profile photos and cl
 <p align="center"><img src="assets/images/StrikeForce-contact1.png" alt="StrikeForce Contact page pre-submit" width="25%" height="auto" style="margin-right: 10px;">
 <img src="assets/images/StrikeForce-contact2.png" alt="StrikeForce Contact page post-submit" width="25%" height="auto"></p>
 
-- [This Stack Overflow solution](https://bootstrapshuffle.com/classes/modal/modal-dialog-centered) suggested a workaround for Bootstrap's `.modal-dialog-centered` class (inexplicably) malfunctioning - by following it, I was able to achieve vertical centering for my modal on contact `form` submit (see second screenshot above)
+- [This Stack Overflow solution](https://stackoverflow.com/questions/50579924/bootstrap-modal-not-showing-properly-centered) suggested a workaround for Bootstrap's `.modal-dialog-centered` class (inexplicably) malfunctioning - by following it, I was able to achieve vertical centering for my modal on contact `form` submit (see second screenshot above)
 
 
 
@@ -278,6 +278,21 @@ In order to run this project locally, you can clone [the remote GH repository](h
 
 - All static content (e.g. text of the 'Contact' page's newsletter signup form) was created by the developer
 
+- Dynamic content loaded after AJAX requests/API calls:
+
+  - All scorer data relating to number of goals scored has been returned from calls to local playerdata.json file, which reflects accurate figures for all PL goalscorers who had scored a minimum of 3 goals up to and including the 25th game of the season for each club.
+  - All other relevant player data, such as figures for value, age etc. is returned from calls to the live, up-to-date TransferMarket API
+  - Because this API applies a rate limit of 5 requests per second, I was prevented from making calls to it in order to populate my StrikeValue tables (for both individual scorers and clubs). Instead, I had to manually log scorer and squad values in my local JSON files and retrieve the relevant data from there to load these tables, which proved to be quite a time-consuming workaround.
+  - This might also mean that over time, unless I make sure to keep these local JSON files updated, some discrepancies may creep in between figures shown for (scorer/club) 'value'/'average player value' as seen here:
+
+  <p align="center"><img src="assets/images/StrikeForce-value1.png" alt="StrikeForce value" width="15%" height="auto" style="margin-right: 10px;"><img src="assets/images/StrikeForce-value2.png" alt="StrikeForce value" width="15%" height="auto"></p>
+
+    and those used to calculate 'goals (+/- penalties) per €1/100 million' as seen here:
+
+  <p align="center"><img src="assets/images/StrikeForce-value3.png" alt="StrikeForce value" width="15%" height="auto" style="margin-right: 10px;"><img src="assets/images/StrikeForce-value4.png" alt="StrikeForce value" width="15%" height="auto"></p>
+
+  - The 'average player value' metric mentioned above was calculated by dividing the figure returned by API calls to TransferMarket for total squad value in the case of each club by the number of players in each particular club's squad. This was seen as offering a more accurate reflection of 'squad value' than simply quoting the total value, as squad sizes vary from club to club (and can be anything from 23 to 29 players)
+
 ### Media
 
 - Entypo pictograms (used in site logo, favicon, `footer`, 'About' page loading animation and icons elsewhere) by [Daniel Bruce](www.entypo.com)
@@ -287,7 +302,7 @@ In order to run this project locally, you can clone [the remote GH repository](h
 
 ### Acknowledgements
 
-- Thanks to my mentor Antonio for his timely feedback, encouragement and recommendations throughout this project. Anto pointed me towards [WrapBootstrap](https://wrapbootstrap.com/) for browsing a wide selection of Bootstrap templates and themes, which provided plenty of inspiration. It was also he who suggested I should use Responsinator for testing site responsiveness throughout the construction process, and this proved to be an invaluable tool.
+- Thanks to my mentor Aaron for his timely feedback, encouragement and recommendations throughout this project. Anto pointed me towards [WrapBootstrap](https://wrapbootstrap.com/) for browsing a wide selection of Bootstrap templates and themes, which provided plenty of inspiration. It was also he who suggested I should use Responsinator for testing site responsiveness throughout the construction process, and this proved to be an invaluable tool.
 
 
 - Other excellent pieces of advice came via @Anna_G and @Eventyret_mentor (among others) in Code Institute's Slack room. Thanks, guys!
@@ -299,4 +314,4 @@ In order to run this project locally, you can clone [the remote GH repository](h
 
 
 
-* The TransferMarket API applies a rate limit of 5 requests per second, which prevented me from making calls to it in order to populate my StrikeValue tables (for both individual scorers and clubs). Instead, I had to manually log scorer and squad values in my local .json files and retrieve the relevant data from there to load these tables, which proved to be quite time-consuming.
+* The TransferMarket API applies a rate limit of 5 requests per second, which prevented me from making calls to it in order to populate my StrikeValue tables (for both individual scorers and clubs). Instead, I had to manually log scorer and squad values in my local JSON files and retrieve the relevant data from there to load these tables, which proved to be quite time-consuming.
