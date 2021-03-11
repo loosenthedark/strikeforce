@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="assets/css/toolkit-inverse.css">
     <link rel="stylesheet" href="assets/css/application.css">
+    <!-- Pure CSS custom switch component adapted from https://www.cssscript.com/ios-style-switches-bootstrap-4/ Please see README.md file for more info -->
     <link rel="stylesheet" href="assets/css/component-custom-switch.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -34,12 +35,13 @@
                             </button>
                         </div>
 
-                        <div class="nav-toggleable-md collapse" id="nav-toggleable-md" aria-expanded="false">
+                        <div class="nav-toggleable-md collapse" role="navigation" id="nav-toggleable-md" aria-expanded="false">
                             <ul class="nav nav-pills nav-stacked flex-column" id="nav-main">
                                 <li class="nav-item">
                                     <a class="nav-link" id='nav-home-link' href="index.html"> Home</a>
                                 </li>
                                 <li class="nav-header">Leaderboards</li>
+                                <!-- code block adapted from https://stackoverflow.com/questions/42401606/how-to-hide-collapsible-bootstrap-4-navbar-on-click -->
                                 <li class="nav-item">
                                     <a class="nav-link active" data-toggle="collapse" id="summary-tables-nav-link" data-target="#nav-toggleable-md.show" href="#summary-tables">Summary</a>
                                 </li>
@@ -92,15 +94,15 @@
                         <ul class="nav nav-pills hr-divider-content hr-divider-nav" role="tablist">
                             <!-- Summary leaderboards tab -->
                             <li class="nav-item" role="presentation">
-                                <a href="#summary-tables" id='summary-tables-tab' class="nav-link nav-link-leaderboards-tab active" role="tab" data-toggle="tab" aria-controls="sales" aria-expanded="true">Summary</a>
+                                <a href="#summary-tables" id='summary-tables-tab' class="nav-link nav-link-leaderboards-tab active" role="tab" data-toggle="tab" aria-controls="summary-tables" aria-expanded="true">Summary</a>
                             </li>
                             <!-- StrikeRate leaderboards tab -->
                             <li class="nav-item" role="presentation">
-                                <a href="#strikerate-tables" id='strikerate-tables-tab' class="nav-link nav-link-leaderboards-tab" role="tab" data-toggle="tab" aria-controls="inventory" aria-expanded="false">StrikeRate</a>
+                                <a href="#strikerate-tables" id='strikerate-tables-tab' class="nav-link nav-link-leaderboards-tab" role="tab" data-toggle="tab" aria-controls="strikerate-tables" aria-expanded="false">StrikeRate</a>
                             </li>
                             <!-- StrikeValue leaderboards tab-pane -->
                             <li class="nav-item" role="presentation">
-                                <a href="#strikevalue-tables" id='strikevalue-tables-tab' class="nav-link nav-link-leaderboards-tab" role="tab" data-toggle="tab" aria-controls="profit" aria-expanded="false">StrikeValue</a>
+                                <a href="#strikevalue-tables" id='strikevalue-tables-tab' class="nav-link nav-link-leaderboards-tab" role="tab" data-toggle="tab" aria-controls="strikevalue-tables" aria-expanded="false">StrikeValue</a>
                             </li>
                         </ul>
                     </div>
@@ -108,6 +110,7 @@
                     <div class="tab-content" id='tab-content-leaderboards'>
                         <!-- Summary leaderboards tab-pane -->
                         <div role="tabpanel" class="tab-pane active" id="summary-tables" aria-expanded="true">
+                            <!-- Pure CSS custom switch component adapted from https://www.cssscript.com/ios-style-switches-bootstrap-4/ Please see README.md file for more info -->
                             <div class="custom-switch custom-switch-label-status text-center pl-0" id='custom-switch-summary'>
                                 <input class="custom-switch-input" id="custom-switch-input" type="checkbox">
                                 <label class="custom-switch-btn" for="custom-switch-input"></label>
@@ -131,6 +134,7 @@
                         </div>
                         <!-- StrikeRate leaderboards tab-pane -->
                         <div role="tabpanel" class="tab-pane" id="strikerate-tables" aria-expanded="false">
+                            <!-- Pure CSS custom switch component adapted from https://www.cssscript.com/ios-style-switches-bootstrap-4/ Please see README.md file for more info -->
                             <div class="custom-switch custom-switch-label-status text-center pl-0" id='custom-switch-strikerate'>
                                 <input class="custom-switch-input" id="custom-switch-input-strikerate" type="checkbox">
                                 <label class="custom-switch-btn" for="custom-switch-input-strikerate"></label>
@@ -158,6 +162,7 @@
                         </div>
                         <!-- StrikeValue leaderboards tab-pane -->
                         <div role="tabpanel" class="tab-pane" id="strikevalue-tables" aria-expanded="false">
+                            <!-- Pure CSS custom switch component adapted from https://www.cssscript.com/ios-style-switches-bootstrap-4/ Please see README.md file for more info -->
                             <div class="custom-switch custom-switch-label-status text-center pl-0" id='custom-switch-strikevalue'>
                                 <input class="custom-switch-input" id="custom-switch-input-strikevalue" type="checkbox">
                                 <label class="custom-switch-btn" for="custom-switch-input-strikevalue"></label>
@@ -190,10 +195,6 @@
         </div>
     </header>
     <!----- end of Header ----->
-    <!----- Main ----->
-    <!-- <main>
-    </main> -->
-    <!----- end of Main ----->
     <!----- Footer ----->
     <footer class="container footer-container leaderboards-footer">
         <div class="text-center row footer-row leaderboards-footer-row">

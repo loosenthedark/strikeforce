@@ -12,22 +12,14 @@ $(document).ready(function() {
     const leaderboardBody = document.getElementById('leaderboard-body');
     const leaderboardBodyStrikeRate = document.getElementById('leaderboard-body-strikerate');
     const leaderboardBodyStrikeValue = document.getElementById('leaderboard-body-strikevalue');
+    const animateNavToggler = document.getElementById('nav-toggler');
+    const navTogglerIcons = document.querySelectorAll('.nav-toggler-icon');
 
-    var summaryTablesOffset = $(summaryTablesPane).offset().top - $(window).scrollTop();
-    var strikerateTablesOffset = $(strikerateTablesPane).offset().top - $(window).scrollTop();
-    var strikevalueTablesOffset = $(strikevalueTablesPane).offset().top - $(window).scrollTop();
+    // Custom nav toggler icon animation on click - code block adapted from https://www.youtube.com/watch?v=g7v4BB9IMRw
 
-    console.log(summaryTablesOffset);
-    console.log(strikerateTablesOffset);
-    console.log(strikevalueTablesOffset);
-    // console.log(strikerateTablesPane.offsetTop);
-    // console.log(strikevalueTablesPane.offsetTop);
-
-    // Animate nav toggler icon on click
-
-    $('#nav-toggler').click(function() {
-        $('.nav-toggler-icon').toggleClass('active');
-        $('#nav-toggler').toggleClass('no-border');
+    $(animateNavToggler).click(function() {
+        $(navTogglerIcons).toggleClass('active');
+        $(animateNavToggler).toggleClass('no-border');
     })
 
     if (window.location.href.indexOf("#strikerate-tables") > -1) {
@@ -94,8 +86,8 @@ $(document).ready(function() {
     $('#nav-main a').click(function() {
         $('#nav-main a').removeClass('active');
         $(this).addClass('active');
-        $('.nav-toggler-icon').toggleClass('active');
-        $('#nav-toggler').toggleClass('no-border');
+        $(navTogglerIcons).toggleClass('active');
+        $(animateNavToggler).toggleClass('no-border');
     });
 
     $('.nav-link-leaderboards-tab').click(function() {
@@ -139,12 +131,12 @@ $(document).ready(function() {
             }
         });
         $("#my-table, #my-second-table, #my-third-table").tablesorter({
-            // prevent first column from being sortable
+            // prevent first column from being sortable - code block adapted from https://stackoverflow.com/questions/437290/exclude-a-column-from-being-sorted-using-jquery-tablesorter
             headers: {
                 0: { sorter: false },
                 1: { sorter: 'last-name' },
                 2: { sorter: false }
-            }, // apply custom widget
+            }, // apply custom widget - code block adapted from https://stackoverflow.com/questions/437290/exclude-a-column-from-being-sorted-using-jquery-tablesorter
             widgets: ['numbering']
         });
 
@@ -299,7 +291,7 @@ $(document).ready(function() {
         return false;
 
     });
-    // add custom numbering widget
+    // add custom numbering widget - code block adapted from https://stackoverflow.com/questions/437290/exclude-a-column-from-being-sorted-using-jquery-tablesorter
     $.tablesorter.addWidget({
         id: "numbering",
         format: function(table) {
@@ -309,6 +301,7 @@ $(document).ready(function() {
             });
         }
     });
+    // add custom parser to sort scorers by surname instead of by first name - code block adapted from https://mottie.github.io/tablesorter/docs/example-parsers.html & https://stackoverflow.com/questions/38209618/tablesorter-sort-by-last-name-ignore-middle-preffered-name
     $.tablesorter.addParser({
         id: 'last-name',
         is: function() {
@@ -333,13 +326,13 @@ $(document).ready(function() {
             sortList: [
                 [3, 1]
             ],
-            // prevent first column from being sortable
+            // prevent first column from being sortable - code block adapted from https://stackoverflow.com/questions/437290/exclude-a-column-from-being-sorted-using-jquery-tablesorter
             headers: {
                 0: { sorter: false },
                 1: { sorter: 'last-name' },
                 2: { sorter: false }
             },
-            // apply custom widget
+            // apply custom widget - code block adapted from https://stackoverflow.com/questions/437290/exclude-a-column-from-being-sorted-using-jquery-tablesorter
             widgets: ['numbering']
         });
     }, 300)

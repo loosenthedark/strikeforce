@@ -20,7 +20,7 @@ window.onload = function() {
         // generate a five digit number for the contact_number variable
         this.contact_number.value = Math.random() * 100000 | 0;
         // these IDs from the previous steps
-        emailjs.sendForm('gmail', 'contact_form', this)
+        emailjs.sendForm('gmail', 'contactform', this)
             .then(function(response) {
                 document.getElementById('error-message-email').innerHTML = '';
                 document.getElementById('input-email').value = '';

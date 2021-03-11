@@ -196,6 +196,9 @@ button {
     z-index: 2;
 }
 
+
+/* Custom nav toggler icon animation on click - code block adapted from https://www.youtube.com/watch?v=g7v4BB9IMRw */
+
 #nav-toggler.no-border {
     border: none;
 }
@@ -1558,10 +1561,11 @@ button {
 }
 
 
-/* Spinner */
+/* Custom spinner */
 
 
-/* Code template snippet found here: https://codepen.io/eyalcohen4/pen/mprbzP */
+/* Code block adapted from https://codemyui.com/soccer-ball-hexagon-pattern-loader/
+Code template snippet found here: https://codepen.io/eyalcohen4/pen/mprbzP */
 
 .main-loader {
     height: 35vh;
@@ -1599,11 +1603,11 @@ path {
 }
 
 .path-6 {
-    animation-delay: -.875ss;
+    animation-delay: -.875s;
 }
 
 .path-5 {
-    animation-delay: -.75ss;
+    animation-delay: -.75s;
 }
 
 .path-4 {
@@ -1733,7 +1737,8 @@ path {
 }
 
 
-/* Custom iOS-style switch */
+/* Custom iOS-style switch 
+Pure CSS custom switch component adapted from https://www.cssscript.com/ios-style-switches-bootstrap-4/ Please see README.md file for more info */
 
 .custom-switch .custom-switch-input+.custom-switch-btn:after {
     background-image: url('../images/futbol-solid.svg');
@@ -1817,7 +1822,7 @@ path {
 }
 
 .table-backdrop-contrast {
-    backdrop-filter: contrast(0.97);
+    backdrop-filter: contrast(97%);
 }
 
 .crest-pane {
@@ -2575,6 +2580,9 @@ path {
     #dropdown-menu-button-clubs .fa-futbol {
         padding-bottom: 16px;
     }
+    /* Custom iOS-style switch
+    Pure CSS custom switch component adapted from https://www.cssscript.com/ios-style-switches-bootstrap-4/
+    Please see README.md file for more info */
     .custom-switch.custom-switch-label-status .custom-switch-input:checked+.custom-switch-btn {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='38'%3E%3Ctext x='12.71429' y='23.75' font-size='12px' font-weight='700' font-family='-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji' fill='%2328a745'%3EClubs%3C/text%3E%3C/svg%3E");
     }
@@ -2969,6 +2977,8 @@ path {
     .hr-divider-nav a {
         width: 140px;
     }
+    /* Custom iOS-style switch 
+    Pure CSS custom switch component adapted from https://www.cssscript.com/ios-style-switches-bootstrap-4/ Please see README.md file for more info */
     .custom-switch {
         line-height: 16px;
     }

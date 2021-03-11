@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="assets/css/toolkit-inverse.css">
     <link rel="stylesheet" href="assets/css/application.css">
-    <link rel="stylesheet" href="assets/css/component-custom-switch.css">
+
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>StrikeForce | Meaningful data for the beautiful game</title>
@@ -34,7 +34,7 @@
                           </button>
                         </div>
 
-                        <div class="nav-toggleable-md collapse" id="nav-toggleable-md" aria-expanded="false">
+                        <div class="nav-toggleable-md collapse" role="navigation" id="nav-toggleable-md" aria-expanded="false">
                             <ul class="nav nav-pills nav-stacked flex-column" id="nav-main">
                                 <li class="nav-item">
                                     <a class="nav-link" id='nav-home-link' href="index.html"> Home</a>
@@ -49,7 +49,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="leaderboards.html#strikevalue-tables">StrikeValue</a>
                                 </li>
-
+                                <!-- code block adapted from https://stackoverflow.com/questions/42401606/how-to-hide-collapsible-bootstrap-4-navbar-on-click -->
                                 <li class="nav-header">Dashboards</li>
                                 <li class="nav-item">
                                     <a class="nav-link active" data-toggle="collapse" id="scorers-dashboards-menu-nav-link" data-target="#nav-toggleable-md.show" href="#player-match-list">
