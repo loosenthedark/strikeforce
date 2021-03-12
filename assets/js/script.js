@@ -6,7 +6,6 @@ const clubSearch = document.getElementById('club-search');
 const clubMatchList = document.getElementById('club-match-list');
 const pillsPlayersTab = document.getElementById('pills-players-tab');
 const pillsClubsTab = document.getElementById('pills-clubs-tab');
-const pillsTabContent = document.getElementById('pills-tab-content');
 const animateNavToggler = document.getElementById('nav-toggler');
 const navTogglerIcons = document.querySelectorAll('.nav-toggler-icon');
 
@@ -34,7 +33,7 @@ const searchScorers = async playerSearchText => {
     if (matches.length === 0) {
         playerMatchList.innerHTML = '';
 
-    };
+    }
 
     // Render alert message if user enters invalid scorer search string
     if (playerSearchText.length > 2 && matches.length === 0) { playerMatchList.innerHTML = "<div class='alert alert-warning text-center' role='alert'><span class='icon icon-warning'></span><br><p>Sorry, no scorers found.</p><p>Please try searching for someone else!</p></div>"; } else if (playerSearchText.length > 2) { showScorers(matches); } else if (playerSearchText.length === 0) {
@@ -43,7 +42,7 @@ const searchScorers = async playerSearchText => {
         logoContainer.classList.remove('no-top-margin');
         logoContainer.classList.add('mt-5');
         mainContent.classList.add('mt-4');
-    };
+    }
 
     pillsClubsTab.addEventListener('click', () => {
         matches = [];
@@ -64,7 +63,7 @@ const searchClubs = async clubSearchText => {
 
     if (matches.length === 0) {
         clubMatchList.innerHTML = '';
-    };
+    }
 
     if (clubSearchText.length > 0 && matches.length === 0) { clubMatchList.innerHTML = "<div class='alert alert-warning text-center' role='alert'><span class='icon icon-warning'></span><br><p>Sorry, no clubs found.</p><p>Please try searching for another one!</p></div>"; } else if (clubSearchText.length > 0) { showClubs(matches); } else if (clubSearchText.length === 0) {
         matches = [];
@@ -72,7 +71,7 @@ const searchClubs = async clubSearchText => {
         logoContainer.classList.remove('no-top-margin');
         logoContainer.classList.add('mt-5');
         mainContent.classList.add('mt-4');
-    };
+    }
     pillsPlayersTab.addEventListener('click', () => {
         matches = [];
         clubMatchList.innerHTML = '';
@@ -99,7 +98,7 @@ const showScorers = matches => {
         logoContainer.classList.remove('mt-5');
         mainContent.classList.remove('mt-4');
         playerMatchList.innerHTML = scorerList;
-    };
+    }
 };
 
 // Display list of clubs in HTML
@@ -122,7 +121,7 @@ const showClubs = matches => {
         logoContainer.classList.remove('mt-5');
         mainContent.classList.remove('mt-4');
         clubMatchList.innerHTML = clubList;
-    };
+    }
 };
 
 // Listen for JLINGZ (Easter Egg) search input
@@ -130,7 +129,7 @@ const showClubs = matches => {
 playerSearch.addEventListener('input', () => {
     if (playerSearch.value === "JLINGZ") { $(playerMatchList).html(`<div class="col-12 statcard-img border-bottom-0 px-0"><img class="d-block mx-auto mt-4 mb-3" src="assets/images/jlingz.jpg" alt="JLINGZ" height="auto" width="180"><div class="col-12 mb-4 px-0 border-top-0 statcard-img-name text-center"><h3>JLINGZ</h3></div></div><nav class="iconav mt-0 px-0 mb-0 col-12"><div class="iconav-slider row"><div class="col-12"><ul class="row nav nav-pills iconav-nav mx-0"><li class="nav-item px-0 col-4"><a class="nav-link active" href="#" title="Load summary dashboard" data-toggle="tooltip" data-placement="right" data-container="body"><span class="icon iconav-icon icon-list"></span><small class="iconav-nav-label">Summary</small></a></li><li class="nav-item px-0 col-4 ml-0"><a class="nav-link" href="#" title="Load StrikeRate dashboard" data-toggle="tooltip" data-placement="right" data-container="body"><span class="icon iconav-icon icon-circular-graph"></span><small class="iconav-nav-label">StrikeRate</small></a></li><li class="nav-item px-0 col-4 ml-0"><a class="nav-link" href="#" title="Load StrikeValue dashboard" data-toggle="tooltip" data-placement="right" data-container="body"><span class="icon iconav-icon icon-line-graph"></span><small class="iconav-nav-label">StrikeValue</small></a></li></ul></div></div></nav><div class="col-12 px-0 statcard-body-wrapper"><div class="row statcard-body-row mx-0"><div class="col-12 py-2 border-top-0 statcard-body"><div class="row statcard-row statcard p-3 py-md-4"><div class="col-5 px-0 statcard-col text-center"><h6 class="statcard-stat statcard-number">AGELESS</h6><span class="statcard-desc">Age</span></div><div class="col-2 statcard-col"></div><div class="col-5 px-0 statcard-col text-center"><h6 class="statcard-stat statcard-number">JLINGZ.COM</h6><span class="statcard-desc">Shirt number</span></div></div><div class="row statcard-row statcard px-3 py-md-2 py-md-4"><div class="col-4 statcard-col text-center"></div><div class="col-4 px-0 statcard-col text-center"><span class="icon icon-user"></span></div><div class="col-4 statcard-col text-center"></div></div><div class="row statcard-row statcard py-3 pl-0 pr-3"><div class="col-7 px-0 statcard-col text-center"><h6 class="statcard-stat statcard-number">TOO MANY TO COUNT</h6><span class="statcard-desc">Goals</span></div><div class="col-5 px-0 statcard-col text-center"><h6 class="statcard-stat statcard-number">PRICELE$$</h6><span class="statcard-desc">Value</span></div></div></div></div></div>`); }
     // search for scorers from user search input
-    else { searchScorers(playerSearch.value) }
+    else { searchScorers(playerSearch.value); }
 });
 
 // Listen for club search input and search for clubs from user search input
@@ -143,7 +142,7 @@ $(document).ready(function() {
     $(animateNavToggler).click(function() {
         $(navTogglerIcons).toggleClass('active');
         $(animateNavToggler).toggleClass('no-border');
-    })
+    });
 });
 
 // Ensure scorer search input field gets focus on page load (after timeout) by default
@@ -154,8 +153,7 @@ $(document).ready(function() {
     }, 1000);
     // make API call to TransferMarket when user clicks on scorer StrikeRate button
     $(document).on('click', '.btn-strike-rate', function() {
-        const apiKey = "750dd332b2msh2ea2cd6530f8ce8p182023jsn0aa726d7814f";
-        const host = "transfermarket.p.rapidapi.com";
+
         let scorerHTMLName = $(this).parent().prev().children('h2').text().trim();
         let scorerName = $(this).parent().prev().children('h2').text().trim().split(' ').join('%20');
 
@@ -208,6 +206,7 @@ $(document).ready(function() {
                 ).then(
                     // function to handle responses from API calls
                     function(responseValue, responseProfile, responseGoals) {
+                        var goals, goalsPer90, goalsMinusPensPer90, gPerM, _gPerM;
                         // code block adapted from https://stackoverflow.com/questions/31489413/remove-last-3-characters-of-string-or-number-in-javascript/45165923
                         var currentMarketValue = responseValue[0].marketValueDevelopment[0].marketValue.replace(',', '.').slice(0, -1);
                         var roundedMarketValue;
@@ -223,16 +222,16 @@ $(document).ready(function() {
                         for (let i = 0; i < responseGoals[0].length; i++) {
 
                             if (`${scorerHTMLName}` === `${responseGoals[0][i].fullname}`) {
-                                var goals = responseGoals[0][i].goals;
+                                goals = responseGoals[0][i].goals;
                                 var goalsMinusPens = responseGoals[0][i].goalsMinusPens;
-                                var goalsPer90 = responseGoals[0][i].goalsPer90;
-                                var goalsMinusPensPer90 = responseGoals[0][i].goalsMinusPensPer90;
+                                goalsPer90 = responseGoals[0][i].goalsPer90;
+                                goalsMinusPensPer90 = responseGoals[0][i].goalsMinusPensPer90;
                                 var goalsPerMillion = goals / currentMarketValue;
-                                var gPerM = goalsPerMillion.toFixed(2);
+                                gPerM = goalsPerMillion.toFixed(2);
                                 var goalsMinusPensPerMillion = goalsMinusPens / currentMarketValue;
-                                var _gPerM = goalsMinusPensPerMillion.toFixed(2);
-                            };
-                        };
+                                _gPerM = goalsMinusPensPerMillion.toFixed(2);
+                            }
+                        }
 
 
                         // Unhide pill buttons once scorer data has been loaded
@@ -291,7 +290,6 @@ $(document).ready(function() {
             $.ajax(getClubID).done(function(response) {
                 // Store club ID from initial API call in variable
                 var clubID = response.clubs[0].id;
-                var _clubLogo = response.clubs[0].logoImage;
 
                 // Use this club ID variable in three further API calls
                 const get_ClubLogo = new clubSettings();
@@ -322,6 +320,8 @@ $(document).ready(function() {
                 ).then(
                     // function to handle responses from API calls
                     function(responseLogo, responseClubProfile, responseClubPosition, responseSquadValue, responseClubGoals) {
+                        var clubGoals, clubPosition;
+
                         var clubLogo = responseLogo[0].clubs[0].image;
 
                         var squadSize = responseClubProfile[0].mainFacts.squadSize;
@@ -332,7 +332,7 @@ $(document).ready(function() {
 
                         for (let i = 0; i < leagueTable.length; i++) {
                             if (`${clubNameAPI}` === `${leagueTable[i].clubName.split(' ').join('')}`) {
-                                var clubPosition = i + 1;
+                                clubPosition = i + 1;
                                 if (clubPosition === 1) {
                                     clubPosition += "st";
                                 } else if (clubPosition === 2) {
@@ -341,8 +341,8 @@ $(document).ready(function() {
                                     clubPosition += "rd";
                                 } else if (clubPosition === 4 || 5 || 6 || 7 || 8 || 9 || 10 || 11 || 12 || 13 || 14 || 15 || 16 || 17 || 18 || 19 || 20) {
                                     clubPosition += "th";
-                                };
-                            };
+                                }
+                            }
                         }
 
                         var squad = responseSquadValue[0].squad;
@@ -351,13 +351,13 @@ $(document).ready(function() {
                         var values = squad.filter(function(squadMember) {
                             if (squadMember.marketValue.value === null) {
                                 return false; // skip
-                            };
+                            }
                             return true;
                         }).map(getNumericalValues);
 
                         function getNumericalValues(_squad) {
                             return parseInt(_squad.marketValue.value, 10);
-                        };
+                        }
 
                         var squadValue = values.reduce((a, b) => a + b, 0);
 
@@ -365,27 +365,28 @@ $(document).ready(function() {
 
                         function insertDecimal(num) {
                             return Number((num / 10).toFixed(1));
-                        };
+                        }
 
                         squadValue = insertDecimal(squadValue);
 
                         var avgValue = squadValue / squadSize;
-                        var _avgValue = avgValue.toFixed(1)
+                        var _avgValue = avgValue.toFixed(1);
 
                         var roundedSquadValue = `${Math.round(squadValue)}`;
                         var _roundedSquadValue;
+
+                        function insertBillionDecimal(num) {
+                            return Number((num / 1000).toFixed(2));
+                        }
                         if (roundedSquadValue.length > 3) {
-                            function insertBillionDecimal(num) {
-                                return Number((num / 1000).toFixed(2));
-                            };
                             _roundedSquadValue = insertBillionDecimal(roundedSquadValue) + 'bn';
                         } else {
                             _roundedSquadValue = roundedSquadValue + 'm';
                         }
 
                         for (let i = 0; i < responseClubGoals[0].length; i++) {
-                            if (`${clubHTMLName}` === `${responseClubGoals[0][i].clubname}`) { var clubGoals = responseClubGoals[0][i]; };
-                        };
+                            if (`${clubHTMLName}` === `${responseClubGoals[0][i].clubname}`) { clubGoals = responseClubGoals[0][i]; }
+                        }
 
                         var goalsPer1m = clubGoals.goals / squadValue;
                         var goalsPer100m = goalsPer1m * 100;

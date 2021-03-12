@@ -39,7 +39,7 @@ $(document).ready(function() {
         pillsClubsTabLink.addClass('active');
         clubsPane.addClass('active');
         scorersPane.removeClass('active');
-    };
+    }
 
     // Implement custom football spinner while page is loading during API calls
     // Code block adapted from https://codemyui.com/soccer-ball-hexagon-pattern-loader/
@@ -89,9 +89,6 @@ $(document).ready(function() {
 
         var showSelectedScorer = function(scorer) {
 
-            const apiKey = "750dd332b2msh2ea2cd6530f8ce8p182023jsn0aa726d7814f";
-            const host = "transfermarket.p.rapidapi.com";
-
             let scorerName = scorer.split(' ').join('%20');
 
             // function for rendering scorer summary data with main image + name in header pane, followed by tabinated nav with three data panels: Summary (static), StrikeRate (interactive) and StrikeValue (interactive)
@@ -138,6 +135,7 @@ $(document).ready(function() {
                     ).then(
                         // function to handle responses from API calls
                         function(responseValue, responseProfile, responseGoals) {
+                            var goals, goalsPer90, goalsMinusPensPer90, gPerM, _gPerM;
                             // code block adapted from https://stackoverflow.com/questions/31489413/remove-last-3-characters-of-string-or-number-in-javascript/45165923
                             var currentMarketValue = responseValue[0].marketValueDevelopment[0].marketValue.replace(',', '.').slice(0, -1);
                             var roundedMarketValue;
@@ -153,16 +151,16 @@ $(document).ready(function() {
                             for (let i = 0; i < responseGoals[0].length; i++) {
 
                                 if (`${scorer}` === `${responseGoals[0][i].fullname}`) {
-                                    var goals = responseGoals[0][i].goals;
+                                    goals = responseGoals[0][i].goals;
                                     var goalsMinusPens = responseGoals[0][i].goalsMinusPens;
-                                    var goalsPer90 = responseGoals[0][i].goalsPer90;
-                                    var goalsMinusPensPer90 = responseGoals[0][i].goalsMinusPensPer90;
+                                    goalsPer90 = responseGoals[0][i].goalsPer90;
+                                    goalsMinusPensPer90 = responseGoals[0][i].goalsMinusPensPer90;
                                     var goalsPerMillion = goals / currentMarketValue;
-                                    var gPerM = goalsPerMillion.toFixed(2);
+                                    gPerM = goalsPerMillion.toFixed(2);
                                     var goalsMinusPensPerMillion = goalsMinusPens / currentMarketValue;
-                                    var _gPerM = goalsMinusPensPerMillion.toFixed(2);
-                                };
-                            };
+                                    _gPerM = goalsMinusPensPerMillion.toFixed(2);
+                                }
+                            }
 
 
                             // Unhide pill buttons once scorer data has been loaded
@@ -188,7 +186,7 @@ $(document).ready(function() {
 
             // Call function to make API calls to scorer data endpoints
             getScorerInfo();
-        }
+        };
 
         // code block adapted from https://stackoverflow.com/questions/21561353/jquery-populate-drop-down-options-based-on-another-drop-down-option-using-javasc/21640704
 
@@ -216,7 +214,7 @@ $(document).ready(function() {
                 var selectedScorer = (this.text);
                 showSelectedScorer(selectedScorer);
             });
-        }
+        };
 
         selectClubBox.click(function() {
 
@@ -271,7 +269,6 @@ $(document).ready(function() {
                 $.ajax(getClubID).done(function(response) {
                     // Store club ID from initial API call in variable
                     var clubID = response.clubs[0].id;
-                    var _clubLogo = response.clubs[0].logoImage;
 
                     // Use this club ID variable in three further API calls
                     const get_ClubLogo = new clubSettings();
@@ -299,6 +296,7 @@ $(document).ready(function() {
                     ).then(
                         // function to handle responses from API calls
                         function(responseLogo, responseClubProfile, responseClubPosition, responseSquadValue, responseClubGoals) {
+                            var clubGoals, clubPosition;
                             var clubLogo = responseLogo[0].clubs[0].image;
 
                             var squadSize = responseClubProfile[0].mainFacts.squadSize;
@@ -309,7 +307,7 @@ $(document).ready(function() {
 
                             for (let i = 0; i < leagueTable.length; i++) {
                                 if (`${clubAPI}` === `${leagueTable[i].clubName.split(' ').join('')}`) {
-                                    var clubPosition = i + 1;
+                                    clubPosition = i + 1;
                                     if (clubPosition === 1) {
                                         clubPosition += "st";
                                     } else if (clubPosition === 2) {
@@ -318,8 +316,8 @@ $(document).ready(function() {
                                         clubPosition += "rd";
                                     } else if (clubPosition === 4 || 5 || 6 || 7 || 8 || 9 || 10 || 11 || 12 || 13 || 14 || 15 || 16 || 17 || 18 || 19 || 20) {
                                         clubPosition += "th";
-                                    };
-                                };
+                                    }
+                                }
                             }
 
                             var squad = responseSquadValue[0].squad;
@@ -328,13 +326,13 @@ $(document).ready(function() {
                             var values = squad.filter(function(squadMember) {
                                 if (squadMember.marketValue.value === null) {
                                     return false; // skip
-                                };
+                                }
                                 return true;
                             }).map(getNumericalValues);
 
                             function getNumericalValues(_squad) {
                                 return parseInt(_squad.marketValue.value, 10);
-                            };
+                            }
 
                             var squadValue = values.reduce((a, b) => a + b, 0);
 
@@ -342,27 +340,28 @@ $(document).ready(function() {
 
                             function insertDecimal(num) {
                                 return Number((num / 10).toFixed(1));
-                            };
+                            }
 
                             squadValue = insertDecimal(squadValue);
 
                             var avgValue = squadValue / squadSize;
-                            var _avgValue = avgValue.toFixed(1)
+                            var _avgValue = avgValue.toFixed(1);
 
                             var roundedSquadValue = `${Math.round(squadValue)}`;
                             var _roundedSquadValue;
+
+                            function insertBillionDecimal(num) {
+                                return Number((num / 1000).toFixed(2));
+                            }
                             if (roundedSquadValue.length > 3) {
-                                function insertBillionDecimal(num) {
-                                    return Number((num / 1000).toFixed(2));
-                                };
                                 _roundedSquadValue = insertBillionDecimal(roundedSquadValue) + 'bn';
                             } else {
                                 _roundedSquadValue = roundedSquadValue + 'm';
                             }
 
                             for (let i = 0; i < responseClubGoals[0].length; i++) {
-                                if (`${club}` === `${responseClubGoals[0][i].clubname}`) { var clubGoals = responseClubGoals[0][i]; };
-                            };
+                                if (`${club}` === `${responseClubGoals[0][i].clubname}`) { clubGoals = responseClubGoals[0][i]; }
+                            }
 
                             var goalsPer1m = clubGoals.goals / squadValue;
                             var goalsPer100m = goalsPer1m * 100;
@@ -395,7 +394,7 @@ $(document).ready(function() {
 
             // Call function to make API calls to club data endpoints
             getClubInfo();
-        }
+        };
         const selectClubBoxLink = $('#select-club-box > .dropdown-item');
         selectClubBoxLink.click(function() {
 

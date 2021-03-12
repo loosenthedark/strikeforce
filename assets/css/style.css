@@ -323,10 +323,12 @@ button {
     background-color: #FF0100;
 }
 
-.statcard-secondary-arsenal,
+.btn-strike-rate-arsenal {
+    border: 5px solid #ff0100;
+}
+
 .btn-strike-rate-arsenal {
     color: #ff0100;
-    border: 5px solid #ff0100;
 }
 
 .statcard-crest {
@@ -364,7 +366,6 @@ button {
 .btn-strike-rate-club:active {
     color: #fff;
     background-color: #1997c6;
-    border-color: #1997c6;
 }
 
 .statcard-crest,
@@ -376,7 +377,7 @@ button {
 
 .statcard-secondary-arsenal {
     background-color: #ff0100;
-    border-width: 2px;
+    border: 2px solid transparent;
 }
 
 .btn-strike-rate-arsenal {
@@ -395,7 +396,7 @@ button {
 .btn-strike-rate-arsenal:hover,
 .btn-strike-rate-arsenal:focus {
     background-color: #9D8349;
-    border: 2px solid #9D8349;
+    border: 2px solid transparent;
 }
 
 .btn-strike-rate-arsenal:focus {
@@ -423,7 +424,6 @@ button {
     background-color: #85001B;
 }
 
-.statcard-secondary-astonvilla,
 .btn-strike-rate-astonvilla {
     color: #85001B;
     border: 5px solid #85001B;
@@ -431,7 +431,7 @@ button {
 
 .statcard-secondary-astonvilla {
     background-color: #85001B;
-    border-width: 2px;
+    border: 2px solid transparent;
 }
 
 .btn-strike-rate-astonvilla {
@@ -472,16 +472,14 @@ button {
     background-color: #0244A8;
 }
 
-.statcard-secondary-brightonandhovealbion,
-.btn-strike-rate-brightonandhovealbion,
-.statcard-crest-brightonandhovealbion {
+.btn-strike-rate-brightonandhovealbion {
     color: #0244A8;
     border: 5px solid#0244A8;
 }
 
 .statcard-secondary-brightonandhovealbion {
     background-color: #0244A8;
-    border-width: 2px;
+    border: 2px solid transparent;
 }
 
 .btn-strike-rate-brightonandhovealbion {
@@ -505,6 +503,7 @@ button {
 
 .statcard-crest-brightonandhovealbion {
     background-color: #0244A8;
+    border: 5px solid transparent;
 }
 
 .statcard-line-chart-brightonandhovealbion {
@@ -527,7 +526,6 @@ button {
     background-color: #81001A;
 }
 
-.statcard-secondary-burnley,
 .btn-strike-rate-burnley {
     color: #81001A;
     border: 5px solid #81001A;
@@ -535,7 +533,7 @@ button {
 
 .statcard-secondary-burnley {
     background-color: #81001A;
-    border-width: 2px;
+    border: 2px solid transparent;
 }
 
 .btn-strike-rate-burnley {
@@ -576,9 +574,7 @@ button {
     background-color: #0000FB;
 }
 
-.statcard-secondary-chelsea,
-.btn-strike-rate-chelsea,
-.statcard-crest-chelsea {
+.btn-strike-rate-chelsea {
     color: #0000FB;
     border: 5px solid #0000FB;
 }
@@ -586,7 +582,7 @@ button {
 .statcard-crest-chelsea,
 .statcard-secondary-chelsea {
     background-color: #0000FB;
-    border-width: 2px;
+    border: 2px solid transparent;
 }
 
 .btn-strike-rate-chelsea {
@@ -631,9 +627,7 @@ button {
     color: rgba(255, 255, 255, 1);
 }
 
-.statcard-secondary-crystalpalace,
-.btn-strike-rate-crystalpalace,
-.statcard-crest-crystalpalace {
+.btn-strike-rate-crystalpalace {
     color: #0000FF;
     border: 5px solid #0000FF;
 }
@@ -641,7 +635,7 @@ button {
 .statcard-secondary-crystalpalace,
 .statcard-crest-crystalpalace {
     background-color: #0000FF;
-    border-width: 2px;
+    border: 2px solid transparent;
 }
 
 .btn-strike-rate-crystalpalace {
@@ -682,9 +676,7 @@ button {
     background-color: #0000FF;
 }
 
-.statcard-secondary-everton,
-.btn-strike-rate-everton,
-.statcard-crest-everton {
+.btn-strike-rate-everton {
     color: #0000FF;
     border: 5px solid #0000FF;
 }
@@ -692,7 +684,7 @@ button {
 .statcard-crest-everton,
 .statcard-secondary-everton {
     background-color: #0000FF;
-    border-width: 2px;
+    border: 2px solid transparent;
 }
 
 .btn-strike-rate-everton {
@@ -738,11 +730,8 @@ button {
     font-weight: 500;
 }
 
-.statcard-secondary-fulham,
-.btn-strike-rate-fulham,
 .statcard-crest-fulham {
-    color: #E7E9EE;
-    border: 5px solid #E7E9EE;
+    border: 5px solid transparent;
 }
 
 .statcard-secondary-fulham,
@@ -750,16 +739,14 @@ button {
     background-color: #E7E9EE;
 }
 
+.btn-strike-rate-fulham,
 .statcard-secondary-fulham {
-    border-width: 2px;
+    border: 2px solid transparent;
 }
 
 .btn-strike-rate-fulham {
     background-color: #0c0d0f;
-}
-
-.btn-strike-rate-fulham {
-    border-width: 2px;
+    color: #E7E9EE;
 }
 
 .btn-strike-rate-fulham:hover,
@@ -809,20 +796,22 @@ button {
     font-weight: 600;
 }
 
-.statcard-secondary-leedsunited,
-.btn-strike-rate-leedsunited,
-.statcard-crest-leedsunited {
+.btn-strike-rate-leedsunited {
     color: #fff;
     border: 5px solid #fff;
 }
 
 .statcard-secondary-leedsunited {
-    border-width: 2px;
+    border: 2px solid transparent;
 }
 
 .statcard-crest-leedsunited,
 .statcard-secondary-leedsunited {
     background-color: #fff;
+}
+
+.statcard-crest-leedsunited {
+    border: 5px solid transparent;
 }
 
 .btn-strike-rate-leedsunited {
@@ -868,21 +857,26 @@ button {
     background-color: #0000FF;
 }
 
-.statcard-secondary-leicestercity,
-.btn-strike-rate-leicestercity,
-.statcard-crest-leicestercity {
+.btn-strike-rate-leicestercity {
     color: #0000FF;
     border: 5px solid #0000FF;
 }
 
-.statcard-secondary-leicestercity,
 .btn-strike-rate-leicestercity {
     border-width: 2px;
+}
+
+.statcard-secondary-leicestercity {
+    border: 2px solid transparent;
 }
 
 .statcard-crest-leicestercity,
 .statcard-secondary-leicestercity {
     background-color: #0000FF;
+}
+
+.statcard-crest-leicestercity {
+    border: 5px solid transparent;
 }
 
 .btn-strike-rate-leicestercity {
@@ -926,19 +920,23 @@ button {
 
 .statcard-desc.statcard-desc-liverpool {
     color: #3CA0BF;
-    /* font-weight: 600; */
 }
 
-.statcard-secondary-liverpool,
-.btn-strike-rate-liverpool,
-.statcard-crest-liverpool {
+.btn-strike-rate-liverpool {
     color: #D93142;
     border: 5px solid #D93142;
 }
 
-.btn-strike-rate-liverpool,
-.statcard-secondary-liverpool {
+.btn-strike-rate-liverpool {
     border-width: 2px;
+}
+
+.statcard-secondary-liverpool {
+    border: 2px solid transparent;
+}
+
+.statcard-crest-liverpool {
+    border: 5px solid transparent;
 }
 
 .statcard-crest-liverpool,
@@ -992,16 +990,21 @@ button {
     color: #000;
 }
 
-.statcard-secondary-manchestercity,
-.btn-strike-rate-manchestercity,
-.statcard-crest-manchestercity {
+.btn-strike-rate-manchestercity {
     color: #9BCDFF;
     border: 5px solid #9BCDFF;
 }
 
-.statcard-secondary-manchestercity,
 .btn-strike-rate-manchestercity {
     border-width: 2px;
+}
+
+.statcard-secondary-manchestercity {
+    border: 2px solid transparent;
+}
+
+.statcard-crest-manchestercity {
+    border: 5px solid transparent;
 }
 
 .statcard-crest-manchestercity,
@@ -1055,15 +1058,17 @@ button {
     color: #FFE500;
 }
 
-.statcard-secondary-manchesterunited,
-.btn-strike-rate-manchesterunited,
-.statcard-crest-manchesterunited {
+.btn-strike-rate-manchesterunited {
     color: #FF0100;
     border: 2px solid #FF0100;
 }
 
 .statcard-crest-manchesterunited {
-    border-width: 5px;
+    border: 5px solid transparent;
+}
+
+.statcard-secondary-manchesterunited {
+    border: 2px solid transparent;
 }
 
 .statcard-crest-manchesterunited,
@@ -1129,11 +1134,10 @@ button {
 
 .btn-strike-rate-newcastleunited {
     background-color: #fff;
-    border: 5px solid #fff;
 }
 
 .btn-strike-rate-newcastleunited {
-    border-width: 3px;
+    border: 3px solid transparent;
 }
 
 .btn-strike-rate-newcastleunited:hover,
@@ -1162,7 +1166,6 @@ button {
 }
 
 .statcard-sheffieldunited,
-.statcard-secondary-sheffieldunited,
 .statcard-crest-sheffieldunited {
     color: #FF0100;
     background-color: #FFf;
@@ -1191,6 +1194,7 @@ button {
 
 .statcard-secondary-sheffieldunited {
     background-color: #FF0100;
+    border: 2px solid transparent;
     border-left: none;
 }
 
@@ -1287,10 +1291,9 @@ button {
 }
 
 .statcard-tottenhamhotspur,
-.statcard-secondary-tottenhamhotspur,
-.statcard-crest-tottenhamhotspur {
+.statcard-secondary-tottenhamhotspur {
     background-color: #FBFBFB;
-    border: 2px solid #fbfbfb;
+    border: 2px solid transparent;
 }
 
 .statcard-tottenhamhotspur {
@@ -1304,7 +1307,8 @@ button {
 }
 
 .statcard-crest-tottenhamhotspur {
-    border-width: 5px;
+    background: #fbfbfb;
+    border: 5px solid transparent;
 }
 
 .statcard-desc.statcard-desc-tottenhamhotspur {
@@ -1356,9 +1360,7 @@ button {
     background-color: #020B52;
 }
 
-.statcard-secondary-westbromwichalbion,
-.btn-strike-rate-westbromwichalbion,
-.statcard-crest-westbromwichalbion {
+.btn-strike-rate-westbromwichalbion {
     color: #020B52;
     border: 2px solid #020B52;
 }
@@ -1366,6 +1368,7 @@ button {
 .statcard-crest-westbromwichalbion,
 .statcard-secondary-westbromwichalbion {
     background-color: #020B52;
+    border: 2px solid transparent;
 }
 
 .btn-strike-rate-westbromwichalbion {
@@ -1410,9 +1413,7 @@ button {
     background-color: #970714;
 }
 
-.statcard-secondary-westhamunited,
-.btn-strike-rate-westhamunited,
-.statcard-crest-westhamunited {
+.btn-strike-rate-westhamunited {
     color: #970714;
     border: 2px solid #970714;
 }
@@ -1424,6 +1425,7 @@ button {
 .statcard-crest-westhamunited,
 .statcard-secondary-westhamunited {
     background-color: #970714;
+    border: 2px solid transparent;
 }
 
 .btn-strike-rate-westhamunited {
@@ -1464,9 +1466,7 @@ button {
     background-color: #FF8400;
 }
 
-.statcard-secondary-wolverhamptonwanderers,
-.btn-strike-rate-wolverhamptonwanderers,
-.statcard-crest-wolverhamptonwanderers {
+.btn-strike-rate-wolverhamptonwanderers {
     color: #FF8400;
     border: 2px solid #FF8400;
 }
@@ -1474,6 +1474,7 @@ button {
 .statcard-crest-wolverhamptonwanderers,
 .statcard-secondary-wolverhamptonwanderers {
     background-color: #FF8400;
+    border: 2px solid transparent;
 }
 
 .btn-strike-rate-wolverhamptonwanderers {
@@ -1485,7 +1486,7 @@ button {
 }
 
 .btn-strike-rate-wolverhamptonwanderers {
-    border-color: #000;
+    border-color: transparent;
 }
 
 .btn-strike-rate-wolverhamptonwanderers:hover,
@@ -1660,7 +1661,7 @@ path {
 
 .statcard-img-thfc {
     background-color: #fdfdfd;
-    border: 1px solid #fdfdfd;
+    border: 1px solid transparent;
     margin-top: 8px;
 }
 
@@ -1822,7 +1823,7 @@ Pure CSS custom switch component adapted from https://www.cssscript.com/ios-styl
 }
 
 .table-backdrop-contrast {
-    backdrop-filter: contrast(97%);
+    background: #282B32;
 }
 
 .crest-pane {
@@ -1944,7 +1945,7 @@ Pure CSS custom switch component adapted from https://www.cssscript.com/ios-styl
     color: #1997c6;
     background-color: #fff;
     font-weight: 500;
-    border-color: #fff;
+    border-color: transparent;
 }
 
 #dropdown-menu-button-clubz .icon,
@@ -2083,7 +2084,7 @@ Pure CSS custom switch component adapted from https://www.cssscript.com/ios-styl
 .progress-bar {
     height: 48px;
     background: #1997c6;
-    border: 2px solid #1997c6;
+    border: 2px solid transparent;
     color: #252830;
     font-size: 18px;
     line-height: 48px;
@@ -2822,12 +2823,12 @@ Pure CSS custom switch component adapted from https://www.cssscript.com/ios-styl
         line-height: 50px;
     }
     .nav-pills.nav-stacked-about .dropdown-item:hover,
-    .nav-pills.nav-stacked-about .dropdown-item:focus,
     .nav-pills.nav-stacked-contact .dropdown-item:hover,
-    .nav-pills.nav-stacked-contact .dropdown-item:focus {
+    .nav-pills.nav-stacked-contact .dropdown-item:focus,
+    .nav-pills.nav-stacked-about .dropdown-item:focus {
         color: #252830;
         background: #1997c6;
-        border-left: .1rem solid #1997c6;
+        border-left: .1rem solid transparent;
     }
     .nav-pills.nav-stacked-about .dropdown-item,
     .nav-pills.nav-stacked-contact .dropdown-item {

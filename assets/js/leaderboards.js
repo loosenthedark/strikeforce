@@ -20,7 +20,7 @@ $(document).ready(function() {
     $(animateNavToggler).click(function() {
         $(navTogglerIcons).toggleClass('active');
         $(animateNavToggler).toggleClass('no-border');
-    })
+    });
 
     if (window.location.href.indexOf("#strikerate-tables") > -1) {
         $(summaryTablesTab).removeClass('active');
@@ -93,40 +93,41 @@ $(document).ready(function() {
     $('.nav-link-leaderboards-tab').click(function() {
         if ($('#custom-switch-summary.custom-switch-label-status .custom-switch-input:checked')) {
             $('#custom-switch-summary.custom-switch-label-status .custom-switch-input').prop("checked", false);
-        };
+        }
         if ($('#custom-switch-strikerate.custom-switch-label-status .custom-switch-input:checked')) {
             $('#custom-switch-strikerate.custom-switch-label-status .custom-switch-input').prop("checked", false);
-        };
+        }
         if ($('#custom-switch-strikevalue.custom-switch-label-status .custom-switch-input:checked')) {
             $('#custom-switch-strikevalue.custom-switch-label-status .custom-switch-input').prop("checked", false);
-        };
+        }
 
         leaderboardBody.innerHTML = '';
         leaderboardBodyStrikeRate.innerHTML = '';
         leaderboardBodyStrikeValue.innerHTML = '';
         $.get("assets/data/playerdata.json", function(data) {
-            for (var i = 0; i < data.length; i++) {
-                var tr = "<tr>";
+            var i, tr, resort;
+            for (i = 0; i < data.length; i++) {
+                tr = "<tr>";
                 tr += "<td class='pl-1'>" + data[i].strikeRank + '</td><td class="pr-2"><a href="#">' + data[i].fullname + `</a></td><td class='pl-2 pr-2 crest-pane ${data[i].club.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'><a class='d-block w-100 h-100' href='#'></a></td><td class='pl-1 text-center pr-3'>` + data[i].goals + '</td><td class="pl-2 text-center pr-3">' + data[i].pens + '</td><td class="text-center pl-1 pr-3">' + data[i].goalsMinusPens + '</td></tr>';
                 leaderboardBody.innerHTML += tr;
 
-                var resort = true;
+                resort = true;
                 $("#my-table").trigger('update', [resort]);
-            };
-            for (var i = 0; i < data.length; i++) {
-                var tr = "<tr>";
+            }
+            for (i = 0; i < data.length; i++) {
+                tr = "<tr>";
                 tr += "<td class='pl-1'>" + data[i].strikeRank + '</td><td class="pr-2"><a href="#">' + data[i].fullname + `</a></td><td class='pl-2 pr-2 crest-pane ${data[i].club.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'><a class='d-block w-100 h-100' href='#'></a></td><td class='pl-1 text-center pr-3'>` + data[i].goals + '</td><td class="pl-2 text-center pr-3 table-border-left table-backdrop-contrast">' + data[i].goalsPer90 + '</td><td class="text-center pl-1 pr-3 table-backdrop-contrast">' + data[i].goalsMinusPensPer90 + '</td></tr>';
                 leaderboardBodyStrikeRate.innerHTML += tr;
 
-                var resort = true;
+                resort = true;
                 $("#my-second-table").trigger('update', [resort]);
-            };
-            for (var i = 0; i < data.length; i++) {
-                var tr = "<tr>";
+            }
+            for (i = 0; i < data.length; i++) {
+                tr = "<tr>";
                 tr += "<td class='pl-1'>" + data[i].strikeRank + '</td><td class="pr-2"><a href="#">' + data[i].fullname + `</a></td><td class='pl-2 pr-2 crest-pane ${data[i].club.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'><a class='d-block w-100 h-100' href='#'></a></td><td class='pl-1 text-center pr-3'>` + data[i].goals + '</td><td class="pl-2 text-center pr-3 table-border-left table-backdrop-contrast"></td><td class="text-center pl-1 pr-3 table-backdrop-contrast"></td></tr>';
                 leaderboardBodyStrikeValue.innerHTML += tr;
 
-                var resort = true;
+                resort = true;
                 $("#my-second-table").trigger('update', [resort]);
             }
         });
@@ -174,35 +175,36 @@ $(document).ready(function() {
     });
 
     $.get("assets/data/playerdata.json", function(data) {
-        for (var i = 0; i < data.length; i++) {
-            var tr = "<tr>";
+        var i, tr, resort;
+        for (i = 0; i < data.length; i++) {
+            tr = "<tr>";
             tr += "<td class='pl-1'>" + data[i].strikeRank + '</td><td class="pr-2"><a href="#">' + data[i].fullname + `</a></td><td class='pl-2 pr-2 crest-pane ${data[i].club.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'><a class='d-block w-100 h-100' href='#'></a></td><td class='pl-1 text-center pr-3'>` + data[i].goals + '</td><td class="pl-2 text-center pr-3">' + data[i].pens + '</td><td class="text-center pl-1 pr-3">' + data[i].goalsMinusPens + '</td></tr>';
             leaderboardBody.innerHTML += tr;
 
-            var resort = true;
+            resort = true;
             $("#my-table").trigger('update', [resort]);
         }
 
-        for (var i = 0; i < data.length; i++) {
-            var tr = "<tr>";
+        for (i = 0; i < data.length; i++) {
+            tr = "<tr>";
             tr += "<td class='pl-1'>" + data[i].strikeRank + '</td><td class="pr-2"><a href="#">' + data[i].fullname + `</a></td><td class='pl-2 pr-2 crest-pane ${data[i].club.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'><a class='d-block w-100 h-100' href='#'></a></td><td class='pl-1 text-center pr-3'>` + data[i].goals + '</td><td class="pl-2 text-center pr-3 table-border-left table-backdrop-contrast">' + data[i].goalsPer90 + '</td><td class="text-center pl-1 pr-3 table-backdrop-contrast">' + data[i].goalsMinusPensPer90 + '</td></tr>';
             leaderboardBodyStrikeRate.innerHTML += tr;
 
-            var resort = true;
+            resort = true;
             $("#my-second-table").trigger('update', [resort]);
         }
 
-        for (var i = 0; i < data.length; i++) {
+        for (i = 0; i < data.length; i++) {
             var valueGoals = data[i].goals / data[i].value;
             var valueGoalsRounded = valueGoals.toFixed(2);
             var valueGoalsMinusPens = data[i].goalsMinusPens / data[i].value;
             var valueGoalsMinusPensRounded = valueGoalsMinusPens.toFixed(2);
 
-            var tr = "<tr>";
+            tr = "<tr>";
             tr += "<td class='pl-1'>" + data[i].strikeRank + '</td><td class="pr-2"><a href="#">' + data[i].fullname + `</a></td><td class='pl-2 pr-2 crest-pane ${data[i].club.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'><a class='d-block w-100 h-100' href='#'></a></td><td class='pl-1 text-center pr-3'>` + data[i].goals + '</td><td class="pl-2 text-center pr-3 table-border-left table-backdrop-contrast">' + valueGoalsRounded + '</td><td class="text-center pl-1 pr-3 table-backdrop-contrast">' + valueGoalsMinusPensRounded + '</td></tr>';
 
             leaderboardBodyStrikeValue.innerHTML += tr;
-            var resort = true;
+            resort = true;
             $("#my-third-table").trigger('update', [resort]);
         }
 
@@ -211,13 +213,14 @@ $(document).ready(function() {
         function confirmCheck() {
             if (this.checked) {
                 $.get("assets/data/clubdata.json", function(clubdata) {
+                    var i, tr, resort;
                     leaderboardBody.innerHTML = '';
-                    for (var i = 0; i < clubdata.length; i++) {
-                        var tr = "<tr>";
+                    for (i = 0; i < clubdata.length; i++) {
+                        tr = "<tr>";
                         tr += "<td class='pl-1'>" + clubdata[i].clubStrikeRank + "</td><td class='pr-2'><a href='#'>" + clubdata[i].clubname + `</a></td><td class='pl-2 pr-2 crest-pane ${clubdata[i].clubname.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'><a class='d-block w-100 h-100' href='#'></a></td><td class='pl-1 text-center pr-3'>` + clubdata[i].goals + '</td><td class="pl-2 text-center pr-3">' + clubdata[i].pens + '</td><td class="text-center pl-1 pr-3">' + clubdata[i].goalsMinusPens + '</td></tr>';
                         leaderboardBody.innerHTML += tr;
 
-                        var resort = true;
+                        resort = true;
                         $("#my-table").trigger('update', [resort]);
 
                         $('#my-table th').removeClass('headerSortDown');
@@ -233,12 +236,12 @@ $(document).ready(function() {
                     }
 
                     leaderboardBodyStrikeRate.innerHTML = '';
-                    for (var i = 0; i < clubdata.length; i++) {
-                        var tr = "<tr>";
+                    for (i = 0; i < clubdata.length; i++) {
+                        tr = "<tr>";
                         tr += "<td class='pl-1'>" + clubdata[i].clubStrikeRank + "</td><td class='pr-2'><a href='#'>" + clubdata[i].clubname + `</a></td><td class='pl-2 pr-2 crest-pane ${clubdata[i].clubname.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'><a class='d-block w-100 h-100' href='#'></a></td><td class='pl-1 text-center pr-3'>` + clubdata[i].goals + '</td><td class="pl-2 text-center pr-3 table-border-left table-backdrop-contrast">' + clubdata[i].goalsPer90 + '</td><td class="text-center pl-1 pr-3 table-backdrop-contrast">' + clubdata[i].goalsMinusPensPer90 + '</td></tr>';
                         leaderboardBodyStrikeRate.innerHTML += tr;
 
-                        var resort = true;
+                        resort = true;
                         $("#my-second-table").trigger('update', [resort]);
 
                         $('#my-second-table th').removeClass('headerSortDown');
@@ -252,18 +255,18 @@ $(document).ready(function() {
                     }
 
                     leaderboardBodyStrikeValue.innerHTML = '';
-                    for (var i = 0; i < clubdata.length; i++) {
+                    for (i = 0; i < clubdata.length; i++) {
                         var valueGoalsClub = clubdata[i].goals / clubdata[i].squadvalue;
                         var valueGoalsClubRounded = valueGoalsClub.toFixed(2);
                         var valueGoalsMinusPensClub = clubdata[i].goalsMinusPens / clubdata[i].squadvalue;
                         var valueGoalsMinusPensClubRounded = valueGoalsMinusPensClub.toFixed(2);
 
                         $('#perPane').text('Per €100m');
-                        var tr = "<tr>";
+                        tr = "<tr>";
                         tr += "<td class='pl-1'>" + clubdata[i].clubStrikeRank + "</td><td class='pr-2'><a href='#'>" + clubdata[i].clubname + `</a></td><td class='pl-2 pr-2 crest-pane ${clubdata[i].clubname.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'><a class='d-block w-100 h-100' href='#'></a></td><td class='pl-1 text-center pr-3'>` + clubdata[i].goals + '</td><td class="pl-2 text-center pr-3 table-border-left table-backdrop-contrast">' + valueGoalsClubRounded + '</td><td class="text-center pl-1 pr-3 table-backdrop-contrast">' + valueGoalsMinusPensClubRounded + '</td></tr>';
                         leaderboardBodyStrikeValue.innerHTML += tr;
 
-                        var resort = true;
+                        resort = true;
                         $("#my-third-table").trigger('update', [resort]);
 
                         $('#my-third-table th').removeClass('headerSortDown');
@@ -275,7 +278,7 @@ $(document).ready(function() {
                             headers: { 1: { sorter: "text" } },
                             widgets: ['numbering']
                         });
-                    };
+                    }
 
                     $('.sorter-last-name').removeClass('sorter-last-name');
                     $('.column-name').addClass('sorter-text');
@@ -295,7 +298,7 @@ $(document).ready(function() {
     $.tablesorter.addWidget({
         id: "numbering",
         format: function(table) {
-            var c = table.config;
+
             $("tr:visible", table.tBodies[0]).each(function(i) {
                 $(this).find('td').eq(0).text(i + 1);
             });
@@ -335,6 +338,6 @@ $(document).ready(function() {
             // apply custom widget - code block adapted from https://stackoverflow.com/questions/437290/exclude-a-column-from-being-sorted-using-jquery-tablesorter
             widgets: ['numbering']
         });
-    }, 300)
+    }, 300);
     return false;
 });

@@ -16,11 +16,11 @@ window.onload = function() {
             emailAlert += "<div class='alert alert-warning text-center' role='alert'><span class='icon icon-warning'></span><br><p class='alert-para'>Please enter a <span class='underline'>valid</span> email address!</p><p class='alert-para'>e.g. <span class='emphasise'>yourname@gmail.com</span></p></div>";
             document.getElementById('error-message-email').innerHTML = emailAlert;
             return false;
-        };
+        }
         // generate a five digit number for the contact_number variable
-        this.contact_number.value = Math.random() * 100000 | 0;
+        this.contact_number.value = Math.random() * 100000;
         // these IDs from the previous steps
-        emailjs.sendForm('gmail', 'contactform', this)
+        emailjs.sendForm('gmail', 'contact_form', this)
             .then(function(response) {
                 document.getElementById('error-message-email').innerHTML = '';
                 document.getElementById('input-email').value = '';
@@ -32,4 +32,4 @@ window.onload = function() {
                 }, 3000);
             });
     });
-}
+};
