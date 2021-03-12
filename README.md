@@ -170,6 +170,14 @@ Apart from this, dynamically-loaded imagery such as player profile photos and cl
 
 
 
+### Wireframes
+
+- [mobile](assets/wireframes/StrikeForce_mobile.pdf)
+- [tablet](assets/wireframes/StrikeForce_tablet.pdf)
+- [desktop](assets/wireframes/StrikeForce_desktop.pdf)
+
+
+
 ## Technologies Used
 
 ### Languages
