@@ -2,7 +2,7 @@
 
 
 
-<p align="center"><img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" alt="Code Institute logo" width="200" height="auto" style="margin-right:20px;"> <img src="assets/images/strikeforce-logo.png" alt="StrikeForce logo" width="200" height="auto"></p>
+<p align="center"><img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" alt="Code Institute logo" width="200" height="auto" style="margin-right:20px;"> <img src="assets/images/screenshots/strikeforce-logo.png" alt="StrikeForce logo" width="200" height="auto"></p>
 
 
 
@@ -23,7 +23,7 @@
 
 
 
-<p align="center"><img src="assets/images/strikerate-leaderboards.png" alt="StrikeForce 'strikerate' leaderboards screenshots across multiple device sizes" width="70%" height="auto"></p>
+<p align="center"><img src="assets/images/screenshots/strikerate-leaderboards.png" alt="StrikeForce 'strikerate' leaderboards screenshots across multiple device sizes" width="70%" height="auto"></p>
 
 
 
@@ -77,55 +77,55 @@ Apart from this, dynamically-loaded imagery such as player profile photos and cl
 
 - The autocomplete filter returns all available matches from the relevant (local) JSON files for search strings greater than two characters in length in the case of scorers and greater than zero characters in the case of clubs:
 
-<p align="center"><img src="assets/images/StrikeForce-landing1.png" alt="StrikeForce landing page scorer search" width="48%" height="auto" style="margin-right: 10px;">
-<img src="assets/images/StrikeForce-landing2.png" alt="StrikeForce landing page club search" width="48%" height="auto"></p>
+<p align="center"><img src="assets/images/screenshots/strikeforce-landing1.png" alt="StrikeForce landing page scorer search" width="48%" height="auto" style="margin-right: 10px;">
+<img src="assets/images/screenshots/strikeforce-landing2.png" alt="StrikeForce landing page club search" width="48%" height="auto"></p>
 
 - Once a dynamic list of matching scorers/clubs has been returned, users may select an individual scorer/club by clicking on the appropriate `.btn-strike-rate(-club)` `<a>` element on the right-hand side of each player's/club's data panel:
 
-<p align="center"><img src="assets/images/StrikeForce-landing3.png" alt="StrikeForce landing page scorer search" width="15%" height="auto" style="margin-right: 20px;">
-<img src="assets/images/StrikeForce-landing4.png" alt="StrikeForce landing page club search" width="15%%" height="auto"></p>
+<p align="center"><img src="assets/images/screenshots/strikeforce-landing3.png" alt="StrikeForce landing page scorer search" width="15%" height="auto" style="margin-right: 20px;">
+<img src="assets/images/screenshots/strikeforce-landing4.png" alt="StrikeForce landing page club search" width="15%%" height="auto"></p>
 
 - This will load the data dashboard relating to the scorer/club in question, each of which consists of a header image and main content pane separated by a tabbed navigation bar that can be clicked to select from a total of three custom `.statcard` data visualisation components: one of these (labelled 'Summary') displays static data, while the other two ('StrikeRate' and 'StrikeValue') allow users to interact by filtering the data to be displayed (e.g. by clicking a toggle button that either excludes or includes penalties scored from the data rendered in chart form):
 
-<p align="center"><img src="assets/images/StrikeForce-landing5.png" alt="StrikeForce landing page scorer search" width="15%" height="auto" style="margin-right: 10px;">
-<img src="assets/images/StrikeForce-landing6.png" alt="StrikeForce landing page scorer search" width="15%%" height="auto" style="margin-right: 10px;">
-<img src="assets/images/StrikeForce-landing7.png" alt="StrikeForce landing page scorer search" width="15%%" height="auto"></p>
+<p align="center"><img src="assets/images/screenshots/strikeforce-landing5.png" alt="StrikeForce landing page scorer search" width="15%" height="auto" style="margin-right: 10px;">
+<img src="assets/images/screenshots/strikeforce-landing6.png" alt="StrikeForce landing page scorer search" width="15%%" height="auto" style="margin-right: 10px;">
+<img src="assets/images/screenshots/strikeforce-landing7.png" alt="StrikeForce landing page scorer search" width="15%%" height="auto"></p>
 
 ### Leaderboard pages:
   
 - Each of the site's three subcategorised Leaderboard pages (again divided by 'Summary', 'StrikeRate' and 'StrikeValue', thus establishing a consistent, intuitive navigational theme) consists of sortable tabular data.
 - Not only can users swiftly move between these three different table categories (either by using the site's main `nav` menu or by clicking on one of the three secondary nav tabs directly above each table)...
 
-<p align="center"><img src="assets/images/StrikeForce-leaderboards1.png" alt="StrikeForce Leaderboards page Summary table" width="25%" height="auto" style="margin-right: 10px;">
-<img src="assets/images/StrikeForce-leaderboards2.png" alt="StrikeForce Leaderboards page StrikeRate table" width="25%%" height="auto" style="margin-right: 10px;">
-<img src="assets/images/StrikeForce-leaderboards3.png" alt="StrikeForce Leaderboards page StrikeValue table" width="25%" height="auto"></p>
+<p align="center"><img src="assets/images/screenshots/strikeforce-leaderboards1.png" alt="StrikeForce Leaderboards page Summary table" width="25%" height="auto" style="margin-right: 10px;">
+<img src="assets/images/screenshots/strikeforce-leaderboards2.png" alt="StrikeForce Leaderboards page StrikeRate table" width="25%%" height="auto" style="margin-right: 10px;">
+<img src="assets/images/screenshots/strikeforce-leaderboards3.png" alt="StrikeForce Leaderboards page StrikeValue table" width="25%" height="auto"></p>
 
 - ...but they can also alternate between viewing individual and club goalscoring leaderboards by means of a pure CSS custom switch that was built using tips and code blocks from [Martin Haubek](https://haubek.github.io/custom-switch/) and retrieved from [this article](https://www.cssscript.com/ios-style-switches-bootstrap-4/):
 
-<p align="center"><img src="assets/images/StrikeForce-leaderboards4.png" alt="StrikeForce Leaderboards page custom switch" width="15%" height="auto" style="margin-right: 10px;">
-<img src="assets/images/StrikeForce-leaderboards5.png" alt="StrikeForce Leaderboards page custom switch" width="15%" height="auto"></p>
+<p align="center"><img src="assets/images/screenshots/strikeforce-leaderboards4.png" alt="StrikeForce Leaderboards page custom switch" width="15%" height="auto" style="margin-right: 10px;">
+<img src="assets/images/screenshots/strikeforce-leaderboards5.png" alt="StrikeForce Leaderboards page custom switch" width="15%" height="auto"></p>
 
 - By default, each table is sorted in descending order of goals scored outright, as indicated by the downward-pointing directional arrow visible in the bottom-right corner of the 'Goals' `th` element in the first screenshot below. However, as seen in the second screenshot, users may interact with each table to rearrange the data by clicking on the appropriate `th` category. Data can also be arranged in either descending (downward-pointing arrow) or ascending (upward-pointing arrow) order, according to user preference:
 
-<p align="center"><img src="assets/images/StrikeForce-leaderboards6.png" alt="StrikeForce Leaderboards page table sorting" width="25%" height="auto" style="margin-right: 10px;">
-<img src="assets/images/StrikeForce-leaderboards7.png" alt="StrikeForce Leaderboards page table sorting" width="25%" height="auto" style="margin-right: 10px;">
-<img src="assets/images/StrikeForce-leaderboards8.png" alt="StrikeForce Leaderboards page table sorting" width="25%" height="auto"></p>
+<p align="center"><img src="assets/images/screenshots/strikeforce-leaderboards6.png" alt="StrikeForce Leaderboards page table sorting" width="25%" height="auto" style="margin-right: 10px;">
+<img src="assets/images/screenshots/strikeforce-leaderboards7.png" alt="StrikeForce Leaderboards page table sorting" width="25%" height="auto" style="margin-right: 10px;">
+<img src="assets/images/screenshots/strikeforce-leaderboards8.png" alt="StrikeForce Leaderboards page table sorting" width="25%" height="auto"></p>
 
 ### Dashboard pages:
 
 - As an alternative to using the main landing page's autocomplete search bars to access data visualisations for individual scorers/clubs, users may instead select from a list of valid options when they navigate to one of the two (Scorers / Clubs) dashboard landing pages. Here they will be prompted by a CSS3 animation effect on the `.dropdown-toggle` `button` element to trigger a `.dropdown-menu`:
 
-<p align="center"><img src="assets/images/StrikeForce-dashboards1.png" alt="StrikeForce Dashboards page Scorers dropdown" width="15%" height="auto" style="margin-right: 10px;">
-<img src="assets/images/StrikeForce-dashboards3.png" alt="StrikeForce Dashboards page Scorers dropdown menu" width="15%" height="auto" style="margin-right: 10px;">
-<img src="assets/images/StrikeForce-dashboards2.png" alt="StrikeForce Dashboards page Clubs dropdown" width="15%" height="auto" style="margin-right: 10px;">
-<img src="assets/images/StrikeForce-dashboards4.png" alt="StrikeForce Dashboards page Clubs dropdown menu" width="15%" height="auto"></p>
+<p align="center"><img src="assets/images/screenshots/strikeforce-dashboards1.png" alt="StrikeForce Dashboards page Scorers dropdown" width="15%" height="auto" style="margin-right: 10px;">
+<img src="assets/images/screenshots/strikeforce-dashboards3.png" alt="StrikeForce Dashboards page Scorers dropdown menu" width="15%" height="auto" style="margin-right: 10px;">
+<img src="assets/images/screenshots/strikeforce-dashboards2.png" alt="StrikeForce Dashboards page Clubs dropdown" width="15%" height="auto" style="margin-right: 10px;">
+<img src="assets/images/screenshots/strikeforce-dashboards4.png" alt="StrikeForce Dashboards page Clubs dropdown menu" width="15%" height="auto"></p>
 
 - In the case of the Scorer dashboards `.dropdown-toggle`, the content of a second (initially hidden) `.dropdown-menu` element will be populated according to the user's choice when prompted to "Choose a club". For instance, if the user selects 'Leeds United' from the first `.dropdown-menu`, they will then be offered a selection limited to scorers from that club alone in the subsequent "Choose a scorer" menu. See the walkthrough below for clarification:
 
-<p align="center"><img src="assets/images/StrikeForce-dashboards5.png" alt="StrikeForce Dashboards page Scorers first dropdown" width="15%" height="auto" style="margin-right: 10px;">
-<img src="assets/images/StrikeForce-dashboards6.png" alt="StrikeForce Dashboards page Scorers first dropdown menu" width="15%" height="auto" style="margin-right: 10px;">
-<img src="assets/images/StrikeForce-dashboards7.png" alt="StrikeForce Dashboards page Scorers second dropdown" width="15%" height="auto" style="margin-right: 10px;">
-<img src="assets/images/StrikeForce-dashboards8.png" alt="StrikeForce Dashboards page Scorers second dropdown menu" width="15%" height="auto"></p>
+<p align="center"><img src="assets/images/screenshots/strikeforce-dashboards5.png" alt="StrikeForce Dashboards page Scorers first dropdown" width="15%" height="auto" style="margin-right: 10px;">
+<img src="assets/images/screenshots/strikeforce-dashboards6.png" alt="StrikeForce Dashboards page Scorers first dropdown menu" width="15%" height="auto" style="margin-right: 10px;">
+<img src="assets/images/screenshots/strikeforce-dashboards7.png" alt="StrikeForce Dashboards page Scorers second dropdown" width="15%" height="auto" style="margin-right: 10px;">
+<img src="assets/images/screenshots/strikeforce-dashboards8.png" alt="StrikeForce Dashboards page Scorers second dropdown menu" width="15%" height="auto"></p>
 
 - The relevant data visualisation dashboard will then load (per the main landing page's functionality described above) based on the user's selection from this *second* `.dropdown-menu` list.
 
@@ -141,9 +141,9 @@ Apart from this, dynamically-loaded imagery such as player profile photos and cl
 
 - A decision was also made to restyle the site's main `nav` element for the 'About' and 'Contact' pages on tablet and desktop devices. This was a largely cosmetic modification: it was felt that keeping the `.sidebar` `nav` layout on larger screens would make both these pages appear asymmetrical and therefore not as pleasing on the eye. By way of illustration, compare...
 
-<p align="center"><img src="assets/images/StrikeForce-navlanding.png" alt="StrikeForce landing page nav md" width="25%" height="auto" style="margin-right: 10px;">
-<img src="assets/images/StrikeForce-navleaderboards.png" alt="StrikeForce Leaderboards page nav md" width="25%" height="auto" style="margin-right: 10px;">
-<img src="assets/images/StrikeForce-navdashboards.png" alt="StrikeForce Dashboards page nav md" width="25%" height="auto"></p>
+<p align="center"><img src="assets/images/screenshots/strikeforce-navlanding.png" alt="StrikeForce landing page nav md" width="25%" height="auto" style="margin-right: 10px;">
+<img src="assets/images/screenshots/strikeforce-navleaderboards.png" alt="StrikeForce Leaderboards page nav md" width="25%" height="auto" style="margin-right: 10px;">
+<img src="assets/images/screenshots/strikeforce-navdashboards.png" alt="StrikeForce Dashboards page nav md" width="25%" height="auto"></p>
 
 
 
@@ -151,8 +151,8 @@ Apart from this, dynamically-loaded imagery such as player profile photos and cl
 
 
 
-<p align="center"><img src="assets/images/StrikeForce-navabout.png" alt="StrikeForce About page nav md" width="25%" height="auto" style="margin-right: 10px;">
-<img src="assets/images/StrikeForce-navcontact.png" alt="StrikeForce Contact page nav md" width="25%" height="auto"></p>
+<p align="center"><img src="assets/images/screenshots/strikeforce-navabout.png" alt="StrikeForce About page nav md" width="25%" height="auto" style="margin-right: 10px;">
+<img src="assets/images/screenshots/strikeforce-navcontact.png" alt="StrikeForce Contact page nav md" width="25%" height="auto"></p>
 
 
 
@@ -163,8 +163,8 @@ Apart from this, dynamically-loaded imagery such as player profile photos and cl
 - There is also a timely reminder of StrikeForce's social media presence, with the social icons this time no longer located in the `footer`, but rather inside the contact form container close to the call-to-action `button`
 - When users successfully input their email address and submit the `form`, a `.modal` is activated thanking them for taking the time to subscribe and assuring them that they will soon be receiving a follow-up email to confirm their subscription:
 
-<p align="center"><img src="assets/images/StrikeForce-contact1.png" alt="StrikeForce Contact page pre-submit" width="25%" height="auto" style="margin-right: 10px;">
-<img src="assets/images/StrikeForce-contact2.png" alt="StrikeForce Contact page post-submit" width="25%" height="auto"></p>
+<p align="center"><img src="assets/images/screenshots/strikeforce-contact1.png" alt="StrikeForce Contact page pre-submit" width="25%" height="auto" style="margin-right: 10px;">
+<img src="assets/images/screenshots/strikeforce-contact2.png" alt="StrikeForce Contact page post-submit" width="25%" height="auto"></p>
 
 - [This Stack Overflow solution](https://stackoverflow.com/questions/50579924/bootstrap-modal-not-showing-properly-centered) suggested a workaround for Bootstrap's `.modal-dialog-centered` class (inexplicably) malfunctioning - by following it, I was able to achieve vertical centering for my modal on contact `form` submit (see second screenshot above)
 
@@ -172,9 +172,9 @@ Apart from this, dynamically-loaded imagery such as player profile photos and cl
 
 ### Wireframes
 
-- [mobile](assets/wireframes/StrikeForce_mobile.pdf)
-- [tablet](assets/wireframes/StrikeForce_tablet.pdf)
-- [desktop](assets/wireframes/StrikeForce_desktop.pdf)
+- [mobile](assets/wireframes/strikeforce_mobile.pdf)
+- [tablet](assets/wireframes/strikeforce_tablet.pdf)
+- [desktop](assets/wireframes/strikeforce_desktop.pdf)
 
 
 
@@ -230,25 +230,25 @@ Apart from this, dynamically-loaded imagery such as player profile photos and cl
 
     - When searching for a goalscorer using the main landing page's primary autocomplete search bar, if a user enters a search string at least three characters long for which there are no valid matches, the following tailored `.alert-warning` message is provided by way of feedback:
 
-    <p align="center"><img src="assets/images/StrikeForce-alert1.png" alt="StrikeForce landing page error alert" width="15%%" height="auto"></p>
+    <p align="center"><img src="assets/images/screenshots/strikeforce-alert1.png" alt="StrikeForce landing page error alert" width="15%%" height="auto"></p>
 
     - Similarly, when searching for a club, if a user enters a search string at least one character in length for which there are no valid matches, they are provided with the following instructional `.alert`:
 
-    <p align="center"><img src="assets/images/StrikeForce-alert2.png" alt="StrikeForce landing page error alert" width="15%%" height="auto"></p>
+    <p align="center"><img src="assets/images/screenshots/strikeforce-alert2.png" alt="StrikeForce landing page error alert" width="15%%" height="auto"></p>
 
     - Elsewhere, if the user attempts to submit the newsletter subscription `form` on the 'Contact' page without entering anything in the email input field, they will be given the following `.alert` message:
 
-    <p align="center"><img src="assets/images/StrikeForce-alert3.png" alt="StrikeForce contact page error alert" width="15%%" height="auto"></p>
+    <p align="center"><img src="assets/images/screenshots/strikeforce-alert3.png" alt="StrikeForce contact page error alert" width="15%%" height="auto"></p>
 
     - Meanwhile, if they try submitting an invalid email address, they will be asked to try again using the following `.alert` message:
 
-    <p align="center"><img src="assets/images/StrikeForce-alert4.png" alt="StrikeForce contact page error alert" width="15%%" height="auto"></p>
+    <p align="center"><img src="assets/images/screenshots/strikeforce-alert4.png" alt="StrikeForce contact page error alert" width="15%%" height="auto"></p>
 
   - A decision was made to override/disable default HTML5 client-side `form` validation in favour of the custom client-side validation described above. This was achieved by adding a `novalidate` attribute to the `#contact-form` element, as suggested in [this Stack Overflow solution](https://stackoverflow.com/questions/3090369/disable-validation-of-html5-form-elements)
 
   - On the server side, any error such as a '404 Not Found' Client Error (resulting from an invalid API call, for instance) or a '503 Service Unavailable' Server Error will generate the following catch-all `.alert` message for the user:
 
-    <p align="center"><img src="assets/images/StrikeForce-alert5.png" alt="StrikeForce Contact page pre-submit" width="15%" height="auto" style="margin-right: 10px;"><img src="assets/images/StrikeForce-alert6.png" alt="StrikeForce Contact page post-submit" width="15%" height="auto"></p>
+    <p align="center"><img src="assets/images/screenshots/strikeforce-alert5.png" alt="StrikeForce Contact page pre-submit" width="15%" height="auto" style="margin-right: 10px;"><img src="assets/images/screenshots/strikeforce-alert6.png" alt="StrikeForce Contact page post-submit" width="15%" height="auto"></p>
 
 ## Deployment
 
@@ -293,11 +293,11 @@ In order to run this project locally, you can clone [the remote GH repository](h
   - Because this API applies a rate limit of 5 requests per second, I was prevented from making calls to it in order to populate my StrikeValue tables (for both individual scorers and clubs). Instead, I had to manually log scorer and squad values in my local JSON files and retrieve the relevant data from there to load these tables, which proved to be quite a time-consuming workaround.
   - This might also mean that over time, unless I make sure to keep these local JSON files updated, some discrepancies may creep in between figures shown for (scorer/club) 'value'/'average player value' as seen here:
 
-  <p align="center"><img src="assets/images/StrikeForce-value1.png" alt="StrikeForce value" width="15%" height="auto" style="margin-right: 10px;"><img src="assets/images/StrikeForce-value2.png" alt="StrikeForce value" width="15%" height="auto"></p>
+  <p align="center"><img src="assets/images/screenshots/StrikeForce-value1.png" alt="StrikeForce value" width="15%" height="auto" style="margin-right: 10px;"><img src="assets/images/screenshots/StrikeForce-value2.png" alt="StrikeForce value" width="15%" height="auto"></p>
 
     and those used to calculate 'goals (+/- penalties) per €1/100 million' as seen here:
 
-  <p align="center"><img src="assets/images/StrikeForce-value3.png" alt="StrikeForce value" width="15%" height="auto" style="margin-right: 10px;"><img src="assets/images/StrikeForce-value4.png" alt="StrikeForce value" width="15%" height="auto"></p>
+  <p align="center"><img src="assets/images/screenshots/StrikeForce-value3.png" alt="StrikeForce value" width="15%" height="auto" style="margin-right: 10px;"><img src="assets/images/screenshots/StrikeForce-value4.png" alt="StrikeForce value" width="15%" height="auto"></p>
 
   - The 'average player value' metric mentioned above was calculated by dividing the figure returned by API calls to TransferMarket for total squad value in the case of each club by the number of players in each particular club's squad. This was seen as offering a more accurate reflection of 'squad value' than simply quoting the total value, as squad sizes vary from club to club (and can be anything from 23 to 29 players)
 
