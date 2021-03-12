@@ -334,11 +334,11 @@ In order to run this project locally, you can clone [the remote GH repository](h
   - Because this API applies a rate limit of 5 requests per second, I was prevented from making calls to it in order to populate my StrikeValue tables (for both individual scorers and clubs). Instead, I had to manually log scorer and squad values in my local JSON files and retrieve the relevant data from there to load these tables, which proved to be quite a time-consuming workaround.
   - This might also mean that over time, unless I make sure to keep these local JSON files updated, some discrepancies may creep in between figures shown for (scorer/club) 'value'/'average player value' as seen here:
 
-  <p align="center"><img src="docs/images/screenshots/StrikeForce-value1.png" alt="StrikeForce value" width="15%" height="auto" style="margin-right: 10px;"><img src="docs/images/screenshots/StrikeForce-value2.png" alt="StrikeForce value" width="15%" height="auto"></p>
+  <p align="center"><img src="docs/images/screenshots/strikeforce-value1.png" alt="StrikeForce value" width="15%" height="auto" style="margin-right: 10px;"><img src="docs/images/screenshots/strikeforce-value2.png" alt="StrikeForce value" width="15%" height="auto"></p>
 
     and those used to calculate 'goals (+/- penalties) per €1/100 million' as seen here:
 
-  <p align="center"><img src="docs/images/screenshots/StrikeForce-value3.png" alt="StrikeForce value" width="15%" height="auto" style="margin-right: 10px;"><img src="docs/images/screenshots/StrikeForce-value4.png" alt="StrikeForce value" width="15%" height="auto"></p>
+  <p align="center"><img src="docs/images/screenshots/strikeforce-value3.png" alt="StrikeForce value" width="15%" height="auto" style="margin-right: 10px;"><img src="docs/images/screenshots/strikeforce-value4.png" alt="StrikeForce value" width="15%" height="auto"></p>
 
   - The 'average player value' metric mentioned above was calculated by dividing the figure returned by API calls to TransferMarket for total squad value in the case of each club by the number of players in each particular club's squad. This was seen as offering a more accurate reflection of 'squad value' than simply quoting the total value, as squad sizes vary from club to club (and can be anything from 23 to 29 players)
 
