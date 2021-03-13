@@ -2876,6 +2876,7 @@ Pure CSS custom switch component adapted from https://www.cssscript.com/ios-styl
     }
     .nav-pills.nav-stacked-contact #nav-about-link:not(.active) {
         color: #1997c6;
+        border-left: .1rem solid #1997c6;
     }
     .nav-pills.nav-stacked-contact #nav-about-link:not(.active):hover {
         border-right: .1rem solid #252830;
