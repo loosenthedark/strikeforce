@@ -43,7 +43,7 @@ footer {
 
 @font-face {
     font-family: entypo;
-    src: url("/assets/fonts/toolkit-entypo.ttf");
+    src: url('assets/fonts/toolkit-entypo.woff');
 }
 
 h1 {
