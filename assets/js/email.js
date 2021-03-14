@@ -1,4 +1,5 @@
 window.onload = function() {
+    document.getElementById('input-email').value = '';
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
 
@@ -9,11 +10,11 @@ window.onload = function() {
         var emailAlert = '';
         var isEmailValid = document.getElementById('input-email').value;
         if (isEmailValid == '') {
-            emailAlert += "<div class='alert alert-warning text-center' role='alert'><span class='icon icon-warning'></span><br><p class='alert-para'>You forgot to enter your email address!</p><p class='alert-para'>Please try again.</p></div>";
+            emailAlert += "<div class='alert alert-warning text-center alert-contact' role='alert'><span class='icon icon-warning'></span><br><p class='alert-para'>You forgot to enter your email address!</p><p class='alert-para'>Please try again.</p></div>";
             document.getElementById('error-message-email').innerHTML = emailAlert;
             return false;
         } else if (!isEmail(isEmailValid)) {
-            emailAlert += "<div class='alert alert-warning text-center' role='alert'><span class='icon icon-warning'></span><br><p class='alert-para'>Please enter a <span class='underline'>valid</span> email address!</p><p class='alert-para'>e.g. <span class='emphasise'>yourname@gmail.com</span></p></div>";
+            emailAlert += "<div class='alert alert-warning text-center alert-contact' role='alert'><span class='icon icon-warning'></span><br><p class='alert-para'>Please enter a <span class='underline'>valid</span> email address!</p><p class='alert-para'>e.g. <span class='emphasise'>yourname@gmail.com</span></p></div>";
             document.getElementById('error-message-email').innerHTML = emailAlert;
             return false;
         }
@@ -27,7 +28,7 @@ window.onload = function() {
                 $('#modal-submit').modal();
             }, function(error) {
                 setTimeout(() => {
-                    document.getElementById('error-message-email').innerHTML = "<div class='alert alert-danger text-center' role='alert'><span class='icon icon-warning'></span><br><p class='alert-para'>We're sorry, but something's gone wrong.</p><p class='alert-para'>Please refresh the page and try again!</p></div>";
+                    document.getElementById('error-message-email').innerHTML = "<div class='alert alert-danger text-center alert-contact' role='alert'><span class='icon icon-warning'></span><br><p class='alert-para'>We're sorry, but something's gone wrong.</p><p class='alert-para'>Please refresh the page and try again!</p></div>";
                     document.getElementById('input-email').value = '';
                 }, 3000);
             });

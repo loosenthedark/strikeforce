@@ -133,9 +133,9 @@ Apart from this, dynamically-loaded imagery such as player profile photos and cl
 
 ### 'About' page:
 
-- The site's only purely decorative (i.e. non-interactive) page, the 'About' page nevertheless boasts a visually-arresting pure CSS animation on page load that combines enlarged versions of several of the site's recurring icons with a neat rendering of the StrikeForce tag line ("Meaningful data for the beautiful game"):
+- The site's only purely decorative (i.e. non-interactive) page, the 'About' page nevertheless boasts a striking pure CSS animation on page load that combines enlarged versions of several of the site's recurring icons with a prominent rendering of the StrikeForce tag line ("Meaningful data for the beautiful game"):
 
-<p align="center"><img src="https://media.giphy.com/media/LMr83nWYlUeLE5b395/giphy.gif" alt="StrikeForce About page flashing animation demo" width="70%" height="auto"></p>
+<p align="center"><img src="docs/images/screenshots/strikeforce-about.png" alt="StrikeForce About page" width="70%" height="auto"></p>
 
 - Pure CSS angled arrow-style borders were applied to the 'About' page's `.progress-bar` elements by referencing [this Stack Overflow thread](https://stackoverflow.com/questions/19736655/pointed-angled-arrow-style-borders-in-css) and [this CSS-Tricks tutorial](https://css-tricks.com/snippets/css/css-triangle/)
 
@@ -312,6 +312,8 @@ In order to run this project locally, you can clone [the remote GH repository](h
 
   - I needed a way to remove characters from the end of various data strings returned by API calls, which I found thanks to [this Stack Overflow solution](https://stackoverflow.com/questions/31489413/remove-last-3-characters-of-string-or-number-in-javascript/45165923)
 
+  - During testing, the `.icon-trophy` icon overlay flanking the left edge of the landing page's `input` element was found to be out of position when the site was viewed in either Firefox or Safari. I managed to find workarounds (CSS hacks) for this bug [here](https://stackoverflow.com/questions/952861/targeting-only-firefox-with-css) (Firefox) and [here](https://gist.github.com/jbutko/6718701) (Safari)
+
   - Guidance on implementing flexible client-side `table` sorting using the [Tablesorter](http://tablesorter.com/) jQuery plugin was found [here](https://bootstrap-themes.github.io/dashboard/docs/index.html#tablesorter)
 
   - I needed a way to implement a static/fixed (i.e. non-sortable) initial 'row number' column in my leaderboard tables, as well as a means of excluding the third (club crest image) column from sorting. I accomplished both of these tasks by following suggestions found [here](https://forum.jquery.com/topic/tablesorter-freeze-one-column) and [here](https://stackoverflow.com/questions/437290/exclude-a-column-from-being-sorted-using-jquery-tablesorter)
@@ -321,6 +323,10 @@ In order to run this project locally, you can clone [the remote GH repository](h
   - For both my Leaderboards and Dashboards pages on mobile, I needed a way to hide the main `nav` element whenever one of the links within it that referred to a link on that same page was clicked. I was able to achieve this by using the Bootstrap `data-toggle` method to add the `collapse` component to the HTML links in line with this [Stack Overflow discussion](https://stackoverflow.com/questions/42401606/how-to-hide-collapsible-bootstrap-4-navbar-on-click)
 
   - Code used to create the site's custom football hexagon pattern `.loader` animation was adapted from [this loading animation tutorial](https://codemyui.com/soccer-ball-hexagon-pattern-loader/)
+
+  - The ['About' page's landing animation](https://loosenthedark.github.io/strikeforce/about.html) was initially not rendering correctly when viewed in the Safari browser. After extensive troubleshooting and debugging, I realised this problem was caused by the fact that the element's original source code had been built using background-images (icons) as the 'animatable' properties. However, as [this MDN Web Docs list of 'Animatable CSS properties'] makes clear, background-images aren't capable of being animated. And as [this relatively recent Stack Overflow answer](https://stackoverflow.com/questions/56943604/change-background-image-with-css-animation) points out, "_for performance reasons, it's advisable to use `opacity` and `transform` properties when animating in CSS_". With this in mind, I decided to refactor my CSS code so that the animation now consists of a series of staggered mini-animations made on the `opacity` of several absolutely-positioned inner `div`s, each with an enlarged icon embedded within its background. This now renders correctly across all major browsers - see demo below:
+
+  <p align="center"><img src="https://media.giphy.com/media/yzRki4vB4dJtkbqE6y/giphy.gif" alt="StrikeForce About page flashing animation demo" width="70%" height="auto"></p>
 
 
 ### Content
@@ -346,7 +352,7 @@ In order to run this project locally, you can clone [the remote GH repository](h
 
 - Entypo pictograms (used in site logo, favicon, `footer`, 'About' page loading animation and icons elsewhere) by [Daniel Bruce](www.entypo.com)
 
-- Font Awesome 'futbol' icon SVG used as background-image in custom iOS-style switch as well as in the 'About' page loading animation [with permission](https://fontawesome.com/license). Some minor modifications were made to the file's source code to alter its colouration, size etc.
+- Font Awesome 'futbol' icon SVG used as background-image in custom iOS-style switch as well as in the 'About' page landing animation [with permission](https://fontawesome.com/license). Some minor modifications were made to the file's source code to alter its colouration, size etc.
 
 
 ### Acknowledgements

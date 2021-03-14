@@ -175,6 +175,27 @@ button {
     top: 2px;
 }
 
+
+/* icon overlay on input not vertically aligning correctly in Firefox */
+
+@-moz-document url-prefix() {
+    .icon-trophy:before {
+        top: 16px;
+    }
+}
+
+
+/* CSS hack for targetting positioning of an icon only when viewed in Safari, as suggested here: https://gist.github.com/jbutko/6718701 */
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    _::-webkit-full-page-media,
+    _:future,
+     :root,
+    .icon-trophy:before {
+        top: -52px;
+    }
+}
+
 .icon-bar-graph {
     font-size: 1.6rem;
 }
@@ -1827,7 +1848,6 @@ Pure CSS custom switch component adapted from https://www.cssscript.com/ios-styl
 }
 
 .crest-pane {
-    background-color: #252830;
     background-position: center;
     background-repeat: no-repeat;
     height: 26px;
@@ -2006,7 +2026,7 @@ Pure CSS custom switch component adapted from https://www.cssscript.com/ios-styl
 /* About page */
 
 #logo-link {
-    animation: logo-zoom 1200ms forwards;
+    animation: logo-zoom 1300ms forwards;
 }
 
 @keyframes logo-zoom {
@@ -2029,39 +2049,107 @@ Pure CSS custom switch component adapted from https://www.cssscript.com/ios-styl
     position: relative;
     width: 240px;
     height: 240px;
-    animation: background-flip 4200ms ease-in-out 1300ms 1 normal forwards, ball-bounce 1s ease-in-out 5500ms 1 normal forwards;
+    background-color: rgba(0, 0, 0, 0);
+    animation: ball-bounce 1300ms forwards;
+    animation-delay: 6s;
 }
 
-@keyframes background-flip {
+.statcard-about-img-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-attachment: scroll;
+    background-origin: padding-box;
+    background-clip: border-box;
+    opacity: 0;
+}
+
+.statcard-about-img-container:nth-child(1) {
+    background-image: url("../../assets/images/futbol-solid-grey.svg");
+    animation: appear 1500ms forwards;
+    animation-delay: 1200ms;
+}
+
+.statcard-about-img-container:nth-child(2) {
+    background-image: url("../../assets/images/futbol-solid-blue.svg");
+    animation: appear 1500ms forwards;
+    animation-delay: 1600ms;
+}
+
+.statcard-about-img-container:nth-child(3) {
+    background-image: url("../../assets/images/user.svg");
+    animation: appear 300ms forwards;
+    animation-delay: 3100ms;
+}
+
+.statcard-about-img-container:nth-child(4) {
+    background-image: url("../../assets/images/sports-club.svg");
+    animation: appear 300ms forwards;
+    animation-delay: 3400ms;
+}
+
+.statcard-about-img-container:nth-child(5) {
+    background-image: url("../../assets/images/trophy.svg");
+    animation: appear 300ms forwards;
+    animation-delay: 3700ms;
+}
+
+.statcard-about-img-container:nth-child(6) {
+    background-image: url("../../assets/images/bar-graph.svg");
+    animation: appear 300ms forwards;
+    animation-delay: 4000ms;
+}
+
+.statcard-about-img-container:nth-child(7) {
+    background-image: url("../../assets/images/circular-graph.svg");
+    animation: appear 300ms forwards;
+    animation-delay: 4300ms;
+}
+
+.statcard-about-img-container:nth-child(8) {
+    background-image: url("../../assets/images/line-graph.svg");
+    animation: appear 300ms forwards;
+    animation-delay: 4600ms;
+}
+
+.statcard-about-img-container:nth-child(9) {
+    background-image: url("../../assets/images/futbol-solid-blue.svg");
+    animation: appear 1200ms forwards;
+    animation-delay: 4900ms;
+}
+
+.statcard-about-img-container:nth-child(10) {
+    background-image: url("../../assets/images/futbol-solid-grey.svg");
+    animation: appearandstay 1500ms forwards;
+    animation-delay: 5200ms;
+}
+
+@keyframes appear {
     0% {
-        background: url('../../assets/images/futbol-solid-grey.svg') center/cover no-repeat;
-    }
-    40% {
-        background: url('../../assets/images/futbol-solid-blue.svg') center/cover no-repeat;
-    }
-    45% {
-        background: url('../../assets/images/user.svg') center/cover no-repeat;
+        opacity: 0;
     }
     50% {
-        background: url('../../assets/images/sports-club.svg') center/cover no-repeat;
-    }
-    55% {
-        background: url('../../assets/images/trophy.svg') center/cover no-repeat;
-    }
-    60% {
-        background: url('../../assets/images/bar-graph.svg') center/cover no-repeat;
-    }
-    65% {
-        background: url('../../assets/images/circular-graph.svg') center/cover no-repeat;
-    }
-    70% {
-        background: url('../../assets/images/line-graph.svg') center/cover no-repeat;
-    }
-    75% {
-        background: url('../../assets/images/futbol-solid-blue.svg') center/cover no-repeat;
+        opacity: 1;
     }
     100% {
-        background: url('../../assets/images/futbol-solid-grey.svg') center/cover no-repeat;
+        opacity: 0;
+    }
+}
+
+@keyframes appearandstay {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
@@ -2114,7 +2202,7 @@ Pure CSS custom switch component adapted from https://www.cssscript.com/ios-styl
 }
 
 #meaningful {
-    animation: fade-in 1s ease-in-out 6500ms 1 normal forwards;
+    animation: fade-in 1s ease-in-out 7000ms 1 normal forwards;
     margin: 0 0 12px;
 }
 
@@ -2129,7 +2217,7 @@ Pure CSS custom switch component adapted from https://www.cssscript.com/ios-styl
 }
 
 #beautiful {
-    animation: fade-in 1s ease-in-out 7500ms 1 normal forwards;
+    animation: fade-in 1s ease-in-out 7700ms 1 normal forwards;
 }
 
 @keyframes fade-in {
@@ -2465,6 +2553,11 @@ Pure CSS custom switch component adapted from https://www.cssscript.com/ios-styl
     font-weight: 900;
 }
 
+.alert-contact {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
 
 /* >>>>> Media Queries >>>>> */
 
@@ -2567,7 +2660,10 @@ Pure CSS custom switch component adapted from https://www.cssscript.com/ios-styl
     }
     .dropdown-toggle,
     .dropdown-menu {
-        max-width: 330px;
+        width: 60%;
+    }
+    .dropdown-menu {
+        margin-left: 20%;
     }
     #dropdown-menu-button-clubs .fa-futbol,
     #dropdown-menu-button-scorers .icon {

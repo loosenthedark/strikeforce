@@ -108,7 +108,7 @@ $(document).ready(function() {
             var i, tr, resort;
             for (i = 0; i < data.length; i++) {
                 tr = "<tr>";
-                tr += "<td class='pl-1'>" + data[i].strikeRank + '</td><td class="pr-2"><a href="#">' + data[i].fullname + `</a></td><td class='pl-2 pr-2 crest-pane ${data[i].club.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'><a class='d-block w-100 h-100' href='#'></a></td><td class='pl-1 text-center pr-3'>` + data[i].goals + '</td><td class="pl-2 text-center pr-3">' + data[i].pens + '</td><td class="text-center pl-1 pr-3">' + data[i].goalsMinusPens + '</td></tr>';
+                tr += "<td class='pl-1'>" + data[i].strikeRank + '</td><td class="pr-2">' + data[i].fullname + `</td><td class='pl-2 pr-2 crest-pane ${data[i].club.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'></td><td class='pl-1 text-center pr-3'>` + data[i].goals + '</td><td class="pl-2 text-center pr-3">' + data[i].pens + '</td><td class="text-center pl-1 pr-3">' + data[i].goalsMinusPens + '</td></tr>';
                 leaderboardBody.innerHTML += tr;
 
                 resort = true;
@@ -116,7 +116,7 @@ $(document).ready(function() {
             }
             for (i = 0; i < data.length; i++) {
                 tr = "<tr>";
-                tr += "<td class='pl-1'>" + data[i].strikeRank + '</td><td class="pr-2"><a href="#">' + data[i].fullname + `</a></td><td class='pl-2 pr-2 crest-pane ${data[i].club.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'><a class='d-block w-100 h-100' href='#'></a></td><td class='pl-1 text-center pr-3'>` + data[i].goals + '</td><td class="pl-2 text-center pr-3 table-border-left table-backdrop-contrast">' + data[i].goalsPer90 + '</td><td class="text-center pl-1 pr-3 table-backdrop-contrast">' + data[i].goalsMinusPensPer90 + '</td></tr>';
+                tr += "<td class='pl-1'>" + data[i].strikeRank + '</td><td class="pr-2">' + data[i].fullname + `</td><td class='pl-2 pr-2 crest-pane ${data[i].club.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'></td><td class='pl-1 text-center pr-3'>` + data[i].goals + '</td><td class="pl-2 text-center pr-3 table-border-left table-backdrop-contrast">' + data[i].goalsPer90 + '</td><td class="text-center pl-1 pr-3 table-backdrop-contrast">' + data[i].goalsMinusPensPer90 + '</td></tr>';
                 leaderboardBodyStrikeRate.innerHTML += tr;
 
                 resort = true;
@@ -124,7 +124,7 @@ $(document).ready(function() {
             }
             for (i = 0; i < data.length; i++) {
                 tr = "<tr>";
-                tr += "<td class='pl-1'>" + data[i].strikeRank + '</td><td class="pr-2"><a href="#">' + data[i].fullname + `</a></td><td class='pl-2 pr-2 crest-pane ${data[i].club.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'><a class='d-block w-100 h-100' href='#'></a></td><td class='pl-1 text-center pr-3'>` + data[i].goals + '</td><td class="pl-2 text-center pr-3 table-border-left table-backdrop-contrast"></td><td class="text-center pl-1 pr-3 table-backdrop-contrast"></td></tr>';
+                tr += "<td class='pl-1'>" + data[i].strikeRank + '</td><td class="pr-2">' + data[i].fullname + `</td><td class='pl-2 pr-2 crest-pane ${data[i].club.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'></td><td class='pl-1 text-center pr-3'>` + data[i].goals + '</td><td class="pl-2 text-center pr-3 table-border-left table-backdrop-contrast"></td><td class="text-center pl-1 pr-3 table-backdrop-contrast"></td></tr>';
                 leaderboardBodyStrikeValue.innerHTML += tr;
 
                 resort = true;
@@ -178,7 +178,7 @@ $(document).ready(function() {
         var i, tr, resort;
         for (i = 0; i < data.length; i++) {
             tr = "<tr>";
-            tr += "<td class='pl-1'>" + data[i].strikeRank + '</td><td class="pr-2"><a href="#">' + data[i].fullname + `</a></td><td class='pl-2 pr-2 crest-pane ${data[i].club.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'><a class='d-block w-100 h-100' href='#'></a></td><td class='pl-1 text-center pr-3'>` + data[i].goals + '</td><td class="pl-2 text-center pr-3">' + data[i].pens + '</td><td class="text-center pl-1 pr-3">' + data[i].goalsMinusPens + '</td></tr>';
+            tr += "<td class='pl-1'>" + data[i].strikeRank + '</td><td class="pr-2">' + data[i].fullname + `</td><td class='pl-2 pr-2 crest-pane ${data[i].club.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'></td><td class='pl-1 text-center pr-3'>` + data[i].goals + '</td><td class="pl-2 text-center pr-3">' + data[i].pens + '</td><td class="text-center pl-1 pr-3">' + data[i].goalsMinusPens + '</td></tr>';
             leaderboardBody.innerHTML += tr;
 
             resort = true;
@@ -187,7 +187,7 @@ $(document).ready(function() {
 
         for (i = 0; i < data.length; i++) {
             tr = "<tr>";
-            tr += "<td class='pl-1'>" + data[i].strikeRank + '</td><td class="pr-2"><a href="#">' + data[i].fullname + `</a></td><td class='pl-2 pr-2 crest-pane ${data[i].club.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'><a class='d-block w-100 h-100' href='#'></a></td><td class='pl-1 text-center pr-3'>` + data[i].goals + '</td><td class="pl-2 text-center pr-3 table-border-left table-backdrop-contrast">' + data[i].goalsPer90 + '</td><td class="text-center pl-1 pr-3 table-backdrop-contrast">' + data[i].goalsMinusPensPer90 + '</td></tr>';
+            tr += "<td class='pl-1'>" + data[i].strikeRank + '</td><td class="pr-2">' + data[i].fullname + `</td><td class='pl-2 pr-2 crest-pane ${data[i].club.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'></td><td class='pl-1 text-center pr-3'>` + data[i].goals + '</td><td class="pl-2 text-center pr-3 table-border-left table-backdrop-contrast">' + data[i].goalsPer90 + '</td><td class="text-center pl-1 pr-3 table-backdrop-contrast">' + data[i].goalsMinusPensPer90 + '</td></tr>';
             leaderboardBodyStrikeRate.innerHTML += tr;
 
             resort = true;
@@ -201,7 +201,7 @@ $(document).ready(function() {
             var valueGoalsMinusPensRounded = valueGoalsMinusPens.toFixed(2);
 
             tr = "<tr>";
-            tr += "<td class='pl-1'>" + data[i].strikeRank + '</td><td class="pr-2"><a href="#">' + data[i].fullname + `</a></td><td class='pl-2 pr-2 crest-pane ${data[i].club.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'><a class='d-block w-100 h-100' href='#'></a></td><td class='pl-1 text-center pr-3'>` + data[i].goals + '</td><td class="pl-2 text-center pr-3 table-border-left table-backdrop-contrast">' + valueGoalsRounded + '</td><td class="text-center pl-1 pr-3 table-backdrop-contrast">' + valueGoalsMinusPensRounded + '</td></tr>';
+            tr += "<td class='pl-1'>" + data[i].strikeRank + '</td><td class="pr-2">' + data[i].fullname + `</td><td class='pl-2 pr-2 crest-pane ${data[i].club.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'></td><td class='pl-1 text-center pr-3'>` + data[i].goals + '</td><td class="pl-2 text-center pr-3 table-border-left table-backdrop-contrast">' + valueGoalsRounded + '</td><td class="text-center pl-1 pr-3 table-backdrop-contrast">' + valueGoalsMinusPensRounded + '</td></tr>';
 
             leaderboardBodyStrikeValue.innerHTML += tr;
             resort = true;
@@ -217,7 +217,7 @@ $(document).ready(function() {
                     leaderboardBody.innerHTML = '';
                     for (i = 0; i < clubdata.length; i++) {
                         tr = "<tr>";
-                        tr += "<td class='pl-1'>" + clubdata[i].clubStrikeRank + "</td><td class='pr-2'><a href='#'>" + clubdata[i].clubname + `</a></td><td class='pl-2 pr-2 crest-pane ${clubdata[i].clubname.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'><a class='d-block w-100 h-100' href='#'></a></td><td class='pl-1 text-center pr-3'>` + clubdata[i].goals + '</td><td class="pl-2 text-center pr-3">' + clubdata[i].pens + '</td><td class="text-center pl-1 pr-3">' + clubdata[i].goalsMinusPens + '</td></tr>';
+                        tr += "<td class='pl-1'>" + clubdata[i].clubStrikeRank + "</td><td class='pr-2'>" + clubdata[i].clubname + `</td><td class='pl-2 pr-2 crest-pane ${clubdata[i].clubname.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'></td><td class='pl-1 text-center pr-3'>` + clubdata[i].goals + '</td><td class="pl-2 text-center pr-3">' + clubdata[i].pens + '</td><td class="text-center pl-1 pr-3">' + clubdata[i].goalsMinusPens + '</td></tr>';
                         leaderboardBody.innerHTML += tr;
 
                         resort = true;
@@ -238,7 +238,7 @@ $(document).ready(function() {
                     leaderboardBodyStrikeRate.innerHTML = '';
                     for (i = 0; i < clubdata.length; i++) {
                         tr = "<tr>";
-                        tr += "<td class='pl-1'>" + clubdata[i].clubStrikeRank + "</td><td class='pr-2'><a href='#'>" + clubdata[i].clubname + `</a></td><td class='pl-2 pr-2 crest-pane ${clubdata[i].clubname.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'><a class='d-block w-100 h-100' href='#'></a></td><td class='pl-1 text-center pr-3'>` + clubdata[i].goals + '</td><td class="pl-2 text-center pr-3 table-border-left table-backdrop-contrast">' + clubdata[i].goalsPer90 + '</td><td class="text-center pl-1 pr-3 table-backdrop-contrast">' + clubdata[i].goalsMinusPensPer90 + '</td></tr>';
+                        tr += "<td class='pl-1'>" + clubdata[i].clubStrikeRank + "</td><td class='pr-2'>" + clubdata[i].clubname + `</td><td class='pl-2 pr-2 crest-pane ${clubdata[i].clubname.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'></td><td class='pl-1 text-center pr-3'>` + clubdata[i].goals + '</td><td class="pl-2 text-center pr-3 table-border-left table-backdrop-contrast">' + clubdata[i].goalsPer90 + '</td><td class="text-center pl-1 pr-3 table-backdrop-contrast">' + clubdata[i].goalsMinusPensPer90 + '</td></tr>';
                         leaderboardBodyStrikeRate.innerHTML += tr;
 
                         resort = true;
@@ -263,7 +263,7 @@ $(document).ready(function() {
 
                         $('#perPane').text('Per €100m');
                         tr = "<tr>";
-                        tr += "<td class='pl-1'>" + clubdata[i].clubStrikeRank + "</td><td class='pr-2'><a href='#'>" + clubdata[i].clubname + `</a></td><td class='pl-2 pr-2 crest-pane ${clubdata[i].clubname.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'><a class='d-block w-100 h-100' href='#'></a></td><td class='pl-1 text-center pr-3'>` + clubdata[i].goals + '</td><td class="pl-2 text-center pr-3 table-border-left table-backdrop-contrast">' + valueGoalsClubRounded + '</td><td class="text-center pl-1 pr-3 table-backdrop-contrast">' + valueGoalsMinusPensClubRounded + '</td></tr>';
+                        tr += "<td class='pl-1'>" + clubdata[i].clubStrikeRank + "</td><td class='pr-2'>" + clubdata[i].clubname + `</td><td class='pl-2 pr-2 crest-pane ${clubdata[i].clubname.replace(/ /g, '-').replace('&', 'and').toLowerCase()}-crest-pane'></td><td class='pl-1 text-center pr-3'>` + clubdata[i].goals + '</td><td class="pl-2 text-center pr-3 table-border-left table-backdrop-contrast">' + valueGoalsClubRounded + '</td><td class="text-center pl-1 pr-3 table-backdrop-contrast">' + valueGoalsMinusPensClubRounded + '</td></tr>';
                         leaderboardBodyStrikeValue.innerHTML += tr;
 
                         resort = true;
