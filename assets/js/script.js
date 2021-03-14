@@ -182,6 +182,7 @@ $(document).ready(function() {
             const getScorerID = new scorerSettings();
             getScorerID.url += `search?query=${scorerName}`;
             $.ajax(getScorerID).done(function(response) {
+                var scorerID;
                 if (response.count.players === 0) {
                     // Hide pill buttons while page is loading scorer data
                     $('#pills-tab').addClass('d-none');
@@ -193,7 +194,7 @@ $(document).ready(function() {
                     return false;
                 } else {
                     // Store scorer ID from initial API call in variable
-                    var scorerID = response.players[0].id;
+                    scorerID = response.players[0].id;
                 }
 
                 // Use this scorer ID variable in two further API calls
@@ -310,7 +311,7 @@ $(document).ready(function() {
                     return false;
                 } else {
                     // Store club ID from initial API call in variable
-                    var clubID = response.clubs[0].id;
+                    clubID = response.clubs[0].id;
                 }
 
                 // Use this club ID variable in three further API calls
