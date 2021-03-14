@@ -3066,10 +3066,12 @@ Pure CSS custom switch component adapted from https://www.cssscript.com/ios-styl
     .crest-box img {
         width: 35%;
     }
-    .statcard-canvas,
+    .statcard-canvas {
+        min-height: 330px;
+    }
     #clubs-strikerate .statcard-canvas,
     #clubs-strikevalue .statcard-canvas {
-        min-height: 330px;
+        min-height: 346px;
     }
     .btn-sm {
         font-size: 16px;
