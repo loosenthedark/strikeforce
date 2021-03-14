@@ -41,11 +41,6 @@ footer {
     position: relative;
 }
 
-@font-face {
-    font-family: entypo;
-    src: url('assets/fonts/toolkit-entypo.woff');
-}
-
 h1 {
     font-family: entypo;
     font-size: 40px;
