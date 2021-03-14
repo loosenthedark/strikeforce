@@ -116,8 +116,19 @@ $(document).ready(function() {
                 const getScorerID = new scorerSettings();
                 getScorerID.url += `search?query=${scorerName}`;
                 $.ajax(getScorerID).done(function(response) {
-                    // Store scorer ID from initial API call in variable
-                    var scorerID = response.players[0].id;
+                    if (response.count.players === 0) {
+                        // Hide pill buttons while page is loading scorer data
+                        $('#pills-tab').addClass('d-none');
+                        playerMatchList.innerHTML = renderSpinner();
+                        setTimeout(() => {
+                            playerMatchList.innerHTML = "<div class='alert alert-danger text-center' role='alert'><span class='icon icon-warning'></span><br><p>We're sorry, but something's gone wrong.</p><p>Please refresh the page and try again!</p></div>";
+                            $('#pills-tab').removeClass('d-none');
+                        }, 5000);
+                        return false;
+                    } else {
+                        // Store scorer ID from initial API call in variable
+                        var scorerID = response.players[0].id;
+                    }
 
                     // Use this scorer ID variable in two further API calls
                     const getScorerValue = new scorerSettings();
@@ -267,8 +278,19 @@ $(document).ready(function() {
                 const getClubID = new clubSettings();
                 getClubID.url += `search?query=${clubName}`;
                 $.ajax(getClubID).done(function(response) {
-                    // Store club ID from initial API call in variable
-                    var clubID = response.clubs[0].id;
+                    if (response.count.clubs === 0) {
+                        // Hide pill buttons while page is loading scorer data
+                        $('#pills-tab').addClass('d-none');
+                        clubMatchList.innerHTML = renderSpinner();
+                        setTimeout(() => {
+                            clubMatchList.innerHTML = "<div class='alert alert-danger text-center' role='alert'><span class='icon icon-warning'></span><br><p>We're sorry, but something's gone wrong.</p><p>Please refresh the page and try again!</p></div>";
+                            $('#pills-tab').removeClass('d-none');
+                        }, 5000);
+                        return false;
+                    } else {
+                        // Store club ID from initial API call in variable
+                        var clubID = response.clubs[0].id;
+                    }
 
                     // Use this club ID variable in three further API calls
                     const get_ClubLogo = new clubSettings();

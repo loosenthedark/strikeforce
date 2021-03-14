@@ -182,15 +182,26 @@ $(document).ready(function() {
             const getScorerID = new scorerSettings();
             getScorerID.url += `search?query=${scorerName}`;
             $.ajax(getScorerID).done(function(response) {
-                // Store scorer ID from initial API call in variable
-                var scorerID = response.players[0].id;
+                if (response.count.players === 0) {
+                    // Hide pill buttons while page is loading scorer data
+                    $('#pills-tab').addClass('d-none');
+                    playerMatchList.innerHTML = renderSpinner();
+                    setTimeout(() => {
+                        playerMatchList.innerHTML = "<div class='alert alert-danger text-center' role='alert'><span class='icon icon-warning'></span><br><p>We're sorry, but something's gone wrong.</p><p>Please refresh the page and try again!</p></div>";
+                        $('#pills-tab').removeClass('d-none');
+                    }, 5000);
+                    return false;
+                } else {
+                    // Store scorer ID from initial API call in variable
+                    var scorerID = response.players[0].id;
+                }
 
                 // Use this scorer ID variable in two further API calls
                 const getScorerValue = new scorerSettings();
-                getScorerValue.url = `https://transfermarket.p.rapidapi.com/players/get-market-value?id=${scorerID}`;
+                getScorerValue.url = `https://transfermarket.p.rapidapi.co/players/get-market-value?id=${scorerID}`;
 
                 const getScorerProfile = new scorerSettings();
-                getScorerProfile.url = `https://transfermarket.p.rapidapi.com/players/get-profile?id=${scorerID}`;
+                getScorerProfile.url = `https://transfermarket.p.rapidapi.co/players/get-profile?id=${scorerID}`;
 
                 // Hide pill buttons while page is loading scorer data
                 $('#pills-tab').addClass('d-none');
@@ -288,21 +299,32 @@ $(document).ready(function() {
             const getClubID = new clubSettings();
             getClubID.url += `search?query=${clubName}`;
             $.ajax(getClubID).done(function(response) {
-                // Store club ID from initial API call in variable
-                var clubID = response.clubs[0].id;
+                if (response.count.clubs === 0) {
+                    // Hide pill buttons while page is loading scorer data
+                    $('#pills-tab').addClass('d-none');
+                    clubMatchList.innerHTML = renderSpinner();
+                    setTimeout(() => {
+                        clubMatchList.innerHTML = "<div class='alert alert-danger text-center' role='alert'><span class='icon icon-warning'></span><br><p>We're sorry, but something's gone wrong.</p><p>Please refresh the page and try again!</p></div>";
+                        $('#pills-tab').removeClass('d-none');
+                    }, 5000);
+                    return false;
+                } else {
+                    // Store club ID from initial API call in variable
+                    var clubID = response.clubs[0].id;
+                }
 
                 // Use this club ID variable in three further API calls
                 const get_ClubLogo = new clubSettings();
-                get_ClubLogo.url = `https://transfermarket.p.rapidapi.com/clubs/get-short-info?ids=${clubID}`;
+                get_ClubLogo.url = `https://transfermarket.p.rapidapi.co/clubs/get-short-info?ids=${clubID}`;
 
                 const getClubProfile = new clubSettings();
-                getClubProfile.url = `https://transfermarket.p.rapidapi.com/clubs/get-profile?id=${clubID}`;
+                getClubProfile.url = `https://transfermarket.p.rapidapi.co/clubs/get-profile?id=${clubID}`;
 
                 const getClubPosition = new clubSettings();
-                getClubPosition.url = `https://transfermarket.p.rapidapi.com/competitions/get-table?id=GB1&seasonID=2020`;
+                getClubPosition.url = `https://transfermarket.p.rapidapi.co/competitions/get-table?id=GB1&seasonID=2020`;
 
                 const getSquadValue = new clubSettings();
-                getSquadValue.url = `https://transfermarket.p.rapidapi.com/clubs/get-squad?id=${clubID}`;
+                getSquadValue.url = `https://transfermarket.p.rapidapi.co/clubs/get-squad?id=${clubID}`;
 
                 // Hide pill buttons while page is loading club data
                 $('#pills-tab').addClass('d-none');

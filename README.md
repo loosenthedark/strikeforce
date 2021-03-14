@@ -203,7 +203,7 @@ Apart from this, dynamically-loaded imagery such as player profile photos and cl
 
 - All testing was performed manually, and on a near-constant basis as the project evolved. [Google Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/?utm_source=dcc&utm_medium=redirect&utm_campaign=2018Q2) served as an indispensable resource throughout this testing process, allowing incremental adjustments to be made to the site's infrastructure and layout. The site's responsiveness was also closely monitored and rigorously tested from start to finish using the bespoke developer-oriented [Blisk web browser](https://blisk.io/).
 
-- In addition to Chrome and Blisk, the site's functionality and appearance was also checked a number of times in the Safari, Firefox and Amazon Silk browsers. Numerous devices and screen sizes - belonging mostly to friends and family members - were similarly used to identify any blind spots in the site's responsive design and feature compatibility. These included the Samsung Galaxy S5, iPhone 7 Plus, Moto G4, Huawei P20, MacBook Pro, iPad and Kindle Fire.
+- In addition to Chrome and Blisk, the site's functionality and appearance was also checked a number of times in the Safari, Firefox, Microsoft Edge and Amazon Silk browsers. Numerous devices and screen sizes - belonging mostly to friends and family members - were similarly used to identify any blind spots in the site's responsive design and feature compatibility. These included the Samsung Galaxy S5, iPhone 7 Plus, Moto G4, Huawei P20, MacBook Pro, iPad and Kindle Fire.
 
 - During testing, a display bug was discovered that caused the `footer` content to rise and cramp/obscure the text input fields on mobile devices when the keyboard was enabled after one of these text inputs gained focus. A workable hack for overcoming this issue was taken from [this Stack Overflow query](https://stackoverflow.com/questions/22627646/how-to-prevent-mobile-keyboard-from-rising-footer-over-the-text-fields)
 
@@ -287,7 +287,7 @@ Apart from this, dynamically-loaded imagery such as player profile photos and cl
 
   - A decision was made to override/disable default HTML5 client-side `form` validation in favour of the custom client-side validation described above. This was achieved by adding a `novalidate` attribute to the `#contact-form` element, as suggested in [this Stack Overflow solution](https://stackoverflow.com/questions/3090369/disable-validation-of-html5-form-elements)
 
-  - On the server side, any error such as a '404 Not Found' Client Error (resulting from an invalid API call, for instance) or a '503 Service Unavailable' Server Error will generate the following catch-all `.alert` message for the user:
+  - On the server side, any error such as a '404 Not Found' Client Error (resulting from an invalid API call, for instance) or a '503 Service Unavailable' Server Error will generate the following catch-all `.alert` message for the user, informing them of the existence of a problem and asking them to "(p)lease refresh the page and try again":
 
     <p align="center"><img src="docs/images/screenshots/strikeforce-alert5.png" alt="StrikeForce Contact page pre-submit" width="15%" height="auto" style="margin-right: 10px;"><img src="docs/images/screenshots/strikeforce-alert6.png" alt="StrikeForce Contact page post-submit" width="15%" height="auto"></p>
 
