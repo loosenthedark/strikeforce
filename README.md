@@ -11,6 +11,8 @@
 <p align="center"><a href="https://loosenthedark.github.io/strikeforce/" style="font-weight:bold;">Live link to deployed project</a> (hosted on GitHub Pages)</p>
 
 
+**[Alternative link](http://loosenthedark.tech/strikeforce/)** (hosted on loosenthedark.tech)
+
 
 ---
 
