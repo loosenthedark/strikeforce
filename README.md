@@ -2,16 +2,16 @@
 
 
 
-<p align="center"><img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" alt="Code Institute logo" width="200" height="auto" style="margin-right:20px;"> <img src="docs/images/screenshots/strikeforce-logo.png" alt="StrikeForce logo" width="200" height="auto"></p>
+<p align="center"><img src="docs/images/screenshots/strikeforce-logo.png" alt="StrikeForce logo" width="200" height="auto"></p>
 
 
-
-<p align="center" style="font-style:italic;">Code Institute Diploma in Software Development: Interactive Frontend Development - Milestone Project</p>
 
 
 
 <p align="center"><a href="https://loosenthedark.github.io/strikeforce/" style="font-weight:bold;">Live link to deployed project</a> (hosted on GitHub Pages)</p>
 
+
+<p align="center"><a href="http://loosenthedark.tech/strikeforce/" style="font-weight:bold;">Alternative link</a> (hosted on loosenthedark.tech)</p>
 
 
 ---
